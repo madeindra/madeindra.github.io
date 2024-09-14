@@ -1,15 +1,27 @@
+# site
 url: 'https://madeindra.github.io'
 baseurl: ''
 title: 'Made Indra'
 
+# plugins
 plugins:
   - jekyll-postcss
 
+# postcss
 postcss:
   cache: false
 
+# exclude
 exclude:
   - package.json
   - package-lock.json
   - postcss.config.js
   - tailwind.config.js
+
+# header
+home_enabled: true
+about_enabled: true
+contact_enabled: true
+
+# footer
+sitemap_enabled: true

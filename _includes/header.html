@@ -1,0 +1,23 @@
+<header class="py-8">
+  <div class="container mx-auto px-4 flex justify-between items-center">
+    <!-- Logo -->
+    <h1 class="text-xl font-bold">{{ site.title }}</h1>
+    
+    <!-- Navigation -->
+    <nav>
+      <ul class="flex space-x-6 font-normal">
+        {% if site.home_enabled == true %}
+        <li><a href="{{ "/" | relative_url }}" class="hover:text-gray-600">Home</a></li>
+        {% endif %}
+
+        {% if site.about_enabled == true %}
+        <li><a href="{{ "/about" | relative_url }}" class="hover:text-gray-600">About</a></li>
+        {% endif %}
+
+        {% if site.contact_enabled == true %}
+        <li><a href="{{ "/contact" | relative_url }}" class="hover:text-gray-600">Contact</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  </div>
+</header>
