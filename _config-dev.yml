@@ -1,0 +1,3 @@
+# local development config, run with
+# bundle exec jekyll serve --config _config.yml,_config-dev.yml --livereload
+url: https://localhost:4000

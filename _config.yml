@@ -1,0 +1,15 @@
+url: 'https://madeindra.github.io'
+baseurl: ''
+title: 'Made Indra'
+
+plugins:
+  - jekyll-postcss
+
+postcss:
+  cache: false
+
+exclude:
+  - package.json
+  - package-lock.json
+  - postcss.config.js
+  - tailwind.config.js
