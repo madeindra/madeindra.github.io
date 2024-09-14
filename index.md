@@ -3,9 +3,8 @@ layout: page
 title: Home
 ---
 
-<div class="py-24 max-w-xl mx-auto text-center">
+<div class="py-12 max-w-xl mx-auto text-center">
   <div class="space-y-12">
-
     <!-- Blog Post 1 -->
     <div class="flex items-start space-x-6">
       <div class="flex-1">
@@ -66,44 +65,5 @@ title: Home
       </div>
     </div>
 
-    <!-- Blog Post 4 -->
-    <div class="flex items-start space-x-6">
-      <div class="flex-1">
-        <div class="flex items-center text-sm text-gray-500 mb-2">
-          <span>April 30, 2023</span>
-          <span class="mx-2">•</span>
-          <span>6 min read</span>
-          <span class="mx-2">•</span>
-          <span class="bg-gray-200 px-2 py-1 rounded">Finance</span>
-        </div>
-        <div class="flex items-start space-x-6">
-          <div class="flex-1">
-            <h2 class="text-xl font-semibold mb-2 text-justify">Cryptocurrency: A Beginner's Guide</h2>
-            <p class="text-gray-600 text-justify">Demystify the world of digital currencies with our comprehensive guide. We break down the basics of blockchain, Bitcoin, and beyond to help you navigate this exciting financial frontier.</p>
-          </div>
-          <img src="https://plus.unsplash.com/premium_photo-1670249421308-15ae3965c326?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cryptocurrency concept" class="w-32 h-32 object-cover rounded">
-        </div>
-      </div>
-    </div>
-
-    <!-- Blog Post 5 -->
-    <div class="flex items-start space-x-6">
-      <div class="flex-1">
-        <div class="flex items-center text-sm text-gray-500 mb-2">
-          <span>April 25, 2023</span>
-          <span class="mx-2">•</span>
-          <span>4 min read</span>
-          <span class="mx-2">•</span>
-          <span class="bg-gray-200 px-2 py-1 rounded">Food</span>
-        </div>
-        <div class="flex items-start space-x-6">
-          <div class="flex-1">
-            <h2 class="text-xl font-semibold mb-2 text-justify">Farm to Table: The Rise of Sustainable Eating</h2>
-            <p class="text-gray-600 text-justify">Explore the growing trend of sustainable eating and its impact on local communities and the environment. Discover how you can make more eco-friendly food choices in your daily life.</p>
-          </div>
-          <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=2500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fresh produce" class="w-32 h-32 object-cover rounded">
-        </div>
-      </div>
-    </div>
   </div>
 </div>
