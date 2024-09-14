@@ -4,7 +4,7 @@ title: Home
 ---
 
 <div class="max-w-xl mx-auto text-center">
-<div class="pb-6 px-6 mb-8">
+<div class="py-6 px-6 mb-8">
   <h2 class="text-2xl font-bold mb-2">Welcome to My Blog</h2>
   <p class="text-gray-700">
     Here, I share insights on technology, travel, and health. Join me as we explore fascinating topics and uncover new perspectives.
