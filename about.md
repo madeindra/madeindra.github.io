@@ -5,12 +5,12 @@ title: "About"
 
 <div class="max-w-xl mx-auto text-center">
   <!-- Profile Image -->
-  {% if site.about.image %}
+  {% if site.about.author_image %}
   <div class="py-6 px-6">
-    {% if site.about.image contains 'http://' or site.about.image contains 'https://' %}
-      <img src="{{ site.about.image }}" alt="{{ site.about.author_name }}" class="w-48 h-48 object-cover rounded-lg mx-auto">
+    {% if site.about.author_image contains 'http://' or site.about.author_image contains 'https://' %}
+      <img src="{{ site.about.author_image }}" alt="{{ site.about.author_name }}" class="w-48 h-48 object-cover rounded-lg mx-auto">
     {% else %}
-      <img src="{{ site.url }}/{{ site.about.image }}" alt="{{ site.about.author_name }}" class="w-48 h-48 object-cover rounded-lg mx-auto">
+      <img src="{{ site.url }}/{{ site.about.author_image }}" alt="{{ site.about.author_name }}" class="w-48 h-48 object-cover rounded-lg mx-auto">
     {% endif %}
   </div>
   {% endif %}
@@ -73,10 +73,12 @@ title: "About"
   {% endif %}
 
   <div class="text-gray-600 text-justify">
-    <p class="mb-6"><strong>Hi! Hello!</strong></p>
-
-    <p class="mb-6">I'm Indra, also known as Made Canggih. I'm a software engineer with years of experience in various industries working. My expertise lies in backend engineering and I'm currently expanding my horizons by diving into frontend. What I love most about being a software engineer is the constant learning of new technologies, meeting a diverse range of people, and gaining new perspectives. For me, this is the highlight of my journey.</p>
-
-    <p class="mb-6">When I'm not immersed in the world of code, I enjoy pursuing my hobbies like reading fiction, playing games, and capturing the beauty of the world through photography. Above all, my greatest passion is sharing my knowledge. In my free time, I volunteer as a mentor and create content for my social media, spreading the magic of software engineering to everyone who shares this curiosity.</p>
+    {% for description in site.about.description %}
+      {% if forloop.first %}
+        <p class="mb-6"><strong>{{ description }}</strong></p>
+      {% else %}
+        <p class="mb-6">{{ description }}</p>
+      {% endif %}
+    {% endfor %}
   </div>
 </div>
