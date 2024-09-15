@@ -19,7 +19,7 @@ bundle exec jekyll serve --config _config.yml,_config-dev.yml --livereload
 
 ## Github Pages
 
-1. Create a github action script in `.github/workflows`
+1. Create a github action script in `.github/workflows/gh-pages.yaml`
 
 ```yaml
 name: Build and deploy this site to GitHub Pages
