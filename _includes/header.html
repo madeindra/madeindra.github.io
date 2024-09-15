@@ -1,7 +1,11 @@
 <header class="py-6">
   <div class="container mx-auto px-4 flex justify-between items-center">
     <!-- Logo -->
-    <h1 class="text-xl font-semibold">{{ site.title }}</h1>
+    <h1 class="text-xl font-semibold">
+      <a href="{{ '/' | relative_url }}" class="hover:text-gray-600 transition duration-300">
+        {{ site.title }}
+      </a>
+    </h1>
     
     <!-- Navigation -->
     <nav>
