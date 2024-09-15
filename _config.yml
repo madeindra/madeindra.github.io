@@ -2,6 +2,7 @@
 url: 'https://madeindra.github.io'
 baseurl: ''
 title: 'Made Indra'
+permalink: /:title/
 
 # plugins
 plugins:
