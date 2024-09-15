@@ -55,14 +55,20 @@ jobs:
 ```
 2. Open repository settings
 
-3. Go to Pages section
+3. Go to Action > General section
 
-4. Select "Deploy from a branch"
+4. On "Workflow permissions" select "Read and write permissions"
 
-5. Set source to "gh-pages"
+5. Click save to save the settings
 
-6. Save
+6. Wait for the first action to run & create "gh-pages" branch
 
-7. Wait for a few minutes
+7. Go to Pages section
 
-8. Open your browser and navigate to https://{username}.github.io/{repository}
+8. Select "Deploy from a branch"
+
+9. Set source to "gh-pages"
+
+10. Save
+
+11. Open your browser and navigate to https://{username}.github.io/{repository}
