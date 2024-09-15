@@ -39,6 +39,11 @@ layout: default
         {{ page.content }}
     </article>
 
+    {% if site.post.comments_allowed %}
+    <section class="max-w-prose mx-auto py-12">
+        {% include disqus.html %}
+    </section>
+    {% endif %}
 </main>
 
 {% include footer.html %}
