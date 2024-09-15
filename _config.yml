@@ -3,21 +3,6 @@ url: "https://madeindra.github.io"
 title: "Made Indra"
 permalink: "/:title/"
 
-# plugins
-plugins:
-  - jekyll-postcss
-
-# postcss
-postcss:
-  cache: false
-
-# exclude
-exclude:
-  - package.json
-  - package-lock.json
-  - postcss.config.js
-  - tailwind.config.js
-
 # header
 home_enabled: true
 about_enabled: true
@@ -31,3 +16,30 @@ homepage:
   welcome:
     title: "Welcome to My Blog"
     subtitle: "Here, I share insights on technology, travel, and health. Join me as we explore fascinating topics and uncover new perspectives."
+
+# plugins
+plugins:
+  - jekyll-postcss
+  - jekyll-paginate
+  - jekyll-feed
+
+# jekyll-postcss
+postcss:
+  cache: false
+
+# jekyll-paginate
+paginate: 5
+paginate_path: "/:num/"
+
+# exclude from build
+exclude:
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - postcss.config.js
+  - tailwind.config.js
+
