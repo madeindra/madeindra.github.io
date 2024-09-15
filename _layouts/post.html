@@ -6,7 +6,7 @@ layout: default
 
 <main class="container mx-auto px-4 flex-grow">
 
-    <div class="relative mb-6 mx-auto max-w-3xl">
+    <div class="relative max-w-prose mb-6 mx-auto">
         <!-- Featured Image -->
         {% if page.feature_image %}
         <div class="relative overflow-hidden rounded">
@@ -35,7 +35,7 @@ layout: default
         </div>
     </div>
 
-    <article class="mx-auto max-w-3xl space-y-6 sm:text-lg">
+    <article class="max-w-prose mx-auto space-y-6 sm:text-lg text-gray-800 leading-relaxed">
         {{ page.content }}
     </article>
 

@@ -3,7 +3,7 @@ layout: page
 title: "About"
 ---
 
-<div class="max-w-xl mx-auto text-center">
+<div class="max-w-prose mx-auto text-center">
   <!-- Profile Image -->
   {% if site.about.author_image %}
   <div class="py-6 px-6">
@@ -72,7 +72,7 @@ title: "About"
   </div>
   {% endif %}
 
-  <div class="text-gray-600 text-justify">
+  <div class="sm:text-lg text-gray-800 leading-relaxed text-justify">
     {% for description in site.about.description %}
       {% if forloop.first %}
         <p class="mb-6"><strong>{{ description }}</strong></p>

@@ -3,19 +3,21 @@ layout: page
 title: "Home"
 ---
 
-<div class="max-w-xl mx-auto text-center">
+<div class="max-w-prose mx-auto text-center">
 
   <!-- Welcome Message -->
+
   {% if site.homepage.welcome.title %}
+
   <div class="py-6 px-6 mb-8">
     <h2 class="text-2xl font-bold mb-2">{{ site.homepage.welcome.title }}</h2>
-    
+
     {% if site.homepage.welcome.subtitle %}
     <p class="text-gray-700">
       {{ site.homepage.welcome.subtitle }}
     </p>
     {% endif %}
-    
+
   </div>
   {% endif %}
 
@@ -30,15 +32,15 @@ title: "Home"
           <span class="mx-2">•</span>
           <span>{{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
           <span class="mx-2">•</span>
-          <span class="bg-gray-200 px-2 py-1 rounded">{{ post.category }}</span>
+          <span>{{ post.category }}</span>
         </div>
 
         <!-- Title, Summary, Image -->
         <div class="flex items-start space-x-6">
           <div class="flex-1">
-          
+
             <a href="{{ post.url | relative_url }}">
-              <h2 class="text-xl font-semibold mb-2 text-justify">{{ post.title }}</h2>
+              <h2 class="text-xl font-semibold mb-2 text-left">{{ post.title }}</h2>
             </a>
 
             {% if post.summary %}
@@ -60,5 +62,6 @@ title: "Home"
       </div>
     </div>
     {% endfor %}
+
   </div>
 </div>
