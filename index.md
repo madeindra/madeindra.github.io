@@ -37,8 +37,10 @@ title: "Home"
         <div class="flex items-start space-x-6">
           <div class="flex-1">
           
-            <h2 class="text-xl font-semibold mb-2 text-justify">{{ post.title }}</h2>
-            
+            <a href="{{ post.url | relative_url }}">
+              <h2 class="text-xl font-semibold mb-2 text-justify">{{ post.title }}</h2>
+            </a>
+
             {% if post.summary %}
             <p class="text-gray-600 text-justify">{{ post.summary }}</p>
             {% else %}
@@ -48,7 +50,9 @@ title: "Home"
           </div>
 
           {% if post.image %}
-          <img src="{{ post.image }}" alt="{{ post.title }}" class="w-32 h-32 object-cover rounded">
+          <a href="{{ post.url | relative_url }}">
+            <img src="{{ post.image }}" alt="{{ post.title }}" class="w-32 h-32 object-cover rounded">
+          </a>
           {% endif %}
 
         </div>
