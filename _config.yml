@@ -1,8 +1,7 @@
 # site
-url: 'https://madeindra.github.io'
-baseurl: ''
-title: 'Made Indra'
-permalink: /:title/
+url: "https://madeindra.github.io"
+title: "Made Indra"
+permalink: "/:title/"
 
 # plugins
 plugins:
@@ -30,5 +29,5 @@ sitemap_enabled: true
 # homepage
 homepage:
   welcome:
-    title: 'Welcome to My Blog'
-    subtitle: 'Here, I share insights on technology, travel, and health. Join me as we explore fascinating topics and uncover new perspectives.'
+    title: "Welcome to My Blog"
+    subtitle: "Here, I share insights on technology, travel, and health. Join me as we explore fascinating topics and uncover new perspectives."
