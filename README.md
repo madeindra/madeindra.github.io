@@ -19,16 +19,50 @@ bundle exec jekyll serve --config _config.yml,_config-dev.yml --livereload
 
 ## Github Pages
 
-1. Open repository settings
+1. Create a github action script in `.github/workflows`
 
-2. Go to Pages section
+```yaml
+name: Build and deploy this site to GitHub Pages
 
-3. Select "Deploy from a branch"
+on:
+  push:
+    branches:
+      - main
 
-4. Set source to "gh-pages"
+jobs:
+  github-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1
+          bundler-cache: true
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - name: Build site
+        uses: limjh16/jekyll-action-ts@v2
+        with:
+          enable_cache: true
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+```
+2. Open repository settings
 
-5. Save
+3. Go to Pages section
 
-6. Wait for a few minutes
+4. Select "Deploy from a branch"
 
-7. Open your browser and navigate to https://{username}.github.io/{repository}
+5. Set source to "gh-pages"
+
+6. Save
+
+7. Wait for a few minutes
+
+8. Open your browser and navigate to https://{username}.github.io/{repository}
