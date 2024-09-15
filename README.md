@@ -61,14 +61,16 @@ jobs:
 
 5. Click save to save the settings
 
-6. Wait for the first action to run & create "gh-pages" branch
+6. After the first action run, it will create "gh-pages" branch
 
-7. Go to Pages section
+7. Open repository settings
 
-8. Select "Deploy from a branch"
+8. Go to Pages section
 
-9. Set source to "gh-pages"
+9. Select "Deploy from a branch"
 
-10. Save
+10. Set source to "gh-pages"
 
-11. Open your browser and navigate to https://{username}.github.io/{repository}
+11. Save
+
+12. Open your browser and navigate to https://{username}.github.io/{repository}
