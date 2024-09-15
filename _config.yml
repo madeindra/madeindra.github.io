@@ -6,7 +6,6 @@ permalink: "/:title/"
 # header
 home_enabled: true
 about_enabled: true
-contact_enabled: true
 
 # footer
 sitemap_enabled: true
@@ -16,6 +15,21 @@ homepage:
   welcome:
     title: "Welcome to My Blog"
     subtitle: "Here, I share insights on technology, travel, and health. Join me as we explore fascinating topics and uncover new perspectives."
+
+# about
+about:
+  author_name: "Made Indra"
+  image: "https://images.unsplash.com/photo-1687702563085-2f550461f24c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG9tZXJhbmlhbnxlbnwwfHwwfHx8MA%3D%3D"
+  social_media_enabled: true
+
+# social media
+social_media:
+  email: "madeindra@pm.me"
+  linkedin: "mdeindra"
+  github: "madeindra"
+  youtube: "madecanggih"
+  twitter: "madecanggih"
+  instagram: "madecanggih"
 
 # plugins
 plugins:
