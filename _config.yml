@@ -1,7 +1,11 @@
 # site
 url: "https://madeindra.github.io"
 title: "Made Indra"
+author: "Made Indra"
 permalink: "/:title/"
+description: ""
+keywords: 
+  - blog
 
 # header
 home_enabled: true

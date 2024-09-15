@@ -1,19 +1,30 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: 'en-US' }}">
 
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name=author content="{{ site.author }}">
 
-    {% include favicon.html %}
+  {% include favicon.html %}
 
-    <title>{{ page.title }} | {{ site.title }}</title>
-    
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-  </head>
-  
-  <body class="flex flex-col min-h-screen">
-      {{ content }}
-  </body>
+  <title>{{ page.title }} | {{ site.title }}</title>
 
-  </html>
+  <meta name="description" content="{% if page.summary %}{{ page.summary | truncate: 160 }}{% else %}{{ site.description | truncate: 160 }}{% endif %}">
+
+  {% if page.keywords %}
+    <meta name="keywords" content="{% if page.keywords %}{{ page.keywords | join: ', ' }}{% else %}{{ site.keywords | join: ', ' }}{% endif %}">
+  {% endif %}
+
+  <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend:
+    site.baseurl | prepend: site.url }}" />
+
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+
+<body class="flex flex-col min-h-screen">
+  {{ content }}
+</body>
+
+</html>
