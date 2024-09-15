@@ -2,10 +2,12 @@
 layout: post
 title: "The Future of Artificial Intelligence"
 date: "2020-12-31 00:00:00"
-category: "Health"
+category: "Technology"
 image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2565&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 feature_image: true
 summary: "Explore the latest advancements in AI and how they're shaping our world. From machine learning to neural networks, we dive deep into the technologies that are revolutionizing industries."
+keywords:
+  - Technology
 ---
 
 Artificial Intelligence (AI) is a rapidly evolving field that is transforming the way we live, work, and interact with technology. As we move towards a more digital world, the applications of AI are becoming increasingly sophisticated and pervasive.

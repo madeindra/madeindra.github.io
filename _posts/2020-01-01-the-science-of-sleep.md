@@ -6,6 +6,8 @@ category: "Health"
 image: "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=2660&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 feature_image: false
 summary: "Learn about the latest research in sleep science and discover practical tips to enhance your sleep quality. From circadian rhythms to sleep hygiene, we cover it all."
+keywords:
+  - Health
 ---
 
 Sleep is a vital biological function that plays a crucial role in our overall health and well-being. It is a complex process that involves various physiological and neurological mechanisms. Understanding the science behind sleep can help us appreciate its importance and make informed decisions about our sleep habits.
