@@ -37,7 +37,7 @@ title: "Home"
         <div class="flex items-start space-x-6">
           <div class="flex-1">
 
-            <a href="{{ post.url | relative_url }}">
+            <a href="{{ post.url | relative_url }}" class="no-underline">
               <h2 class="text-xl font-semibold mb-2 text-left">{{ post.title }}</h2>
             </a>
 
