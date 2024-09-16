@@ -21,6 +21,10 @@
 
 <body class="flex flex-col min-h-screen">
   {{ content }}
+
+  {% if site.search_enabled %}
+    {% include search.html %}
+  {% endif %}
 </body>
 
 </html>

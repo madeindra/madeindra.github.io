@@ -8,6 +8,7 @@ keywords:
   - blog
 
 # header
+search_enabled: true
 home_enabled: true
 about_enabled: true
 

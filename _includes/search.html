@@ -1,0 +1,82 @@
+<script type="text/javascript">
+    let searchData = [];
+    
+    // Fetch search data
+    fetch('/search.json')
+      .then(response => response.json())
+      .then(data => {
+        searchData = data;
+      });
+    
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    
+    searchInput.addEventListener('input', debounce(handleSearch, 300));
+    
+    function handleSearch() {
+      const query = searchInput.value.toLowerCase();
+
+      // don't process 1 character
+      if (query.length < 2) {
+        searchResults.innerHTML = '';
+        searchResults.classList.add('hidden');
+        return;
+      }
+    
+      const matches = searchData
+        .map(item => ({
+          item,
+          score: fuzzyMatch(query, item.title.toLowerCase())
+        }))
+        .filter(({ score }) => score > 0.3)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 5);
+    
+      renderResults(matches);
+    }
+    
+    function fuzzyMatch(query, text) {
+      let score = 0;
+      let textIndex = 0;
+    
+      for (let i = 0; i < query.length; i++) {
+        const index = text.indexOf(query[i], textIndex);
+        if (index === -1) return 0;
+        score += 1 / (index - textIndex + 1);
+        textIndex = index + 1;
+      }
+    
+      return score / query.length;
+    }
+    
+    function renderResults(matches) {
+      if (matches.length === 0) {
+        searchResults.innerHTML = '<p class="p-2 text-gray-500">No results found</p>';
+      } else {
+        searchResults.innerHTML = matches
+          .map(({ item }) => `
+            <a href="${item.url}" class="block p-2 hover:bg-gray-100">
+              <h3 class="font-semibold">${item.title}</h3>
+              <p class="text-sm text-gray-600">${item.description}</p>
+            </a>
+          `)
+          .join('');
+      }
+      searchResults.classList.remove('hidden');
+    }
+    
+    function debounce(func, delay) {
+      let timeoutId;
+      return function (...args) {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => func.apply(this, args), delay);
+      };
+    }
+    
+    // hide search results on click
+    document.addEventListener('click', (event) => {
+      if (!searchInput.contains(event.target) && !searchResults.contains(event.target)) {
+        searchResults.classList.add('hidden');
+      }
+    });
+</script>
