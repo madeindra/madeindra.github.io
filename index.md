@@ -3,7 +3,7 @@ layout: page
 title: "Home"
 ---
 
-<div class="prose dark:prose-invert max-w-prose mx-auto text-center">
+<div class="max-w-prose mx-auto text-center">
 
   {% if site.homepage.welcome.title != "" %}
   <!-- Welcome Message -->

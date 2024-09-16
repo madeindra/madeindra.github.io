@@ -6,7 +6,7 @@ layout: default
 
 <main class="container mx-auto px-4 flex-grow">
 
-    <div class="relative prose dark:prose-invert max-w-prose mb-6 mx-auto">
+    <div class="relative max-w-prose mb-6 mx-auto">
         <!-- Featured Image -->
         {% if page.feature_image %}
         <div class="relative overflow-hidden rounded">
@@ -45,7 +45,7 @@ layout: default
 
     {% if site.post.comments_allowed %}
     <div class="max-w-prose mx-auto border-t border-gray-200 my-12"></div>
-    <section class="prose dark:prose-invert max-w-prose mx-auto">
+    <section class="max-w-prose mx-auto">
         {% include disqus.html %}
     </section>
     {% endif %}
