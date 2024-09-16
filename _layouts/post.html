@@ -44,7 +44,8 @@ layout: default
     </article>
 
     {% if site.post.comments_allowed %}
-    <section class="prose dark:prose-invert max-w-prose mx-auto py-12">
+    <div class="max-w-prose mx-auto border-t border-gray-200 my-12"></div>
+    <section class="prose dark:prose-invert max-w-prose mx-auto">
         {% include disqus.html %}
     </section>
     {% endif %}
