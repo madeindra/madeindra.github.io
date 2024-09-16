@@ -26,7 +26,7 @@ layout: default
         <div
             class="{% if page.feature_image %}absolute bottom-0 left-0 right-0 p-6 text-white{% else %}py-6 text-gray-800 dark:text-gray-200{% endif %}">
             <div class="flex items-center space-x-1 md:space-x-2 text-sm mb-2">
-                <span>{{ page.date | date: "%d %B %Y" }}</span>
+                <span>{{ page.date | date: "%d %b %Y" }}</span>
                 <span>•</span>
                 <span>{{ page.content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
                 <span>•</span>
