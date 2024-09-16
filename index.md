@@ -5,10 +5,8 @@ title: "Home"
 
 <div class="prose dark:prose-invert max-w-prose mx-auto text-center">
 
+  {% if site.homepage.welcome.title != "" %}
   <!-- Welcome Message -->
-
-  {% if site.homepage.welcome.title %}
-
   <div class="py-6 px-6 mb-8">
     <h2 class="text-2xl font-bold mb-2">{{ site.homepage.welcome.title }}</h2>
 
