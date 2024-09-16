@@ -9,7 +9,7 @@
   {% include favicon.html %}
 
   <title>{{ page.title }} | {{ site.title }}</title>
-  <meta name="description" content="{% if page.summary %}{{ page.summary | truncate: 160 }}{% else %}{{ site.description | truncate: 160 }}{% endif %}">
+  <meta name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160 }}{% endif %}">
   <meta name="keywords" content="{% if page.keywords %}{{ page.keywords | join: ', ' }}{% else %}{{ site.keywords | join: ', ' }}{% endif %}">
 
   <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">

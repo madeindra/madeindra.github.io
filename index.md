@@ -43,8 +43,8 @@ title: "Home"
               <h2 class="text-xl font-semibold mb-2 text-left">{{ post.title }}</h2>
             </a>
 
-            {% if post.summary %}
-            <p class="text-gray-600 text-justify">{{ post.summary }}</p>
+            {% if post.description %}
+            <p class="text-gray-600 text-justify">{{ post.description }}</p>
             {% else %}
             <p class="text-gray-600 text-justify">{{ post.content | strip_html | truncatewords: 30 }}</p>
             {% endif %}
