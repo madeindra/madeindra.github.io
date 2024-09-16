@@ -3,7 +3,7 @@ layout: page
 title: "Home"
 ---
 
-<div class="max-w-prose mx-auto text-center">
+<div class="prose dark:prose-invert max-w-prose mx-auto text-center">
 
   <!-- Welcome Message -->
 
@@ -13,7 +13,7 @@ title: "Home"
     <h2 class="text-2xl font-bold mb-2">{{ site.homepage.welcome.title }}</h2>
 
     {% if site.homepage.welcome.subtitle %}
-    <p class="text-gray-700">
+    <p class="text-gray-700 dark:text-gray-300">
       {{ site.homepage.welcome.subtitle }}
     </p>
     {% endif %}
@@ -27,7 +27,7 @@ title: "Home"
       <div class="flex-1">
 
         <!-- Date, Reading Time, Category -->
-        <div class="flex items-center text-sm text-gray-500 mb-2">
+        <div class="flex items-center text-sm text-gray-500 dark:text-gray-500 mb-2">
           <span>{{ post.date | date: "%d %B %Y" }}</span>
           <span class="mx-2">•</span>
           <span>{{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
@@ -44,9 +44,9 @@ title: "Home"
             </a>
 
             {% if post.description %}
-            <p class="text-gray-600 text-justify">{{ post.description }}</p>
+            <p class="text-gray-600 dark:text-gray-400 text-justify">{{ post.description }}</p>
             {% else %}
-            <p class="text-gray-600 text-justify">{{ post.content | strip_html | truncatewords: 30 }}</p>
+            <p class="text-gray-600 dark:text-gray-400 text-justify">{{ post.content | strip_html | truncatewords: 30 }}</p>
             {% endif %}
 
           </div>

@@ -6,7 +6,7 @@ layout: default
 
 <main class="container mx-auto px-4 flex-grow">
 
-    <div class="relative max-w-prose mb-6 mx-auto">
+    <div class="relative prose dark:prose-invert max-w-prose mb-6 mx-auto">
         <!-- Featured Image -->
         {% if page.feature_image %}
         <div class="relative overflow-hidden rounded">
@@ -20,14 +20,14 @@ layout: default
 
         <!-- Title Overlay -->
         <div
-            class="{% if page.feature_image %}absolute bottom-0 left-0 right-0 p-6 text-white{% else %}py-6 text-gray-800{% endif %}">
+            class="{% if page.feature_image %}absolute bottom-0 left-0 right-0 p-6 text-white{% else %}py-6 text-gray-800 dark:text-gray-200{% endif %}">
             <div class="flex items-center space-x-1 md:space-x-2 text-sm mb-2">
                 <span>{{ page.date | date: "%d %B %Y" }}</span>
                 <span>•</span>
                 <span>{{ page.content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
                 <span>•</span>
                 <span
-                    class="{% if page.feature_image %}{% else %}bg-gray-200 text-gray-800 px-2 py-1 rounded{% endif %}">
+                    class="{% if page.feature_image %}{% else %}text-gray-800 dark:text-gray-200{% endif %}">
                     {{ page.category }}
                 </span>
             </div>
@@ -35,12 +35,12 @@ layout: default
         </div>
     </div>
 
-    <article class="max-w-prose mx-auto space-y-6 sm:text-lg text-gray-800 leading-relaxed">
+    <article class="prose dark:prose-invert max-w-prose mx-auto space-y-6 sm:text-lg leading-relaxed">
         {{ page.content }}
     </article>
 
     {% if site.post.comments_allowed %}
-    <section class="max-w-prose mx-auto py-12">
+    <section class="prose dark:prose-invert max-w-prose mx-auto py-12">
         {% include disqus.html %}
     </section>
     {% endif %}

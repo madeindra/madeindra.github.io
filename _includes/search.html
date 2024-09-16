@@ -11,7 +11,7 @@
     const searchInput = document.getElementById('search-input');
     const searchResults = document.getElementById('search-results');
     
-    searchInput.addEventListener('input', debounce(handleSearch, 300));
+    searchInput?.addEventListener('input', debounce(handleSearch, 300));
     
     function handleSearch() {
       const query = searchInput.value.toLowerCase();
@@ -51,13 +51,13 @@
     
     function renderResults(matches) {
       if (matches.length === 0) {
-        searchResults.innerHTML = '<p class="p-2 text-gray-500">No results found</p>';
+        searchResults.innerHTML = '<p class="p-2 text-gray-500 dark:text-gray-500">No results found</p>';
       } else {
         searchResults.innerHTML = matches
           .map(({ item }) => `
-            <a href="${item.url}" class="block p-2 hover:bg-gray-100">
+            <a href="${item.url}" class="block p-2 hover:bg-gray-200 dark:hover:bg-gray-800">
               <h3 class="font-semibold">${item.title}</h3>
-              <p class="text-sm text-gray-600">${item.description}</p>
+              <p class="text-sm text-gray-600 dark:text-gray-400">${item.description}</p>
             </a>
           `)
           .join('');
@@ -74,7 +74,7 @@
     }
     
     // hide search results on click
-    document.addEventListener('click', (event) => {
+    document?.addEventListener('click', (event) => {
       if (!searchInput.contains(event.target) && !searchResults.contains(event.target)) {
         searchResults.classList.add('hidden');
       }

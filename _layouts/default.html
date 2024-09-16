@@ -19,8 +19,10 @@
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 
-<body class="flex flex-col min-h-screen">
+<body class="min-h-screen flex flex-col transition-colors duration-300 bg-white dark:bg-dark text-gray-900 dark:text-dark-base">
   {{ content }}
+
+  {% include theme.html %}
 
   {% if site.search_enabled %}
     {% include search.html %}
