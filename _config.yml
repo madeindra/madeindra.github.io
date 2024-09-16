@@ -24,7 +24,7 @@ homepage:
 # about
 about:
   author_name: "Made Indra"
-  author_image: "assets/images/author.webp"
+  author_image: "/assets/images/author.webp"
   social_media_enabled: true
   description:
     - "Hey there!"

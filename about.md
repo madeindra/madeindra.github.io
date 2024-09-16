@@ -10,7 +10,7 @@ title: "About"
     {% if site.about.author_image contains 'http://' or site.about.author_image contains 'https://' %}
       <img src="{{ site.about.author_image }}" alt="{{ site.about.author_name }}" class="w-48 h-48 object-cover rounded-lg mx-auto">
     {% else %}
-      <img src="{{ site.url }}/{{ site.about.author_image }}" alt="{{ site.about.author_name }}" class="w-48 h-48 object-cover rounded-lg mx-auto">
+      <img src="{{ site.about.author_image | prepend: site.baseurl | prepend: site.url }}" alt="{{ site.about.author_name }}" class="w-48 h-48 object-cover rounded-lg mx-auto">
     {% endif %}
   </div>
   {% endif %}

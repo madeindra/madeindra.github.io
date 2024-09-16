@@ -10,7 +10,11 @@ layout: default
         <!-- Featured Image -->
         {% if page.feature_image %}
         <div class="relative overflow-hidden rounded">
+            {% if site.about.author_image contains 'http://' or site.about.author_image contains 'https://' %}
             <img src="{{ page.image }}" alt="Featured image" class="w-full h-[40vh] md:h-[50vh] object-cover">
+            {% else %}
+            <img src="{{ page.image | prepend: site.baseurl | prepend: site.url }}" alt="Featured image" class="w-full h-[40vh] md:h-[50vh] object-cover">
+            {% endif %}
 
             <!-- Black Overlay -->
             <div class="absolute inset-0 bg-black bg-opacity-50"></div>
