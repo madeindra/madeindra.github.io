@@ -24,12 +24,12 @@ homepage:
 # about
 about:
   author_name: "Made Indra"
-  author_image: "https://images.unsplash.com/photo-1687702563085-2f550461f24c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG9tZXJhbmlhbnxlbnwwfHwwfHx8MA%3D%3D"
+  author_image: "assets/images/author.webp"
   social_media_enabled: true
   description:
-    - "Hi! Hello!"
-    - "I'm Indra, also known as Made Canggih. I'm a software engineer with years of experience in various industries working. My expertise lies in backend engineering and I'm currently expanding my horizons by diving into frontend. What I love most about being a software engineer is the constant learning of new technologies, meeting a diverse range of people, and gaining new perspectives. For me, this is the highlight of my journey."
-    - "When I'm not immersed in the world of code, I enjoy pursuing my hobbies like reading fiction, playing games, and capturing the beauty of the world through photography. Above all, my greatest passion is sharing my knowledge. In my free time, I volunteer as a mentor and create content for my social media, spreading the magic of software engineering to everyone who shares this curiosity."
+    - "Hey there!"
+    - "I'm Made Indra, a software engineer with years of experience in various industries. My expertise is in backend engineering, and I'm currently expanding into frontend development. What I love most about being a software engineer is constantly learning new technologies, meeting diverse people, and gaining new perspectives. These are the highlights of my journey."
+    - When I'm not coding, I enjoy reading fiction, playing games, and capturing the beauty of the world through photography. My greatest passion is sharing my knowledge. In my free time, I volunteer as a mentor and create content for social media, spreading the magic of software engineering to everyone who shares this curiosity."
 
 # post
 post:
