@@ -19,7 +19,13 @@ bundle exec jekyll serve --config _config.yml,_config-dev.yml --livereload
 
 ## Github Pages
 
-1. Create a github action script in `.github/workflows/gh-pages.yaml`
+1. Make sure the Gemfile.lock has `x86_64-linux` platform so it can run in Github Action. Run this if necessary.
+
+```
+bundle lock --add-platform x86_64-linux
+```
+
+2. Create a github action script in `.github/workflows/gh-pages.yaml`
 
 ```yaml
 name: Build and deploy this site to GitHub Pages
@@ -53,24 +59,24 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
 ```
-2. Open repository settings
+3. Open repository settings
 
-3. Go to Action > General section
+4. Go to Action > General section
 
-4. On "Workflow permissions" select "Read and write permissions"
+5. On "Workflow permissions" select "Read and write permissions"
 
-5. Click save to save the settings
+6. Click save to save the settings
 
-6. After the first action run, it will create "gh-pages" branch
+7. After the first action run, it will create "gh-pages" branch
 
-7. Open repository settings
+8. Open repository settings
 
-8. Go to Pages section
+9. Go to Pages section
 
-9. Select "Deploy from a branch"
+10. Select "Deploy from a branch"
 
-10. Set source to "gh-pages"
+11. Set source to "gh-pages"
 
-11. Save
+12. Save
 
-12. Open your browser and navigate to https://{username}.github.io/{repository}
+13. Open your browser and navigate to https://{username}.github.io/{repository}
