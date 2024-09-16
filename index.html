@@ -16,13 +16,25 @@
 
 
   <title>Home | madeindra.dev</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="blog">
+  <meta name="description"
+    content="">
+  <meta name="keywords"
+    content="blog">
 
   <link rel="canonical" href="https://madeindra.github.io/">
   <link rel="alternate" type="application/rss+xml" title="madeindra.dev" href="https://madeindra.github.io/feed.xml" />
 
-    <meta property="og:title" content="Home">
+  <!-- ios dark mode -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <!-- ios and other browsers -->
+  <meta name="color-scheme" content="dark light">
+
+  <!-- android and other browsers supporting theme-color -->
+  <meta name="theme-color" content="#1A1A1A" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+  <meta property="og:title" content="Home">
 <meta property="og:description"
     content="">
 <meta property="og:url" content="https://madeindra.github.io/">
@@ -42,7 +54,8 @@
   <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 
-<body class="min-h-screen flex flex-col transition-colors duration-300 bg-white dark:bg-dark text-gray-900 dark:text-dark-base">
+<body
+  class="min-h-screen flex flex-col transition-colors duration-300 bg-white dark:bg-dark text-gray-900 dark:text-dark-base">
   <header class="py-6">
   <div class="container mx-auto px-4 flex justify-between items-center">
     <!-- Logo -->
@@ -116,7 +129,7 @@
 
         <!-- Date, Reading Time, Category -->
         <div class="flex items-center text-sm text-gray-500 dark:text-gray-500 mb-2">
-          <span>16 September 2024</span>
+          <span>16 Sep 2024</span>
           <span class="mx-2">•</span>
           <span>7 min read</span>
           <span class="mx-2">•</span>
@@ -179,6 +192,8 @@
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
+    const statusBarMetaTag = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
+
     // change the icons inside the button based on previous settings
     if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         themeToggleLightIcon?.classList?.remove('hidden');
@@ -189,14 +204,22 @@
     function setTheme(isDark) {
         if (isDark) {
             document.documentElement?.classList?.add('dark');
+            
             localStorage.setItem('color-theme', 'dark');
+            
             themeToggleDarkIcon?.classList?.add('hidden');
             themeToggleLightIcon?.classList?.remove('hidden');
+
+            statusBarMetaTag.setAttribute('content', 'dark');
         } else {
             document.documentElement?.classList?.remove('dark');
+            
             localStorage.setItem('color-theme', 'light');
+            
             themeToggleDarkIcon?.classList?.remove('hidden');
             themeToggleLightIcon?.classList?.add('hidden');
+
+            statusBarMetaTag.setAttribute('content', 'default');
         }
     }
 
@@ -213,7 +236,7 @@
 </script>
 
   
-    <script type="text/javascript">
+  <script type="text/javascript">
   let searchData = [];
 
   // Fetch search data
