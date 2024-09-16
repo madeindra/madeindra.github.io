@@ -37,14 +37,14 @@ title: "Home"
         <div class="flex items-start space-x-6">
           <div class="flex-1">
 
-            <a href="{{ post.url | relative_url }}" class="no-underline">
+            <a href="{{ post.url | relative_url }}" class="no-underline line-clamp-2 lg:line-clamp-1">
               <h2 class="text-xl font-semibold mb-2 text-left">{{ post.title }}</h2>
             </a>
 
             {% if post.description %}
-            <p class="text-gray-600 dark:text-gray-400 text-justify">{{ post.description }}</p>
+            <p class="text-gray-600 dark:text-gray-400 text-justify line-clamp-3 md:line-clamp-4">{{ post.description }}</p>
             {% else %}
-            <p class="text-gray-600 dark:text-gray-400 text-justify">{{ post.content | strip_html | truncatewords: 30 }}</p>
+            <p class="text-gray-600 dark:text-gray-400 text-justify line-clamp-3 md:line-clamp-4">{{ post.content | strip_html | truncate: 160 }}</p>
             {% endif %}
 
           </div>
