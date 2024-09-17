@@ -3,7 +3,7 @@
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
-    const statusBarMetaTag = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
+    const themeColorMetaTag = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
 
     // change the icons inside the button based on previous settings
     if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -21,7 +21,7 @@
             themeToggleDarkIcon?.classList?.add('hidden');
             themeToggleLightIcon?.classList?.remove('hidden');
 
-            statusBarMetaTag.setAttribute('content', 'dark');
+            themeColorMetaTag.setAttribute('content', '#1A1A1A');
         } else {
             document.documentElement?.classList?.remove('dark');
             
@@ -30,7 +30,7 @@
             themeToggleDarkIcon?.classList?.remove('hidden');
             themeToggleLightIcon?.classList?.add('hidden');
 
-            statusBarMetaTag.setAttribute('content', 'default');
+            themeColorMetaTag.setAttribute('content', '#FFFFFF');
         }
     }
 
