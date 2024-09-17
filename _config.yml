@@ -32,10 +32,6 @@ about:
     - "I'm Made Indra, a software engineer with years of experience in various industries. My expertise is in backend engineering, and I'm currently expanding into frontend development. What I love most about being a software engineer is constantly learning new technologies, meeting diverse people, and gaining new perspectives. These are the highlights of my journey."
     - When I'm not coding, I enjoy reading fiction, playing games, and capturing the beauty of the world through photography. My greatest passion is sharing my knowledge. In my free time, I volunteer as a mentor and create content for social media, spreading the magic of software engineering to everyone who shares this curiosity."
 
-# post
-post:
-  comments_allowed: true
-
 # social media
 social_media:
   email: "madeindra@pm.me"
