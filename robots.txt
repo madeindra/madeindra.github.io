@@ -1,1 +1,1 @@
-Sitemap: https://madeindra.github.io/sitemap.xml
+Sitemap: https://madeindra.dev/sitemap.xml
