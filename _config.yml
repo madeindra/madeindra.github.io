@@ -14,6 +14,7 @@ about_enabled: true
 
 # footer
 sitemap_enabled: true
+feed_enabled: true
 
 # homepage
 homepage:
@@ -51,6 +52,7 @@ disqus:
 # plugins
 plugins:
   - jekyll-postcss
+  - jekyll-sitemap
   - jekyll-feed
 
 # jekyll-postcss
