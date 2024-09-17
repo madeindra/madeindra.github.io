@@ -25,7 +25,7 @@ title: "Home"
       <div class="flex-1">
 
         <!-- Date, Reading Time, Category -->
-        <div class="flex items-center text-sm text-gray-500 dark:text-gray-500 mb-2">
+        <div class="flex items-center text-sm text-gray-600 dark:text-gray-400 mb-2">
           <span>{{ post.date | date: "%d %b %Y" }}</span>
           <span class="mx-2">•</span>
           <span>{{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
