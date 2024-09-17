@@ -24,12 +24,8 @@
   <link rel="canonical" href="https://madeindra.dev/too-big-too-fail/">
   <link rel="alternate" type="application/rss+xml" title="madeindra.dev" href="https://madeindra.dev/feed.xml" />
 
-  <!-- ios dark mode -->
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-
-  <!-- android and other browsers supporting theme-color -->
-  <meta name="theme-color" content="#1A1A1A" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <!-- for browsers supporting theme-color -->
+  <meta name="theme-color" content="">
 
   <meta property="og:title" content="Too Big To Fail: A Corporation Story">
 <meta property="og:description"
@@ -346,7 +342,7 @@
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
-    const statusBarMetaTag = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
+    const themeColorMetaTag = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
 
     // change the icons inside the button based on previous settings
     if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -364,7 +360,7 @@
             themeToggleDarkIcon?.classList?.add('hidden');
             themeToggleLightIcon?.classList?.remove('hidden');
 
-            statusBarMetaTag.setAttribute('content', 'dark');
+            themeColorMetaTag.setAttribute('content', '#1A1A1A');
         } else {
             document.documentElement?.classList?.remove('dark');
             
@@ -373,7 +369,7 @@
             themeToggleDarkIcon?.classList?.remove('hidden');
             themeToggleLightIcon?.classList?.add('hidden');
 
-            statusBarMetaTag.setAttribute('content', 'default');
+            themeColorMetaTag.setAttribute('content', '#FFFFFF');
         }
     }
 
