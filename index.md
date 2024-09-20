@@ -46,7 +46,7 @@ title: "Home"
             </p>
             {% else %}
             <p class="text-gray-600 dark:text-gray-400 text-justify overflow-hidden">
-              <span class="line-clamp-3 md:line-clamp-4">{{ post.content | strip_html | truncate: 160 }}</span>
+              <span class="line-clamp-3 md:line-clamp-4">{{ post.content }}</span>
             </p>
             {% endif %}
             
@@ -54,7 +54,7 @@ title: "Home"
         
           {% if post.image %}
           <a href="{{ post.url | relative_url }}" class="flex-shrink-0">
-            <img src="{{ post.image }}" alt="{{ post.title }}" class="w-32 h-32 object-cover rounded">
+            <img src="{{ post.image }}" alt="{{ post.title }}" class="w-24 h-24 md:w-32 md:h-32 object-cover rounded">
           </a>
           {% endif %}
 
