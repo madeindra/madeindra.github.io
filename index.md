@@ -46,7 +46,7 @@ title: "Home"
             </p>
             {% else %}
             <p class="text-gray-600 dark:text-gray-400 text-justify overflow-hidden">
-              <span class="line-clamp-3 md:line-clamp-4">{{ post.content }}</span>
+              <span class="line-clamp-3 md:line-clamp-4">{{ post.content | strip_html | truncate: 160  }}</span>
             </p>
             {% endif %}
             
