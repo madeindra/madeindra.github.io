@@ -5,7 +5,7 @@ date: "2024-09-21 00:00:00"
 category: "Work"
 image: "/assets/images/2024-09-21-unfair-labor-standard.webp"
 feature_image: true
-description: ""
+description: "A reflection on Indonesia's job market constraints, focusing on age discrimination and political influence, with a hope for future labor reforms and equality."
 keywords:
   - Work
   - Labor
