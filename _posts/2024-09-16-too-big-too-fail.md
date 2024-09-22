@@ -87,13 +87,19 @@ That day, the number of active customers was not even bigger than the number of 
 
 ## Poor Talent Management
 
-The company has pools of great talents from all over the country, yet they put people not in the right place.
+The company has pools of great talent from all over the country, yet they do not place people in the right positions.
 
-Someone could be a top engineering graduate from an overseas university but tasked to work as a sales officer which was not their merit.
+If you are not familiar with how management trainees are recruited, it's common in Indonesia for management trainees to apply for the position while also acknowledging that they are ready to be positioned anywhere in Indonesia in any available role.
 
-Instead of starting with listing all vacant positions and the required skills before recruiting, they recruit first and put people in whichever positions are vacant. Granted that some people did get fitting positions, but there are still wasted potentials.
+Someone could be a top engineering graduate from an overseas university but be tasked to work as a sales officer, which is not their area of expertise.
 
-That was the case with the permanent hires, they mostly are fresh graduates.
+Upon the final announcement, people might know they got the job, but they still do not know where they will work or in which field. They will only find this out after their probation period ends.
+
+You can't appeal this decision, but you can choose to forfeit your position if you can pay the penalty.
+
+It was mind boggling. Instead of listing all vacant positions and the required skills before recruiting, they recruit first and then place people in whichever positions are vacant. Granted, some people do get fitting positions, but there are still wasted potentials.
+
+This was the case with permanent hires, who are mostly fresh graduates.
 
 ---
 
