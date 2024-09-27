@@ -11,6 +11,7 @@ keywords:
   - Labor
   - Politics
 comments: true
+archived: true
 ---
 
 I have been trying not to talk about the negative aspects happening in Indonesia for years. Not because I don't care, but because some people see it as unprofessional.

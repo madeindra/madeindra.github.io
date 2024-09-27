@@ -11,6 +11,7 @@ keywords:
   - Corporation
   - Startup
 comments: true
+archived: true
 ---
 
 In the past, I've dreamed about landing the perfect job which I could do until my retirement day. It's also Indonesian parents' dream to have their kids working as Civil Servants or State Enterprise Employees. So, after a year of teaching and making a bare minimum, I tried my best to land my dream job. I did succeed, but reality was never as beautiful as your dream, am I right?

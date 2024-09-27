@@ -21,6 +21,7 @@ title: "Home"
 
   <div class="space-y-8 md:space-y-12">
     {% for post in site.posts %}
+    {% if post.archived != true %}
     <div class="flex items-start space-x-4 md:space-x-6">
       <div class="flex-1">
 
@@ -60,6 +61,7 @@ title: "Home"
 
       </div>
     </div>
+    {% endif %}
     {% endfor %}
 
   </div>
