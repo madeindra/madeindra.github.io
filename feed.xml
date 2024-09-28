@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://madeindra.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://madeindra.dev/" rel="alternate" type="text/html" /><updated>2024-09-28T09:12:39+00:00</updated><id>https://madeindra.dev/feed.xml</id><title type="html">madeindra.dev</title><subtitle>A blog by Made Indra sharing insights, tutorials, and stories about software development, technology trends, personal passions, plus a bit of everything else!</subtitle><author><name>Made Indra</name></author><entry><title type="html">Unfair Labor Standard</title><link href="https://madeindra.dev/unfair-labor-standard/" rel="alternate" type="text/html" title="Unfair Labor Standard" /><published>2024-09-21T00:00:00+00:00</published><updated>2024-09-21T00:00:00+00:00</updated><id>https://madeindra.dev/unfair-labor-standard</id><content type="html" xml:base="https://madeindra.dev/unfair-labor-standard/"><![CDATA[<p>I have been trying not to talk about the negative aspects happening in Indonesia for years. Not because I don’t care, but because some people see it as unprofessional.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://madeindra.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://madeindra.dev/" rel="alternate" type="text/html" /><updated>2024-09-28T09:20:22+00:00</updated><id>https://madeindra.dev/feed.xml</id><title type="html">madeindra.dev</title><subtitle>A blog by Made Indra sharing insights, tutorials, and stories about software development, technology trends, personal passions, plus a bit of everything else!</subtitle><author><name>Made Indra</name></author><entry><title type="html">Unfair Labor Standard</title><link href="https://madeindra.dev/unfair-labor-standard/" rel="alternate" type="text/html" title="Unfair Labor Standard" /><published>2024-09-21T00:00:00+00:00</published><updated>2024-09-21T00:00:00+00:00</updated><id>https://madeindra.dev/unfair-labor-standard</id><content type="html" xml:base="https://madeindra.dev/unfair-labor-standard/"><![CDATA[<p>I have been trying not to talk about the negative aspects happening in Indonesia for years. Not because I don’t care, but because some people see it as unprofessional.</p>
 
 <p>Let me tell you, if people feel that something is not right and stay silent, change won’t happen.</p>
 
@@ -102,7 +102,11 @@
 
 <p>Moreover, the problem with <code class="language-plaintext highlighter-rouge">Navigator.mediaDevices</code> not being available was not consistent, sometimes it was <code class="language-plaintext highlighter-rouge">undefined</code>, other time it was not.</p>
 
-<p>Turns out I need to make a proper policy change on the <code class="language-plaintext highlighter-rouge">.plist</code> for Mac use.</p>
+<p>It was really stressful.</p>
+
+<p>Without the API available, I struggle to record the audio. I tried <code class="language-plaintext highlighter-rouge">portaudio</code> with no luck, and I haven’t even started with making the recording work on multiple operating systems.</p>
+
+<p>Turns out I need to make a proper policy change on the <code class="language-plaintext highlighter-rouge">.plist</code> for Mac.</p>
 
 <h2 id="lessons-learned">Lessons Learned</h2>
 

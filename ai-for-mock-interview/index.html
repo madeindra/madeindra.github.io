@@ -139,7 +139,7 @@
             <div class="flex items-center space-x-1 md:space-x-2 text-sm mb-2">
                 <span>21 Sep 2024</span>
                 <span>•</span>
-                <span>3 min read</span>
+                <span>4 min read</span>
                 <span>•</span>
                 <span
                     class="">
@@ -203,7 +203,11 @@
 
 <p>Moreover, the problem with <code class="language-plaintext highlighter-rouge">Navigator.mediaDevices</code> not being available was not consistent, sometimes it was <code class="language-plaintext highlighter-rouge">undefined</code>, other time it was not.</p>
 
-<p>Turns out I need to make a proper policy change on the <code class="language-plaintext highlighter-rouge">.plist</code> for Mac use.</p>
+<p>It was really stressful.</p>
+
+<p>Without the API available, I struggle to record the audio. I tried <code class="language-plaintext highlighter-rouge">portaudio</code> with no luck, and I haven’t even started with making the recording work on multiple operating systems.</p>
+
+<p>Turns out I need to make a proper policy change on the <code class="language-plaintext highlighter-rouge">.plist</code> for Mac.</p>
 
 <h2 id="lessons-learned">Lessons Learned</h2>
 
