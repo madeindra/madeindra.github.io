@@ -70,7 +70,7 @@ Without the Browser APIs available, I struggled to record the audio.
 
 A little googling suggested that I let Golang handle the recording, so I tried `portaudio` with no luck, and I haven't even started with making the recording work on multiple operating systems.
 
-To be perfectly honest, the `portaudio` library did work on Mac, but it was very slow and sometimes the there was only screech instead of a voice recording. The app lost the real-interview feelings.
+To be perfectly honest, the `portaudio` library did work on Mac, but it was very slow and sometimes there was only screech instead of a voice recording. The app lost the real-interview feelings.
 
 --- 
 
