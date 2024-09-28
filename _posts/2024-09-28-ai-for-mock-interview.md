@@ -2,10 +2,10 @@
 layout: post
 title: "AI for Mock Interview"
 date: "2024-09-21 00:00:00"
-category: "Work"
+category: "Project"
 image: "/assets/images/2024-09-28-ai-for-mock-interview.webp"
 feature_image: true
-description: "My journey on porting a AI-powered web app for developer interview prep into a desktop app that can be run by anyone on their laptop. Here I will share with you about the fun and challenges I faced during the process."
+description: "My journey on porting an AI-powered web app for developer interview prep into a desktop app that can be run by anyone on their laptop. The fun and challenges faced during the process will be shared here."
 keywords:
   - Wails
   - Golang
@@ -29,7 +29,7 @@ On the frontend, I made use of MediaStream API to capture voice recordings and p
 Meanwhile, the backend was built with Golang, serving as API interface with OpenAI's API. The process follows these steps:
 
 1. Transcribe the voice recording into text
-2. Pass the transcript to the chat API to get generate a question
+2. Pass the transcript to the chat API to generate a question
 3. Convert the text question into voice
 
 When I need to make this app available for non-developer job interview, it was just a matter of updating the prompt with no change necessary to the backend or the frontend code.
@@ -58,15 +58,25 @@ That's it, it was pretty easy too.
 
 See the [Desktop Port of the Interview App on GitHub](https://github.com/madeindra/interview-app), if you are interested. 
 
-One significant problem I faced was ensuring the MediaStream API available withing the Wails environment. This API is exposed through `Navigator.mediaDevices`, which available only if the web is accessed in secure context( e.g `http://`, `http`, `localhost`, etc). I was sure that Wails appp access through `wails://` that should be a secure context.
+---
+
+One significant problem I faced was ensuring the MediaStream API available withing the Wails environment. This Browser API is exposed through `Navigator.mediaDevices`, which available only if the web is accessed in secure context( e.g `http://`, `http`, `localhost`, etc). I was sure that Wails appp access through `wails://` that should be a secure context.
 
 Moreover, the problem with `Navigator.mediaDevices` not being available was not consistent, sometimes it was `undefined`, other time it was not.
 
 It was really stressful.
 
-Without the API available, I struggle to record the audio. I tried `portaudio` with no luck, and I haven't even started with making the recording work on multiple operating systems.
+Without the Browser APIs available, I struggled to record the audio.
+
+A little googling suggested that I let Golang handle the recording, so I tried `portaudio` with no luck, and I haven't even started with making the recording work on multiple operating systems.
+
+To be perfectly honest, the `portaudio` library did work on Mac, but it was very slow and sometimes the there was only screech instead of a voice recording. The app lost the real-interview feelings.
+
+--- 
 
 Turns out I need to make a proper policy change on the `.plist` for Mac.
+
+I updated it and later I never get the same problem. Welcome back, Browser APIs!
 
 ## Lessons Learned
 
