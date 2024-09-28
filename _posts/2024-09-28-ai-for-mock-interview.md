@@ -62,7 +62,11 @@ One significant problem I faced was ensuring the MediaStream API available withi
 
 Moreover, the problem with `Navigator.mediaDevices` not being available was not consistent, sometimes it was `undefined`, other time it was not.
 
-Turns out I need to make a proper policy change on the `.plist` for Mac use.
+It was really stressful.
+
+Without the API available, I struggle to record the audio. I tried `portaudio` with no luck, and I haven't even started with making the recording work on multiple operating systems.
+
+Turns out I need to make a proper policy change on the `.plist` for Mac.
 
 ## Lessons Learned
 
