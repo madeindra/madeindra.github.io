@@ -15,30 +15,37 @@
 <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon/android-chrome-512x512.png">
 
 
-  <title>Home | madeindra.dev</title>
+  <title>AI for Mock Interview | madeindra.dev</title>
   <meta name="description"
-    content="A blog by Made Indra sharing insights, tutorials, and stories about software development, technology trends, personal passions, plus a bit of everything else!">
+    content="">
   <meta name="keywords"
-    content="blog">
+    content="Wails, Golang, React">
 
-  <link rel="canonical" href="https://madeindra.dev/">
+  <link rel="canonical" href="https://madeindra.dev/ai-for-mock-interview/">
   <link rel="alternate" type="application/rss+xml" title="madeindra.dev" href="https://madeindra.dev/feed.xml" />
 
   <!-- for browsers supporting theme-color -->
   <meta name="theme-color" content="">
 
-  <meta property="og:title" content="Home">
+  <meta property="og:title" content="AI for Mock Interview">
 <meta property="og:description"
-    content="A blog by Made Indra sharing insights, tutorials, and stories about software development, technology trends, personal passions, plus a bit of everything else!">
-<meta property="og:url" content="https://madeindra.dev/">
+    content="">
+<meta property="og:url" content="https://madeindra.dev/ai-for-mock-interview/">
 <meta property="og:site_name" content="madeindra.dev">
 <meta property="og:type" content="website">
 
+<meta property="og:image" content="https://madeindra.dev/assets/images/2024-09-28-ai-for-mock-interview.webp">
+
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Home">
+<meta name="twitter:title" content="AI for Mock Interview">
 <meta name="twitter:description"
-    content="A blog by Made Indra sharing insights, tutorials, and stories about software development, technology trends, personal passions, plus a bit of everything else!">
+    content="">
+
+<meta property="twitter:domain" content="https://madeindra.dev">
+<meta property="twitter:url"
+    content="https://madeindra.dev/ai-for-mock-interview/">
+<meta name="twitter:image" content="https://madeindra.dev/assets/images/2024-09-28-ai-for-mock-interview.webp">
 
 
 <meta name="twitter:site" content="@madecanggih">
@@ -111,60 +118,127 @@
 </header>
 
 <main class="container mx-auto px-4 flex-grow">
-    <div class="max-w-prose mx-auto text-center">
 
-  
+    <div class="relative max-w-prose mb-6 mx-auto">
+        <!-- Featured Image -->
+        
+        <div class="relative overflow-hidden rounded">
+            
+            <img src="https://madeindra.dev/assets/images/2024-09-28-ai-for-mock-interview.webp" alt="Featured image" class="w-full h-[40vh] md:h-[50vh] object-cover">
+            
 
-  <div class="space-y-8 md:space-y-12">
-    
-    
-    <div class="flex items-start space-x-4 md:space-x-6">
-      <div class="flex-1">
-
-        <!-- Date, Reading Time, Category -->
-        <div class="flex items-center text-sm text-gray-600 dark:text-gray-400 mb-2">
-          <span>21 Sep 2024</span>
-          <span class="mx-2">•</span>
-          <span>3 min read</span>
-          <span class="mx-2">•</span>
-          <span>Work</span>
+            <!-- Black Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         </div>
+        
 
-        <!-- Title, Summary, Image -->
-        <div class="flex items-start space-x-4 md:space-x-6">
-          <div class="flex-1 min-w-0">
-            <a href="/ai-for-mock-interview/" class="no-underline">
-              <h2 class="text-xl font-semibold mb-2 text-left line-clamp-2 md:line-clamp-1">AI for Mock Interview</h2>
-            </a>
 
-            <p class="text-gray-600 dark:text-gray-400 text-justify overflow-hidden">
-              
-              <span class="line-clamp-3 md:line-clamp-4"></span>
-              
-            </p>
-
-          </div>
-
-          
-          <a href="/ai-for-mock-interview/" class="flex-shrink-0">
-            <img src="/assets/images/2024-09-28-ai-for-mock-interview.webp" alt="AI for Mock Interview" class="w-24 h-24 md:w-32 md:h-32 object-cover rounded" />
-          </a>
-          
-
+        <!-- Title Overlay -->
+        <div
+            class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <div class="flex items-center space-x-1 md:space-x-2 text-sm mb-2">
+                <span>21 Sep 2024</span>
+                <span>•</span>
+                <span>3 min read</span>
+                <span>•</span>
+                <span
+                    class="">
+                    Work
+                </span>
+            </div>
+            <h1 class="text-2xl md:text-4xl font-bold">AI for Mock Interview</h1>
         </div>
-
-      </div>
     </div>
-    
-    
-    
-    
-    
-    
 
-  </div>
-</div>
+    <article class="prose dark:prose-invert max-w-prose mx-auto space-y-6 sm:text-lg leading-relaxed">
+        <p>So, several months ago I created a fullstack web app to assist people in preparing for developer job interview using AI.</p>
 
+<p>I started simple because the project was intended for beginner to follow. Then, my significant other challenged me to make the app accessible for roles other than developer.</p>
+
+<h2 id="starting-as-web-application">Starting as Web Application</h2>
+
+<p>The whole idea of the app is straightforward yet powerful: users record their voice and the AI responds with questions in both voice and text format.</p>
+
+<p>If you are interested, you can find the <a href="https://github.com/madeindra/mock-interview">Mock Interview app on GitHub</a>.</p>
+
+<p>On the frontend, I made use of MediaStream API to capture voice recordings and pass them to the backend. Later, the frontend will play the audio and show the text that came in the response. When I started, it was a vanilla JavaScript, but later I rewrote it into TypeScript with React.</p>
+
+<p>Meanwhile, the backend was built with Golang, serving as API interface with OpenAI’s API. The process follows these steps:</p>
+
+<ol>
+  <li>Transcribe the voice recording into text</li>
+  <li>Pass the transcript to the chat API to get generate a question</li>
+  <li>Convert the text question into voice</li>
+</ol>
+
+<p>When I need to make this app available for non-developer job interview, it was just a matter of updating the prompt with no change necessary to the backend or the frontend code.</p>
+
+<h2 id="porting-to-desktop-app">Porting to Desktop App</h2>
+
+<p>With the app running well on my laptop, the next challenge was making it accessible over the internet to specific users.</p>
+
+<p>I can just deploy the app on a VPS, but I didn’t have a proper authentication and authorization process in place.</p>
+
+<p>It would be bothersome for me to start coding it back then. I mean, I need to create a user tables in the database, thinking about a secure way to store the password hashing key, or even integrating with social login to make OAuth possible.</p>
+
+<p>I asked myself whether I should rewrite the app into Electron app, but I would need to rewrite the whole backend, ouch!</p>
+
+<p>This is where <a href="https://wails.io">Wails</a> came to my rescue.</p>
+
+<p>I don’t need to rewrite my backend and frontend, just use the existing one with minimal changes, and voila!</p>
+
+<p>The process was surprisingly straightforward:</p>
+
+<ol>
+  <li>Changed the api handler functions into Wails app method.</li>
+  <li>Replaced the <code class="language-plaintext highlighter-rouge">fetch</code> call with the Wails-translated runtime functions.</li>
+  <li>Replaced unsupported browser function (e.g <code class="language-plaintext highlighter-rouge">windows.alert</code>) with Wails desktop equivalents.</li>
+</ol>
+
+<p>That’s it, it was pretty easy too.</p>
+
+<p>See the <a href="https://github.com/madeindra/interview-app">Desktop Port of the Interview App on GitHub</a>, if you are interested.</p>
+
+<p>One significant problem I faced was ensuring the MediaStream API available withing the Wails environment. This API is exposed through <code class="language-plaintext highlighter-rouge">Navigator.mediaDevices</code>, which available only if the web is accessed in secure context( e.g <code class="language-plaintext highlighter-rouge">http://</code>, <code class="language-plaintext highlighter-rouge">http</code>, <code class="language-plaintext highlighter-rouge">localhost</code>, etc). I was sure that Wails appp access through <code class="language-plaintext highlighter-rouge">wails://</code> that should be a secure context.</p>
+
+<p>Moreover, the problem with <code class="language-plaintext highlighter-rouge">Navigator.mediaDevices</code> not being available was not consistent, sometimes it was <code class="language-plaintext highlighter-rouge">undefined</code>, other time it was not.</p>
+
+<p>Turns out I need to make a proper policy change on the <code class="language-plaintext highlighter-rouge">.plist</code> for Mac use.</p>
+
+<h2 id="lessons-learned">Lessons Learned</h2>
+
+<p>For a long time I take Browser APIs for granted, a lot of the functionalities I usually use (e.g. image, video, and audio capture) come bundled with the browser and are easily accessible through JavaScript.</p>
+
+<p>When they are not available, I will be forced to interact directly with the OS. Making that work across Windows; Mac; and Linux at the same time won’t be fun.</p>
+
+    </article>
+
+    
+    <div class="max-w-prose mx-auto border-t border-gray-200 my-12"></div>
+    <section class="max-w-prose mx-auto">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = "https://madeindra.dev/ai-for-mock-interview/";
+        this.page.identifier = "/ai-for-mock-interview";
+    };
+
+    (function () {
+        var d = document;
+
+        s = d.createElement('script');
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://madecanggih.disqus.com/embed.js";
+        s.setAttribute("data-timestamp", +new Date());
+
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+    </section>
+    
 </main>
 
 <footer class="py-6">
