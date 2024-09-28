@@ -5,7 +5,7 @@ date: "2024-09-21 00:00:00"
 category: "Work"
 image: "/assets/images/2024-09-28-ai-for-mock-interview.webp"
 feature_image: true
-description: ""
+description: "My journey on porting a AI-powered web app for developer interview prep into a desktop app that can be run by anyone on their laptop. Here I will share with you about the fun and challenges I faced during the process."
 keywords:
   - Wails
   - Golang
