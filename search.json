@@ -1,10 +1,17 @@
 [
     
     {
+        "title": "Shell Script for CI/CD",
+        "url": "/shell-scripting-cicd/",
+        "date": "21 Sep 2024",
+        "description": ""
+    } ,
+  
+    {
         "title": "AI for Mock Interview",
         "url": "/ai-for-mock-interview/",
         "date": "21 Sep 2024",
-        "description": "My journey on porting a AI-powered web app for developer interview prep into a desktop app that can be run by anyone on their laptop. Here I will share with you about the fun and challenges I faced during the process."
+        "description": "My journey on porting an AI-powered web app for developer interview prep into a desktop app that can be run by anyone on their laptop. The fun and challenges faced during the process will be shared here."
     } ,
   
     {

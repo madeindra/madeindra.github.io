@@ -15,37 +15,37 @@
 <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon/android-chrome-512x512.png">
 
 
-  <title>AI for Mock Interview | madeindra.dev</title>
+  <title>Shell Script for CI/CD | madeindra.dev</title>
   <meta name="description"
-    content="My journey on porting an AI-powered web app for developer interview prep into a desktop app that can be run by anyone on their laptop. The fun and challenges...">
+    content="">
   <meta name="keywords"
-    content="Wails, Golang, React">
+    content="Shell, Script, Automation">
 
-  <link rel="canonical" href="https://madeindra.dev/ai-for-mock-interview/">
+  <link rel="canonical" href="https://madeindra.dev/shell-scripting-cicd/">
   <link rel="alternate" type="application/rss+xml" title="madeindra.dev" href="https://madeindra.dev/feed.xml" />
 
   <!-- for browsers supporting theme-color -->
   <meta name="theme-color" content="">
 
-  <meta property="og:title" content="AI for Mock Interview">
+  <meta property="og:title" content="Shell Script for CI/CD">
 <meta property="og:description"
-    content="My journey on porting an AI-powered web app for developer interview prep into a desktop app that can be run by anyone on their laptop. The fun and challenges...">
-<meta property="og:url" content="https://madeindra.dev/ai-for-mock-interview/">
+    content="">
+<meta property="og:url" content="https://madeindra.dev/shell-scripting-cicd/">
 <meta property="og:site_name" content="madeindra.dev">
 <meta property="og:type" content="website">
 
-<meta property="og:image" content="https://madeindra.dev/assets/images/2024-09-28-ai-for-mock-interview.webp">
+<meta property="og:image" content="https://madeindra.dev/assets/images/2024-09-29-shell-scripting-cicd.webp">
 
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="AI for Mock Interview">
+<meta name="twitter:title" content="Shell Script for CI/CD">
 <meta name="twitter:description"
-    content="My journey on porting an AI-powered web app for developer interview prep into a desktop app that can be run by anyone on their laptop. The fun and challenges...">
+    content="">
 
 <meta property="twitter:domain" content="https://madeindra.dev">
 <meta property="twitter:url"
-    content="https://madeindra.dev/ai-for-mock-interview/">
-<meta name="twitter:image" content="https://madeindra.dev/assets/images/2024-09-28-ai-for-mock-interview.webp">
+    content="https://madeindra.dev/shell-scripting-cicd/">
+<meta name="twitter:image" content="https://madeindra.dev/assets/images/2024-09-29-shell-scripting-cicd.webp">
 
 
 <meta name="twitter:site" content="@madecanggih">
@@ -124,7 +124,7 @@
         
         <div class="relative overflow-hidden rounded">
             
-            <img src="https://madeindra.dev/assets/images/2024-09-28-ai-for-mock-interview.webp" alt="Featured image" class="w-full h-[40vh] md:h-[50vh] object-cover">
+            <img src="https://madeindra.dev/assets/images/2024-09-29-shell-scripting-cicd.webp" alt="Featured image" class="w-full h-[40vh] md:h-[50vh] object-cover">
             
 
             <!-- Black Overlay -->
@@ -139,91 +139,175 @@
             <div class="flex items-center space-x-1 md:space-x-2 text-sm mb-2">
                 <span>21 Sep 2024</span>
                 <span>•</span>
-                <span>4 min read</span>
+                <span>5 min read</span>
                 <span>•</span>
                 <span
                     class="">
                     Project
                 </span>
             </div>
-            <h1 class="text-2xl md:text-4xl font-bold">AI for Mock Interview</h1>
+            <h1 class="text-2xl md:text-4xl font-bold">Shell Script for CI/CD</h1>
         </div>
     </div>
 
     <article class="prose dark:prose-invert prose-img:mx-auto max-w-prose mx-auto space-y-6 sm:text-lg leading-relaxed">
-        <p>So, several months ago I created a fullstack web app to assist people in preparing for developer job interview using AI.</p>
+        <p>In professional settings, code deployment typically involves a CI/CD process that runs in a pipeline. This process ensures everything is in order before updating the deployment on the cloud.</p>
 
-<p>I started simple because the project was intended for beginner to follow. Then, my significant other challenged me to make the app accessible for roles other than developer.</p>
-
-<h2 id="starting-as-web-application">Starting as Web Application</h2>
-
-<p>The whole idea of the app is straightforward yet powerful: users record their voice and the AI responds with questions in both voice and text format.</p>
-
-<p>If you are interested, you can find the <a href="https://github.com/madeindra/mock-interview">Mock Interview app on GitHub</a>.</p>
-
-<p>On the frontend, I made use of MediaStream API to capture voice recordings and pass them to the backend. Later, the frontend will play the audio and show the text that came in the response. When I started, it was a vanilla JavaScript, but later I rewrote it into TypeScript with React.</p>
-
-<p>Meanwhile, the backend was built with Golang, serving as API interface with OpenAI’s API. The process follows these steps:</p>
-
-<ol>
-  <li>Transcribe the voice recording into text</li>
-  <li>Pass the transcript to the chat API to generate a question</li>
-  <li>Convert the text question into voice</li>
-</ol>
-
-<p>When I need to make this app available for non-developer job interview, it was just a matter of updating the prompt with no change necessary to the backend or the frontend code.</p>
-
-<h2 id="porting-to-desktop-app">Porting to Desktop App</h2>
-
-<p>With the app running well on my laptop, the next challenge was making it accessible over the internet to specific users.</p>
-
-<p>I can just deploy the app on a VPS, but I didn’t have a proper authentication and authorization process in place.</p>
-
-<p>It would be bothersome for me to start coding it back then. I mean, I need to create a user tables in the database, thinking about a secure way to store the password hashing key, or even integrating with social login to make OAuth possible.</p>
-
-<p>I asked myself whether I should rewrite the app into Electron app, but I would need to rewrite the whole backend, ouch!</p>
-
-<p>This is where <a href="https://wails.io">Wails</a> came to my rescue.</p>
-
-<p>I don’t need to rewrite my backend and frontend, just use the existing one with minimal changes, and voila!</p>
-
-<p>The process was surprisingly straightforward:</p>
-
-<ol>
-  <li>Changed the api handler functions into Wails app method.</li>
-  <li>Replaced the <code class="language-plaintext highlighter-rouge">fetch</code> call with the Wails-translated runtime functions.</li>
-  <li>Replaced unsupported browser function (e.g <code class="language-plaintext highlighter-rouge">windows.alert</code>) with Wails desktop equivalents.</li>
-</ol>
-
-<p>That’s it, it was pretty easy too.</p>
-
-<p>See the <a href="https://github.com/madeindra/interview-app">Desktop Port of the Interview App on GitHub</a>, if you are interested.</p>
+<p>To put it simply, it usually consist of:</p>
+<ul>
+  <li>A codebase stored in a repository</li>
+  <li>A repository pipeline (e.g. automated testing, building, and deployment)</li>
+  <li>A cloud server</li>
+</ul>
 
 <hr />
 
-<p>One significant problem I faced was ensuring the MediaStream API available withing the Wails environment. This Browser API is exposed through <code class="language-plaintext highlighter-rouge">Navigator.mediaDevices</code>, which available only if the web is accessed in secure context( e.g <code class="language-plaintext highlighter-rouge">http://</code>, <code class="language-plaintext highlighter-rouge">http</code>, <code class="language-plaintext highlighter-rouge">localhost</code>, etc). I was sure that Wails appp access through <code class="language-plaintext highlighter-rouge">wails://</code> that should be a secure context.</p>
+<p>A few months ago, I wanted to replicate that process for my hobbyist project. The lower the cost, the better.</p>
 
-<p>Moreover, the problem with <code class="language-plaintext highlighter-rouge">Navigator.mediaDevices</code> not being available was not consistent, sometimes it was <code class="language-plaintext highlighter-rouge">undefined</code>, other time it was not.</p>
+<p>I already had a VPS ready and my code was already stored in GitHub.</p>
 
-<p>It was really stressful.</p>
+<p>My goals were to:</p>
+<ul>
+  <li>Run automated tasks on commit / merge to the <code class="language-plaintext highlighter-rouge">main</code> branch.</li>
+  <li>Build a private docker image from the code</li>
+  <li>Replace the current running container with the new image</li>
+</ul>
 
-<p>Without the Browser APIs available, I struggled to record the audio.</p>
+<p>It was pretty simple.</p>
 
-<p>A little googling suggested that I let Golang handle the recording, so I tried <code class="language-plaintext highlighter-rouge">portaudio</code> with no luck, and I haven’t even started with making the recording work on multiple operating systems.</p>
+<p>I didn’t want to use IaC tool like Terraform, that would be overkill. Instead, I opt for Shell Scripts, I know this will suffice my needs.</p>
 
-<p>To be perfectly honest, the <code class="language-plaintext highlighter-rouge">portaudio</code> library did work on Mac, but it was very slow and sometimes there was only screech instead of a voice recording. The app lost the real-interview feelings.</p>
+<p>Since this project is private, I wanted my docker image to be stored in a private Docker repository. Unfortunately, my docker account isn’t a Pro account, I needed two private Docker repositories (for backend &amp; frontend).</p>
+
+<blockquote>
+  <p>Please don’t judge me.</p>
+
+  <p>Back then, I had yet to realize that there are several alternatives to Docker Hub</p>
+</blockquote>
+
+<p><img src="https://madeindra.dev/assets/gifs/oh-no-anyway.webp" alt="Oh no! Anyway" /></p>
+
+<p>I thought to myself, “I might as well clone the repo on the server and build it there”.</p>
+
+<p>I know, I know. It’s not the most ideal solution, but it works.</p>
+
+<p>So I put the script inside the repo, cloned the repo on the server, and designed a pipeline to run the script. The script essentially does the following:</p>
+<ol>
+  <li>Stashes all changes on the local. This is to make sure all uncommited change won’t block the git pull.</li>
+  <li>Pulls the latest changes.</li>
+  <li>Builds docker image without cache.</li>
+  <li>Stops the existing container.</li>
+  <li>Reruns the container with the latest image.</li>
+  <li>Connects the container to the docker network.</li>
+</ol>
+
+<p>To achieve this, I needed to create a GitHub Personal Access Token to read the repo and set the token as a secret on the pipeline.</p>
+
+<p>Here’s the preview of the script:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/sh
+
+# Set variables
+DOCKER_IMAGE_NAME="your-image-name"
+DOCKER_CONTAINER_NAME="your-container-name"
+DOCKER_NETWORK_NAME="your-network-name"
+
+# 1. Stash all changes on the local
+git stash
+
+# 2. Pull the latest changes
+git pull
+
+# 3. Build docker image without cache
+docker build --no-cache -t $DOCKER_IMAGE_NAME .
+
+# 4. Stop the existing container
+docker stop $DOCKER_CONTAINER_NAME
+
+# 5. Remove the existing container
+docker rm $DOCKER_CONTAINER_NAME
+
+# 6. Rerun the container with the latest image
+docker run -d --name $DOCKER_CONTAINER_NAME $DOCKER_IMAGE_NAME
+
+# 7. Connect the container to the docker network
+docker network connect $DOCKER_NETWORK_NAME $DOCKER_CONTAINER_NAME
+</code></pre></div></div>
+
+<p>As for the GitHub Action to run the pipeline, it:</p>
+<ol>
+  <li>Checks out the repo.</li>
+  <li>Sets up programming language.</li>
+  <li>Sets up dependencies of automated taskss.</li>
+  <li>Runs automated task (e.g tests); if they pass, it continues to the next step.</li>
+  <li>SSHs to the server. I used <a href="https://github.com/marketplace/actions/ssh-remote-commands">SSH Remote Command by appleboy</a>. Then, on the ssh, mount the directory and run the script.</li>
+</ol>
+
+<p>I needed to set the SSH credentials as secrets on the pipeline as well. However, I considered the 4th step less than ideal because if I need to move the directory, I’ll have to modify the GitHub Action script.</p>
+
+<p>Here’s the preview of the script:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Checkout the repository
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    # 2. Set up Go
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: '1.22'
+
+    # 3. Install dependencies
+    - name: Get dependencies
+      run: |
+        go get -v -t -d ./...
+
+    # 4. Run Golang tests
+    - name: Run tests
+      run: go test -v ./...
+      
+    # 5. SSH to the server and run the script
+    - name: Deploy to server
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SERVER_HOST }}
+        username: ${{ secrets.SERVER_USERNAME }}
+        key: ${{ secrets.SERVER_SSH_KEY }}
+        script: |
+          cd /path/to/your/project
+          ./script_name.sh
+</code></pre></div></div>
+
+<p>One more thing, I wanted to automate database backup. This was still possible with the good ol’ Shell Script with the help of Cron.</p>
+
+<p>I just went and open cron on the server:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>crontab -e
+</code></pre></div></div>
+
+<p>Then set the script to run every Sunday midnight:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 0 * * SUN BASH_ENV=/root/.bashrc /path/to/script.sh &gt;&gt; /path/to/script_log.log 2&gt;&amp;1
+</code></pre></div></div>
+
+<p>See <a href="https://crontab.guru/">crontab.guru</a> if you want to learn about other format for cron job.</p>
 
 <hr />
 
-<p>Turns out I need to make a proper policy change on the <code class="language-plaintext highlighter-rouge">.plist</code> for Mac.</p>
+<p>In the future, I’d like to simplify this workflow. Not having to build on the server would be a boon. I’ve discovered that I can publish docker image for free to <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry">GitHub Container Registry</a>.</p>
 
-<p>I updated it and later I never get the same problem. Welcome back, Browser APIs!</p>
-
-<h2 id="lessons-learned">Lessons Learned</h2>
-
-<p>For a long time I take Browser APIs for granted, a lot of the functionalities I usually use (e.g. image, video, and audio capture) come bundled with the browser and are easily accessible through JavaScript.</p>
-
-<p>When they are not available, I will be forced to interact directly with the OS. Making that work across Windows; Mac; and Linux at the same time won’t be fun.</p>
+<p>I have successfully built the docker image and pushed it to ghcr.io on the pipeline. The next step is to prepare a script to pull the image and run it on the server. Maybe I will write another about this in the future. (｡•̀ᴗ-)✧</p>
 
     </article>
 
@@ -233,8 +317,8 @@
         <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = "https://madeindra.dev/ai-for-mock-interview/";
-        this.page.identifier = "/ai-for-mock-interview";
+        this.page.url = "https://madeindra.dev/shell-scripting-cicd/";
+        this.page.identifier = "/shell-scripting-cicd";
     };
 
     (function () {
