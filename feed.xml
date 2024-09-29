@@ -1,128 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://madeindra.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://madeindra.dev/" rel="alternate" type="text/html" /><updated>2024-09-29T03:52:03+00:00</updated><id>https://madeindra.dev/feed.xml</id><title type="html">madeindra.dev</title><subtitle>A blog by Made Indra sharing insights, tutorials, and stories about software development, technology trends, personal passions, plus a bit of everything else!</subtitle><author><name>Made Indra</name></author><entry><title type="html">Unfair Labor Standard</title><link href="https://madeindra.dev/unfair-labor-standard/" rel="alternate" type="text/html" title="Unfair Labor Standard" /><published>2024-09-21T00:00:00+00:00</published><updated>2024-09-21T00:00:00+00:00</updated><id>https://madeindra.dev/unfair-labor-standard</id><content type="html" xml:base="https://madeindra.dev/unfair-labor-standard/"><![CDATA[<p>I have been trying not to talk about the negative aspects happening in Indonesia for years. Not because I don’t care, but because some people see it as unprofessional.</p>
-
-<p>Let me tell you, if people feel that something is not right and stay silent, change won’t happen.</p>
-
-<h2 id="quarter-life-crisis">Quarter-Life Crisis</h2>
-
-<p>This started when I was almost 25. As people commonly know, this is when most individuals feel conflicted about their life, career, and everything in between.</p>
-
-<p>Growing up idealistic, I was faced with a difficult position: succumb to “dirty” practices to get a steady job, or find a job I wouldn’t feel guilty about, even if it’s a bit unstable.</p>
-
-<p>I won’t talk about the former; it’s an open secret.</p>
-
-<p>Regardless, I chose the latter and forced myself to hunt for a job. That’s when I realized reality was never as beautiful as I had imagined as a kid.</p>
-
-<p>There were numerous jobs that required people to be under a certain age. I remember the first job I applied for had an under-29 criterion. I was lucky to be included in that criterion, but I know it’s not going to be long. Once I reach that age, applying for jobs will be much harder.</p>
-
-<h2 id="age-limitation">Age Limitation</h2>
-
-<p>To be perfectly honest, I don’t know the reason behind such age limitations on job applications.</p>
-
-<p>People say it’s due to salary budgets, but I am not certain that is the reason.</p>
-
-<hr />
-
-<p>From today’s perspective, working in a foreign company, that was not the case.</p>
-
-<p>Several months ago, my colleague just celebrated their 50th birthday. They are 50 and still working.</p>
-
-<p>Turns out it is common; looking around, there are a lot of colleagues who are much more senior than me. They bring wisdom and expertise that no greener hires will have.</p>
-
-<blockquote>
-  <p>How come?</p>
-</blockquote>
-
-<p>I did not realize that fair labor standards are a thing.</p>
-
-<p>Discrimination against people of a certain age applying for jobs is prohibited in some countries.</p>
-
-<h2 id="political-influence">Political Influence</h2>
-
-<p>When talking about laws, it’s down to politics.</p>
-
-<p>I was furious in light of recent events, where the Constitutional Court tampered with laws to allow for certain individuals to get a specific position - <a href="https://www.bbc.com/indonesia/articles/cpvl6l2p439o">source</a>. This almost happened again through the Supreme Court for the upcoming election - <a href="https://nasional.kompas.com/read/2024/08/21/15294141/pakar-putusan-mk-tak-bisa-dianulir-dengan-revisi-uu">source</a>.</p>
-
-<p>At the same time, they deny that age requirements in job applications are discriminatory - <a href="https://www.cnnindonesia.com/nasional/20240730162502-12-1127234/mk-tolak-gugatan-uu-ketenagakerjaan-batas-usia-bukan-diskriminasi">source</a>.</p>
-
-<p>To this day, people still live in this country with the fear of not getting a job once they reach a certain age.</p>
-
-<h2 id="the-future">The Future</h2>
-
-<p>To stay one step ahead, I really hope that in the coming years, they will realize that the current workforce is not easily replaced. And at that time, I hope they start by forbidding age discrimination in job applications.</p>
-
-<p>I believe that everyone should have an equal standing when they want to support themselves and their family, not forgetting that these are the same people who will contribute to the country through their income tax.</p>]]></content><author><name>Made Indra</name></author><category term="Work" /><summary type="html"><![CDATA[A reflection on Indonesia's job market constraints, focusing on age discrimination and political influence, with a hope for future labor reforms and equality.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://madeindra.dev/assets/images/2024-09-21-unfair-labor-standard.webp" /><media:content medium="image" url="https://madeindra.dev/assets/images/2024-09-21-unfair-labor-standard.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">AI for Mock Interview</title><link href="https://madeindra.dev/ai-for-mock-interview/" rel="alternate" type="text/html" title="AI for Mock Interview" /><published>2024-09-21T00:00:00+00:00</published><updated>2024-09-21T00:00:00+00:00</updated><id>https://madeindra.dev/ai-for-mock-interview</id><content type="html" xml:base="https://madeindra.dev/ai-for-mock-interview/"><![CDATA[<p>So, several months ago I created a fullstack web app to assist people in preparing for developer job interview using AI.</p>
-
-<p>I started simple because the project was intended for beginner to follow. Then, my significant other challenged me to make the app accessible for roles other than developer.</p>
-
-<h2 id="starting-as-web-application">Starting as Web Application</h2>
-
-<p>The whole idea of the app is straightforward yet powerful: users record their voice and the AI responds with questions in both voice and text format.</p>
-
-<p>If you are interested, you can find the <a href="https://github.com/madeindra/mock-interview">Mock Interview app on GitHub</a>.</p>
-
-<p>On the frontend, I made use of MediaStream API to capture voice recordings and pass them to the backend. Later, the frontend will play the audio and show the text that came in the response. When I started, it was a vanilla JavaScript, but later I rewrote it into TypeScript with React.</p>
-
-<p>Meanwhile, the backend was built with Golang, serving as API interface with OpenAI’s API. The process follows these steps:</p>
-
-<ol>
-  <li>Transcribe the voice recording into text</li>
-  <li>Pass the transcript to the chat API to generate a question</li>
-  <li>Convert the text question into voice</li>
-</ol>
-
-<p>When I need to make this app available for non-developer job interview, it was just a matter of updating the prompt with no change necessary to the backend or the frontend code.</p>
-
-<h2 id="porting-to-desktop-app">Porting to Desktop App</h2>
-
-<p>With the app running well on my laptop, the next challenge was making it accessible over the internet to specific users.</p>
-
-<p>I can just deploy the app on a VPS, but I didn’t have a proper authentication and authorization process in place.</p>
-
-<p>It would be bothersome for me to start coding it back then. I mean, I need to create a user tables in the database, thinking about a secure way to store the password hashing key, or even integrating with social login to make OAuth possible.</p>
-
-<p>I asked myself whether I should rewrite the app into Electron app, but I would need to rewrite the whole backend, ouch!</p>
-
-<p>This is where <a href="https://wails.io">Wails</a> came to my rescue.</p>
-
-<p>I don’t need to rewrite my backend and frontend, just use the existing one with minimal changes, and voila!</p>
-
-<p>The process was surprisingly straightforward:</p>
-
-<ol>
-  <li>Changed the api handler functions into Wails app method.</li>
-  <li>Replaced the <code class="language-plaintext highlighter-rouge">fetch</code> call with the Wails-translated runtime functions.</li>
-  <li>Replaced unsupported browser function (e.g <code class="language-plaintext highlighter-rouge">windows.alert</code>) with Wails desktop equivalents.</li>
-</ol>
-
-<p>That’s it, it was pretty easy too.</p>
-
-<p>See the <a href="https://github.com/madeindra/interview-app">Desktop Port of the Interview App on GitHub</a>, if you are interested.</p>
-
-<hr />
-
-<p>One significant problem I faced was ensuring the MediaStream API available withing the Wails environment. This Browser API is exposed through <code class="language-plaintext highlighter-rouge">Navigator.mediaDevices</code>, which available only if the web is accessed in secure context( e.g <code class="language-plaintext highlighter-rouge">http://</code>, <code class="language-plaintext highlighter-rouge">http</code>, <code class="language-plaintext highlighter-rouge">localhost</code>, etc). I was sure that Wails appp access through <code class="language-plaintext highlighter-rouge">wails://</code> that should be a secure context.</p>
-
-<p>Moreover, the problem with <code class="language-plaintext highlighter-rouge">Navigator.mediaDevices</code> not being available was not consistent, sometimes it was <code class="language-plaintext highlighter-rouge">undefined</code>, other time it was not.</p>
-
-<p>It was really stressful.</p>
-
-<p>Without the Browser APIs available, I struggled to record the audio.</p>
-
-<p>A little googling suggested that I let Golang handle the recording, so I tried <code class="language-plaintext highlighter-rouge">portaudio</code> with no luck, and I haven’t even started with making the recording work on multiple operating systems.</p>
-
-<p>To be perfectly honest, the <code class="language-plaintext highlighter-rouge">portaudio</code> library did work on Mac, but it was very slow and sometimes there was only screech instead of a voice recording. The app lost the real-interview feelings.</p>
-
-<hr />
-
-<p>Turns out I need to make a proper policy change on the <code class="language-plaintext highlighter-rouge">.plist</code> for Mac.</p>
-
-<p>I updated it and later I never get the same problem. Welcome back, Browser APIs!</p>
-
-<h2 id="lessons-learned">Lessons Learned</h2>
-
-<p>For a long time I take Browser APIs for granted, a lot of the functionalities I usually use (e.g. image, video, and audio capture) come bundled with the browser and are easily accessible through JavaScript.</p>
-
-<p>When they are not available, I will be forced to interact directly with the OS. Making that work across Windows; Mac; and Linux at the same time won’t be fun.</p>]]></content><author><name>Made Indra</name></author><category term="Project" /><summary type="html"><![CDATA[My journey on porting an AI-powered web app for developer interview prep into a desktop app that can be run by anyone on their laptop. The fun and challenges faced during the process will be shared here.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://madeindra.dev/assets/images/2024-09-28-ai-for-mock-interview.webp" /><media:content medium="image" url="https://madeindra.dev/assets/images/2024-09-28-ai-for-mock-interview.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Shell Script for CI/CD</title><link href="https://madeindra.dev/shell-scripting-cicd/" rel="alternate" type="text/html" title="Shell Script for CI/CD" /><published>2024-09-21T00:00:00+00:00</published><updated>2024-09-21T00:00:00+00:00</updated><id>https://madeindra.dev/shell-scripting-cicd</id><content type="html" xml:base="https://madeindra.dev/shell-scripting-cicd/"><![CDATA[<p>In professional settings, code deployment typically involves a CI/CD process that runs in a pipeline. This process ensures everything is in order before updating the deployment on the cloud.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://madeindra.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://madeindra.dev/" rel="alternate" type="text/html" /><updated>2024-09-29T03:56:45+00:00</updated><id>https://madeindra.dev/feed.xml</id><title type="html">madeindra.dev</title><subtitle>A blog by Made Indra sharing insights, tutorials, and stories about software development, technology trends, personal passions, plus a bit of everything else!</subtitle><author><name>Made Indra</name></author><entry><title type="html">Shell Script for CI/CD</title><link href="https://madeindra.dev/shell-scripting-cicd/" rel="alternate" type="text/html" title="Shell Script for CI/CD" /><published>2024-09-29T00:00:00+00:00</published><updated>2024-09-29T00:00:00+00:00</updated><id>https://madeindra.dev/shell-scripting-cicd</id><content type="html" xml:base="https://madeindra.dev/shell-scripting-cicd/"><![CDATA[<p>In professional settings, code deployment typically involves a CI/CD process that runs in a pipeline. This process ensures everything is in order before updating the deployment on the cloud.</p>
 
 <p>To put it simply, it usually consist of:</p>
 <ul>
@@ -278,7 +154,131 @@ jobs:
 
 <p>In the future, I’d like to simplify this workflow. Not having to build on the server would be a boon. I’ve discovered that I can publish docker image for free to <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry">GitHub Container Registry</a>.</p>
 
-<p>I have successfully built the docker image and pushed it to ghcr.io on the pipeline. The next step is to prepare a script to pull the image and run it on the server. Maybe I will write another about this in the future. (｡•̀ᴗ-)✧</p>]]></content><author><name>Made Indra</name></author><category term="Project" /><summary type="html"><![CDATA[A hobbyist's guide to simple CI/CD using shell scripts. Covers automating tasks, building Docker images, and deploying containers on a VPS with GitHub Actions.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://madeindra.dev/assets/images/2024-09-29-shell-scripting-cicd.webp" /><media:content medium="image" url="https://madeindra.dev/assets/images/2024-09-29-shell-scripting-cicd.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Too Big To Fail: A Corporation Story</title><link href="https://madeindra.dev/too-big-too-fail/" rel="alternate" type="text/html" title="Too Big To Fail: A Corporation Story" /><published>2024-09-16T00:00:00+00:00</published><updated>2024-09-16T00:00:00+00:00</updated><id>https://madeindra.dev/too-big-too-fail</id><content type="html" xml:base="https://madeindra.dev/too-big-too-fail/"><![CDATA[<p>In the past, I’ve dreamed about landing the perfect job which I could do until my retirement day. It’s also Indonesian parents’ dream to have their kids working as Civil Servants or State Enterprise Employees. So, after a year of teaching and making a bare minimum, I tried my best to land my dream job. I did succeed, but reality was never as beautiful as your dream, am I right?</p>
+<p>I have successfully built the docker image and pushed it to ghcr.io on the pipeline. The next step is to prepare a script to pull the image and run it on the server. Maybe I will write another about this in the future. (｡•̀ᴗ-)✧</p>]]></content><author><name>Made Indra</name></author><category term="Project" /><summary type="html"><![CDATA[A hobbyist's guide to simple CI/CD using shell scripts. Covers automating tasks, building Docker images, and deploying containers on a VPS with GitHub Actions.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://madeindra.dev/assets/images/2024-09-29-shell-scripting-cicd.webp" /><media:content medium="image" url="https://madeindra.dev/assets/images/2024-09-29-shell-scripting-cicd.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">AI for Mock Interview</title><link href="https://madeindra.dev/ai-for-mock-interview/" rel="alternate" type="text/html" title="AI for Mock Interview" /><published>2024-09-28T00:00:00+00:00</published><updated>2024-09-28T00:00:00+00:00</updated><id>https://madeindra.dev/ai-for-mock-interview</id><content type="html" xml:base="https://madeindra.dev/ai-for-mock-interview/"><![CDATA[<p>So, several months ago I created a fullstack web app to assist people in preparing for developer job interview using AI.</p>
+
+<p>I started simple because the project was intended for beginner to follow. Then, my significant other challenged me to make the app accessible for roles other than developer.</p>
+
+<h2 id="starting-as-web-application">Starting as Web Application</h2>
+
+<p>The whole idea of the app is straightforward yet powerful: users record their voice and the AI responds with questions in both voice and text format.</p>
+
+<p>If you are interested, you can find the <a href="https://github.com/madeindra/mock-interview">Mock Interview app on GitHub</a>.</p>
+
+<p>On the frontend, I made use of MediaStream API to capture voice recordings and pass them to the backend. Later, the frontend will play the audio and show the text that came in the response. When I started, it was a vanilla JavaScript, but later I rewrote it into TypeScript with React.</p>
+
+<p>Meanwhile, the backend was built with Golang, serving as API interface with OpenAI’s API. The process follows these steps:</p>
+
+<ol>
+  <li>Transcribe the voice recording into text</li>
+  <li>Pass the transcript to the chat API to generate a question</li>
+  <li>Convert the text question into voice</li>
+</ol>
+
+<p>When I need to make this app available for non-developer job interview, it was just a matter of updating the prompt with no change necessary to the backend or the frontend code.</p>
+
+<h2 id="porting-to-desktop-app">Porting to Desktop App</h2>
+
+<p>With the app running well on my laptop, the next challenge was making it accessible over the internet to specific users.</p>
+
+<p>I can just deploy the app on a VPS, but I didn’t have a proper authentication and authorization process in place.</p>
+
+<p>It would be bothersome for me to start coding it back then. I mean, I need to create a user tables in the database, thinking about a secure way to store the password hashing key, or even integrating with social login to make OAuth possible.</p>
+
+<p>I asked myself whether I should rewrite the app into Electron app, but I would need to rewrite the whole backend, ouch!</p>
+
+<p>This is where <a href="https://wails.io">Wails</a> came to my rescue.</p>
+
+<p>I don’t need to rewrite my backend and frontend, just use the existing one with minimal changes, and voila!</p>
+
+<p>The process was surprisingly straightforward:</p>
+
+<ol>
+  <li>Changed the api handler functions into Wails app method.</li>
+  <li>Replaced the <code class="language-plaintext highlighter-rouge">fetch</code> call with the Wails-translated runtime functions.</li>
+  <li>Replaced unsupported browser function (e.g <code class="language-plaintext highlighter-rouge">windows.alert</code>) with Wails desktop equivalents.</li>
+</ol>
+
+<p>That’s it, it was pretty easy too.</p>
+
+<p>See the <a href="https://github.com/madeindra/interview-app">Desktop Port of the Interview App on GitHub</a>, if you are interested.</p>
+
+<hr />
+
+<p>One significant problem I faced was ensuring the MediaStream API available withing the Wails environment. This Browser API is exposed through <code class="language-plaintext highlighter-rouge">Navigator.mediaDevices</code>, which available only if the web is accessed in secure context( e.g <code class="language-plaintext highlighter-rouge">http://</code>, <code class="language-plaintext highlighter-rouge">http</code>, <code class="language-plaintext highlighter-rouge">localhost</code>, etc). I was sure that Wails appp access through <code class="language-plaintext highlighter-rouge">wails://</code> that should be a secure context.</p>
+
+<p>Moreover, the problem with <code class="language-plaintext highlighter-rouge">Navigator.mediaDevices</code> not being available was not consistent, sometimes it was <code class="language-plaintext highlighter-rouge">undefined</code>, other time it was not.</p>
+
+<p>It was really stressful.</p>
+
+<p>Without the Browser APIs available, I struggled to record the audio.</p>
+
+<p>A little googling suggested that I let Golang handle the recording, so I tried <code class="language-plaintext highlighter-rouge">portaudio</code> with no luck, and I haven’t even started with making the recording work on multiple operating systems.</p>
+
+<p>To be perfectly honest, the <code class="language-plaintext highlighter-rouge">portaudio</code> library did work on Mac, but it was very slow and sometimes there was only screech instead of a voice recording. The app lost the real-interview feelings.</p>
+
+<hr />
+
+<p>Turns out I need to make a proper policy change on the <code class="language-plaintext highlighter-rouge">.plist</code> for Mac.</p>
+
+<p>I updated it and later I never get the same problem. Welcome back, Browser APIs!</p>
+
+<h2 id="lessons-learned">Lessons Learned</h2>
+
+<p>For a long time I take Browser APIs for granted, a lot of the functionalities I usually use (e.g. image, video, and audio capture) come bundled with the browser and are easily accessible through JavaScript.</p>
+
+<p>When they are not available, I will be forced to interact directly with the OS. Making that work across Windows; Mac; and Linux at the same time won’t be fun.</p>]]></content><author><name>Made Indra</name></author><category term="Project" /><summary type="html"><![CDATA[My journey on porting an AI-powered web app for developer interview prep into a desktop app that can be run by anyone on their laptop. The fun and challenges faced during the process will be shared here.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://madeindra.dev/assets/images/2024-09-28-ai-for-mock-interview.webp" /><media:content medium="image" url="https://madeindra.dev/assets/images/2024-09-28-ai-for-mock-interview.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Unfair Labor Standard</title><link href="https://madeindra.dev/unfair-labor-standard/" rel="alternate" type="text/html" title="Unfair Labor Standard" /><published>2024-09-21T00:00:00+00:00</published><updated>2024-09-21T00:00:00+00:00</updated><id>https://madeindra.dev/unfair-labor-standard</id><content type="html" xml:base="https://madeindra.dev/unfair-labor-standard/"><![CDATA[<p>I have been trying not to talk about the negative aspects happening in Indonesia for years. Not because I don’t care, but because some people see it as unprofessional.</p>
+
+<p>Let me tell you, if people feel that something is not right and stay silent, change won’t happen.</p>
+
+<h2 id="quarter-life-crisis">Quarter-Life Crisis</h2>
+
+<p>This started when I was almost 25. As people commonly know, this is when most individuals feel conflicted about their life, career, and everything in between.</p>
+
+<p>Growing up idealistic, I was faced with a difficult position: succumb to “dirty” practices to get a steady job, or find a job I wouldn’t feel guilty about, even if it’s a bit unstable.</p>
+
+<p>I won’t talk about the former; it’s an open secret.</p>
+
+<p>Regardless, I chose the latter and forced myself to hunt for a job. That’s when I realized reality was never as beautiful as I had imagined as a kid.</p>
+
+<p>There were numerous jobs that required people to be under a certain age. I remember the first job I applied for had an under-29 criterion. I was lucky to be included in that criterion, but I know it’s not going to be long. Once I reach that age, applying for jobs will be much harder.</p>
+
+<h2 id="age-limitation">Age Limitation</h2>
+
+<p>To be perfectly honest, I don’t know the reason behind such age limitations on job applications.</p>
+
+<p>People say it’s due to salary budgets, but I am not certain that is the reason.</p>
+
+<hr />
+
+<p>From today’s perspective, working in a foreign company, that was not the case.</p>
+
+<p>Several months ago, my colleague just celebrated their 50th birthday. They are 50 and still working.</p>
+
+<p>Turns out it is common; looking around, there are a lot of colleagues who are much more senior than me. They bring wisdom and expertise that no greener hires will have.</p>
+
+<blockquote>
+  <p>How come?</p>
+</blockquote>
+
+<p>I did not realize that fair labor standards are a thing.</p>
+
+<p>Discrimination against people of a certain age applying for jobs is prohibited in some countries.</p>
+
+<h2 id="political-influence">Political Influence</h2>
+
+<p>When talking about laws, it’s down to politics.</p>
+
+<p>I was furious in light of recent events, where the Constitutional Court tampered with laws to allow for certain individuals to get a specific position - <a href="https://www.bbc.com/indonesia/articles/cpvl6l2p439o">source</a>. This almost happened again through the Supreme Court for the upcoming election - <a href="https://nasional.kompas.com/read/2024/08/21/15294141/pakar-putusan-mk-tak-bisa-dianulir-dengan-revisi-uu">source</a>.</p>
+
+<p>At the same time, they deny that age requirements in job applications are discriminatory - <a href="https://www.cnnindonesia.com/nasional/20240730162502-12-1127234/mk-tolak-gugatan-uu-ketenagakerjaan-batas-usia-bukan-diskriminasi">source</a>.</p>
+
+<p>To this day, people still live in this country with the fear of not getting a job once they reach a certain age.</p>
+
+<h2 id="the-future">The Future</h2>
+
+<p>To stay one step ahead, I really hope that in the coming years, they will realize that the current workforce is not easily replaced. And at that time, I hope they start by forbidding age discrimination in job applications.</p>
+
+<p>I believe that everyone should have an equal standing when they want to support themselves and their family, not forgetting that these are the same people who will contribute to the country through their income tax.</p>]]></content><author><name>Made Indra</name></author><category term="Work" /><summary type="html"><![CDATA[A reflection on Indonesia's job market constraints, focusing on age discrimination and political influence, with a hope for future labor reforms and equality.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://madeindra.dev/assets/images/2024-09-21-unfair-labor-standard.webp" /><media:content medium="image" url="https://madeindra.dev/assets/images/2024-09-21-unfair-labor-standard.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Too Big To Fail: A Corporation Story</title><link href="https://madeindra.dev/too-big-too-fail/" rel="alternate" type="text/html" title="Too Big To Fail: A Corporation Story" /><published>2024-09-16T00:00:00+00:00</published><updated>2024-09-16T00:00:00+00:00</updated><id>https://madeindra.dev/too-big-too-fail</id><content type="html" xml:base="https://madeindra.dev/too-big-too-fail/"><![CDATA[<p>In the past, I’ve dreamed about landing the perfect job which I could do until my retirement day. It’s also Indonesian parents’ dream to have their kids working as Civil Servants or State Enterprise Employees. So, after a year of teaching and making a bare minimum, I tried my best to land my dream job. I did succeed, but reality was never as beautiful as your dream, am I right?</p>
 
 <p>My former employer is a telecommunications company that is in the process of transforming into a digital company. The reason being the revenue coming from the telecommunications field is running low, and the customer growth is just stagnant.</p>
 
