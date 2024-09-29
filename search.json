@@ -4,7 +4,7 @@
         "title": "Shell Script for CI/CD",
         "url": "/shell-scripting-cicd/",
         "date": "21 Sep 2024",
-        "description": ""
+        "description": "A hobbyist&#39;s guide to simple CI/CD using shell scripts. Covers automating tasks, building Docker images, and deploying containers on a VPS with GitHub Actions."
     } ,
   
     {
