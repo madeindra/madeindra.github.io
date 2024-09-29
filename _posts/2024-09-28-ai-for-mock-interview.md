@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AI for Mock Interview"
-date: "2024-09-21 00:00:00"
+date: "2024-09-28 00:00:00"
 category: "Project"
 image: "/assets/images/2024-09-28-ai-for-mock-interview.webp"
 feature_image: true

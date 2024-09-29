@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Shell Script for CI/CD"
-date: "2024-09-21 00:00:00"
+date: "2024-09-29 00:00:00"
 category: "Project"
 image: "/assets/images/2024-09-29-shell-scripting-cicd.webp"
 feature_image: true
