@@ -5,7 +5,7 @@ date: "2024-09-21 00:00:00"
 category: "Project"
 image: "/assets/images/2024-09-29-shell-scripting-cicd.webp"
 feature_image: true
-description: ""
+description: "A hobbyist's guide to simple CI/CD using shell scripts. Covers automating tasks, building Docker images, and deploying containers on a VPS with GitHub Actions."
 keywords:
   - Shell
   - Script
