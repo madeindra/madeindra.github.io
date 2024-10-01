@@ -3,7 +3,7 @@
     <!-- Logo and Title -->
     <div class="flex items-center">
       {% if site.logo_image != "" %}
-      <img src="{{ site.logo_image }}" alt="Logo" class="h-8 mr-2" />
+      <img src="{{ site.logo_image | prepend: site.baseurl | prepend: site.url }}" alt="Logo" class="h-8 mr-2" />
       {% endif %}
       <h1 class="text-xl font-semibold hidden md:block">
         <a href="/" class="hover:text-gray-600 dark:hover:text-white">
@@ -85,6 +85,12 @@
 
       burgerMenu.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!burgerMenu.contains(event.target) && !mobileMenu.contains(event.target)) {
+          mobileMenu.classList.add('hidden');
+        }
       });
     });
   </script>
