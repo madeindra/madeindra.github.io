@@ -51,27 +51,33 @@
   class="min-h-screen flex flex-col transition-colors duration-300 bg-white dark:bg-dark text-gray-900 dark:text-dark-base">
   <header class="py-6">
   <div class="container mx-auto px-4 flex justify-between items-center">
-    <!-- Logo -->
-    <h1 class="text-xl font-semibold">
-      <a href="/" class="hover:text-gray-600 dark:hover:text-white">
-        madeindra.dev
-      </a>
-    </h1>
+    <!-- Logo and Title -->
+    <div class="flex items-center">
+      
+      <img src="https://madeindra.dev/assets/images/logo.webp" alt="Logo" class="h-8 mr-2" />
+      
+      <h1 class="text-xl font-semibold hidden md:block">
+        <a href="/" class="hover:text-gray-600 dark:hover:text-white">
+          madeindra.dev
+        </a>
+      </h1>
+    </div>
 
-    <!-- Search Bar (Main, hide on smaller screen) -->
+    <!-- Search Bar-->
     
-    <div  id="search-bar-main" class="relative w-1/3 hidden md:block">
-      <input type="text" id="search-input-big" placeholder="Search..."
+    <div id="search-bar" class="relative w-1/3">
+      <input type="text" id="search-input" placeholder="Search..."
         class="w-full px-4 py-1 border rounded-full focus:outline-none focus:ring-0 bg-white dark:bg-dark transition-colors duration-300">
-      <div id="search-results-big" class="z-[100] absolute left-0 right-0 mt-2 bg-white dark:bg-dark border rounded shadow-lg hidden"
+      <div id="search-results" class="z-[100] absolute left-0 right-0 mt-2 bg-white dark:bg-dark border rounded shadow-lg hidden"
         style="min-width: 150%; left: 50%; transform: translateX(-50%);"></div>
     </div>
     
 
-
     <!-- Navigation -->
     <div class="flex items-center space-x-6">
-      <nav>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:block">
         <ul class="flex space-x-6 font-normal">
           
           <li><a href="/" class="hover:text-gray-600 dark:hover:text-white">Home</a></li>
@@ -82,6 +88,30 @@
           
         </ul>
       </nav>
+
+      <!-- Burger Menu Icon -->
+      <div class="relative">
+        <button id="burger-menu" class="md:hidden p-2 rounded-full" aria-label="Toggle mobile menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu (Positioned absolutely) -->
+        <div id="mobile-menu" class="hidden md:hidden absolute mt-2 w-24 bg-white dark:bg-dark border rounded shadow-lg z-50">
+          <nav>
+            <ul class="py-2 font-normal">
+              
+              <li><a href="/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a></li>
+              
+
+              
+              <li><a href="/about" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">About</a></li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
 
       <button id="theme-toggle" class="p-2 rounded-full" aria-label="Toggle theme to dark or light mode">
         <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"
@@ -99,15 +129,22 @@
     </div>
   </div>
 
-    <!-- Search Bar (show on smaller screen) -->
-    
-    <div class="mx-auto py-4 w-2/3 block md:hidden">
-      <input type="text" id="search-input-small" placeholder="Search..."
-        class="w-full px-4 py-1 border rounded-full focus:outline-none focus:ring-0 bg-white dark:bg-dark transition-colors duration-300">
-      <div id="search-results-small" class="z-[100] absolute left-0 right-0 mt-2 bg-white dark:bg-dark border rounded shadow-lg hidden"
-        style="min-width: 80%; left: 50%; transform: translateX(-50%);"></div>
-    </div>
-    
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const burgerMenu = document.getElementById('burger-menu');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      burgerMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!burgerMenu.contains(event.target) && !mobileMenu.contains(event.target)) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    });
+  </script>
 </header>
 
 <main class="container mx-auto px-4 flex-grow">
@@ -284,62 +321,26 @@
       searchData = data;
     });
 
-  const searchBarMain = document.getElementById('search-bar-main');
+  const searchBar = document.getElementById('search-bar');
+  const searchInput = document.getElementById('search-input');
+  const searchResults = document.getElementById('search-results');
 
-  const searchInputSmall = document.getElementById('search-input-small');
-  const searchInputBig = document.getElementById('search-input-big');
-
-  const searchResultsSmall = document.getElementById('search-results-small');
-  const searchResultsBig = document.getElementById('search-results-big');
-
-  searchInputSmall?.addEventListener('input', debounce(syncAndSearch, 300));
-  searchInputBig?.addEventListener('input', debounce(syncAndSearch, 300));
-
-  function getVisibleInput() {
-    const style = window.getComputedStyle(searchBarMain);
-    const displayValue = style.getPropertyValue('display');
-
-    if (displayValue != "none") {
-      return searchInputBig;
-    }
-    
-    return searchInputSmall;
-  }
-
-  function getInvisibleInput() {
-    const style = window.getComputedStyle(searchBarMain);
-    const displayValue = style.getPropertyValue('display');
-
-    if (displayValue == "none") {
-      return searchInputBig;
-    }
-    
-    return searchInputSmall;
-  }
+  searchInput?.addEventListener('input', debounce(handleSearch, 300));
 
   function setResultInnerHTML(content) {
-    [searchResultsSmall, searchResultsBig].forEach((element) => element.innerHTML = content);
+    searchResults.innerHTML = content;
   }
 
   function addResultClass(className) {
-    [searchResultsSmall, searchResultsBig].forEach((element) => element.classList.add(className));
+    searchResults.classList.add(className);
   }
 
   function removeResultClass(className) {
-    [searchResultsSmall, searchResultsBig].forEach((element) => element.classList.remove(className));
-  }
-
-  function syncAndSearch() {
-    syncValue();
-    handleSearch();
-  }
-
-  function syncValue() {
-    getInvisibleInput().value = getVisibleInput().value;
+    searchResults.classList.remove(className);
   }
 
   function handleSearch() {
-    const query = getVisibleInput().value.toLowerCase();
+    const query = searchInput.value.toLowerCase();
 
     // don't process 1 character
     if (query.length < 2) {
@@ -404,12 +405,8 @@
 
   // hide search results on click
   document?.addEventListener('click', (event) => {
-    if (!searchInputSmall.contains(event.target) && !searchResultsSmall.contains(event.target)) {
-      searchResultsSmall.classList.add('hidden');
-    }
-
-    if (!searchInputBig.contains(event.target) && !searchResultsBig.contains(event.target)) {
-      searchResultsBig.classList.add('hidden');
+    if (!searchInput.contains(event.target) && !searchResults.contains(event.target)) {
+      searchResults.classList.add('hidden');
     }
   });
 </script>
