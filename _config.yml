@@ -8,7 +8,7 @@ keywords:
   - blog
 
 # header
-logo_image: "assets/images/logo.webp"
+logo_image: "/assets/images/logo.webp"
 search_enabled: true
 home_enabled: true
 about_enabled: true
