@@ -3,7 +3,9 @@
     <!-- Logo and Title -->
     <div class="flex items-center">
       {% if site.logo_image != "" %}
-      <img src="{{ site.logo_image | prepend: site.baseurl | prepend: site.url }}" alt="Logo" class="h-8 mr-2" />
+      <a href="/">
+        <img src="{{ site.logo_image | prepend: site.baseurl | prepend: site.url }}" alt="Logo" class="h-8 mr-2" />
+      </a>
       {% endif %}
       <h1 class="text-xl font-semibold hidden md:block">
         <a href="/" class="hover:text-gray-600 dark:hover:text-white">
