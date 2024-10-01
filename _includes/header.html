@@ -4,7 +4,7 @@
     <div class="flex items-center">
       {% if site.logo_image != "" %}
       <a href="/">
-        <img src="{{ site.logo_image | prepend: site.baseurl | prepend: site.url }}" alt="Logo" class="h-8 mr-2" />
+        <img src="{{ site.logo_image | prepend: site.baseurl | prepend: site.url }}" alt="Logo" class="h-8 mr-2 block md:hidden" />
       </a>
       {% endif %}
       <h1 class="text-xl font-semibold hidden md:block">
