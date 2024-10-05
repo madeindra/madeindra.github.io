@@ -5,7 +5,7 @@ date: "2024-10-04 00:00:00"
 category: "Learning"
 image: "/assets/images/2024-10-04-trick-to-learn-foreign-language.webp"
 feature_image: true
-description: ""
+description: "A practical guide to make learning a new language feel more natural. Based on observation of common mistakes."
 keywords:
   - Language
   - Learning
