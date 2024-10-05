@@ -1,4 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://madeindra.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://madeindra.dev/" rel="alternate" type="text/html" /><updated>2024-10-02T06:22:57+00:00</updated><id>https://madeindra.dev/feed.xml</id><title type="html">madeindra.dev</title><subtitle>A blog by Made Indra sharing insights, tutorials, and stories about software development, technology trends, personal passions, plus a bit of everything else!</subtitle><author><name>Made Indra</name></author><entry><title type="html">Shell Script for CI/CD</title><link href="https://madeindra.dev/shell-scripting-cicd/" rel="alternate" type="text/html" title="Shell Script for CI/CD" /><published>2024-09-29T00:00:00+00:00</published><updated>2024-09-29T00:00:00+00:00</updated><id>https://madeindra.dev/shell-scripting-cicd</id><content type="html" xml:base="https://madeindra.dev/shell-scripting-cicd/"><![CDATA[<p>In professional settings, code deployment typically involves a CI/CD process that runs in a pipeline. This process ensures everything is in order before updating the deployment on the cloud.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://madeindra.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://madeindra.dev/" rel="alternate" type="text/html" /><updated>2024-10-05T21:57:09+00:00</updated><id>https://madeindra.dev/feed.xml</id><title type="html">madeindra.dev</title><subtitle>A blog by Made Indra sharing insights, tutorials, and stories about software development, technology trends, personal passions, plus a bit of everything else!</subtitle><author><name>Made Indra</name></author><entry><title type="html">Simple Trick to Learn Foreign Language</title><link href="https://madeindra.dev/trick-to-learn-foreign-language/" rel="alternate" type="text/html" title="Simple Trick to Learn Foreign Language" /><published>2024-10-04T00:00:00+00:00</published><updated>2024-10-04T00:00:00+00:00</updated><id>https://madeindra.dev/trick-to-learn-foreign-language</id><content type="html" xml:base="https://madeindra.dev/trick-to-learn-foreign-language/"><![CDATA[<h2 id="learning-a-new-language-is-difficult-i-know">Learning a New Language is Difficult, I Know!</h2>
+
+<p>Making sense of the words, how to pronounce them, use them in a sentence properly, and so on. Those new rules that people are not familiar with are the challenges that usually discourage people from learning.</p>
+
+<blockquote>
+  <p>Why is it so hard for us to learn a foreign language when it seems natural for the native speaker to speak it?</p>
+</blockquote>
+
+<p>Yeah, you might think that statement was silly, but that’s the point.</p>
+
+<p>The single trick to make learning a foreign language easier is to approach it like a native speaker would.</p>
+
+<hr />
+
+<p>Some people try learning a new language by translating, but this method usually doesn’t work well because it slows down the process. They rely on their mother tongue as a base. When they want to speak in a foreign language, they first translate each word and then try to put them in the right place using the proper grammar.</p>
+
+<p>If you’re wondering whether you are one of these learners, try speaking in the foreign language. Were you speaking it while thinking in a different language, in your mother tongue, perhaps?</p>
+
+<p>The goal is to think and speak in the same language—removing the translation process happening inside your head, making it feel more natural.</p>
+
+<h2 id="how-we-learn-our-first-language">How We Learn Our First Language</h2>
+
+<p>Let’s rewind and take a look at how we learned our first language, back when we didn’t know any language at all.</p>
+
+<p>Here’s what we did to learn a new word as a baby:</p>
+<ol>
+  <li>Observed the use of a word multiple times, either pointed or heard.</li>
+  <li>Grasped the gist of its meaning.</li>
+  <li>Tried to use the word in contexts we understood.</li>
+  <li>Read other people’s reactions to see if the usage was proper or not.</li>
+  <li>If the reaction was positive, our understanding was validated, and we will learn more through repetition.</li>
+  <li>If the reaction wasn’t positive, we usually shown the proper use, and we will try to use it again until we get positive reaction.</li>
+</ol>
+
+<p>Once we knew a lot of words, we repeated the same process when trying to make sentences. It took years before we formally learned how to structure sentences properly.</p>
+
+<hr />
+
+<p>What usually differs when learning a foreign language is how we use our senses and the steps we follow.</p>
+
+<p>When learning a new language, some people usually start with a book or an app. They read about words, learn what they mean, and how to make sentences with those words. It’s not wrong, but it will be much harder if that’s the only source of learning.</p>
+
+<p>If we were to replicate the learning process of a baby, we should immerse ourselves in the language we are learning. A simple way to do this is by consuming media in that language: news, movies, or music. This way, we can start hearing words and seeing how they are used, associating them with the sensations of what we see or hear.</p>
+
+<p>Learn and associate as many words as we can with our senses before starting to make sentences. Once we’re familiar with making sentences, then learn how to make a proper one using the proper grammar. Having someone validate what we write or say is crucial, but it’s not a dealbreaker once we can correct ourselves.</p>
+
+<p>We don’t want to solely rely on our brain to memorize things when we just started. Instead, we should use our senses as much as we can. That way, recalling things would be off top of our head.</p>
+
+<hr />
+
+<h2 id="final-thoughts">Final Thoughts</h2>
+
+<p>So, I think the trick to learning a new language is to start by learning as many words as possible, associating those words with your senses (vision, hearing, smell, etc.), and recalling them whenever you experience that sensation—be it through writing or speaking. Receiving feedback is also a part of the learning process. That’s why having someone to converse with (written or spoken) will strengthen your foundation and help you become fluent.</p>]]></content><author><name>Made Indra</name></author><category term="Learning" /><summary type="html"><![CDATA[Learning a New Language is Difficult, I Know!]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://madeindra.dev/assets/images/2024-10-04-trick-to-learn-foreign-language.webp" /><media:content medium="image" url="https://madeindra.dev/assets/images/2024-10-04-trick-to-learn-foreign-language.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Shell Script for CI/CD</title><link href="https://madeindra.dev/shell-scripting-cicd/" rel="alternate" type="text/html" title="Shell Script for CI/CD" /><published>2024-09-29T00:00:00+00:00</published><updated>2024-09-29T00:00:00+00:00</updated><id>https://madeindra.dev/shell-scripting-cicd</id><content type="html" xml:base="https://madeindra.dev/shell-scripting-cicd/"><![CDATA[<p>In professional settings, code deployment typically involves a CI/CD process that runs in a pipeline. This process ensures everything is in order before updating the deployment on the cloud.</p>
 
 <p>To put it simply, it usually consist of:</p>
 <ul>
