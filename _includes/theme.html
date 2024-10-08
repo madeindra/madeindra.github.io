@@ -2,8 +2,10 @@
     const themeToggleBtn = document.getElementById('theme-toggle');
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
-
+    
     const themeColorMetaTag = document.querySelector('meta[name="theme-color"]');
+    
+    const themeComment = document.getElementById('gitcus');
 
     // change the icons inside the button based on previous settings
     if (sessionStorage.getItem('color-theme') === 'dark' || (!('color-theme' in sessionStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -22,6 +24,10 @@
             themeToggleLightIcon?.classList?.remove('hidden');
 
             themeColorMetaTag.setAttribute('content', '#1A1A1A');
+            
+            if (themeComment) {
+                themeComment.setAttribute('data-theme', 'noborder_dark');
+            }
         } else {
             document.documentElement?.classList?.remove('dark');
             
@@ -31,6 +37,10 @@
             themeToggleLightIcon?.classList?.add('hidden');
 
             themeColorMetaTag.setAttribute('content', '#FFFFFF');
+
+            if (themeComment) {
+                themeComment.setAttribute('data-theme', 'noborder_light');
+            }
         }
     }
 

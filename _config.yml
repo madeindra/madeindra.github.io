@@ -42,10 +42,6 @@ social_media:
   twitter: "madecanggih"
   instagram: "madecanggih"
 
-# disqus
-disqus:
-  shortname: "madecanggih"
-
 # plugins
 plugins:
   - jekyll-postcss
