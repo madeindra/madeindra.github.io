@@ -47,10 +47,15 @@ plugins:
   - jekyll-postcss
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-paginate
 
 # jekyll-postcss
 postcss:
   cache: false
+
+# jekyll-paginate
+paginate: 10
+paginate_path: '/page/:num/'
 
 # exclude from build
 exclude:

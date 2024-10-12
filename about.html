@@ -3,14 +3,16 @@ layout: page
 title: "About"
 ---
 
-<div class="max-w-prose mx-auto text-center">
+<main class="flex-grow container max-w-prose mx-auto px-4 flex flex-col text-center">
   <!-- Profile Image -->
   {% if site.about.author_image %}
   <div class="py-6 px-6">
     {% if site.about.author_image contains 'http://' or site.about.author_image contains 'https://' %}
-      <img src="{{ site.about.author_image }}" alt="{{ site.about.author_name }}" class="w-48 h-48 object-cover rounded-lg mx-auto">
+    <img src="{{ site.about.author_image }}" alt="{{ site.about.author_name }}"
+      class="w-48 h-48 object-cover rounded-lg mx-auto">
     {% else %}
-      <img src="{{ site.about.author_image | prepend: site.baseurl | prepend: site.url }}" alt="{{ site.about.author_name }}" class="w-48 h-48 object-cover rounded-lg mx-auto">
+    <img src="{{ site.about.author_image | prepend: site.baseurl | prepend: site.url }}"
+      alt="{{ site.about.author_name }}" class="w-48 h-48 object-cover rounded-lg mx-auto">
     {% endif %}
   </div>
   {% endif %}
@@ -24,11 +26,11 @@ title: "About"
 
   <div class="prose dark:prose-invert sm:text-lg leading-relaxed text-justify">
     {% for description in site.about.description %}
-      {% if forloop.first %}
-        <p class="mb-6"><strong>{{ description }}</strong></p>
-      {% else %}
-        <p class="mb-6">{{ description }}</p>
-      {% endif %}
+    {% if forloop.first %}
+    <p class="mb-6"><strong>{{ description }}</strong></p>
+    {% else %}
+    <p class="mb-6">{{ description }}</p>
+    {% endif %}
     {% endfor %}
   </div>
-</div>
+</main>
