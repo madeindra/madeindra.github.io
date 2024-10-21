@@ -22,7 +22,7 @@ Here's the thing, standing out among the crowd is not easy. I'm not going to cov
 
 For the backend development, Java and Phython are the most commonly listed programming language in job postings. Moreover, these two has been around for decades, so a lot of technologies are already built on them. Fot the frameworks, it's usually Java with Spring Boot and Python with either Django or a more recent FastAPI. When it comes to databases, there are typically 2 categories: SQL and NoSQL. For sure, if it's SQL, the most in-demand would be PostgreSQL or MySQL, but for NoSQL it usually depends on the product they are working on, it could be MongoDB, Cassandra, or even Neo4j. Lastly, familiarity with cloud platforms such as AWS, GCP, or Azure is essential.
 
-For the frontend development, React is on the top. By itself, to master React you need master HTML, CSS, and JavaScript. And, yes, you can start from JavaScript, but skipping TypeScript is not an option in today's market.
+For the frontend development, React is on the top. By itself, to master React you need master HTML, CSS, and JavaScript. And, yes, you can start from JavaScript, but skipping TypeScript is not an option in today's market. Also, if you want to stick to one language for the whole fullstack development (both backend and frontend), you can accompany React with NestJS.
 
 I am not well-versed in roles related to Data, AI, DevOps, SRE, or similar fields, so I can't give much insight about those area.
 
