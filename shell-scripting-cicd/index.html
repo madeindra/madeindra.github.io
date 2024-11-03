@@ -178,7 +178,7 @@
             <div class="flex items-center space-x-1 md:space-x-2 text-sm mb-2">
                 <span>29 Sep 2024</span>
                 <span>•</span>
-                <span>5 min read</span>
+                <span>6 min read</span>
                 <span>•</span>
                 <span
                     class="">
@@ -282,7 +282,7 @@ docker network connect <span class="nv">$DOCKER_NETWORK_NAME</span> <span class=
   <li>SSHs to the server. I used <a href="https://github.com/marketplace/actions/ssh-remote-commands">SSH Remote Command by appleboy</a>. Then, on the ssh, mount the directory and run the script.</li>
 </ol>
 
-<p>I needed to set the SSH credentials as secrets on the pipeline as well. However, I considered the 4th step less than ideal because if I need to move the directory, I’ll have to modify the GitHub Action script.</p>
+<p>I needed to set the SSH credentials as secrets on the pipeline as well. However, I considered the 5th step less than ideal because if I need to move the directory of the script, I’ll have to modify the GitHub Action script.</p>
 
 <p>Here’s the preview of the script:</p>
 
@@ -343,6 +343,31 @@ docker network connect <span class="nv">$DOCKER_NETWORK_NAME</span> <span class=
 </code></pre></div></div>
 
 <p>See <a href="https://crontab.guru/">crontab.guru</a> if you want to learn about other format for cron job.</p>
+
+<p>Here’s preview of how my script do backup with PostgreSQL that runs in docker.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/sh</span>
+
+<span class="c"># Exit immediately if a command exits with a non-zero status.</span>
+<span class="nb">set</span> <span class="nt">-e</span>
+
+<span class="c"># Define the variables</span>
+<span class="nv">CONTAINER_NAME</span><span class="o">=</span><span class="s2">"postgres"</span>
+<span class="nv">BACKUP_FILE</span><span class="o">=</span><span class="s2">"backup_</span><span class="si">$(</span><span class="nb">date</span> +<span class="se">\%</span>Y-<span class="se">\%</span>m-<span class="se">\%</span>d_<span class="se">\%</span>H-<span class="se">\%</span>M-<span class="se">\%</span>S<span class="si">)</span><span class="s2">.sql"</span>
+
+<span class="c"># Directory where the script is located</span>
+<span class="nv">WORKDIR</span><span class="o">=</span><span class="s2">"/path/to/your/project"</span>
+
+<span class="c"># Backup the PostgreSQL database to a .sql file</span>
+docker <span class="nb">exec</span> <span class="nt">-t</span> <span class="nv">$CONTAINER_NAME</span> pg_dump <span class="nt">-U</span> <span class="nv">$POSTGRES_USER</span> <span class="nt">-d</span> <span class="nv">$POSTGRES_DB</span> <span class="nt">-F</span> c <span class="nt">-b</span> <span class="nt">-v</span> <span class="nt">-f</span> /root/<span class="nv">$BACKUP_FILE</span>
+
+<span class="c"># Copy the backup from the container to the host</span>
+docker <span class="nb">cp</span> <span class="nv">$CONTAINER_NAME</span>:/root/<span class="nv">$BACKUP_FILE</span> <span class="nv">$WORKDIR</span>/backup
+</code></pre></div></div>
+
+<p>With this, the sql dumps will be available in <code class="language-plaintext highlighter-rouge">/path/to/your/project/backup</code> directory.</p>
+
+<p>I needed to set the PostgreSQL credentials on <code class="language-plaintext highlighter-rouge">.bashrc</code> to make this work and include <code class="language-plaintext highlighter-rouge">BASH_ENV=/root/.bashrc</code> on the cron job so it would be able to retrieve the environment variables later.</p>
 
 <hr />
 
