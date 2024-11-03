@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://madeindra.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://madeindra.dev/" rel="alternate" type="text/html" /><updated>2024-10-21T06:15:30+00:00</updated><id>https://madeindra.dev/feed.xml</id><title type="html">madeindra.dev</title><subtitle>A blog by Made Indra sharing insights, tutorials, and stories about software development, technology trends, personal passions, plus a bit of everything else!</subtitle><author><name>Made Indra</name></author><entry><title type="html">Tech Stack to Learn for Beginner</title><link href="https://madeindra.dev/tech-stack-to-learn-for-beginner/" rel="alternate" type="text/html" title="Tech Stack to Learn for Beginner" /><published>2024-10-20T00:00:00+00:00</published><updated>2024-10-20T00:00:00+00:00</updated><id>https://madeindra.dev/tech-stack-to-learn-for-beginner</id><content type="html" xml:base="https://madeindra.dev/tech-stack-to-learn-for-beginner/"><![CDATA[<p>We all know how saturated the current tech market is. After the Covid-19 pandemic came to pass, several waves of layoff have occured, and many tech companies are now calling for return to the office. Those caused the market to get even more chaotic. Initially, the market were full of people transitioning from non-tech careers, but now, it’s flooded with experienced people who were either laid off or are unwilling to return to in-office setting. Even worse, companies are not looking to hire more junior candidate anymore, they have less and less chance.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://madeindra.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://madeindra.dev/" rel="alternate" type="text/html" /><updated>2024-11-03T22:34:52+00:00</updated><id>https://madeindra.dev/feed.xml</id><title type="html">madeindra.dev</title><subtitle>A blog by Made Indra sharing insights, tutorials, and stories about software development, technology trends, personal passions, plus a bit of everything else!</subtitle><author><name>Made Indra</name></author><entry><title type="html">Tech Stack to Learn for Beginner</title><link href="https://madeindra.dev/tech-stack-to-learn-for-beginner/" rel="alternate" type="text/html" title="Tech Stack to Learn for Beginner" /><published>2024-10-20T00:00:00+00:00</published><updated>2024-10-20T00:00:00+00:00</updated><id>https://madeindra.dev/tech-stack-to-learn-for-beginner</id><content type="html" xml:base="https://madeindra.dev/tech-stack-to-learn-for-beginner/"><![CDATA[<p>We all know how saturated the current tech market is. After the Covid-19 pandemic came to pass, several waves of layoff have occured, and many tech companies are now calling for return to the office. Those caused the market to get even more chaotic. Initially, the market were full of people transitioning from non-tech careers, but now, it’s flooded with experienced people who were either laid off or are unwilling to return to in-office setting. Even worse, companies are not looking to hire more junior candidate anymore, they have less and less chance.</p>
 
 <p>In the midst of this madness, one potential way out of is to explore opportunities with overseas companies, whether through remote work or relocation.</p>
 
@@ -122,33 +122,33 @@
 
 <p>Here’s the preview of the script:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/sh
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/sh</span>
 
-# Set variables
-DOCKER_IMAGE_NAME="your-image-name"
-DOCKER_CONTAINER_NAME="your-container-name"
-DOCKER_NETWORK_NAME="your-network-name"
+<span class="c"># Set variables</span>
+<span class="nv">DOCKER_IMAGE_NAME</span><span class="o">=</span><span class="s2">"your-image-name"</span>
+<span class="nv">DOCKER_CONTAINER_NAME</span><span class="o">=</span><span class="s2">"your-container-name"</span>
+<span class="nv">DOCKER_NETWORK_NAME</span><span class="o">=</span><span class="s2">"your-network-name"</span>
 
-# 1. Stash all changes on the local
+<span class="c"># 1. Stash all changes on the local</span>
 git stash
 
-# 2. Pull the latest changes
+<span class="c"># 2. Pull the latest changes</span>
 git pull
 
-# 3. Build docker image without cache
-docker build --no-cache -t $DOCKER_IMAGE_NAME .
+<span class="c"># 3. Build docker image without cache</span>
+docker build <span class="nt">--no-cache</span> <span class="nt">-t</span> <span class="nv">$DOCKER_IMAGE_NAME</span> <span class="nb">.</span>
 
-# 4. Stop the existing container
-docker stop $DOCKER_CONTAINER_NAME
+<span class="c"># 4. Stop the existing container</span>
+docker stop <span class="nv">$DOCKER_CONTAINER_NAME</span>
 
-# 5. Remove the existing container
-docker rm $DOCKER_CONTAINER_NAME
+<span class="c"># 5. Remove the existing container</span>
+docker <span class="nb">rm</span> <span class="nv">$DOCKER_CONTAINER_NAME</span>
 
-# 6. Rerun the container with the latest image
-docker run -d --name $DOCKER_CONTAINER_NAME $DOCKER_IMAGE_NAME
+<span class="c"># 6. Rerun the container with the latest image</span>
+docker run <span class="nt">-d</span> <span class="nt">--name</span> <span class="nv">$DOCKER_CONTAINER_NAME</span> <span class="nv">$DOCKER_IMAGE_NAME</span>
 
-# 7. Connect the container to the docker network
-docker network connect $DOCKER_NETWORK_NAME $DOCKER_CONTAINER_NAME
+<span class="c"># 7. Connect the container to the docker network</span>
+docker network connect <span class="nv">$DOCKER_NETWORK_NAME</span> <span class="nv">$DOCKER_CONTAINER_NAME</span>
 </code></pre></div></div>
 
 <p>As for the GitHub Action to run the pipeline, it:</p>
@@ -163,59 +163,61 @@ docker network connect $DOCKER_NETWORK_NAME $DOCKER_CONTAINER_NAME
 <p>I needed to set the SSH credentials as secrets on the pipeline as well. However, I considered the 4th step less than ideal because if I need to move the directory, I’ll have to modify the GitHub Action script.</p>
 
 <p>Here’s the preview of the script:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name: CI/CD Pipeline
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">CI/CD Pipeline</span>
 
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span> <span class="pi">[</span> <span class="nv">main</span> <span class="pi">]</span>
+  <span class="na">pull_request</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span> <span class="pi">[</span> <span class="nv">main</span> <span class="pi">]</span>
 
-    steps:
-    # 1. Checkout the repository
-    - name: Checkout repository
-      uses: actions/checkout@v2
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">build-and-deploy</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
 
-    # 2. Set up Go
-    - name: Set up Go
-      uses: actions/setup-go@v2
-      with:
-        go-version: '1.22'
+    <span class="na">steps</span><span class="pi">:</span>
+    <span class="c1"># 1. Checkout the repository</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Checkout repository</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v2</span>
 
-    # 3. Install dependencies
-    - name: Get dependencies
-      run: |
-        go get -v -t -d ./...
+    <span class="c1"># 2. Set up Go</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Set up Go</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/setup-go@v2</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">go-version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1.22'</span>
 
-    # 4. Run Golang tests
-    - name: Run tests
-      run: go test -v ./...
+    <span class="c1"># 3. Install dependencies</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Get dependencies</span>
+      <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+        <span class="s">go get -v -t -d ./...</span>
+
+    <span class="c1"># 4. Run Golang tests</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Run tests</span>
+      <span class="na">run</span><span class="pi">:</span> <span class="s">go test -v ./...</span>
       
-    # 5. SSH to the server and run the script
-    - name: Deploy to server
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.SERVER_HOST }}
-        username: ${{ secrets.SERVER_USERNAME }}
-        key: ${{ secrets.SERVER_SSH_KEY }}
-        script: |
-          cd /path/to/your/project
-          ./script_name.sh
+    <span class="c1"># 5. SSH to the server and run the script</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Deploy to server</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">appleboy/ssh-action@master</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">host</span><span class="pi">:</span> <span class="s">${{ secrets.SERVER_HOST }}</span>
+        <span class="na">username</span><span class="pi">:</span> <span class="s">${{ secrets.SERVER_USERNAME }}</span>
+        <span class="na">key</span><span class="pi">:</span> <span class="s">${{ secrets.SERVER_SSH_KEY }}</span>
+        <span class="na">script</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">cd /path/to/your/project</span>
+          <span class="s">./script_name.sh</span>
 </code></pre></div></div>
 
 <p>One more thing, I wanted to automate database backup. This was still possible with the good ol’ Shell Script with the help of Cron.</p>
 
 <p>I just went and open cron on the server:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>crontab -e
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>crontab <span class="nt">-e</span>
 </code></pre></div></div>
 
 <p>Then set the script to run every Sunday midnight:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 0 * * SUN BASH_ENV=/root/.bashrc /path/to/script.sh &gt;&gt; /path/to/script_log.log 2&gt;&amp;1
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 0 <span class="k">*</span> <span class="k">*</span> SUN <span class="nv">BASH_ENV</span><span class="o">=</span>/root/.bashrc /path/to/script.sh <span class="o">&gt;&gt;</span> /path/to/script_log.log 2&gt;&amp;1
 </code></pre></div></div>
 
 <p>See <a href="https://crontab.guru/">crontab.guru</a> if you want to learn about other format for cron job.</p>
