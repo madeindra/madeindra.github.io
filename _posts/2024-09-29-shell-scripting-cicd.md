@@ -60,7 +60,7 @@ To achieve this, I needed to create a GitHub Personal Access Token to read the r
 
 Here's the preview of the script:
 
-```
+```shell
 #!/bin/sh
 
 # Set variables
@@ -100,7 +100,8 @@ As for the GitHub Action to run the pipeline, it:
 I needed to set the SSH credentials as secrets on the pipeline as well. However, I considered the 4th step less than ideal because if I need to move the directory, I'll have to modify the GitHub Action script.
 
 Here's the preview of the script:
-```
+
+```yaml
 name: CI/CD Pipeline
 
 on:
@@ -149,12 +150,13 @@ One more thing, I wanted to automate database backup. This was still possible wi
 
 I just went and open cron on the server:
 
-```
+```shell
 crontab -e
 ```
 
 Then set the script to run every Sunday midnight:
-```
+
+```shell
 0 0 * * SUN BASH_ENV=/root/.bashrc /path/to/script.sh >> /path/to/script_log.log 2>&1
 ```
 
