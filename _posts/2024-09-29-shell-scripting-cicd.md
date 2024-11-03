@@ -97,7 +97,7 @@ As for the GitHub Action to run the pipeline, it:
 4. Runs automated task (e.g tests); if they pass, it continues to the next step.
 5. SSHs to the server. I used [SSH Remote Command by appleboy](https://github.com/marketplace/actions/ssh-remote-commands). Then, on the ssh, mount the directory and run the script.
 
-I needed to set the SSH credentials as secrets on the pipeline as well. However, I considered the 4th step less than ideal because if I need to move the directory, I'll have to modify the GitHub Action script.
+I needed to set the SSH credentials as secrets on the pipeline as well. However, I considered the 5th step less than ideal because if I need to move the directory of the script, I'll have to modify the GitHub Action script.
 
 Here's the preview of the script:
 
@@ -161,6 +161,32 @@ Then set the script to run every Sunday midnight:
 ```
 
 See [crontab.guru](https://crontab.guru/) if you want to learn about other format for cron job.
+
+Here's preview of how my script do backup with PostgreSQL that runs in docker.
+
+```shell
+#!/bin/sh
+
+# Exit immediately if a command exits with a non-zero status.
+set -e
+
+# Define the variables
+CONTAINER_NAME="postgres"
+BACKUP_FILE="backup_$(date +\%Y-\%m-\%d_\%H-\%M-\%S).sql"
+
+# Directory where the script is located
+WORKDIR="/path/to/your/project"
+
+# Backup the PostgreSQL database to a .sql file
+docker exec -t $CONTAINER_NAME pg_dump -U $POSTGRES_USER -d $POSTGRES_DB -F c -b -v -f /root/$BACKUP_FILE
+
+# Copy the backup from the container to the host
+docker cp $CONTAINER_NAME:/root/$BACKUP_FILE $WORKDIR/backup
+```
+
+With this, the sql dumps will be available in `/path/to/your/project/backup` directory.
+
+I needed to set the PostgreSQL credentials on `.bashrc` to make this work and include `BASH_ENV=/root/.bashrc` on the cron job so it would be able to retrieve the environment variables later.
 
 ---
 
