@@ -80,3 +80,36 @@ jobs:
 12. Save
 
 13. Open your browser and navigate to https://{username}.github.io/{repository}
+
+## Scripts
+
+### Create New Post
+
+Create a new blog post with interactive prompts:
+```markdown
+make post
+```
+
+Create a new blog post with a specified title:
+```markdown
+make post title="My New Post"
+```
+
+Create a new blog post with a specified title and date:
+```markdown
+make post title="My New Post" date="2024-12-31"
+```
+
+### Download Random Image
+
+Download a random image with a specified query:
+```markdown
+make image query="person sitting"
+```
+
+### Compress Image
+
+Compress image to WebP format:
+```markdown
+make compress image="/path/to/images.ext"
+```

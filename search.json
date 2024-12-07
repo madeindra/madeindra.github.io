@@ -1,6 +1,13 @@
 [
     
     {
+        "title": "Docker Argument vs Variable vs Secret",
+        "url": "/docker-argument-vs-variable-vs-secret/",
+        "date": "07 Dec 2024",
+        "description": "Learn the differences between Docker build arguments, environment variables, and build secrets. Understand when and how to use each for configuring your Docker builds and containers."
+    } ,
+  
+    {
         "title": "Dealing With Rejections",
         "url": "/dealing-with-rejections/",
         "date": "24 Nov 2024",

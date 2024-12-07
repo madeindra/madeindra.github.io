@@ -1,4 +1,304 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://madeindra.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://madeindra.dev/" rel="alternate" type="text/html" /><updated>2024-12-07T05:43:58+00:00</updated><id>https://madeindra.dev/feed.xml</id><title type="html">madeindra.dev</title><subtitle>A blog by Made Indra sharing insights, tutorials, and stories about software development, technology trends, personal passions, plus a bit of everything else!</subtitle><author><name>Made Indra</name></author><entry><title type="html">Dealing With Rejections</title><link href="https://madeindra.dev/dealing-with-rejections/" rel="alternate" type="text/html" title="Dealing With Rejections" /><published>2024-11-24T00:00:00+00:00</published><updated>2024-11-24T00:00:00+00:00</updated><id>https://madeindra.dev/dealing-with-rejections</id><content type="html" xml:base="https://madeindra.dev/dealing-with-rejections/"><![CDATA[<p>You are in dire need of a job, and months in, you still haven’t found the right one. You wake up to an email saying they are proceeding with other candidates that better fit their needs, and it hurts. It hurts your ego, it hurts your pride; in short, it hurts. No matter how much you have grown, rejection always hurts. The worst thing about rejection is that you can never get used to it.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://madeindra.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://madeindra.dev/" rel="alternate" type="text/html" /><updated>2024-12-07T09:01:02+00:00</updated><id>https://madeindra.dev/feed.xml</id><title type="html">madeindra.dev</title><subtitle>A blog by Made Indra sharing insights, tutorials, and stories about software development, technology trends, personal passions, plus a bit of everything else!</subtitle><author><name>Made Indra</name></author><entry><title type="html">Docker Argument vs Variable vs Secret</title><link href="https://madeindra.dev/docker-argument-vs-variable-vs-secret/" rel="alternate" type="text/html" title="Docker Argument vs Variable vs Secret" /><published>2024-12-07T00:00:00+00:00</published><updated>2024-12-07T00:00:00+00:00</updated><id>https://madeindra.dev/docker-argument-vs-variable-vs-secret</id><content type="html" xml:base="https://madeindra.dev/docker-argument-vs-variable-vs-secret/"><![CDATA[<p>You might be wondering how to pass a value during building a Docker image. I’ve been there, in fact, I am still revisiting this topic from time to time. So I want to dedicate a post about building an image with argument, variables, and secrets.</p>
+
+<p>Let’s start with simple Dockerfile with multiple stages:</p>
+
+<div class="language-Dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> golang:1.23</span>
+<span class="k">WORKDIR</span><span class="s"> /src</span>
+<span class="k">COPY</span><span class="s"> &lt;&lt;EOF ./main.go</span>
+package main
+
+import "fmt"
+
+func main() {
+  fmt.Println("hello, world")
+}
+EOF
+<span class="k">RUN </span>go build <span class="nt">-o</span> /bin/hello ./main.go
+
+<span class="k">FROM</span><span class="s"> scratch</span>
+<span class="k">COPY</span><span class="s"> --from=0 /bin/hello /bin/hello</span>
+<span class="k">CMD</span><span class="s"> ["/bin/hello"]</span>
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">FROM</code> that you saw on the example above is the stage, the first one is building the file, and the second is running the built binary.</p>
+
+<p>Now let’s talk about build arguments and environment variables. Build arguments in Docker is closely related to environment variables, they are written as <code class="language-plaintext highlighter-rouge">ARG</code> and <code class="language-plaintext highlighter-rouge">ENV</code>, respectively. They are used to pass information to the build process.</p>
+
+<h2 id="build-arguments">Build Arguments</h2>
+
+<p>The way you use <code class="language-plaintext highlighter-rouge">ARG</code> is by defining it either before the stage (a.k.a Global Scope) or inside the stage (a.k.a Local Scope).</p>
+
+<p>The benefit of using <code class="language-plaintext highlighter-rouge">ARG</code> is we can build the image in different way without editing the <code class="language-plaintext highlighter-rouge">Dockerfile</code>.</p>
+
+<p>The value of <code class="language-plaintext highlighter-rouge">ARG</code> only available during build process and will not be available when the image is running as container, unless it is explicitly passed.</p>
+
+<p>I recommend to use <code class="language-plaintext highlighter-rouge">ARG</code> for configuring build. For example, to build a different version, or to use different base image.</p>
+
+<p>This is an example of using <code class="language-plaintext highlighter-rouge">ARG</code> to define the base image to be used to build.</p>
+
+<div class="language-Dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># create argument for image version</span>
+<span class="k">ARG</span><span class="s"> GO_VERSION="1.23"</span>
+
+<span class="c"># use argmument</span>
+<span class="k">FROM</span><span class="s"> golang:${GO_VERSION}</span>
+
+<span class="c"># rest of the file stay the same as first example</span>
+...
+</code></pre></div></div>
+
+<p>Try to build above example and you will see that it uses <code class="language-plaintext highlighter-rouge">golang:1.23</code></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build <span class="nt">-t</span> example:latest <span class="nb">.</span>
+</code></pre></div></div>
+
+<p>But if you pass a different version, let’s say <code class="language-plaintext highlighter-rouge">1.22</code>, it will use <code class="language-plaintext highlighter-rouge">golang:1.22</code> instead.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build <span class="nt">--build-arg</span> <span class="nv">GO_VERSION</span><span class="o">=</span><span class="s2">"1.22"</span> <span class="nt">-t</span> example:latest <span class="nb">.</span>
+</code></pre></div></div>
+
+<h3 id="without-default-value">Without Default Value</h3>
+
+<p>We can also just set the argument name without defining the value. This way, the value of the argument will be empty when not provided in the build command.</p>
+<div class="language-Dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># create argument without default value</span>
+<span class="k">ARG</span><span class="s"> GO_VERSION</span>
+
+<span class="c"># use argmument</span>
+<span class="k">FROM</span><span class="s"> golang:${GO_VERSION}</span>
+
+<span class="c"># rest of the file stay the same as first example</span>
+...
+</code></pre></div></div>
+
+<h3 id="scope">Scope</h3>
+
+<p>If we declared <code class="language-plaintext highlighter-rouge">ARG</code> on the Global Scope and want to use them inside the stage, <code class="language-plaintext highlighter-rouge">ARG</code> have to be redeclared inside the stage to allow the stage to read the value. No need to write the value again, just the name should be enough for stage to inherit the value.</p>
+
+<p>This version will not work</p>
+
+<div class="language-Dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">ARG</span><span class="s"> MESSAGE="helo, world"</span>
+
+<span class="k">FROM</span><span class="s"> golang:1.23</span>
+<span class="k">WORKDIR</span><span class="s"> /src</span>
+<span class="c"># this will fail</span>
+<span class="k">COPY</span><span class="s"> &lt;&lt;EOF ./main.go</span>
+package main
+
+import "fmt"
+
+func main() {
+  fmt.Println("${MESSAGE}")
+}
+EOF
+<span class="k">RUN </span>go build <span class="nt">-o</span> /bin/hello ./main.go
+
+<span class="c"># rest of the file stay the same as first example</span>
+...
+</code></pre></div></div>
+
+<p>With redeclaration, it now works perfectly.</p>
+
+<div class="language-Dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">ARG</span><span class="s"> MESSAGE="helo, world"</span>
+
+<span class="k">FROM</span><span class="s"> golang:1.23</span>
+<span class="c"># inherit the arg from global scope</span>
+<span class="k">ARG</span><span class="s"> MESSAGE </span>
+<span class="k">WORKDIR</span><span class="s"> /src</span>
+<span class="k">COPY</span><span class="s"> &lt;&lt;EOF ./main.go</span>
+package main
+
+import "fmt"
+
+func main() {
+  fmt.Println("${MESSAGE}")
+}
+EOF
+<span class="k">RUN </span>go build <span class="nt">-o</span> /bin/hello ./main.go
+
+<span class="c"># rest of the file stay the same as first example</span>
+...
+</code></pre></div></div>
+
+<h2 id="environment-variables">Environment Variables</h2>
+
+<p>The way you use <code class="language-plaintext highlighter-rouge">ENV</code> is by defining it inside the stage (a.k.a Local Scope).</p>
+
+<p>The benefit of using <code class="language-plaintext highlighter-rouge">ENV</code> is we can configure the way our container run.</p>
+
+<p>The value of <code class="language-plaintext highlighter-rouge">ENV</code> available during build process and when the image is running as container.</p>
+
+<p>I recommend to use <code class="language-plaintext highlighter-rouge">ENV</code> for configuring runtime. For example, to set API endpoint, I don’t recommend using it for secret value like password.</p>
+
+<p>To pass environment variables during build, we will need to make use of build arguments. This is why previously I said they are closely related.</p>
+
+<div class="language-Dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">ARG</span><span class="s"> USER</span>
+
+<span class="k">FROM</span><span class="s"> golang:1.23</span>
+<span class="k">WORKDIR</span><span class="s"> /src</span>
+<span class="k">COPY</span><span class="s"> &lt;&lt;EOF ./main.go</span>
+package main
+
+import (
+  "fmt"
+  "os"
+)
+
+func main() {
+  fmt.Println("Hello", os.Getenv("USER_NAME"))
+}
+EOF
+<span class="k">RUN </span>go build <span class="nt">-o</span> /bin/hello ./main.go
+
+<span class="k">FROM</span><span class="s"> scratch</span>
+<span class="c"># inherit &amp; copy the arg from global scope</span>
+<span class="k">ARG</span><span class="s"> USER </span>
+<span class="k">ENV</span><span class="s"> USER_NAME=${USER}</span>
+<span class="k">COPY</span><span class="s"> --from=0 /bin/hello /bin/hello</span>
+<span class="k">CMD</span><span class="s"> ["/bin/hello"]</span>
+</code></pre></div></div>
+
+<p>Now building it, environment variables will be available in the container and it can simply accessed programatically (<code class="language-plaintext highlighter-rouge">os.Getenv.ENV_NAME</code> in Go or <code class="language-plaintext highlighter-rouge">process.env.ENV_NAME</code> in Node.js).</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build <span class="nt">--build-arg</span> <span class="nv">USER</span><span class="o">=</span><span class="s2">"example"</span> <span class="nt">-t</span> example:latest <span class="nb">.</span>
+</code></pre></div></div>
+
+<p>If you are wondering on why did the <code class="language-plaintext highlighter-rouge">USER_NAME</code> called by the code in the first stage (build) but the environment value copied to the second stage (run), I got an answer for you.</p>
+
+<p>It was because the first stage did not need the environment variables to be present, it will still compile. Once compiled, that binary will run on the second stage, that’s where we want the environment variables to be present, hence we copied it to the second stage and not the first stage.</p>
+
+<h2 id="build-argument-vs-environment-variables">Build Argument vs Environment Variables</h2>
+
+<p>So here’s a TL;DR version of Build Arguments vs Environment Variables.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aspect</th>
+      <th>Build Arguments (ARG)</th>
+      <th>Environment Variables (ENV)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Declaration</td>
+      <td>Using <code class="language-plaintext highlighter-rouge">ARG</code> keyword</td>
+      <td>Using <code class="language-plaintext highlighter-rouge">ENV</code> keyword</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Can be Global or Local (stage)</td>
+      <td>Local (stage) only</td>
+    </tr>
+    <tr>
+      <td>Availability</td>
+      <td>Only during build time (unless explicitly passed)</td>
+      <td>During build time and container runtime</td>
+    </tr>
+    <tr>
+      <td>Best Used For</td>
+      <td>Build configurations (versions, base images)</td>
+      <td>Runtime configurations (API endpoints)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="build-secrets">Build Secrets</h2>
+
+<p>Why would there be build secrets when build arguments and environment variable already exist?</p>
+
+<p>Well, they are for storing sensitive information like Password or API Key. By using build secrets, the sensitive information would not be exposed.</p>
+
+<p>Let’s take an example of passing API key when building frontend app in javascript</p>
+
+<div class="language-Dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">ARG</span><span class="s"> SECRET_API_KEY</span>
+
+<span class="k">FROM</span><span class="w"> </span><span class="s">node:20</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s">build</span>
+
+<span class="k">WORKDIR</span><span class="s"> /app</span>
+<span class="k">COPY</span><span class="s"> package*.json ./</span>
+
+<span class="k">RUN </span>npm <span class="nb">install</span>
+<span class="k">COPY</span><span class="s"> . .</span>
+<span class="k">ARG</span><span class="s"> SECRET_API_KEY</span>
+<span class="k">RUN </span><span class="nv">SECRET_API_KEY</span><span class="o">=</span><span class="k">${</span><span class="nv">SECRET_API_KEY</span><span class="k">}</span> <span class="se">\
+</span>    npm run build
+
+<span class="k">FROM</span><span class="s"> node:20</span>
+<span class="k">RUN </span>npm <span class="nb">install</span> <span class="nt">-g</span> serve
+<span class="k">COPY</span><span class="s"> --from=build /app/dist ./dist</span>
+<span class="k">EXPOSE</span><span class="s"> 3000</span>
+<span class="k">CMD</span><span class="s"> ["serve", "-s", "dist", "-l", "3000"]</span>
+</code></pre></div></div>
+
+<p>And build it by passing secret using argument</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build <span class="nt">--build-arg</span> <span class="nv">SECRET_API_KEY</span><span class="o">=</span><span class="s2">"example"</span> <span class="nt">-t</span> example:latest <span class="nb">.</span>
+</code></pre></div></div>
+
+<p>Yeah it did work with build argument, and even if we pass that argument to environment variable before using in build, it will still work.</p>
+
+<p>The problem is we are leaking sensitive info. Docker will also print a warning message about this.</p>
+
+<p>Let’s change the implementation with build secret.</p>
+
+<div class="language-Dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="w"> </span><span class="s">node:20-alpine</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">build</span>
+
+<span class="k">WORKDIR</span><span class="s"> /app</span>
+<span class="k">COPY</span><span class="s"> package*.json ./</span>
+
+<span class="k">RUN </span>npm <span class="nb">install</span>
+<span class="k">COPY</span><span class="s"> . .</span>
+<span class="k">RUN </span><span class="nt">--mount</span><span class="o">=</span><span class="nb">type</span><span class="o">=</span>secret,id<span class="o">=</span>SECRET_API_KEY <span class="se">\
+</span>    <span class="nv">SECRET_API_KEY</span><span class="o">=</span><span class="si">$(</span><span class="nb">cat</span> /run/secrets/SECRET_API_KEY<span class="si">)</span> <span class="se">\
+</span>    npm run build
+
+<span class="k">FROM</span><span class="s"> node:20-alpine</span>
+<span class="k">RUN </span>npm <span class="nb">install</span> <span class="nt">-g</span> serve
+<span class="k">COPY</span><span class="s"> --from=build /app/dist ./dist</span>
+<span class="k">EXPOSE</span><span class="s"> 3000</span>
+<span class="k">CMD</span><span class="s"> ["serve", "-s", "dist", "-l", "3000"]</span>
+</code></pre></div></div>
+
+<p>We will also change the build command and add environment variable to the shell before executing the build command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export SECRET_API_KEY=example
+docker build --secret id=SECRET_API_KEY -t example:latest .
+</code></pre></div></div>
+
+<p>No more warning message and we successfully pass the secret to the build, yay!</p>
+
+<h2 id="environment-variables-vs-build-secrets">Environment Variables vs Build Secrets</h2>
+
+<p>So here’s a TL;DR version of Environment Variables vs Build Secrets.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aspect</th>
+      <th>Environment Variables (ENV)</th>
+      <th>Build Secrets</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Declaration</td>
+      <td>Using <code class="language-plaintext highlighter-rouge">ENV</code> keyword</td>
+      <td>Using <code class="language-plaintext highlighter-rouge">--mount=type=secret</code></td>
+    </tr>
+    <tr>
+      <td>Visibility</td>
+      <td>Visible in image history and container</td>
+      <td>Not visible in image history</td>
+    </tr>
+    <tr>
+      <td>Security Level</td>
+      <td>Lower (plaintext)</td>
+      <td>Higher (secure during build)</td>
+    </tr>
+    <tr>
+      <td>Best Used For</td>
+      <td>Non-sensitive configuration</td>
+      <td>Sensitive data (API keys, credentials)</td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>Made Indra</name></author><category term="Development" /><summary type="html"><![CDATA[Learn the differences between Docker build arguments, environment variables, and build secrets. Understand when and how to use each for configuring your Docker builds and containers.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://madeindra.dev/assets/images/2024-12-07-docker-argument-vs-variable-vs-secret.webp" /><media:content medium="image" url="https://madeindra.dev/assets/images/2024-12-07-docker-argument-vs-variable-vs-secret.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Dealing With Rejections</title><link href="https://madeindra.dev/dealing-with-rejections/" rel="alternate" type="text/html" title="Dealing With Rejections" /><published>2024-11-24T00:00:00+00:00</published><updated>2024-11-24T00:00:00+00:00</updated><id>https://madeindra.dev/dealing-with-rejections</id><content type="html" xml:base="https://madeindra.dev/dealing-with-rejections/"><![CDATA[<p>You are in dire need of a job, and months in, you still haven’t found the right one. You wake up to an email saying they are proceeding with other candidates that better fit their needs, and it hurts. It hurts your ego, it hurts your pride; in short, it hurts. No matter how much you have grown, rejection always hurts. The worst thing about rejection is that you can never get used to it.</p>
 
 <p>Rejection does not exclusively come from your job hunt; it can occur in any aspect of your life. Confessing your feelings, joining a new community, sharing your ideas in public, or even opening up to your own family can lead to rejection. One thing I’ve realized is that even when it’s not our identity that’s being rejected, still, we associate that rejection with ourselves. It’s already hurting us even when we’re only imagining it.</p>
 
