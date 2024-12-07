@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Get date parameter or use today's date
-date=${1:-$(date +%Y-%m-%d)}
-datetime=$(date +"%Y-%m-%d %H:%M:%S")
-
 # Get post name parameter or use placeholder
-post_name=${2:-"New Blog Post"}
+post_name=${1:-"New Blog Post"}
+
+# Get date parameter or use today's date
+date=${2:-$(date +"%Y-%m-%d")}
+datetime="${date} 00:00:00"
 
 # Convert post name to filename format (lowercase, replace spaces with hyphens)
 filename=$(echo "$post_name" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
