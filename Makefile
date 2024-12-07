@@ -1,5 +1,10 @@
-.PHONY: post
+# Run local development
+.PHONE: run
+run:
+	bundle exec jekyll serve --config _config.yml,_config-dev.yml --livereload
 
+# Create new post template
+.PHONY: post
 post:
 	@if [ -z "$(title)" ] && [ -z "$(date)" ]; then \
 		./scripts/make-post.sh; \
