@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Building Docker Image - Argument vs Variable vs Secret"
+title: "Docker Argument vs Variable vs Secret"
 date: "2024-12-07 00:00:00"
-category: ""
+category: "Development"
 image: "/assets/images/2024-12-07-docker-argument-vs-variable-vs-secret.webp"
 feature_image: true
-description: ""
+description: "Learn the differences between Docker build arguments, environment variables, and build secrets. Understand when and how to use each for configuring your Docker builds and containers."
 keywords:
   - Docker
   - Container
@@ -65,12 +65,12 @@ FROM golang:${GO_VERSION}
 
 Try to build above example and you will see that it uses `golang:1.23`
 ```bash
-docker build . -t example:latest 
+docker build -t example:latest .
 ```
 
 But if you pass a different version, let's say `1.22`, it will use `golang:1.22` instead.
 ```bash
-docker build --build-arg GO_VERSION="1.22" . -t example:latest 
+docker build --build-arg GO_VERSION="1.22" -t example:latest .
 ```
 
 ### Without Default Value
@@ -180,7 +180,7 @@ CMD ["/bin/hello"]
 Now building it, environment variables will be available in the container and it can simply accessed programatically (`os.Getenv.ENV_NAME` in Go or `process.env.ENV_NAME` in Node.js).
 
 ```bash
-docker build --build-arg USER="example" . -t example:latest 
+docker build --build-arg USER="example" -t example:latest .
 ```
 
 If you are wondering on why did the `USER_NAME` called by the code in the first stage (build) but the environment value copied to the second stage (run), I got an answer for you.
@@ -199,4 +199,82 @@ So here's a TL;DR version of Build Arguments vs Environment Variables.
 | Best Used For | Build configurations (versions, base images)      | Runtime configurations (API endpoints)  |
 
 
-## Build Secret
+## Build Secrets
+
+Why would there be build secrets when build arguments and environment variable already exist?
+
+Well, they are for storing sensitive information like Password or API Key. By using build secrets, the sensitive information would not be exposed.
+
+Let's take an example of passing API key when building frontend app in javascript
+
+```Dockerfile
+ARG SECRET_API_KEY
+
+FROM node:20 as build
+
+WORKDIR /app
+COPY package*.json ./
+
+RUN npm install
+COPY . .
+ARG SECRET_API_KEY
+RUN SECRET_API_KEY=${SECRET_API_KEY} \
+    npm run build
+
+FROM node:20
+RUN npm install -g serve
+COPY --from=build /app/dist ./dist
+EXPOSE 3000
+CMD ["serve", "-s", "dist", "-l", "3000"]
+```
+
+And build it by passing secret using argument
+
+```bash
+docker build --build-arg SECRET_API_KEY="example" -t example:latest .
+```
+
+Yeah it did work with build argument, and even if we pass that argument to environment variable before using in build, it will still work.
+
+The problem is we are leaking sensitive info. Docker will also print a warning message about this.
+
+Let's change the implementation with build secret.
+
+```Dockerfile
+FROM node:20-alpine AS build
+
+WORKDIR /app
+COPY package*.json ./
+
+RUN npm install
+COPY . .
+RUN --mount=type=secret,id=SECRET_API_KEY \
+    SECRET_API_KEY=$(cat /run/secrets/SECRET_API_KEY) \
+    npm run build
+
+FROM node:20-alpine
+RUN npm install -g serve
+COPY --from=build /app/dist ./dist
+EXPOSE 3000
+CMD ["serve", "-s", "dist", "-l", "3000"]
+```
+
+We will also change the build command and add environment variable to the shell before executing the build command:
+
+```
+export SECRET_API_KEY=example
+docker build --secret id=SECRET_API_KEY -t example:latest .
+```
+
+No more warning message and we successfully pass the secret to the build, yay!
+
+## Environment Variables vs Build Secrets
+
+So here's a TL;DR version of Environment Variables vs Build Secrets.
+
+| Aspect         | Environment Variables (ENV)            | Build Secrets                          |
+| -------------- | -------------------------------------- | -------------------------------------- |
+| Declaration    | Using `ENV` keyword                    | Using `--mount=type=secret`            |
+| Visibility     | Visible in image history and container | Not visible in image history           |
+| Security Level | Lower (plaintext)                      | Higher (secure during build)           |
+| Best Used For  | Non-sensitive configuration            | Sensitive data (API keys, credentials) |
