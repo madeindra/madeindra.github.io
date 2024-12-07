@@ -190,9 +190,9 @@
     </div>
 
     <article class="prose dark:prose-invert prose-img:mx-auto max-w-prose mx-auto space-y-6 sm:text-lg leading-relaxed">
-        <p>You might be wondering how to pass a value during building a Docker image. I’ve been there, in fact, I am still revisiting this topic from time to time. So I want to dedicate a post about building an image with argument, variables, and secrets.</p>
+        <p>You might be wondering how to pass a value while building a Docker image. I’ve been there; in fact, I still revisit this topic from time to time. So I want to dedicate a post to building an image with arguments, variables, and secrets.</p>
 
-<p>Let’s start with simple Dockerfile with multiple stages:</p>
+<p>Let’s start with a simple Dockerfile with multiple stages:</p>
 
 <div class="language-Dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> golang:1.23</span>
 <span class="k">WORKDIR</span><span class="s"> /src</span>
@@ -212,9 +212,9 @@ EOF
 <span class="k">CMD</span><span class="s"> ["/bin/hello"]</span>
 </code></pre></div></div>
 
-<p>The <code class="language-plaintext highlighter-rouge">FROM</code> that you saw on the example above is the stage, the first one is building the file, and the second is running the built binary.</p>
+<p>The <code class="language-plaintext highlighter-rouge">FROM</code> statements you saw in the example above define stages. The first one builds the file, and the second runs the built binary.</p>
 
-<p>Now let’s talk about build arguments and environment variables. Build arguments in Docker is closely related to environment variables, they are written as <code class="language-plaintext highlighter-rouge">ARG</code> and <code class="language-plaintext highlighter-rouge">ENV</code>, respectively. They are used to pass information to the build process.</p>
+<p>Now let’s talk about build arguments and environment variables. Build arguments in Docker are closely related to environment variables; they are written as <code class="language-plaintext highlighter-rouge">ARG</code> and <code class="language-plaintext highlighter-rouge">ENV</code>, respectively. They are used to pass information to the build process.</p>
 
 <h2 id="build-arguments">Build Arguments</h2>
 
@@ -222,11 +222,11 @@ EOF
 
 <p>The benefit of using <code class="language-plaintext highlighter-rouge">ARG</code> is we can build the image in different way without editing the <code class="language-plaintext highlighter-rouge">Dockerfile</code>.</p>
 
-<p>The value of <code class="language-plaintext highlighter-rouge">ARG</code> only available during build process and will not be available when the image is running as container, unless it is explicitly passed.</p>
+<p>The value of <code class="language-plaintext highlighter-rouge">ARG</code> is only available during the build process and will not be available when the image is running as a container, unless it is explicitly passed.</p>
 
-<p>I recommend to use <code class="language-plaintext highlighter-rouge">ARG</code> for configuring build. For example, to build a different version, or to use different base image.</p>
+<p>I recommend using <code class="language-plaintext highlighter-rouge">ARG</code> for configuring builds. For example, to build a different version, or to use different base image.</p>
 
-<p>This is an example of using <code class="language-plaintext highlighter-rouge">ARG</code> to define the base image to be used to build.</p>
+<p>This is an example of using <code class="language-plaintext highlighter-rouge">ARG</code> to define the base image to be used for the build.</p>
 
 <div class="language-Dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># create argument for image version</span>
 <span class="k">ARG</span><span class="s"> GO_VERSION="1.23"</span>
@@ -238,7 +238,7 @@ EOF
 ...
 </code></pre></div></div>
 
-<p>Try to build above example and you will see that it uses <code class="language-plaintext highlighter-rouge">golang:1.23</code></p>
+<p>Try to build the example above, and you will see that it uses <code class="language-plaintext highlighter-rouge">golang:1.23</code></p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build <span class="nt">-t</span> example:latest <span class="nb">.</span>
 </code></pre></div></div>
 
@@ -248,7 +248,7 @@ EOF
 
 <h3 id="without-default-value">Without Default Value</h3>
 
-<p>We can also just set the argument name without defining the value. This way, the value of the argument will be empty when not provided in the build command.</p>
+<p>We can also just set the argument name without defining the value. This way, the value of the argument will be empty if not provided in the build command.</p>
 <div class="language-Dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># create argument without default value</span>
 <span class="k">ARG</span><span class="s"> GO_VERSION</span>
 
@@ -261,7 +261,7 @@ EOF
 
 <h3 id="scope">Scope</h3>
 
-<p>If we declared <code class="language-plaintext highlighter-rouge">ARG</code> on the Global Scope and want to use them inside the stage, <code class="language-plaintext highlighter-rouge">ARG</code> have to be redeclared inside the stage to allow the stage to read the value. No need to write the value again, just the name should be enough for stage to inherit the value.</p>
+<p>If we declare <code class="language-plaintext highlighter-rouge">ARG</code> in the global scope and want to use it inside a stage, <code class="language-plaintext highlighter-rouge">ARG</code> has to be redeclared inside the stage to allow the stage to read the value. There’s no need to write the value again; just the name is enough for the stage to inherit the value.</p>
 
 <p>This version will not work</p>
 
@@ -316,9 +316,9 @@ EOF
 
 <p>The value of <code class="language-plaintext highlighter-rouge">ENV</code> available during build process and when the image is running as container.</p>
 
-<p>I recommend to use <code class="language-plaintext highlighter-rouge">ENV</code> for configuring runtime. For example, to set API endpoint, I don’t recommend using it for secret value like password.</p>
+<p>I recommend using <code class="language-plaintext highlighter-rouge">ENV</code> for configuring runtime. For example, to set API endpoints. I don’t recommend using it for sensitive values like passwords.</p>
 
-<p>To pass environment variables during build, we will need to make use of build arguments. This is why previously I said they are closely related.</p>
+<p>To pass environment variables during build, we need to use build arguments. This is why I previously said they are closely related.</p>
 
 <div class="language-Dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">ARG</span><span class="s"> USER</span>
 
@@ -346,14 +346,14 @@ EOF
 <span class="k">CMD</span><span class="s"> ["/bin/hello"]</span>
 </code></pre></div></div>
 
-<p>Now building it, environment variables will be available in the container and it can simply accessed programatically (<code class="language-plaintext highlighter-rouge">os.Getenv.ENV_NAME</code> in Go or <code class="language-plaintext highlighter-rouge">process.env.ENV_NAME</code> in Node.js).</p>
+<p>Now, after building it, the environment variables will be available in the container, and they can be accessed programmatically (<code class="language-plaintext highlighter-rouge">os.Getenv("ENV_NAME")</code> in Go or <code class="language-plaintext highlighter-rouge">process.env.ENV_NAME</code> in Node.js).</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build <span class="nt">--build-arg</span> <span class="nv">USER</span><span class="o">=</span><span class="s2">"example"</span> <span class="nt">-t</span> example:latest <span class="nb">.</span>
 </code></pre></div></div>
 
-<p>If you are wondering on why did the <code class="language-plaintext highlighter-rouge">USER_NAME</code> called by the code in the first stage (build) but the environment value copied to the second stage (run), I got an answer for you.</p>
+<p>If you are wondering why the <code class="language-plaintext highlighter-rouge">USER_NAME</code> is called by the code in the first stage (build), but the environment variable is copied to the second stage (run), I have an answer for you.</p>
 
-<p>It was because the first stage did not need the environment variables to be present, it will still compile. Once compiled, that binary will run on the second stage, that’s where we want the environment variables to be present, hence we copied it to the second stage and not the first stage.</p>
+<p>This is because the first stage does not need the environment variables to be present; it will still compile. Once compiled, the binary runs in the second stage, which is where we want the environment variables to be present. Hence, we copied them to the second stage and not the first stage.</p>
 
 <h2 id="build-argument-vs-environment-variables">Build Argument vs Environment Variables</h2>
 
@@ -393,11 +393,11 @@ EOF
 
 <h2 id="build-secrets">Build Secrets</h2>
 
-<p>Why would there be build secrets when build arguments and environment variable already exist?</p>
+<p>Why would there be build secrets when build arguments and environment variables already exist?</p>
 
-<p>Well, they are for storing sensitive information like Password or API Key. By using build secrets, the sensitive information would not be exposed.</p>
+<p>Well, they are for storing sensitive information like passwords or API keys. By using build secrets, the sensitive information will not be exposed.</p>
 
-<p>Let’s take an example of passing API key when building frontend app in javascript</p>
+<p>Let’s take an example of passing an API key when building a frontend app in JavaScript:</p>
 
 <div class="language-Dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">ARG</span><span class="s"> SECRET_API_KEY</span>
 
@@ -419,16 +419,16 @@ EOF
 <span class="k">CMD</span><span class="s"> ["serve", "-s", "dist", "-l", "3000"]</span>
 </code></pre></div></div>
 
-<p>And build it by passing secret using argument</p>
+<p>And build it by passing the secret using an argument:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build <span class="nt">--build-arg</span> <span class="nv">SECRET_API_KEY</span><span class="o">=</span><span class="s2">"example"</span> <span class="nt">-t</span> example:latest <span class="nb">.</span>
 </code></pre></div></div>
 
-<p>Yeah it did work with build argument, and even if we pass that argument to environment variable before using in build, it will still work.</p>
+<p>Yeah, it did work with build arguments, and even if we pass that argument to an environment variable before using it in the build, it will still work.</p>
 
-<p>The problem is we are leaking sensitive info. Docker will also print a warning message about this.</p>
+<p>The problem is we are leaking sensitive information. Docker will also print a warning message about this.</p>
 
-<p>Let’s change the implementation with build secret.</p>
+<p>Let’s change the implementation to use build secrets.</p>
 
 <div class="language-Dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="w"> </span><span class="s">node:20-alpine</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">build</span>
 
@@ -448,13 +448,13 @@ EOF
 <span class="k">CMD</span><span class="s"> ["serve", "-s", "dist", "-l", "3000"]</span>
 </code></pre></div></div>
 
-<p>We will also change the build command and add environment variable to the shell before executing the build command:</p>
+<p>We will also change the build command and add the environment variable to the shell before executing the build command:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export SECRET_API_KEY=example
 docker build --secret id=SECRET_API_KEY -t example:latest .
 </code></pre></div></div>
 
-<p>No more warning message and we successfully pass the secret to the build, yay!</p>
+<p>No more warning messages, and we successfully pass the secret to the build. Yay!</p>
 
 <h2 id="environment-variables-vs-build-secrets">Environment Variables vs Build Secrets</h2>
 
