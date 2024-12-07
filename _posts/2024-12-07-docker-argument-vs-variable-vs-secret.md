@@ -3,7 +3,7 @@ layout: post
 title: "Building Docker Image - Argument vs Variable vs Secret"
 date: "2024-12-07 00:00:00"
 category: ""
-image: "/assets/images/2024-12-07-docker-argument-vs-secret.webp"
+image: "/assets/images/2024-12-07-docker-argument-vs-variable-vs-secret.webp"
 feature_image: true
 description: ""
 keywords:
