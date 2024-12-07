@@ -13,9 +13,9 @@ comments: true
 archived: false
 ---
 
-You might be wondering how to pass a value during building a Docker image. I've been there, in fact, I am still revisiting this topic from time to time. So I want to dedicate a post about building an image with argument, variables, and secrets.
+You might be wondering how to pass a value while building a Docker image. I've been there; in fact, I still revisit this topic from time to time. So I want to dedicate a post to building an image with arguments, variables, and secrets.
 
-Let's start with simple Dockerfile with multiple stages:
+Let's start with a simple Dockerfile with multiple stages:
 
 ```Dockerfile
 FROM golang:1.23
@@ -36,9 +36,9 @@ COPY --from=0 /bin/hello /bin/hello
 CMD ["/bin/hello"]
 ```
 
-The `FROM` that you saw on the example above is the stage, the first one is building the file, and the second is running the built binary.
+The `FROM` statements you saw in the example above define stages. The first one builds the file, and the second runs the built binary.
 
-Now let's talk about build arguments and environment variables. Build arguments in Docker is closely related to environment variables, they are written as `ARG` and `ENV`, respectively. They are used to pass information to the build process. 
+Now let's talk about build arguments and environment variables. Build arguments in Docker are closely related to environment variables; they are written as `ARG` and `ENV`, respectively. They are used to pass information to the build process. 
 
 ## Build Arguments
 
@@ -46,11 +46,11 @@ The way you use `ARG` is by defining it either before the stage (a.k.a Global Sc
 
 The benefit of using `ARG` is we can build the image in different way without editing the `Dockerfile`. 
 
-The value of `ARG` only available during build process and will not be available when the image is running as container, unless it is explicitly passed.
+The value of `ARG` is only available during the build process and will not be available when the image is running as a container, unless it is explicitly passed.
 
-I recommend to use `ARG` for configuring build. For example, to build a different version, or to use different base image.
+I recommend using `ARG` for configuring builds. For example, to build a different version, or to use different base image.
 
-This is an example of using `ARG` to define the base image to be used to build.
+This is an example of using `ARG` to define the base image to be used for the build.
 
 ```Dockerfile
 # create argument for image version
@@ -63,7 +63,7 @@ FROM golang:${GO_VERSION}
 ...
 ```
 
-Try to build above example and you will see that it uses `golang:1.23`
+Try to build the example above, and you will see that it uses `golang:1.23`
 ```bash
 docker build -t example:latest .
 ```
@@ -75,7 +75,7 @@ docker build --build-arg GO_VERSION="1.22" -t example:latest .
 
 ### Without Default Value
 
-We can also just set the argument name without defining the value. This way, the value of the argument will be empty when not provided in the build command.
+We can also just set the argument name without defining the value. This way, the value of the argument will be empty if not provided in the build command.
 ```Dockerfile
 # create argument without default value
 ARG GO_VERSION
@@ -89,7 +89,7 @@ FROM golang:${GO_VERSION}
 
 ### Scope
 
-If we declared `ARG` on the Global Scope and want to use them inside the stage, `ARG` have to be redeclared inside the stage to allow the stage to read the value. No need to write the value again, just the name should be enough for stage to inherit the value.
+If we declare `ARG` in the global scope and want to use it inside a stage, `ARG` has to be redeclared inside the stage to allow the stage to read the value. There's no need to write the value again; just the name is enough for the stage to inherit the value.
 
 This version will not work
 
@@ -146,9 +146,9 @@ The benefit of using `ENV` is we can configure the way our container run.
 
 The value of `ENV` available during build process and when the image is running as container.
 
-I recommend to use `ENV` for configuring runtime. For example, to set API endpoint, I don't recommend using it for secret value like password.
+I recommend using `ENV` for configuring runtime. For example, to set API endpoints. I don't recommend using it for sensitive values like passwords.
 
-To pass environment variables during build, we will need to make use of build arguments. This is why previously I said they are closely related.
+To pass environment variables during build, we need to use build arguments. This is why I previously said they are closely related.
 
 ```Dockerfile
 ARG USER
@@ -177,15 +177,15 @@ COPY --from=0 /bin/hello /bin/hello
 CMD ["/bin/hello"]
 ```
 
-Now building it, environment variables will be available in the container and it can simply accessed programatically (`os.Getenv.ENV_NAME` in Go or `process.env.ENV_NAME` in Node.js).
+Now, after building it, the environment variables will be available in the container, and they can be accessed programmatically (`os.Getenv("ENV_NAME")` in Go or `process.env.ENV_NAME` in Node.js).
 
 ```bash
 docker build --build-arg USER="example" -t example:latest .
 ```
 
-If you are wondering on why did the `USER_NAME` called by the code in the first stage (build) but the environment value copied to the second stage (run), I got an answer for you.
+If you are wondering why the `USER_NAME` is called by the code in the first stage (build), but the environment variable is copied to the second stage (run), I have an answer for you.
 
-It was because the first stage did not need the environment variables to be present, it will still compile. Once compiled, that binary will run on the second stage, that's where we want the environment variables to be present, hence we copied it to the second stage and not the first stage.
+This is because the first stage does not need the environment variables to be present; it will still compile. Once compiled, the binary runs in the second stage, which is where we want the environment variables to be present. Hence, we copied them to the second stage and not the first stage.
 
 ## Build Argument vs Environment Variables
 
@@ -201,11 +201,11 @@ So here's a TL;DR version of Build Arguments vs Environment Variables.
 
 ## Build Secrets
 
-Why would there be build secrets when build arguments and environment variable already exist?
+Why would there be build secrets when build arguments and environment variables already exist?
 
-Well, they are for storing sensitive information like Password or API Key. By using build secrets, the sensitive information would not be exposed.
+Well, they are for storing sensitive information like passwords or API keys. By using build secrets, the sensitive information will not be exposed.
 
-Let's take an example of passing API key when building frontend app in javascript
+Let's take an example of passing an API key when building a frontend app in JavaScript:
 
 ```Dockerfile
 ARG SECRET_API_KEY
@@ -228,17 +228,17 @@ EXPOSE 3000
 CMD ["serve", "-s", "dist", "-l", "3000"]
 ```
 
-And build it by passing secret using argument
+And build it by passing the secret using an argument:
 
 ```bash
 docker build --build-arg SECRET_API_KEY="example" -t example:latest .
 ```
 
-Yeah it did work with build argument, and even if we pass that argument to environment variable before using in build, it will still work.
+Yeah, it did work with build arguments, and even if we pass that argument to an environment variable before using it in the build, it will still work.
 
-The problem is we are leaking sensitive info. Docker will also print a warning message about this.
+The problem is we are leaking sensitive information. Docker will also print a warning message about this.
 
-Let's change the implementation with build secret.
+Let's change the implementation to use build secrets.
 
 ```Dockerfile
 FROM node:20-alpine AS build
@@ -259,14 +259,14 @@ EXPOSE 3000
 CMD ["serve", "-s", "dist", "-l", "3000"]
 ```
 
-We will also change the build command and add environment variable to the shell before executing the build command:
+We will also change the build command and add the environment variable to the shell before executing the build command:
 
 ```
 export SECRET_API_KEY=example
 docker build --secret id=SECRET_API_KEY -t example:latest .
 ```
 
-No more warning message and we successfully pass the secret to the build, yay!
+No more warning messages, and we successfully pass the secret to the build. Yay!
 
 ## Environment Variables vs Build Secrets
 
