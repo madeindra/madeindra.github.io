@@ -136,14 +136,48 @@ jobs:
       
     # 5. SSH to the server and run the script
     - name: Deploy to server
-      uses: appleboy/ssh-action@master
+      uses: appleboy/ssh-action@v1.2.0
       with:
         host: {% raw %}${{ secrets.SERVER_HOST }}{% endraw %}
         username: {% raw %}${{ secrets.SERVER_USERNAME }}{% endraw %}
-        key: {% raw %}${{ secrets.SERVER_SSH_KEY }}{% endraw %}
+        password: {% raw %}${{ secrets.PASSWORD }}{% endraw %}
+        port: {% raw %}${{ secrets.PORT }}{% endraw %}
         script: |
+          # export necessary environment variables for the script here
+          # export VARIABLE_NAME=value
+
+          # run script
           cd /path/to/your/project
           ./script_name.sh
+```
+
+You can do anything with the `script_name.sh`, let's say you want to build docker image on the server and run it:
+
+```bash
+#!/bin/sh
+
+# Name for the Docker image
+IMAGE_NAME="${IMAGE_NAME:-username/imagename:latest}"
+CONTAINER_NAME="${CONTAINER_NAME:-containername}"
+
+# Build Docker image
+echo "Building Docker image..."
+docker build -t $IMAGE_NAME .
+
+# Check if a container with CONTAINER_NAME exists and stop/remove it
+EXISTING_CONTAINER=$(docker ps -aq -f name="$CONTAINER_NAME")
+if [ ! -z "$EXISTING_CONTAINER" ]; then
+    echo "Stopping and removing existing container with name $CONTAINER_NAME..."
+    docker stop $CONTAINER_NAME
+    docker rm $CONTAINER_NAME
+fi
+
+# Run Docker container
+echo "Running Docker container..."
+docker run -d --restart always --name $CONTAINER_NAME $IMAGE_NAME
+
+echo "Docker image built and container started."
+
 ```
 
 One more thing, I wanted to automate database backup. This was still possible with the good ol' Shell Script with the help of Cron.
