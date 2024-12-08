@@ -61,3 +61,285 @@ In Go, there are JSON interface methods that we can override to customize the be
 
 Before we start, let's talk a little bit about currency.
 
+Most countrie uses 2 decimal places. There's country like Kuwait that uses 3 decimal places. And there are countries like Indonesia and Japan that use no decimal place at all. I havn't found any country that use more than 3 decimal places, yet.
+
+Being ambitious, let's say we want to support all currency from every country in the world. Standardizing 3 decimal place on the backend would be great, on the frontend we don't need to care; `"1"`, `"1.0"`, `"1.00"` or `"1.000"` will all be treated as `"1.000"`. Less stress for the API consumers, less conflict we will have. LOL!
+
+### Overriding JSON Marshal/Unmarshal
+
+Now that we have agreed to use 3 decimal places for all money data, let's start by coding the implementation.
+
+This is our starting point, just like all other Go Project:
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	fmt.Println("Hello, World!")
+}
+```
+
+First, let's create a custom data type:
+
+```go
+type Money int64
+```
+
+Notice that we didn't write it as `type Money = int64`, because this is Type Definition, not Type Alias.
+
+The difference is when doing Aliasing, both data type are interchangeable, meaning we can pass `int64` to functions that expect `Money` if it were alias of `int64`. But, in Type Definition, we need to explicitly cast `int64` to `Money` before we can pass it to functions that expect `Money`.
+
+Now that we have our custom data type, let's add 2 methods to change the way we receive JSON request and send JSON response:
+
+```go
+// UnmarshalJSON implements the json.Unmarshaler interface
+func (m *Money) UnmarshalJSON(data []byte) error {
+	// remove quotes from string
+	s := strings.Trim(string(data), "\"")
+
+	// if negative, remove sign
+	isNegative := strings.HasPrefix(s, "-")
+	if isNegative {
+		s = s[1:]
+	}
+
+	// split by point
+	parts := strings.Split(s, ".")
+	if len(parts) > 2 {
+		return fmt.Errorf("invalid decimal format: %s", s)
+	}
+
+	// parse leading part
+	intPart, err := strconv.ParseInt(parts[0], 10, 64)
+	if err != nil {
+		return fmt.Errorf("invalid integer part: %v", err)
+	}
+
+	// multiply by 1000, later will add the trailing part
+	result := intPart * 1000
+
+	// parse trailing part, only if exist
+	if len(parts) == 2 {
+		// trim to at max 3 digits (additional decimal places will be ignored)
+		decimalPart := parts[1]
+		if len(decimalPart) > 3 {
+			decimalPart = decimalPart[:3]
+		}
+
+		// pad with additional zeros (if less than 3 decimal places)
+		for len(decimalPart) < 3 {
+			decimalPart += "0"
+		}
+
+		// parse
+		decimal, err := strconv.ParseInt(decimalPart, 10, 64)
+		if err != nil {
+			return fmt.Errorf("invalid decimal part: %v", err)
+		}
+
+		// combine leading and trailing part
+		result += decimal
+	}
+
+	// if negative, return back sign
+	if isNegative {
+		result = -result
+	}
+
+	*m = Money(result)
+
+	return nil
+}
+
+// MarshalJSON implements the json.Marshaler interface
+func (m Money) MarshalJSON() ([]byte, error) {
+	// get non-negative value
+	value := int64(m)
+	sign := ""
+	if value < 0 {
+		sign = "-"
+		value = -value
+	}
+
+	// calculate leading and trailing digits
+	intPart := value / 1000
+	decPart := value % 1000
+
+	// always format to trailing 3 decimal
+	str := fmt.Sprintf("%s%d.%03d", sign, intPart, decPart)
+
+	return json.Marshal(str)
+}
+```
+
+For request/response simulation, we will need a struct that has `Money` data type as the property:
+```go
+type Data struct {
+	Value Money `json:"value"`
+}
+```
+
+Now to simulate receiving request:
+```go
+// receiving request
+incoming := `{"value": "1"}`
+
+var received Data
+_ = json.Unmarshal([]byte(incoming), &received)
+
+fmt.Println("incoming data parsed as int64:", received)
+```
+
+The result will look like this:
+```sh
+incoming data parsed as int64: {1000}
+```
+
+What ever value being sent, be it `"1"`, `"1.0"`, `"1.00"` or `"1.000"`, the backend will receive it as `1000`. Neat, huh?
+
+Now to simulate sending response:
+```go
+// sending response
+outgoing := Data{Value: 5000}
+sent, _ := json.Marshal(outgoing)
+
+fmt.Println("outgoing data converted to string:", string(sent))
+```
+
+The result will look like this:
+```sh
+outgoing data converted to string: {"value":"5.000"}
+```
+
+The `Money` data type will be automatically converted to string. Perfect!
+
+### Putting Them Up
+
+The final result should looks like this:
+```go
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"strconv"
+	"strings"
+)
+
+type Money int64
+
+func (m *Money) UnmarshalJSON(data []byte) error {
+	// remove quotes from string
+	s := strings.Trim(string(data), "\"")
+
+	// if negative, remove sign
+	isNegative := strings.HasPrefix(s, "-")
+	if isNegative {
+		s = s[1:]
+	}
+
+	// split by point
+	parts := strings.Split(s, ".")
+	if len(parts) > 2 {
+		return fmt.Errorf("invalid decimal format: %s", s)
+	}
+
+	// parse leading part
+	intPart, err := strconv.ParseInt(parts[0], 10, 64)
+	if err != nil {
+		return fmt.Errorf("invalid integer part: %v", err)
+	}
+
+	// multiply by 1000, later will add the trailing part
+	result := intPart * 1000
+
+	// parse trailing part, only if exist
+	if len(parts) == 2 {
+		// trim to at max 3 digits (additional decimal places will be ignored)
+		decimalPart := parts[1]
+		if len(decimalPart) > 3 {
+			decimalPart = decimalPart[:3]
+		}
+
+		// pad with additional zeros (if less than 3 decimal places)
+		for len(decimalPart) < 3 {
+			decimalPart += "0"
+		}
+
+		// parse
+		decimal, err := strconv.ParseInt(decimalPart, 10, 64)
+		if err != nil {
+			return fmt.Errorf("invalid decimal part: %v", err)
+		}
+
+		// combine leading and trailing part
+		result += decimal
+	}
+
+	// if negative, return back sign
+	if isNegative {
+		result = -result
+	}
+
+	*m = Money(result)
+
+	return nil
+}
+
+// MarshalJSON implements the json.Marshaler interface
+func (m Money) MarshalJSON() ([]byte, error) {
+	// get non-negative value
+	value := int64(m)
+	sign := ""
+	if value < 0 {
+		sign = "-"
+		value = -value
+	}
+
+	// calculate leading and trailing digits
+	intPart := value / 1000
+	decPart := value % 1000
+
+	// always format to trailing 3 decimal
+	str := fmt.Sprintf("%s%d.%03d", sign, intPart, decPart)
+
+	return json.Marshal(str)
+}
+
+type Data struct {
+	Value Money `json:"value"`
+}
+
+func main() {
+	// receiving request
+	incoming := `{"value": "1"}`
+
+	var received Data
+	_ = json.Unmarshal([]byte(incoming), &received)
+
+	fmt.Println("incoming data parsed as int64:", received)
+
+	// sending response
+	outgoing := Data{Value: 5000}
+	sent, _ := json.Marshal(outgoing)
+
+	fmt.Println("outgoing data converted to string:", string(sent))
+}
+```
+
+## Closing Up
+
+Now you know (arguably) the best way to handle money data in Golang.
+
+Joke aside, this approach is not the perfect (yet), for production you might want to add more handling such as arithmetic operations, validation rules, and formatting with currency.
+
+But, so far, using this approach, you already get:
+- Consistent decimal places handling
+- Clean API request/response with string representation
+- No floating-point arithmetic errors
+
+I'd say that's already enough for a starter ＼(٥⁀▽⁀ )／
