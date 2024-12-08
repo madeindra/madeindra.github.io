@@ -201,7 +201,7 @@ The result will look like this:
 incoming data parsed as int64: {1000}
 ```
 
-What ever value being sent, be it `"1"`, `"1.0"`, `"1.00"` or `"1.000"`, the backend will receive it as `1000`. Neat, huh?
+Whatever value being sent, be it `"1"`, `"1.0"`, `"1.00"` or `"1.000"`, the backend will receive it as `1000`. Neat, huh?
 
 Now to simulate sending response:
 ```go
@@ -344,4 +344,4 @@ But, so far, using this approach, you already get:
 - Clean API request/response with string representation
 - No floating-point arithmetic errors
 
-I'd say that's already enough for a starter ＼(٥⁀▽⁀ )／
+I'd say that's already enough for a starter (๑˃ᴗ˂)ﻭ
