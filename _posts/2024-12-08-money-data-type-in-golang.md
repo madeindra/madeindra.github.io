@@ -1,43 +1,45 @@
 ---
 layout: post
 title: "Money Data Type in Golang"
-date: "2024-12-08 00:00:00"
-category: ""
+date: "2024-12-08 12:00:00"
+category: "Development"
 image: "/assets/images/2024-12-08-money-data-type-in-golang.webp"
 feature_image: true
-description: ""
+description: "Learn how to handle money data type in Golang without floating-point arithmetic errors using custom type definition and JSON interface implementation."
 keywords:
-  - 
-  - 
+  - Golang
+  - Money
+  - Floating
+  - Decimal
 comments: true
-archived: true
+archived: false
 ---
 
-It's a common knowledge that using `Float` (or `Number` in JavaScript, it is `Float64` behind the scene) to store monetary data is a bad idea. If you don't know this yet, try doing `10 / 3` in your choice of programming language. I've seen a lot of LinkedIn post ridiculing JavaScript for this.
+It's common knowledge that using `Float` (or `Number` in JavaScript, which is `Float64` behind the scenes) to store monetary data is a bad idea. If you don't know this yet, try doing `10 / 3` in your choice of programming language. I've seen a lot of LinkedIn posts ridiculing JavaScript for this.
 
 ![Dividing 10 by 3](/assets/others/floating-point-error-1.webp)
 
-When dealing with user's balance, let's say in US Dollar, we sometimes need to deal with cent value. If a user have a balance of US$10.00 and we want to charge them 50 cent (US$0.50), they will have US$9.50 by the end of it. Doesn't look wrong, right?
+When dealing with a user's balance, let's say in US Dollar, we sometimes need to deal with cent value. If a user has a balance of US$10.00 and we want to charge them 50 cents (US$0.50), they will have US$9.50 by the end of it. Doesn't look wrong, right?
 
-But what if the user only has US$1.00 and we charge them 70 cent (US$0.70)? 
+But what if the user only has US$1.00 and we charge them 70 cents (US$0.70)? 
 
 ![Subtracting 0.70 from 1.00](/assets/others/floating-point-error-2.webp)
 
-Mentally we already done the calculation and got US$0.30, but again when I tried the code in JavaScript, I got `0.30000000000000004`. Now the customer has more money than they should have.
+Mentally we already did the calculation and got US$0.30, but again when I tried the code in JavaScript, I got `0.30000000000000004`. Now the customer has more money than they should have.
 
 > Huh, weird?
 >
 > That couldn't be right. Curse you JavaScript!
 
-I mean, this problem can be found not only in JavaScript, but also in all programming language that uses [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754) standard. So Golang has this problem too, run [this piece of code](https://go.dev/play/p/WE25YQNwOZ5) if you don't believe me.
+I mean, this problem can be found not only in JavaScript, but also in all programming languages that use the [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754) standard. So Golang has this problem too, run [this piece of code](https://go.dev/play/p/WE25YQNwOZ5) if you don't believe me.
 
 ## Dealing with Decimal Place
 
 > So what should we use, then?
 
-Worry not! We have other data type.
+Worry not! We have other data types.
 
-Throughout my career, I've seen there are 2 way most developers handle this; either by using `Integer` or `String`.
+Throughout my career, I've seen there are 2 ways most developers handle this; either by using `Integer` or `String`.
 
 When using `Integer`, we write US$1 as `100`. Notice that there is no comma separator on the value. This way every calculation can be done in `Integer`, no more floating point issue. This way, we will show `100` in API request/response and database to denote US$1.
 
@@ -53,17 +55,17 @@ Personally, I liked the second approach where the API consumer can just pass `St
 
 ## Enter the JSON Interface
 
-I would use JSON for most of my API, this is the format most consumer expect to get.
+I would use JSON for most of my API, this is the format most consumers expect to get.
 
-In Go, there are JSON interface methods that we can override to customize the behaviour when receiving request and sending response. We will use this to eliminate the need to manually call the `String` to `Integer` parsing method everytime.
+In Go, there are JSON interface methods that we can override to customize the behaviour when receiving request and sending response. We will use this to eliminate the need to manually call the `String` to `Integer` parsing method every time.
 
 ### Determining The Number of Decimal Place
 
 Before we start, let's talk a little bit about currency.
 
-Most countrie uses 2 decimal places. There's country like Kuwait that uses 3 decimal places. And there are countries like Indonesia and Japan that use no decimal place at all. I havn't found any country that use more than 3 decimal places, yet.
+Most countries use 2 decimal places. There's country like Kuwait that uses 3 decimal places. And there are countries like Indonesia and Japan that use no decimal place at all. I haven't found any country that uses more than 3 decimal places, yet.
 
-Being ambitious, let's say we want to support all currency from every country in the world. Standardizing 3 decimal place on the backend would be great, on the frontend we don't need to care; `"1"`, `"1.0"`, `"1.00"` or `"1.000"` will all be treated as `"1.000"`. Less stress for the API consumers, less conflict we will have. LOL!
+Being ambitious, let's say we want to support all currency from every country in the world. Standardizing 3 decimal places on the backend would be great. On the frontend we don't need to care; `"1"`, `"1.0"`, `"1.00"` or `"1.000"` will all be treated as `"1.000"`. Less stress for the API consumers, less conflict we will have. LOL!
 
 ### Overriding JSON Marshal/Unmarshal
 
