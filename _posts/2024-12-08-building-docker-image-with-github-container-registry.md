@@ -2,10 +2,10 @@
 layout: post
 title: "Building Docker Image with GitHub Container Registry"
 date: "2024-12-08 00:00:00"
-category: ""
+category: "Project"
 image: "/assets/images/2024-12-08-building-docker-image-with-github-container-registry.webp"
 feature_image: true
-description: ""
+description: "Learn how to use GitHub Actions to build Docker images and store them in GitHub Container Registry (ghcr.io). A guide to improving CI/CD workflow for private repositories without exposing source code to servers."
 keywords:
   - Docker
   - GitHub
@@ -13,17 +13,17 @@ comments: true
 archived: false
 ---
 
-Months ago I posted about using [Shell Script for CI/CD](../shell-scripting-cicd) in personal project in which the script includes cloning the repo locally, building the Docker image and running it as a container right in the VPS. I know, I know. It's not ideal and it's leaking the source code to the server, so let's redo it.
+Months ago I posted about using [Shell Script for CI/CD](../shell-scripting-cicd) in a personal project in which the script includes cloning the repo locally, building the Docker image, and running it as a container right in the VPS. I know, I know. It's not ideal, and it's leaking the source code to the server, so let's redo it.
 
-I want to focus on using GitHub Actions on a private repository to build a Docker image and store it on GitHub Container Registry ([ghcr.io](https://ghcr.io/)). It's perfect for personal project since we can use up to a total of 500MB for all images on GitHub Free plan, it's counted as GitHub Package storage usage, by the way.
+I want to focus on using GitHub Actions on a private repository to build a Docker image and store it on GitHub Container Registry ([ghcr.io](https://ghcr.io/)). It's perfect for personal projects since we can use up to 500MB total for all images on the GitHub Free plan - it's counted as GitHub Package storage usage, by the way.
 
-What I am looking for in this round are:
+What I am looking for in this round is:
 - Build the Docker image on GitHub Actions.
 - Push the image into GitHub Container Registry.
 - Pull the image into the server.
 - Run a script to start the image as container on the server.
 
-Let's take a look at how the actions looks like.
+Let's take a look at how the action looks like.
 
 ```yaml
 name: CI/CD Pipeline
@@ -76,10 +76,10 @@ jobs:
       
       # 6. Extract metadata (tags, labels) for Docker
       - name: Extract metadata
-      id: meta
-      uses: docker/metadata-action@v5
-      with:
-        images: {% raw %}${{ env.REGISTRY }}{% endraw %}/{% raw %}${{ env.IMAGE_NAME }}{% endraw %}
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: {% raw %}${{ env.REGISTRY }}{% endraw %}/{% raw %}${{ env.IMAGE_NAME }}{% endraw %}
 
       # 7. Build and push image to ghcr.io
       - name: Build and push docker image
@@ -128,18 +128,18 @@ jobs:
           rm -f /vps/path/to/save/script_name.sh
 ```
 
-With the above change, no more cloning needed to build image on the server.
+With the above changes, no more cloning is needed to build images on the server.
 
-All the build process happened in the pipeline, and when it's successsfully built, the ssh script will login to ghcr.io and pull the image. I chose to do Docker login before the script to prevent passing the `GITHUB_TOKEN` secret to the script.
+All the build processes happen in the pipeline, and when it's successfully built, the SSH script will log in to ghcr.io and pull the image. I chose to do Docker login before the script to prevent passing the `GITHUB_TOKEN` secret to the script.
 
 > P.S. `GITHUB_TOKEN` is a provided secret value.
 > No need to add them to the repository secret.
 >
 > The only thing I did was adding secrets for the ssh step.
 
-Only the script is downloaded into the server, the rest of the source code are not. This way, the script can safely stored in the same repository. Moreover, it's deleted from the server after the run is completed. Neat!
+Only the script is downloaded into the server; the rest of the source code is not. This way, the script can be safely stored in the same repository. Moreover, it's deleted from the server after the run is completed. Neat!
 
-Just like the previous post, you can do anything inside the `script_name.sh`. The only difference would be this time it would be simpler without the Docker build step:
+Just like the previous post, you can do anything inside the `script_name.sh`. The only difference would be that this time it would be simpler without the Docker build step:
 
 ```bash
 #!/bin/sh
@@ -164,4 +164,4 @@ echo "Docker container started."
 
 ```
 
-Finally, you might be wondering whether GitHub has dashboard for images like [DockerHub](https://hub.docker.com/). Worry not! You can go to [https://github.com/username?tab=packages](https://github.com/username?tab=packages) (change it to your username) to see a list of images you have stored in ghcr.io.
+Finally, you might be wondering whether GitHub has a dashboard for your images like what [DockerHub](https://hub.docker.com/) does. Worry not! You can go to [https://github.com/username?tab=packages](https://github.com/username?tab=packages) (change it to your username) to see a list of images you have stored in ghcr.io.
