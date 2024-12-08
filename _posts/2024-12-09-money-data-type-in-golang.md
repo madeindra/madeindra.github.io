@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Money Data Type in Golang"
-date: "2024-12-08 12:00:00"
+date: "2024-12-09 12:00:00"
 category: "Development"
-image: "/assets/images/2024-12-08-money-data-type-in-golang.webp"
+image: "/assets/images/2024-12-09-money-data-type-in-golang.webp"
 feature_image: true
 description: "Learn how to handle money data type in Golang without floating-point arithmetic errors using custom type definition and JSON interface implementation."
 keywords:
