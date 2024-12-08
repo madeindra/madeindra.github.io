@@ -109,7 +109,7 @@ make image query="person sitting"
 
 Download a specified image with Unsplash image id:
 ```markdown
-make image id="lOr3m"
+make image id="lOr3m1pSum"
 ```
 
 ### Compress Image
