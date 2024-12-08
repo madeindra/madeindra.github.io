@@ -10,7 +10,7 @@ keywords:
   - 
   - 
 comments: true
-archived: false
+archived: true
 ---
 
 It's a common knowledge that using `Float` (or `Number` in JavaScript, it is `Float64` behind the scene) to store monetary data is a bad idea. If you don't know this yet, try doing `10 / 3` in your choice of programming language. I've seen a lot of LinkedIn post ridiculing JavaScript for this.
