@@ -19,9 +19,9 @@ It's common knowledge that using `Float` (or `Number` in JavaScript, which is `F
 
 ![Dividing 10 by 3](/assets/others/floating-point-error-1.webp)
 
-When dealing with a user's balance, let's say in US Dollar, we sometimes need to deal with cent value. If a user has a balance of US$10.00 and we want to charge them 50 cents (US$0.50), they will have US$9.50 by the end of it. Doesn't look wrong, right?
+When dealing with a user's balance, let's say in US Dollars, we sometimes need to deal with cent values. If a user has a balance of US$10.00 and we want to charge them 50 cents (US$0.50), they will have US$9.50 by the end of it. Doesn't look wrong, right?
 
-But what if the user only has US$1.00 and we charge them 70 cents (US$0.70)? 
+But what if the user only has US$1.00 and we charge them 70 cents (US$0.70)?
 
 ![Subtracting 0.70 from 1.00](/assets/others/floating-point-error-2.webp)
 
@@ -31,17 +31,17 @@ Mentally we already did the calculation and got US$0.30, but again when I tried 
 >
 > That couldn't be right. Curse you JavaScript!
 
-I mean, this problem can be found not only in JavaScript, but also in all programming languages that use the [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754) standard. So Golang has this problem too, run [this piece of code](https://go.dev/play/p/WE25YQNwOZ5) if you don't believe me.
+I mean, this problem can be found not only in JavaScript but also in all programming languages that use the [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754) standard. So Golang has this problem too, run [this piece of code](https://go.dev/play/p/WE25YQNwOZ5) if you don't believe me.
 
-## Dealing with Decimal Place
+## Dealing with Decimal Places
 
 > So what should we use, then?
 
 Worry not! We have other data types.
 
-Throughout my career, I've seen there are 2 ways most developers handle this; either by using `Integer` or `String`.
+Throughout my career, I've seen there are two ways most developers handle this; either by using `Integer` or `String`.
 
-When using `Integer`, we write US$1 as `100`. Notice that there is no comma separator on the value. This way every calculation can be done in `Integer`, no more floating point issue. This way, we will show `100` in API request/response and database to denote US$1.
+When using `Integer`, we write US$1 as `100`. Notice that there is no comma separator in the value. This way every calculation can be done in `Integer`, no more floating-point issues. This way, we will show `100` in API request/response and database to denote US$1.
 
 When using `String`, we write US$1 as `"1.00"`, then we parse it to `Integer` so we get a value like the previous example, do some calculation, and make it into `String` again to be stored in the database. This way we can show `"1.00"` in the API request/response while calculating them fully in `Integer`.
 
@@ -57,21 +57,21 @@ Personally, I liked the second approach where the API consumer can just pass `St
 
 I would use JSON for most of my API, this is the format most consumers expect to get.
 
-In Go, there are JSON interface methods that we can override to customize the behaviour when receiving request and sending response. We will use this to eliminate the need to manually call the `String` to `Integer` parsing method every time.
+In Go, there are JSON interface methods that we can override to customize the behavior when receiving requests and sending responses. We will use this to eliminate the need to manually call the `String` to `Integer` parsing method every time.
 
-### Determining The Number of Decimal Place
+### Determining The Number of Decimal Places
 
 Before we start, let's talk a little bit about currency.
 
-Most countries use 2 decimal places. There's country like Kuwait that uses 3 decimal places. And there are countries like Indonesia and Japan that use no decimal place at all. I haven't found any country that uses more than 3 decimal places, yet.
+Most countries use 2 decimal places. There's a country like Kuwait that uses 3 decimal places. And there are countries like Indonesia and Japan that use no decimal places at all. I haven't found any country that uses more than 3 decimal places, yet.
 
-Being ambitious, let's say we want to support all currency from every country in the world. Standardizing 3 decimal places on the backend would be great. On the frontend we don't need to care; `"1"`, `"1.0"`, `"1.00"` or `"1.000"` will all be treated as `"1.000"`. Less stress for the API consumers, less conflict we will have. LOL!
+Being ambitious, let's say we want to support all currencies from every country in the world. Standardizing 3 decimal places on the backend would be great. On the frontend we don't need to care; `"1"`, `"1.0"`, `"1.00"` or `"1.000"` will all be treated as `"1.000"`. Less stress for the API consumers, less conflict we will have. LOL!
 
 ### Overriding JSON Marshal/Unmarshal
 
 Now that we have agreed to use 3 decimal places for all money data, let's start by coding the implementation.
 
-This is our starting point, just like all other Go Project:
+This is our starting point, just like all other Go Projects:
 
 ```go
 package main
