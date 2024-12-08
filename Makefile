@@ -19,12 +19,21 @@ post:
 # Get image from Unsplash
 .PHONY: image
 image:
-	@if [ -z "$(query)" ]; then \
-		echo "Please provide a search query using 'query' parameter"; \
+	@if [ ! -z "$(query)" ] && [ ! -z "$(id)" ]; then \
+		echo "Error: Cannot use both query and id parameters"; \
 		echo "Usage: make image query='mountain landscape'"; \
+		echo "   or: make image id='photo-id'"; \
 		exit 1; \
+	elif [ -z "$(query)" ] && [ -z "$(id)" ]; then \
+		echo "Please provide either a search query or photo ID"; \
+		echo "Usage: make image query='mountain landscape'"; \
+		echo "   or: make image id='photo-id'"; \
+		exit 1; \
+	elif [ ! -z "$(query)" ]; then \
+		./scripts/get-image.sh "$(query)"; \
+	else \
+		./scripts/get-image.sh --id "$(id)"; \
 	fi
-	@./scripts/get-image.sh "$(query)"
 
 # Compress image to WebP format
 .PHONY: compress

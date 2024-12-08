@@ -1,4 +1,157 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://madeindra.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://madeindra.dev/" rel="alternate" type="text/html" /><updated>2024-12-07T09:06:22+00:00</updated><id>https://madeindra.dev/feed.xml</id><title type="html">madeindra.dev</title><subtitle>A blog by Made Indra sharing insights, tutorials, and stories about software development, technology trends, personal passions, plus a bit of everything else!</subtitle><author><name>Made Indra</name></author><entry><title type="html">Docker Argument vs Variable vs Secret</title><link href="https://madeindra.dev/docker-argument-vs-variable-vs-secret/" rel="alternate" type="text/html" title="Docker Argument vs Variable vs Secret" /><published>2024-12-07T00:00:00+00:00</published><updated>2024-12-07T00:00:00+00:00</updated><id>https://madeindra.dev/docker-argument-vs-variable-vs-secret</id><content type="html" xml:base="https://madeindra.dev/docker-argument-vs-variable-vs-secret/"><![CDATA[<p>You might be wondering how to pass a value while building a Docker image. I’ve been there; in fact, I still revisit this topic from time to time. So I want to dedicate a post to building an image with arguments, variables, and secrets.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://madeindra.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://madeindra.dev/" rel="alternate" type="text/html" /><updated>2024-12-08T00:55:07+00:00</updated><id>https://madeindra.dev/feed.xml</id><title type="html">madeindra.dev</title><subtitle>A blog by Made Indra sharing insights, tutorials, and stories about software development, technology trends, personal passions, plus a bit of everything else!</subtitle><author><name>Made Indra</name></author><entry><title type="html">Building Docker Image with GitHub Container Registry</title><link href="https://madeindra.dev/building-docker-image-with-github-container-registry/" rel="alternate" type="text/html" title="Building Docker Image with GitHub Container Registry" /><published>2024-12-08T00:00:00+00:00</published><updated>2024-12-08T00:00:00+00:00</updated><id>https://madeindra.dev/building-docker-image-with-github-container-registry</id><content type="html" xml:base="https://madeindra.dev/building-docker-image-with-github-container-registry/"><![CDATA[<p>Months ago I posted about using <a href="../shell-scripting-cicd">Shell Script for CI/CD</a> in a personal project in which the script includes cloning the repo locally, building the Docker image, and running it as a container right in the VPS. I know, I know. It’s not ideal, and it’s leaking the source code to the server, so let’s redo it.</p>
+
+<p>I want to focus on using GitHub Actions on a private repository to build a Docker image and store it on GitHub Container Registry (<a href="https://ghcr.io/">ghcr.io</a>). It’s perfect for personal projects since we can use up to 500MB total for all images on the GitHub Free plan - it’s counted as GitHub Package storage usage, by the way.</p>
+
+<p>What I am looking for in this round is:</p>
+<ul>
+  <li>Build the Docker image on GitHub Actions.</li>
+  <li>Push the image into GitHub Container Registry.</li>
+  <li>Pull the image into the server.</li>
+  <li>Run a script to start the image as container on the server.</li>
+</ul>
+
+<p>Let’s take a look at how the action looks like.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">CI/CD Pipeline</span>
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span> <span class="pi">[</span> <span class="nv">main</span> <span class="pi">]</span>
+  <span class="na">pull_request</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span> <span class="pi">[</span> <span class="nv">main</span> <span class="pi">]</span>
+
+<span class="na">env</span><span class="pi">:</span>
+  <span class="na">REGISTRY</span><span class="pi">:</span> <span class="s">ghcr.io</span>
+  <span class="na">IMAGE_NAME</span><span class="pi">:</span> <span class="s">${{ github.repository }}</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">build</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+
+    <span class="c1"># this sets permission to read repo content and push image to ghcr.io</span>
+    <span class="na">permissions</span><span class="pi">:</span>
+      <span class="na">contents</span><span class="pi">:</span> <span class="s">read</span>
+      <span class="na">packages</span><span class="pi">:</span> <span class="s">write</span>
+
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="c1"># 1. Checkout the repository</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Checkout repository</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+
+      <span class="c1"># 2. Set up Go</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Set up Go</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/setup-go@v2</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">go-version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1.22'</span>
+
+      <span class="c1"># 3. Install dependencies</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Get dependencies</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">go get -v -t -d ./...</span>
+
+      <span class="c1"># 4. Run Golang tests</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Run tests</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">go test -v ./...</span>
+        
+      <span class="c1"># 5. Login to ghcr.io</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Login to the container registry</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">docker/login-action@v3</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">registry</span><span class="pi">:</span> <span class="s">${{ env.REGISTRY }}</span>
+          <span class="na">username</span><span class="pi">:</span> <span class="s">${{ github.actor }}</span>
+          <span class="na">password</span><span class="pi">:</span> <span class="s">${{ secrets.GITHUB_TOKEN }}</span>
+      
+      <span class="c1"># 6. Extract metadata (tags, labels) for Docker</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Extract metadata</span>
+        <span class="na">id</span><span class="pi">:</span> <span class="s">meta</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">docker/metadata-action@v5</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">images</span><span class="pi">:</span> <span class="s">${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}</span>
+
+      <span class="c1"># 7. Build and push image to ghcr.io</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Build and push docker image</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">docker/build-push-action@v6</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">context</span><span class="pi">:</span> <span class="s">.</span>
+          <span class="na">push</span><span class="pi">:</span> <span class="kc">true</span>
+          <span class="na">tags</span><span class="pi">:</span> <span class="s">${{ steps.meta.outputs.tags }}</span>
+          <span class="na">labels</span><span class="pi">:</span> <span class="s">${{ steps.meta.outputs.labels }}</span>
+          <span class="c1"># you can pass build-args and secrets here</span>
+          <span class="c1"># see https://github.com/marketplace/actions/build-and-push-docker-images</span>
+
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="c1"># this prevent deployment when image building failed</span>
+    <span class="na">needs</span><span class="pi">:</span> <span class="s">build</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">steps</span><span class="pi">:</span>
+    <span class="c1"># 8. SSH to the server and run the script</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">executing remote ssh commands using password</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">appleboy/ssh-action@v1.2.0</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">host</span><span class="pi">:</span> <span class="s">${{ secrets.HOST }}</span>
+        <span class="na">username</span><span class="pi">:</span> <span class="s">${{ secrets.USERNAME }}</span>
+        <span class="na">password</span><span class="pi">:</span> <span class="s">${{ secrets.PASSWORD }}</span>
+        <span class="na">port</span><span class="pi">:</span> <span class="s">${{ secrets.PORT }}</span>
+        <span class="na">script</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s"># log in to container registry</span>
+          <span class="s">echo "${{ secrets.GITHUB_TOKEN }}" | docker login ${{ env.REGISTRY }} -u ${{ github.actor }} --password-stdin</span>
+          
+          <span class="s"># pull the image</span>
+          <span class="s">docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest</span>
+          
+          <span class="s"># export necessary environment variables for the script here</span>
+          <span class="s"># export VARIABLE_NAME=value</span>
+
+          <span class="s"># download and run deploy script using curl with auth header</span>
+          <span class="s">curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \</span>
+               <span class="s">-H "Accept: application/vnd.github.v3.raw" \</span>
+               <span class="s">-o /vps/path/to/save/script_name.sh \</span>
+               <span class="s">-L "https://api.github.com/repos/${{ github.repository }}/contents/repo/path/to/script_name.sh?ref=${{ github.sha }}"</span>
+
+          <span class="s">chmod +x /vps/path/to/save/script_name.sh</span>
+          <span class="s">/vps/path/to/save/script_name.sh</span>
+
+          <span class="s"># remove script after run completed</span>
+          <span class="s">rm -f /vps/path/to/save/script_name.sh</span>
+</code></pre></div></div>
+
+<p>With the above changes, no more cloning is needed to build images on the server.</p>
+
+<p>All the build processes happen in the pipeline, and when it’s successfully built, the SSH script will log in to ghcr.io and pull the image. I chose to do Docker login before the script to prevent passing the <code class="language-plaintext highlighter-rouge">GITHUB_TOKEN</code> secret to the script.</p>
+
+<blockquote>
+  <p>P.S. <code class="language-plaintext highlighter-rouge">GITHUB_TOKEN</code> is a provided secret value.
+No need to add them to the repository secret.</p>
+
+  <p>The only thing I did was adding secrets for the ssh step.</p>
+</blockquote>
+
+<p>Only the script is downloaded into the server; the rest of the source code is not. This way, the script can be safely stored in the same repository. Moreover, it’s deleted from the server after the run is completed. Neat!</p>
+
+<p>Just like the previous post, you can do anything inside the <code class="language-plaintext highlighter-rouge">script_name.sh</code>. The only difference would be that this time it would be simpler without the Docker build step:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/sh</span>
+
+<span class="c"># Name for the Docker image</span>
+<span class="nv">IMAGE_NAME</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">IMAGE_NAME</span><span class="k">:-</span><span class="nv">username</span><span class="p">/imagename</span>:latest<span class="k">}</span><span class="s2">"</span>
+<span class="nv">CONTAINER_NAME</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">CONTAINER_NAME</span><span class="k">:-</span><span class="nv">containername</span><span class="k">}</span><span class="s2">"</span>
+
+<span class="c"># Check if a container with CONTAINER_NAME exists and stop/remove it</span>
+<span class="nv">EXISTING_CONTAINER</span><span class="o">=</span><span class="si">$(</span>docker ps <span class="nt">-aq</span> <span class="nt">-f</span> <span class="nv">name</span><span class="o">=</span><span class="s2">"</span><span class="nv">$CONTAINER_NAME</span><span class="s2">"</span><span class="si">)</span>
+<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-z</span> <span class="s2">"</span><span class="nv">$EXISTING_CONTAINER</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"Stopping and removing existing container with name </span><span class="nv">$CONTAINER_NAME</span><span class="s2">..."</span>
+    docker stop <span class="nv">$CONTAINER_NAME</span>
+    docker <span class="nb">rm</span> <span class="nv">$CONTAINER_NAME</span>
+<span class="k">fi</span>
+
+<span class="c"># Run Docker container</span>
+<span class="nb">echo</span> <span class="s2">"Running Docker container..."</span>
+docker run <span class="nt">-d</span> <span class="nt">--restart</span> always <span class="nt">--name</span> <span class="nv">$CONTAINER_NAME</span> <span class="nv">$IMAGE_NAME</span>
+
+<span class="nb">echo</span> <span class="s2">"Docker container started."</span>
+
+</code></pre></div></div>
+
+<p>Finally, you might be wondering whether GitHub has a dashboard for your images like what <a href="https://hub.docker.com/">DockerHub</a> does. Worry not! You can go to <a href="https://github.com/username?tab=packages">https://github.com/username?tab=packages</a> (change it to your username) to see a list of images you have stored in ghcr.io.</p>]]></content><author><name>Made Indra</name></author><category term="Project" /><summary type="html"><![CDATA[Learn how to use GitHub Actions to build Docker images and store them in GitHub Container Registry (ghcr.io). A guide to improving CI/CD workflow for private repositories without exposing source code to servers.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://madeindra.dev/assets/images/2024-12-08-building-docker-image-with-github-container-registry.webp" /><media:content medium="image" url="https://madeindra.dev/assets/images/2024-12-08-building-docker-image-with-github-container-registry.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Docker Argument vs Variable vs Secret</title><link href="https://madeindra.dev/docker-argument-vs-variable-vs-secret/" rel="alternate" type="text/html" title="Docker Argument vs Variable vs Secret" /><published>2024-12-07T00:00:00+00:00</published><updated>2024-12-07T00:00:00+00:00</updated><id>https://madeindra.dev/docker-argument-vs-variable-vs-secret</id><content type="html" xml:base="https://madeindra.dev/docker-argument-vs-variable-vs-secret/"><![CDATA[<p>You might be wondering how to pass a value while building a Docker image. I’ve been there; in fact, I still revisit this topic from time to time. So I want to dedicate a post to building an image with arguments, variables, and secrets.</p>
 
 <p>Let’s start with a simple Dockerfile with multiple stages:</p>
 
@@ -512,14 +665,47 @@ docker network connect <span class="nv">$DOCKER_NETWORK_NAME</span> <span class=
       
     <span class="c1"># 5. SSH to the server and run the script</span>
     <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Deploy to server</span>
-      <span class="na">uses</span><span class="pi">:</span> <span class="s">appleboy/ssh-action@master</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">appleboy/ssh-action@v1.2.0</span>
       <span class="na">with</span><span class="pi">:</span>
         <span class="na">host</span><span class="pi">:</span> <span class="s">${{ secrets.SERVER_HOST }}</span>
         <span class="na">username</span><span class="pi">:</span> <span class="s">${{ secrets.SERVER_USERNAME }}</span>
-        <span class="na">key</span><span class="pi">:</span> <span class="s">${{ secrets.SERVER_SSH_KEY }}</span>
+        <span class="na">password</span><span class="pi">:</span> <span class="s">${{ secrets.PASSWORD }}</span>
+        <span class="na">port</span><span class="pi">:</span> <span class="s">${{ secrets.PORT }}</span>
         <span class="na">script</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s"># export necessary environment variables for the script here</span>
+          <span class="s"># export VARIABLE_NAME=value</span>
+
+          <span class="s"># run script</span>
           <span class="s">cd /path/to/your/project</span>
           <span class="s">./script_name.sh</span>
+</code></pre></div></div>
+
+<p>You can do anything with the <code class="language-plaintext highlighter-rouge">script_name.sh</code>, let’s say you want to build docker image on the server and run it:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/sh</span>
+
+<span class="c"># Name for the Docker image</span>
+<span class="nv">IMAGE_NAME</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">IMAGE_NAME</span><span class="k">:-</span><span class="nv">username</span><span class="p">/imagename</span>:latest<span class="k">}</span><span class="s2">"</span>
+<span class="nv">CONTAINER_NAME</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">CONTAINER_NAME</span><span class="k">:-</span><span class="nv">containername</span><span class="k">}</span><span class="s2">"</span>
+
+<span class="c"># Build Docker image</span>
+<span class="nb">echo</span> <span class="s2">"Building Docker image..."</span>
+docker build <span class="nt">-t</span> <span class="nv">$IMAGE_NAME</span> <span class="nb">.</span>
+
+<span class="c"># Check if a container with CONTAINER_NAME exists and stop/remove it</span>
+<span class="nv">EXISTING_CONTAINER</span><span class="o">=</span><span class="si">$(</span>docker ps <span class="nt">-aq</span> <span class="nt">-f</span> <span class="nv">name</span><span class="o">=</span><span class="s2">"</span><span class="nv">$CONTAINER_NAME</span><span class="s2">"</span><span class="si">)</span>
+<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-z</span> <span class="s2">"</span><span class="nv">$EXISTING_CONTAINER</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"Stopping and removing existing container with name </span><span class="nv">$CONTAINER_NAME</span><span class="s2">..."</span>
+    docker stop <span class="nv">$CONTAINER_NAME</span>
+    docker <span class="nb">rm</span> <span class="nv">$CONTAINER_NAME</span>
+<span class="k">fi</span>
+
+<span class="c"># Run Docker container</span>
+<span class="nb">echo</span> <span class="s2">"Running Docker container..."</span>
+docker run <span class="nt">-d</span> <span class="nt">--restart</span> always <span class="nt">--name</span> <span class="nv">$CONTAINER_NAME</span> <span class="nv">$IMAGE_NAME</span>
+
+<span class="nb">echo</span> <span class="s2">"Docker image built and container started."</span>
+
 </code></pre></div></div>
 
 <p>One more thing, I wanted to automate database backup. This was still possible with the good ol’ Shell Script with the help of Cron.</p>

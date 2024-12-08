@@ -100,11 +100,16 @@ Create a new blog post with a specified title and date:
 make post title="My New Post" date="2024-12-31"
 ```
 
-### Download Random Image
+### Download Image
 
 Download a random image with a specified query:
 ```markdown
 make image query="person sitting"
+```
+
+Download a specified image with Unsplash image id:
+```markdown
+make image id="lOr3m"
 ```
 
 ### Compress Image
