@@ -1,6 +1,6 @@
 # Jekyll Blog
 
-## Local Development
+## How To Run Locally
 
 1. Install dependencies
 

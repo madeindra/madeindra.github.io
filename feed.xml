@@ -1,4 +1,330 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://madeindra.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://madeindra.dev/" rel="alternate" type="text/html" /><updated>2024-12-09T09:02:43+00:00</updated><id>https://madeindra.dev/feed.xml</id><title type="html">madeindra.dev</title><subtitle>A blog by Made Indra sharing insights, tutorials, and stories about software development, technology trends, personal passions, plus a bit of everything else!</subtitle><author><name>Made Indra</name></author><entry><title type="html">Storing Docker Image on GitHub Container Registry</title><link href="https://madeindra.dev/storing-docker-image-on-github-container-registry/" rel="alternate" type="text/html" title="Storing Docker Image on GitHub Container Registry" /><published>2024-12-08T00:00:00+00:00</published><updated>2024-12-08T00:00:00+00:00</updated><id>https://madeindra.dev/storing-docker-image-on-github-container-registry</id><content type="html" xml:base="https://madeindra.dev/storing-docker-image-on-github-container-registry/"><![CDATA[<p>Months ago I posted about using <a href="../shell-scripting-cicd">Shell Script for CI/CD</a> in a personal project in which the script includes cloning the repo locally, building the Docker image, and running it as a container right in the VPS. I know, I know. It’s not ideal, and it’s leaking the source code to the server, so let’s redo it.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://madeindra.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://madeindra.dev/" rel="alternate" type="text/html" /><updated>2024-12-10T03:44:38+00:00</updated><id>https://madeindra.dev/feed.xml</id><title type="html">madeindra.dev</title><subtitle>A blog by Made Indra sharing insights, tutorials, and stories about software development, technology trends, personal passions, plus a bit of everything else!</subtitle><author><name>Made Indra</name></author><entry><title type="html">Money Data Type in Golang</title><link href="https://madeindra.dev/money-data-type-in-golang/" rel="alternate" type="text/html" title="Money Data Type in Golang" /><published>2024-12-09T12:00:00+00:00</published><updated>2024-12-09T12:00:00+00:00</updated><id>https://madeindra.dev/money-data-type-in-golang</id><content type="html" xml:base="https://madeindra.dev/money-data-type-in-golang/"><![CDATA[<p>It’s common knowledge that using <code class="language-plaintext highlighter-rouge">Float</code> (or <code class="language-plaintext highlighter-rouge">Number</code> in JavaScript, which is <code class="language-plaintext highlighter-rouge">Float64</code> behind the scenes) to store monetary data is a bad idea. If you don’t know this yet, try doing <code class="language-plaintext highlighter-rouge">10 / 3</code> in your choice of programming language. I’ve seen a lot of LinkedIn posts ridiculing JavaScript for this.</p>
+
+<p><img src="/assets/others/floating-point-error-1.webp" alt="Dividing 10 by 3" /></p>
+
+<p>When dealing with a user’s balance, let’s say in US Dollars, we sometimes need to deal with cent values. If a user has a balance of US$10.00 and we want to charge them 50 cents (US$0.50), they will have US$9.50 by the end of it. Doesn’t look wrong, right?</p>
+
+<p>But what if the user only has US$1.00 and we charge them 70 cents (US$0.70)?</p>
+
+<p><img src="/assets/others/floating-point-error-2.webp" alt="Subtracting 0.70 from 1.00" /></p>
+
+<p>Mentally we already did the calculation and got US$0.30, but again when I tried the code in JavaScript, I got <code class="language-plaintext highlighter-rouge">0.30000000000000004</code>. Now the customer has more money than they should have.</p>
+
+<blockquote>
+  <p>Huh, weird?</p>
+
+  <p>That couldn’t be right. Curse you JavaScript!</p>
+</blockquote>
+
+<p>I mean, this problem can be found not only in JavaScript but also in all programming languages that use the <a href="https://en.wikipedia.org/wiki/IEEE_754">IEEE 754</a> standard. So Golang has this problem too, run <a href="https://go.dev/play/p/WE25YQNwOZ5">this piece of code</a> if you don’t believe me.</p>
+
+<h2 id="dealing-with-decimal-places">Dealing with Decimal Places</h2>
+
+<blockquote>
+  <p>So what should we use, then?</p>
+</blockquote>
+
+<p>Worry not! We have other data types.</p>
+
+<p>Throughout my career, I’ve seen there are two ways most developers handle this; either by using <code class="language-plaintext highlighter-rouge">Integer</code> or <code class="language-plaintext highlighter-rouge">String</code>.</p>
+
+<p>When using <code class="language-plaintext highlighter-rouge">Integer</code>, we write US$1 as <code class="language-plaintext highlighter-rouge">100</code>. Notice that there is no comma separator in the value. This way every calculation can be done in <code class="language-plaintext highlighter-rouge">Integer</code>, no more floating-point issues. This way, we will show <code class="language-plaintext highlighter-rouge">100</code> in API request/response and database to denote US$1.</p>
+
+<p>When using <code class="language-plaintext highlighter-rouge">String</code>, we write US$1 as <code class="language-plaintext highlighter-rouge">"1.00"</code>, then we parse it to <code class="language-plaintext highlighter-rouge">Integer</code> so we get a value like the previous example, do some calculation, and make it into <code class="language-plaintext highlighter-rouge">String</code> again to be stored in the database. This way we can show <code class="language-plaintext highlighter-rouge">"1.00"</code> in the API request/response while calculating them fully in <code class="language-plaintext highlighter-rouge">Integer</code>.</p>
+
+<p>To be honest, I am a bit opinionated on this money-data-type approach.</p>
+
+<p>I think the <code class="language-plaintext highlighter-rouge">Integer</code> approach is great since there is no extra step necessary for parsing value, but the downside is the API consumer has to be aware that <code class="language-plaintext highlighter-rouge">100</code> means <code class="language-plaintext highlighter-rouge">US$1</code> and not <code class="language-plaintext highlighter-rouge">US$100</code>.</p>
+
+<p>If you worked in backend, you know how silly it is to trust that the API consumer would have the same thought process as the API developer.</p>
+
+<p>Personally, I liked the second approach where the API consumer can just pass <code class="language-plaintext highlighter-rouge">String</code> value of either <code class="language-plaintext highlighter-rouge">"1"</code> or <code class="language-plaintext highlighter-rouge">"1.00"</code> and we would still get the same <code class="language-plaintext highlighter-rouge">Integer</code> value of <code class="language-plaintext highlighter-rouge">100</code> to handle. But, I would store them as <code class="language-plaintext highlighter-rouge">Integer</code> not <code class="language-plaintext highlighter-rouge">String</code> so that parsing only happened when receiving request or before sending response.</p>
+
+<h2 id="enter-the-json-interface">Enter the JSON Interface</h2>
+
+<p>I would use JSON for most of my API, this is the format most consumers expect to get.</p>
+
+<p>In Go, there are JSON interface methods that we can override to customize the behavior when receiving requests and sending responses. We will use this to eliminate the need to manually call the <code class="language-plaintext highlighter-rouge">String</code> to <code class="language-plaintext highlighter-rouge">Integer</code> parsing method every time.</p>
+
+<h3 id="determining-the-number-of-decimal-places">Determining The Number of Decimal Places</h3>
+
+<p>Before we start, let’s talk a little bit about currency.</p>
+
+<p>Most countries use 2 decimal places. There’s a country like Kuwait that uses 3 decimal places. And there are countries like Indonesia and Japan that use no decimal places at all. I haven’t found any country that uses more than 3 decimal places, yet.</p>
+
+<p>Being ambitious, let’s say we want to support all currencies from every country in the world. Standardizing 3 decimal places on the backend would be great. On the frontend we don’t need to care; <code class="language-plaintext highlighter-rouge">"1"</code>, <code class="language-plaintext highlighter-rouge">"1.0"</code>, <code class="language-plaintext highlighter-rouge">"1.00"</code> or <code class="language-plaintext highlighter-rouge">"1.000"</code> will all be treated as <code class="language-plaintext highlighter-rouge">"1.000"</code>. Less stress for the API consumers, less conflict we will have. LOL!</p>
+
+<h3 id="overriding-json-marshalunmarshal">Overriding JSON Marshal/Unmarshal</h3>
+
+<p>Now that we have agreed to use 3 decimal places for all money data, let’s start by coding the implementation.</p>
+
+<p>This is our starting point, just like all other Go Projects:</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="p">(</span>
+	<span class="s">"fmt"</span>
+<span class="p">)</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"Hello, World!"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>First, let’s create a custom data type:</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">type</span> <span class="n">Money</span> <span class="kt">int64</span>
+</code></pre></div></div>
+
+<p>Notice that we didn’t write it as <code class="language-plaintext highlighter-rouge">type Money = int64</code>, because this is Type Definition, not Type Alias.</p>
+
+<p>The difference is when doing Aliasing, both data type are interchangeable, meaning we can pass <code class="language-plaintext highlighter-rouge">int64</code> to functions that expect <code class="language-plaintext highlighter-rouge">Money</code> if it were alias of <code class="language-plaintext highlighter-rouge">int64</code>. But, in Type Definition, we need to explicitly cast <code class="language-plaintext highlighter-rouge">int64</code> to <code class="language-plaintext highlighter-rouge">Money</code> before we can pass it to functions that expect <code class="language-plaintext highlighter-rouge">Money</code>.</p>
+
+<p>Now that we have our custom data type, let’s add 2 methods to change the way we receive JSON request and send JSON response:</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">// UnmarshalJSON implements the json.Unmarshaler interface</span>
+<span class="k">func</span> <span class="p">(</span><span class="n">m</span> <span class="o">*</span><span class="n">Money</span><span class="p">)</span> <span class="n">UnmarshalJSON</span><span class="p">(</span><span class="n">data</span> <span class="p">[]</span><span class="kt">byte</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
+	<span class="c">// remove quotes from string</span>
+	<span class="n">s</span> <span class="o">:=</span> <span class="n">strings</span><span class="o">.</span><span class="n">Trim</span><span class="p">(</span><span class="kt">string</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="s">"</span><span class="se">\"</span><span class="s">"</span><span class="p">)</span>
+
+	<span class="c">// if negative, remove sign</span>
+	<span class="n">isNegative</span> <span class="o">:=</span> <span class="n">strings</span><span class="o">.</span><span class="n">HasPrefix</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s">"-"</span><span class="p">)</span>
+	<span class="k">if</span> <span class="n">isNegative</span> <span class="p">{</span>
+		<span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="p">]</span>
+	<span class="p">}</span>
+
+	<span class="c">// split by point</span>
+	<span class="n">parts</span> <span class="o">:=</span> <span class="n">strings</span><span class="o">.</span><span class="n">Split</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s">"."</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">&gt;</span> <span class="m">2</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="n">fmt</span><span class="o">.</span><span class="n">Errorf</span><span class="p">(</span><span class="s">"invalid decimal format: %s"</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+	<span class="p">}</span>
+
+	<span class="c">// parse leading part</span>
+	<span class="n">intPart</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">strconv</span><span class="o">.</span><span class="n">ParseInt</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="m">0</span><span class="p">],</span> <span class="m">10</span><span class="p">,</span> <span class="m">64</span><span class="p">)</span>
+	<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="n">fmt</span><span class="o">.</span><span class="n">Errorf</span><span class="p">(</span><span class="s">"invalid integer part: %v"</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+	<span class="p">}</span>
+
+	<span class="c">// multiply by 1000, later will add the trailing part</span>
+	<span class="n">result</span> <span class="o">:=</span> <span class="n">intPart</span> <span class="o">*</span> <span class="m">1000</span>
+
+	<span class="c">// parse trailing part, only if exist</span>
+	<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">==</span> <span class="m">2</span> <span class="p">{</span>
+		<span class="c">// trim to at max 3 digits (additional decimal places will be ignored)</span>
+		<span class="n">decimalPart</span> <span class="o">:=</span> <span class="n">parts</span><span class="p">[</span><span class="m">1</span><span class="p">]</span>
+		<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">decimalPart</span><span class="p">)</span> <span class="o">&gt;</span> <span class="m">3</span> <span class="p">{</span>
+			<span class="n">decimalPart</span> <span class="o">=</span> <span class="n">decimalPart</span><span class="p">[</span><span class="o">:</span><span class="m">3</span><span class="p">]</span>
+		<span class="p">}</span>
+
+		<span class="c">// pad with additional zeros (if less than 3 decimal places)</span>
+		<span class="k">for</span> <span class="nb">len</span><span class="p">(</span><span class="n">decimalPart</span><span class="p">)</span> <span class="o">&lt;</span> <span class="m">3</span> <span class="p">{</span>
+			<span class="n">decimalPart</span> <span class="o">+=</span> <span class="s">"0"</span>
+		<span class="p">}</span>
+
+		<span class="c">// parse</span>
+		<span class="n">decimal</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">strconv</span><span class="o">.</span><span class="n">ParseInt</span><span class="p">(</span><span class="n">decimalPart</span><span class="p">,</span> <span class="m">10</span><span class="p">,</span> <span class="m">64</span><span class="p">)</span>
+		<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
+			<span class="k">return</span> <span class="n">fmt</span><span class="o">.</span><span class="n">Errorf</span><span class="p">(</span><span class="s">"invalid decimal part: %v"</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+		<span class="p">}</span>
+
+		<span class="c">// combine leading and trailing part</span>
+		<span class="n">result</span> <span class="o">+=</span> <span class="n">decimal</span>
+	<span class="p">}</span>
+
+	<span class="c">// if negative, return back sign</span>
+	<span class="k">if</span> <span class="n">isNegative</span> <span class="p">{</span>
+		<span class="n">result</span> <span class="o">=</span> <span class="o">-</span><span class="n">result</span>
+	<span class="p">}</span>
+
+	<span class="o">*</span><span class="n">m</span> <span class="o">=</span> <span class="n">Money</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+	<span class="k">return</span> <span class="no">nil</span>
+<span class="p">}</span>
+
+<span class="c">// MarshalJSON implements the json.Marshaler interface</span>
+<span class="k">func</span> <span class="p">(</span><span class="n">m</span> <span class="n">Money</span><span class="p">)</span> <span class="n">MarshalJSON</span><span class="p">()</span> <span class="p">([]</span><span class="kt">byte</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+	<span class="c">// get non-negative value</span>
+	<span class="n">value</span> <span class="o">:=</span> <span class="kt">int64</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+	<span class="n">sign</span> <span class="o">:=</span> <span class="s">""</span>
+	<span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="m">0</span> <span class="p">{</span>
+		<span class="n">sign</span> <span class="o">=</span> <span class="s">"-"</span>
+		<span class="n">value</span> <span class="o">=</span> <span class="o">-</span><span class="n">value</span>
+	<span class="p">}</span>
+
+	<span class="c">// calculate leading and trailing digits</span>
+	<span class="n">intPart</span> <span class="o">:=</span> <span class="n">value</span> <span class="o">/</span> <span class="m">1000</span>
+	<span class="n">decPart</span> <span class="o">:=</span> <span class="n">value</span> <span class="o">%</span> <span class="m">1000</span>
+
+	<span class="c">// always format to trailing 3 decimal</span>
+	<span class="n">str</span> <span class="o">:=</span> <span class="n">fmt</span><span class="o">.</span><span class="n">Sprintf</span><span class="p">(</span><span class="s">"%s%d.%03d"</span><span class="p">,</span> <span class="n">sign</span><span class="p">,</span> <span class="n">intPart</span><span class="p">,</span> <span class="n">decPart</span><span class="p">)</span>
+
+	<span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">Marshal</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>For request/response simulation, we will need a struct that has <code class="language-plaintext highlighter-rouge">Money</code> data type as the property:</p>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">type</span> <span class="n">Data</span> <span class="k">struct</span> <span class="p">{</span>
+	<span class="n">Value</span> <span class="n">Money</span> <span class="s">`json:"value"`</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Now to simulate receiving request:</p>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">// receiving request</span>
+<span class="n">incoming</span> <span class="o">:=</span> <span class="s">`{"value": "1"}`</span>
+
+<span class="k">var</span> <span class="n">received</span> <span class="n">Data</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">Unmarshal</span><span class="p">([]</span><span class="kt">byte</span><span class="p">(</span><span class="n">incoming</span><span class="p">),</span> <span class="o">&amp;</span><span class="n">received</span><span class="p">)</span>
+
+<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"incoming data parsed as int64:"</span><span class="p">,</span> <span class="n">received</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The result will look like this:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>incoming data parsed as int64: <span class="o">{</span>1000<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Whatever value being sent, be it <code class="language-plaintext highlighter-rouge">"1"</code>, <code class="language-plaintext highlighter-rouge">"1.0"</code>, <code class="language-plaintext highlighter-rouge">"1.00"</code> or <code class="language-plaintext highlighter-rouge">"1.000"</code>, the backend will receive it as <code class="language-plaintext highlighter-rouge">1000</code>. Neat, huh?</p>
+
+<p>Now to simulate sending response:</p>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">// sending response</span>
+<span class="n">outgoing</span> <span class="o">:=</span> <span class="n">Data</span><span class="p">{</span><span class="n">Value</span><span class="o">:</span> <span class="m">5000</span><span class="p">}</span>
+<span class="n">sent</span><span class="p">,</span> <span class="n">_</span> <span class="o">:=</span> <span class="n">json</span><span class="o">.</span><span class="n">Marshal</span><span class="p">(</span><span class="n">outgoing</span><span class="p">)</span>
+
+<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"outgoing data converted to string:"</span><span class="p">,</span> <span class="kt">string</span><span class="p">(</span><span class="n">sent</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>The result will look like this:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>outgoing data converted to string: <span class="o">{</span><span class="s2">"value"</span>:<span class="s2">"5.000"</span><span class="o">}</span>
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">Money</code> data type will be automatically converted to string. Perfect!</p>
+
+<h3 id="putting-them-up">Putting Them Up</h3>
+
+<p>The final result should looks like this:</p>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="p">(</span>
+	<span class="s">"encoding/json"</span>
+	<span class="s">"fmt"</span>
+	<span class="s">"strconv"</span>
+	<span class="s">"strings"</span>
+<span class="p">)</span>
+
+<span class="k">type</span> <span class="n">Money</span> <span class="kt">int64</span>
+
+<span class="k">func</span> <span class="p">(</span><span class="n">m</span> <span class="o">*</span><span class="n">Money</span><span class="p">)</span> <span class="n">UnmarshalJSON</span><span class="p">(</span><span class="n">data</span> <span class="p">[]</span><span class="kt">byte</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
+	<span class="c">// remove quotes from string</span>
+	<span class="n">s</span> <span class="o">:=</span> <span class="n">strings</span><span class="o">.</span><span class="n">Trim</span><span class="p">(</span><span class="kt">string</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="s">"</span><span class="se">\"</span><span class="s">"</span><span class="p">)</span>
+
+	<span class="c">// if negative, remove sign</span>
+	<span class="n">isNegative</span> <span class="o">:=</span> <span class="n">strings</span><span class="o">.</span><span class="n">HasPrefix</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s">"-"</span><span class="p">)</span>
+	<span class="k">if</span> <span class="n">isNegative</span> <span class="p">{</span>
+		<span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="p">]</span>
+	<span class="p">}</span>
+
+	<span class="c">// split by point</span>
+	<span class="n">parts</span> <span class="o">:=</span> <span class="n">strings</span><span class="o">.</span><span class="n">Split</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s">"."</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">&gt;</span> <span class="m">2</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="n">fmt</span><span class="o">.</span><span class="n">Errorf</span><span class="p">(</span><span class="s">"invalid decimal format: %s"</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+	<span class="p">}</span>
+
+	<span class="c">// parse leading part</span>
+	<span class="n">intPart</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">strconv</span><span class="o">.</span><span class="n">ParseInt</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="m">0</span><span class="p">],</span> <span class="m">10</span><span class="p">,</span> <span class="m">64</span><span class="p">)</span>
+	<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="n">fmt</span><span class="o">.</span><span class="n">Errorf</span><span class="p">(</span><span class="s">"invalid integer part: %v"</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+	<span class="p">}</span>
+
+	<span class="c">// multiply by 1000, later will add the trailing part</span>
+	<span class="n">result</span> <span class="o">:=</span> <span class="n">intPart</span> <span class="o">*</span> <span class="m">1000</span>
+
+	<span class="c">// parse trailing part, only if exist</span>
+	<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">==</span> <span class="m">2</span> <span class="p">{</span>
+		<span class="c">// trim to at max 3 digits (additional decimal places will be ignored)</span>
+		<span class="n">decimalPart</span> <span class="o">:=</span> <span class="n">parts</span><span class="p">[</span><span class="m">1</span><span class="p">]</span>
+		<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">decimalPart</span><span class="p">)</span> <span class="o">&gt;</span> <span class="m">3</span> <span class="p">{</span>
+			<span class="n">decimalPart</span> <span class="o">=</span> <span class="n">decimalPart</span><span class="p">[</span><span class="o">:</span><span class="m">3</span><span class="p">]</span>
+		<span class="p">}</span>
+
+		<span class="c">// pad with additional zeros (if less than 3 decimal places)</span>
+		<span class="k">for</span> <span class="nb">len</span><span class="p">(</span><span class="n">decimalPart</span><span class="p">)</span> <span class="o">&lt;</span> <span class="m">3</span> <span class="p">{</span>
+			<span class="n">decimalPart</span> <span class="o">+=</span> <span class="s">"0"</span>
+		<span class="p">}</span>
+
+		<span class="c">// parse</span>
+		<span class="n">decimal</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">strconv</span><span class="o">.</span><span class="n">ParseInt</span><span class="p">(</span><span class="n">decimalPart</span><span class="p">,</span> <span class="m">10</span><span class="p">,</span> <span class="m">64</span><span class="p">)</span>
+		<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
+			<span class="k">return</span> <span class="n">fmt</span><span class="o">.</span><span class="n">Errorf</span><span class="p">(</span><span class="s">"invalid decimal part: %v"</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+		<span class="p">}</span>
+
+		<span class="c">// combine leading and trailing part</span>
+		<span class="n">result</span> <span class="o">+=</span> <span class="n">decimal</span>
+	<span class="p">}</span>
+
+	<span class="c">// if negative, return back sign</span>
+	<span class="k">if</span> <span class="n">isNegative</span> <span class="p">{</span>
+		<span class="n">result</span> <span class="o">=</span> <span class="o">-</span><span class="n">result</span>
+	<span class="p">}</span>
+
+	<span class="o">*</span><span class="n">m</span> <span class="o">=</span> <span class="n">Money</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+	<span class="k">return</span> <span class="no">nil</span>
+<span class="p">}</span>
+
+<span class="c">// MarshalJSON implements the json.Marshaler interface</span>
+<span class="k">func</span> <span class="p">(</span><span class="n">m</span> <span class="n">Money</span><span class="p">)</span> <span class="n">MarshalJSON</span><span class="p">()</span> <span class="p">([]</span><span class="kt">byte</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+	<span class="c">// get non-negative value</span>
+	<span class="n">value</span> <span class="o">:=</span> <span class="kt">int64</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+	<span class="n">sign</span> <span class="o">:=</span> <span class="s">""</span>
+	<span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="m">0</span> <span class="p">{</span>
+		<span class="n">sign</span> <span class="o">=</span> <span class="s">"-"</span>
+		<span class="n">value</span> <span class="o">=</span> <span class="o">-</span><span class="n">value</span>
+	<span class="p">}</span>
+
+	<span class="c">// calculate leading and trailing digits</span>
+	<span class="n">intPart</span> <span class="o">:=</span> <span class="n">value</span> <span class="o">/</span> <span class="m">1000</span>
+	<span class="n">decPart</span> <span class="o">:=</span> <span class="n">value</span> <span class="o">%</span> <span class="m">1000</span>
+
+	<span class="c">// always format to trailing 3 decimal</span>
+	<span class="n">str</span> <span class="o">:=</span> <span class="n">fmt</span><span class="o">.</span><span class="n">Sprintf</span><span class="p">(</span><span class="s">"%s%d.%03d"</span><span class="p">,</span> <span class="n">sign</span><span class="p">,</span> <span class="n">intPart</span><span class="p">,</span> <span class="n">decPart</span><span class="p">)</span>
+
+	<span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">Marshal</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">type</span> <span class="n">Data</span> <span class="k">struct</span> <span class="p">{</span>
+	<span class="n">Value</span> <span class="n">Money</span> <span class="s">`json:"value"`</span>
+<span class="p">}</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="c">// receiving request</span>
+	<span class="n">incoming</span> <span class="o">:=</span> <span class="s">`{"value": "1"}`</span>
+
+	<span class="k">var</span> <span class="n">received</span> <span class="n">Data</span>
+	<span class="n">_</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">Unmarshal</span><span class="p">([]</span><span class="kt">byte</span><span class="p">(</span><span class="n">incoming</span><span class="p">),</span> <span class="o">&amp;</span><span class="n">received</span><span class="p">)</span>
+
+	<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"incoming data parsed as int64:"</span><span class="p">,</span> <span class="n">received</span><span class="p">)</span>
+
+	<span class="c">// sending response</span>
+	<span class="n">outgoing</span> <span class="o">:=</span> <span class="n">Data</span><span class="p">{</span><span class="n">Value</span><span class="o">:</span> <span class="m">5000</span><span class="p">}</span>
+	<span class="n">sent</span><span class="p">,</span> <span class="n">_</span> <span class="o">:=</span> <span class="n">json</span><span class="o">.</span><span class="n">Marshal</span><span class="p">(</span><span class="n">outgoing</span><span class="p">)</span>
+
+	<span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"outgoing data converted to string:"</span><span class="p">,</span> <span class="kt">string</span><span class="p">(</span><span class="n">sent</span><span class="p">))</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="closing-up">Closing Up</h2>
+
+<p>Now you know (arguably) the best way to handle money data in Golang.</p>
+
+<p>Joke aside, this approach is not the perfect (yet), for production you might want to add more handling such as arithmetic operations, validation rules, and formatting with currency.</p>
+
+<p>But, so far, using this approach, you already get:</p>
+<ul>
+  <li>Consistent decimal places handling</li>
+  <li>Clean API request/response with string representation</li>
+  <li>No floating-point arithmetic errors</li>
+</ul>
+
+<p>I’d say that’s already enough for a starter (๑˃ᴗ˂)ﻭ</p>]]></content><author><name>Made Indra</name></author><category term="Development" /><summary type="html"><![CDATA[Learn how to handle money data type in Golang without floating-point arithmetic errors using custom type definition and JSON interface implementation.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://madeindra.dev/assets/images/2024-12-09-money-data-type-in-golang.webp" /><media:content medium="image" url="https://madeindra.dev/assets/images/2024-12-09-money-data-type-in-golang.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Storing Docker Image on GitHub Container Registry</title><link href="https://madeindra.dev/storing-docker-image-on-github-container-registry/" rel="alternate" type="text/html" title="Storing Docker Image on GitHub Container Registry" /><published>2024-12-08T00:00:00+00:00</published><updated>2024-12-08T00:00:00+00:00</updated><id>https://madeindra.dev/storing-docker-image-on-github-container-registry</id><content type="html" xml:base="https://madeindra.dev/storing-docker-image-on-github-container-registry/"><![CDATA[<p>Months ago I posted about using <a href="../shell-scripting-cicd">Shell Script for CI/CD</a> in a personal project in which the script includes cloning the repo locally, building the Docker image, and running it as a container right in the VPS. I know, I know. It’s not ideal, and it’s leaking the source code to the server, so let’s redo it.</p>
 
 <p>I want to focus on using GitHub Actions on a private repository to build a Docker image and store it on GitHub Container Registry (<a href="https://ghcr.io/">ghcr.io</a>). It’s perfect for personal projects since we can use up to 500MB total for all images on the GitHub Free plan - it’s counted as GitHub Package storage usage, by the way.</p>
 

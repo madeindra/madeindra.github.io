@@ -1,6 +1,13 @@
 [
     
     {
+        "title": "Money Data Type in Golang",
+        "url": "/money-data-type-in-golang/",
+        "date": "09 Dec 2024",
+        "description": "Learn how to handle money data type in Golang without floating-point arithmetic errors using custom type definition and JSON interface implementation."
+    } ,
+  
+    {
         "title": "Storing Docker Image on GitHub Container Registry",
         "url": "/storing-docker-image-on-github-container-registry/",
         "date": "08 Dec 2024",
