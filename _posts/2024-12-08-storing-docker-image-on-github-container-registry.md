@@ -2,7 +2,7 @@
 layout: post
 title: "Storing Docker Image on GitHub Container Registry"
 date: "2024-12-08 00:00:00"
-category: "Project"
+category: "Development"
 image: "/assets/images/2024-12-08-storing-docker-image-on-github-container-registry.webp"
 feature_image: true
 description: "Learn how to use GitHub Actions to build Docker images and store them in GitHub Container Registry (ghcr.io). A guide to improving CI/CD workflow for private repositories without exposing source code to servers."

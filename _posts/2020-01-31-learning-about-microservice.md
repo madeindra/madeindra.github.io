@@ -2,7 +2,7 @@
 layout: post
 title: "Learning about Microservice"
 date: "2020-02-23 07:00:00"
-category: "Development"
+category: "Project"
 description: "Is microservice architecture the solution that fit all needs?"
 keywords:
   - Project
