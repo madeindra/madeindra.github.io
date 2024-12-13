@@ -227,3 +227,8 @@ I needed to set the PostgreSQL credentials on `.bashrc` to make this work and in
 In the future, I'd like to simplify this workflow. Not having to build on the server would be a boon. I've discovered that I can publish docker image for free to [GitHub Container Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry).
 
 I have successfully built the docker image and pushed it to ghcr.io on the pipeline. The next step is to prepare a script to pull the image and run it on the server. Maybe I will write another about this in the future. (｡•̀ᴗ-)✧
+
+---
+
+Photo by <a href="https://unsplash.com/@casparrubin?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Caspar Camille Rubin on Unsplash</a>
+      

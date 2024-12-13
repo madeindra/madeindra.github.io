@@ -345,3 +345,8 @@ But, so far, using this approach, you already get:
 - No floating-point arithmetic errors
 
 I'd say that's already enough for a starter (๑˃ᴗ˂)ﻭ
+
+---
+
+Photo by <a href="https://unsplash.com/@nbmat?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Mathieu Turle on Unsplash</a>
+      

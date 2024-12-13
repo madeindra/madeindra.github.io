@@ -65,3 +65,8 @@ To this day, people still live in this country with the fear of not getting a jo
 To stay one step ahead, I really hope that in the coming years, they will realize that the current workforce is not easily replaced. And at that time, I hope they start by forbidding age discrimination in job applications.
 
 I believe that everyone should have an equal standing when they want to support themselves and their family, not forgetting that these are the same people who will contribute to the country through their income tax.
+
+---
+
+Photo by <a href="https://unsplash.com/@visuals?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">visuals on Unsplash</a>
+      

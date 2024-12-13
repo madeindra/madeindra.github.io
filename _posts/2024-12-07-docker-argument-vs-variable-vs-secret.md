@@ -278,3 +278,8 @@ So here's a TL;DR version of Environment Variables vs Build Secrets.
 | Visibility     | Visible in image history and container | Not visible in image history           |
 | Security Level | Lower (plaintext)                      | Higher (secure during build)           |
 | Best Used For  | Non-sensitive configuration            | Sensitive data (API keys, credentials) |
+
+---
+
+Photo by <a href="https://unsplash.com/@carrier_lost?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ian Taylor on Unsplash</a>
+      

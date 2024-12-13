@@ -63,3 +63,8 @@ We don't want to solely rely on our brain to memorize things when we just starte
 ## Final Thoughts
 
 So, I think the trick to learning a new language is to start by learning as many words as possible, associating those words with your senses (vision, hearing, smell, etc.), and recalling them whenever you experience that sensation—be it through writing or speaking. Receiving feedback is also a part of the learning process. That's why having someone to converse with (written or spoken) will strengthen your foundation and help you become fluent.
+
+---
+
+Photo by <a href="https://unsplash.com/@priscilladupreez?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Priscilla Du Preez on Unsplash</a>
+      

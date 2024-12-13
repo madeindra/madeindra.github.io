@@ -165,3 +165,8 @@ echo "Docker container started."
 ```
 
 Finally, you might be wondering whether GitHub has a dashboard for your images like what [DockerHub](https://hub.docker.com/) does. Worry not! You can go to [https://github.com/username?tab=packages](https://github.com/username?tab=packages) (change it to your username) to see a list of images you have stored in ghcr.io.
+
+---
+
+Photo by <a href="https://unsplash.com/@richygreat?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Richy Great on Unsplash</a>
+      

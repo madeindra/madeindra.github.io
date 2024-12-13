@@ -33,3 +33,8 @@ Now, where can you find the postings?
 For remote job opportunities, you can start by checking out platforms like [Remote.com](https://remote.com/jobs), [Remotive](https://remotive.com/), [Wellfound](https://wellfound.com/jobs), [WeWorkRemotely](https://weworkremotely.com/) and [Jobgether](https://jobgether.com).
 
 When it comes to jobs offering relocation support, I can only think of [Relocate.me](https://relocate.me/) as the most trusted. Many companies also list relocation as part of th their perk, so be sure to keep an eye on their career pages.
+
+---
+
+Photo by <a href="https://unsplash.com/@grakozy?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Greg Rakozy on Unsplash</a>
+      

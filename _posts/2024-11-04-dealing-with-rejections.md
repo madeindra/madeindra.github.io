@@ -29,3 +29,8 @@ I want to tell you this: whether you didn't get the job, didn't win the prize, o
 When you start to feel like you're in the dumpster, take a rest. Take your time—no matter how long it takes—take as much as you need. I know it sounds cliché, but time does heal wounds. Do things you enjoy, and involve yourself with people who matter. One day, when you're ready to bounce back, you'll do it better because you've learned the lessons from the rejections you faced.
 
 I pray that one day you will succeed.
+
+---
+
+Photo by <a href="https://unsplash.com/@a_d_s_w?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Adrian Swancar on Unsplash</a>
+      

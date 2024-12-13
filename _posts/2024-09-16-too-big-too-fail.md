@@ -143,3 +143,8 @@ Last time I heard they stopped recruiting people and stopped renewing contracts.
 Failing to do all those rules might lead to contract termination. 
 
 Gosh! I can only wish for the best for them.
+
+---
+
+Photo by <a href="https://unsplash.com/@storybyphil?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Phil Desforges on Unsplash</a>
+      

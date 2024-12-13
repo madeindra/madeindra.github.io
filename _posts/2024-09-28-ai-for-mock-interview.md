@@ -83,3 +83,7 @@ I updated it and later I never get the same problem. Welcome back, Browser APIs!
 For a long time I take Browser APIs for granted, a lot of the functionalities I usually use (e.g. image, video, and audio capture) come bundled with the browser and are easily accessible through JavaScript.
 
 When they are not available, I will be forced to interact directly with the OS. Making that work across Windows; Mac; and Linux at the same time won't be fun.
+
+---
+
+Photo by <a href="https://unsplash.com/@headwayio?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Headway on Unsplash</a>
