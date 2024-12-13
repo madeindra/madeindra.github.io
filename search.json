@@ -68,6 +68,69 @@
         "url": "/too-big-too-fail/",
         "date": "16 Sep 2024",
         "description": "This is a story of a corporation aiming to transform into a digital company. Despite investmenting a big sum in new technology and hiring new talents, their efforts are undermined by outdated practices."
+    } ,
+  
+    {
+        "title": "Hacktiv8 Learn To Become Go Developer",
+        "url": "/event-hacktiv8-learn-golang/",
+        "date": "22 Mar 2023",
+        "description": "Ini nih kesempatan kamu buat jadi Developer yang mahir Golang!"
+    } ,
+  
+    {
+        "title": "Binar Open House Backend Engineering",
+        "url": "/event-binar-backend-openhouse/",
+        "date": "19 May 2022",
+        "description": "Kepikiran buat switch career menjadi Backend Developer? Atau malah baru tau kalau ada pekerjaan yang namanya Backend Developer?"
+    } ,
+  
+    {
+        "title": "Yuk, mentoring di ADPList!",
+        "url": "/yuk-mentoring-di-ADPList/",
+        "date": "13 Feb 2022",
+        "description": "Mau tau seputar Software Development atau bingung mau mulai belajar darimana? Ini dia salah satu jalan keluarnya!"
+    } ,
+  
+    {
+        "title": "Perlukah Ikut Bootcamp?",
+        "url": "/perlukah-ikut-bootcamp/",
+        "date": "06 Jan 2022",
+        "description": "Apakah wajib ikut bootcamp? Atau bisa belajar otodidak hanya bermodal Youtube?"
+    } ,
+  
+    {
+        "title": "Bingung Memilih Jurusan?",
+        "url": "/bingung-memilih-jurusan/",
+        "date": "31 Oct 2020",
+        "description": "Sepuluh tahun lalu, sebagai calon alumni SMA, aku bertanya &#39;Kuliah bidang apa ya?&#39;. Aku yakin hal ini bukan cuma terjadi denganku, tapi juga banyak orang di luar sana yang masih bimbang tentang masa depan mereka."
+    } ,
+  
+    {
+        "title": "Fenomena Social Distancing",
+        "url": "/fenomena-social-distancing/",
+        "date": "10 Jun 2020",
+        "description": "Selama pemberlakuan pembatasan social berskala besar, aku lihat banyak mulai bermunculan fenomena yang menarik. Banyak orang memulai kebiasaan baru. Hal ini termasuk hal baik, tapi di balik kebaikan itu justru ada sesuatu yang tidak bisa kita lihat."
+    } ,
+  
+    {
+        "title": "Lanjut Kuliah atau Kerja?",
+        "url": "/lanjut-kuliah-atau-kerja/",
+        "date": "27 May 2020",
+        "description": "Dulu aku sempat bingung mau pilih jurusan apa. Setelah lulus bingung lagi, mau lanjut kuliah atau langsung kerja. Setelah kerja bingung lagi mau pindah kerja atau tidak."
+    } ,
+  
+    {
+        "title": "Guide to Signal Messenger",
+        "url": "/guide-to-signal-messenger/",
+        "date": "23 Feb 2020",
+        "description": "Guide to Signal secure chat app"
+    } ,
+  
+    {
+        "title": "Learning about Microservice",
+        "url": "/learning-about-microservice/",
+        "date": "23 Feb 2020",
+        "description": "Is microservice architecture the solution that fit all needs?"
     } 
   
 ]

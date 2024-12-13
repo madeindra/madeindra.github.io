@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name=author content="Made Indra">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon/site.webmanifest">
+<link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon/android-chrome-512x512.png">
+
+
+  <title>Learning about Microservice | madeindra.dev</title>
+  <meta name="description"
+    content="Is microservice architecture the solution that fit all needs?">
+  <meta name="keywords"
+    content="Project, Microservice, CodeIgniter, PHP">
+
+  <link rel="canonical" href="https://madeindra.dev/learning-about-microservice/">
+  <link rel="alternate" type="application/rss+xml" title="madeindra.dev" href="https://madeindra.dev/feed.xml" />
+
+  <!-- for browsers supporting theme-color -->
+  <meta name="theme-color" content="">
+
+  <meta property="og:title" content="Learning about Microservice">
+<meta property="og:description"
+    content="Is microservice architecture the solution that fit all needs?">
+<meta property="og:url" content="https://madeindra.dev/learning-about-microservice/">
+<meta property="og:site_name" content="madeindra.dev">
+<meta property="og:type" content="website">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Learning about Microservice">
+<meta name="twitter:description"
+    content="Is microservice architecture the solution that fit all needs?">
+
+
+<meta name="twitter:site" content="@madecanggih">
+
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body
+  class="min-h-screen flex flex-col transition-colors duration-300 bg-white dark:bg-dark text-gray-900 dark:text-dark-base">
+  <header class="py-6">
+  <div class="container mx-auto px-4 flex justify-between items-center">
+    <!-- Logo and Title -->
+    <div class="flex items-center">
+      
+      <a href="/">
+        <img src="https://madeindra.dev/assets/images/logo.webp" alt="Logo" class="h-8 mr-2 block md:hidden" />
+      </a>
+      
+      <h1 class="text-xl font-semibold hidden md:block">
+        <a href="/" class="hover:text-gray-600 dark:hover:text-white">
+          madeindra.dev
+        </a>
+      </h1>
+    </div>
+
+    <!-- Search Bar-->
+    
+    <div id="search-bar" class="relative w-1/3">
+      <input type="text" id="search-input" placeholder="Search..."
+        class="w-full px-4 py-1 border rounded-full focus:outline-none focus:ring-0 bg-white dark:bg-dark transition-colors duration-300">
+      <div id="search-results" class="z-[100] absolute left-0 right-0 mt-2 bg-white dark:bg-dark border rounded shadow-lg hidden"
+        style="min-width: 150%; left: 50%; transform: translateX(-50%);"></div>
+    </div>
+    
+
+    <!-- Navigation -->
+    <div class="flex items-center space-x-4">
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-6 font-normal">
+          
+          <li><a href="/" class="hover:text-gray-600 dark:hover:text-white">Home</a></li>
+          
+
+          
+          <li><a href="/about" class="hover:text-gray-600 dark:hover:text-white">About</a></li>
+          
+        </ul>
+      </nav>
+
+      <!-- Burger Menu Icon -->
+      <div class="relative">
+        <button id="burger-menu" class="md:hidden p-2 rounded-full" aria-label="Toggle mobile menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu (Positioned absolutely) -->
+        <div id="mobile-menu" class="hidden md:hidden absolute mt-2 w-24 bg-white dark:bg-dark border rounded shadow-lg z-50">
+          <nav>
+            <ul class="py-2 font-normal">
+              
+              <li><a href="/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a></li>
+              
+
+              
+              <li><a href="/about" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">About</a></li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <button id="theme-toggle" class="p-2 rounded-full" aria-label="Toggle theme to dark or light mode">
+        <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+        </svg>
+        <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+            fill-rule="evenodd" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const burgerMenu = document.getElementById('burger-menu');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      burgerMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!burgerMenu.contains(event.target) && !mobileMenu.contains(event.target)) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+</header>
+
+<main class="container mx-auto px-4 flex-grow">
+
+    <div class="relative max-w-prose mb-6 mx-auto">
+        <!-- Featured Image -->
+        
+
+
+        <!-- Title Overlay -->
+        <div
+            class="py-6 text-gray-800 dark:text-gray-200">
+            <div class="flex items-center space-x-1 md:space-x-2 text-sm mb-2">
+                <span>23 Feb 2020</span>
+                <span>•</span>
+                <span>6 min read</span>
+                <span>•</span>
+                <span
+                    class="text-gray-800 dark:text-gray-200">
+                    Development
+                </span>
+            </div>
+            <h1 class="text-2xl md:text-4xl font-bold">Learning about Microservice</h1>
+        </div>
+    </div>
+
+    <article class="prose dark:prose-invert prose-img:mx-auto max-w-prose mx-auto space-y-6 sm:text-lg leading-relaxed">
+        <p>Earlier in 2020, I got a project assignment to do an example app for e-commerce application. I was tasked to code in PHP CodeIgniter3 &amp; MariaDB as database.</p>
+
+<p>The app was planned to have 3 specific class, those are Financial, Warehouse, and Order. The Warehouse class will handle item related functions, the Financial class will handle invoice and payment related function, and the Order class will handle the order from user.</p>
+
+<p>A simple operation for ordering an item in app goes like this:</p>
+
+<p><img src="/assets/others/monolithic-poc.png" alt="Monolithic-Architecture" /></p>
+
+<p><strong>Start: User confirm an order</strong></p>
+
+<ol>
+  <li>Order class create the order on the database</li>
+  <li>Order class call Financial class to generate Invoice</li>
+  <li>Financial class create the invoice on the database</li>
+  <li>Financial class pass the invoice to Order class</li>
+  <li>Order class call Warehouse class to check item availability</li>
+  <li>Warehouse class fetch item’s stock data in database</li>
+  <li>Warehouse class pass the item data to Order class</li>
+</ol>
+
+<p><strong>End: User ready to pay the order</strong></p>
+
+<p>After completing this step, I were tasked to decople the classes and move three classes to their own service.</p>
+
+<p>By “service”, it means the class will run on their own server instance and their own database instance, thus making them unable to call each other like in the previous model.</p>
+
+<p>This raise a questions, how could they communicate?</p>
+
+<p>One solution is to call the function using API, but this is not desired, because it will cause the service to go through external mean of communication. The idea of decopling was to let the services communicate to each other without using external mean of communication.</p>
+
+<p><strong>Enter Microservice</strong></p>
+
+<p>At this point, I reached an answer, it was to add another dependency that will pass a message to each service.</p>
+
+<p>The choice was to use either RabbitMQ or Kafka, and on this project I choose RabbitMQ.</p>
+
+<p>By using RabbitMQ AMQP communication protocol, each service will pass a service to RabbitMQ, and RabbitMQ will send the message to the designated service. After the service recived the message,the service will run a function according to the message, and create another message to the service that send the message before.</p>
+
+<p>Ordering an item in the app goes like this:</p>
+
+<p><img src="/assets/others/microservice-poc.png" alt="Microservice-Architecture" /></p>
+
+<p><strong>Start: User confirm an order</strong></p>
+
+<p>1: Order Service fetches the Order Detail of (orderId 1), Order Service get (productId 1, quantity 10) detail.</p>
+
+<p>2: Order Service pass (orderId 1, productId 1, quantity 10) to Order Worker to create invoice and to check if the product is in stock.</p>
+
+<p>3: Order Worker sends a message (orderId 1, productId 1, quantity 10) to Exchange 1.</p>
+
+<p>4a, 4b: Exchange 1 received message (orderId 1, productId 1, quantity 10), as it is a Direct Exchange, it forwards the message to Subscribing Queue(s).</p>
+
+<p>5a: Financial Worker received a message (orderId 1, productId 1, quantity 10), then Financial Worker passes the message to Financial Service to be processed.</p>
+
+<p>5b: Warehouse Worker received a message (orderId 1, productId 1, quantity 10), then Warehouse Worker pass only (productId 1, quantity 10) to Warehouse Service to be checked.</p>
+
+<p>6a: Financial Service creates an Invoice based on the message (orderId 1, productId 1, quantity 10).</p>
+
+<p>6b: Warehouse Service prepares a query to check stock based on the productId 1.</p>
+
+<p>7a: Financial Service successfully created the Invoice on Financial Database.</p>
+
+<p>7b: Warehouse Service fetches stock from Warehouse Database.</p>
+
+<p>8a: Financial Service tells Financial Worker that it has created the Invoice.</p>
+
+<p>8b: Warehouse Service gets information (stock 50) and compares it to quantity 10, because (stock &gt; quantity), the order can be processed, send (productId 1, quantity 10, inStock true) to Warehouse Worker.</p>
+
+<p>9: Warehouse Worker sends a message (productId 1, quantity 10, inStock true) to Financial Queue.</p>
+
+<p>10: Financial Worker receives a message (productId 1, quantity 10, inStock true) stored in Financial Queue.</p>
+
+<p>11: Financial Worker then passes the message to Financial Service to be processed.</p>
+
+<p>12: Financial Service updates the Invoice status.</p>
+
+<p>13: Financial Service tells Financial Worker that it has updated the Invoice.</p>
+
+<p>14: Financial Worker sends a message (productId 1, quantity 10, invoice true) to Exchange 2.</p>
+
+<p>15a, 15b: Exchange 2 received a message (productId 1, quantity 10, invoice true), as it is a Direct Exchange, it forwards the message to Subscribing Queue(s).</p>
+
+<p>16a: Order Worker received a message (productId 1, quantity 10, invoice true), then Order Worker passes the message to Order Service to be processed.</p>
+
+<p>16b: Warehouse Worker received a message (productId 1, quantity 10, invoice true), then Warehouse Worker passes the message to Warehouse Service to be processed.</p>
+
+<p>17a: Order Worker completes the user’s check-out process.</p>
+
+<p>17b: Warehouse Service prepares a query to decrease the product’s stock based on the message (productId 1, quantity 10, invoice true).</p>
+
+<p>18: Warehouse Service decreases the stock of the product in the Warehouse Database.</p>
+
+<p>19: Warehouse Service tells Warehouse Worker that it has updated the Stock.</p>
+
+<p><strong>End: User ready to pay the order</strong></p>
+
+<p>It went really complicated for a simple operation, right?</p>
+
+<p>But this approach make it easier to maintain a single service, a different team can work on a different service at the same time. But in my experience, this made it harder to debug.</p>
+
+<p>Oh right, you must notice the <strong>worker</strong> on the picture, this worker is made by creating a single <code class="language-plaintext highlighter-rouge">.php</code> file that run by using a terminal.</p>
+
+<p><strong>Why was worker needed?</strong></p>
+
+<p>For this approach, the PHP code need to process the user command and send a message to RabbitMQ, but if the code wait for RabbitMQ message sent before continuing the process, it could take a long time, thus it need to be run asyncronously.</p>
+
+<p>At the time, I was unable to find another approach than using worked because PHP can’t run a code asyncronously. So, the worker need to run separately to the app, to do this, I run it using terminal command.</p>
+
+<p>This was how I learn about microservice, for those who interested to follow my approach, you can take a look at <a href="https://github.com/madeindra/codeigniter-microservice">Microservice in CodeIgniter 3 (proof-of-concept)</a> on my Github .</p>
+
+<p>This is by no mean the best approach to microservice, there’s a lot to improve and there might be a wrong step to do microservice.</p>
+
+    </article>
+
+    
+    <div class="max-w-prose mx-auto border-t border-gray-200 my-12"></div>
+    <section class="max-w-prose mx-auto">
+        <script src="https://giscus.app/client.js"
+        data-repo="madeindra/madeindra.github.io"
+        data-repo-id="R_kgDOMxraRQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOMxraRc4CjK1D"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        id="gitcus"
+        async>
+</script>
+    </section>
+    
+</main>
+
+<footer class="py-6">
+    <div class="container mx-auto px-4">
+        <!-- Divider -->
+        <div class="border-t border-gray-200 mb-4"></div>
+
+        <!-- Footer -->
+        <div class="flex justify-between items-center">
+            <div class="text-sm text-gray-600 dark:text-gray-400">
+                madeindra.dev © 2024
+            </div>
+            
+            <div class="text-sm text-gray-600 dark:text-gray-400">
+                
+                <a href="/sitemap.xml" class="hover:text-gray-900 dark:hover:text-gray-100">Sitemap</a>
+                
+        
+                
+                <span class="px-2">|</span>
+                
+        
+                
+                <a href="/feed.xml" class="hover:text-gray-900 dark:hover:text-gray-100">RSS</a>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+  <script type="text/javascript">
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+    const themeColorMetaTag = document.querySelector('meta[name="theme-color"]');
+
+    const themeComment = document.getElementById('gitcus');
+
+    // add click listener to theme toggle button
+    themeToggleBtn?.addEventListener('click', function () {
+        setTheme(!document?.documentElement?.classList?.contains('dark'));
+    });
+
+    // set initial theme
+    if (sessionStorage.theme === 'dark' || (!('theme' in sessionStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        setTheme(true);
+    } else {
+        setTheme(false);
+    }
+
+    function setTheme(isDark) {
+        if (isDark) {
+            sessionStorage.theme = 'dark';
+
+            document.documentElement?.classList?.add('dark');
+
+            themeToggleDarkIcon?.classList?.add('hidden');
+            themeToggleLightIcon?.classList?.remove('hidden');
+
+            themeColorMetaTag.setAttribute('content', '#1A1A1A');
+
+            if (themeComment) {
+                themeComment.setAttribute('data-theme', 'noborder_dark');
+            }
+        } else {
+            sessionStorage.theme = 'light';
+
+            document.documentElement?.classList?.remove('dark');
+
+            themeToggleDarkIcon?.classList?.remove('hidden');
+            themeToggleLightIcon?.classList?.add('hidden');
+
+            themeColorMetaTag.setAttribute('content', '#FFFFFF');
+
+            if (themeComment) {
+                themeComment.setAttribute('data-theme', 'noborder_light');
+            }
+        }
+    }
+</script>
+
+  
+  <script type="text/javascript">
+  let searchData = [];
+
+  // Fetch search data
+  fetch('/search.json')
+    .then(response => response.json())
+    .then(data => {
+      searchData = data;
+    });
+
+  const searchBar = document.getElementById('search-bar');
+  const searchInput = document.getElementById('search-input');
+  const searchResults = document.getElementById('search-results');
+
+  searchInput?.addEventListener('input', debounce(handleSearch, 300));
+
+  function setResultInnerHTML(content) {
+    searchResults.innerHTML = content;
+  }
+
+  function addResultClass(className) {
+    searchResults.classList.add(className);
+  }
+
+  function removeResultClass(className) {
+    searchResults.classList.remove(className);
+  }
+
+  function handleSearch() {
+    const query = searchInput.value.toLowerCase();
+
+    // don't process 1 character
+    if (query.length < 2) {
+      setResultInnerHTML('');
+      addResultClass('hidden');
+
+      return;
+    }
+
+    const matches = searchData
+      .map(item => ({
+        item,
+        score: fuzzyMatch(query, item.title.toLowerCase())
+      }))
+      .filter(({ score }) => score > 0.3)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 5);
+
+    renderResults(matches);
+  }
+
+  function fuzzyMatch(query, text) {
+    let score = 0;
+    let textIndex = 0;
+
+    for (let i = 0; i < query.length; i++) {
+      const index = text.indexOf(query[i], textIndex);
+      if (index === -1) return 0;
+      score += 1 / (index - textIndex + 1);
+      textIndex = index + 1;
+    }
+
+    return score / query.length;
+  }
+
+  function renderResults(matches) {
+    let resultInnerHTML;
+    if (matches.length === 0) {
+      resultInnerHTML = '<p class="p-2 text-gray-500 dark:text-gray-500">No results found</p>';
+    } else {
+      resultInnerHTML = matches
+        .map(({ item }) => `
+            <a href="${item.url}" class="block p-2 hover:bg-gray-200 dark:hover:bg-gray-800">
+              <h3 class="font-semibold">${item.title}</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">${item.description}</p>
+            </a>
+          `)
+        .join('');
+    }
+
+    setResultInnerHTML(resultInnerHTML);
+    removeResultClass('hidden');
+  }
+
+  function debounce(func, delay) {
+    let timeoutId;
+    return function (...args) {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => func.apply(this, args), delay);
+    };
+  }
+
+  // hide search results on click
+  document?.addEventListener('click', (event) => {
+    if (!searchInput.contains(event.target) && !searchResults.contains(event.target)) {
+      searchResults.classList.add('hidden');
+    }
+  });
+</script>
+  
+</body>
+
+</html>

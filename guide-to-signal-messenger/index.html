@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name=author content="Made Indra">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon/site.webmanifest">
+<link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon/android-chrome-512x512.png">
+
+
+  <title>Guide to Signal Messenger | madeindra.dev</title>
+  <meta name="description"
+    content="Guide to Signal secure chat app">
+  <meta name="keywords"
+    content="Project, Guide, Signal">
+
+  <link rel="canonical" href="https://madeindra.dev/guide-to-signal-messenger/">
+  <link rel="alternate" type="application/rss+xml" title="madeindra.dev" href="https://madeindra.dev/feed.xml" />
+
+  <!-- for browsers supporting theme-color -->
+  <meta name="theme-color" content="">
+
+  <meta property="og:title" content="Guide to Signal Messenger">
+<meta property="og:description"
+    content="Guide to Signal secure chat app">
+<meta property="og:url" content="https://madeindra.dev/guide-to-signal-messenger/">
+<meta property="og:site_name" content="madeindra.dev">
+<meta property="og:type" content="website">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Guide to Signal Messenger">
+<meta name="twitter:description"
+    content="Guide to Signal secure chat app">
+
+
+<meta name="twitter:site" content="@madecanggih">
+
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body
+  class="min-h-screen flex flex-col transition-colors duration-300 bg-white dark:bg-dark text-gray-900 dark:text-dark-base">
+  <header class="py-6">
+  <div class="container mx-auto px-4 flex justify-between items-center">
+    <!-- Logo and Title -->
+    <div class="flex items-center">
+      
+      <a href="/">
+        <img src="https://madeindra.dev/assets/images/logo.webp" alt="Logo" class="h-8 mr-2 block md:hidden" />
+      </a>
+      
+      <h1 class="text-xl font-semibold hidden md:block">
+        <a href="/" class="hover:text-gray-600 dark:hover:text-white">
+          madeindra.dev
+        </a>
+      </h1>
+    </div>
+
+    <!-- Search Bar-->
+    
+    <div id="search-bar" class="relative w-1/3">
+      <input type="text" id="search-input" placeholder="Search..."
+        class="w-full px-4 py-1 border rounded-full focus:outline-none focus:ring-0 bg-white dark:bg-dark transition-colors duration-300">
+      <div id="search-results" class="z-[100] absolute left-0 right-0 mt-2 bg-white dark:bg-dark border rounded shadow-lg hidden"
+        style="min-width: 150%; left: 50%; transform: translateX(-50%);"></div>
+    </div>
+    
+
+    <!-- Navigation -->
+    <div class="flex items-center space-x-4">
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-6 font-normal">
+          
+          <li><a href="/" class="hover:text-gray-600 dark:hover:text-white">Home</a></li>
+          
+
+          
+          <li><a href="/about" class="hover:text-gray-600 dark:hover:text-white">About</a></li>
+          
+        </ul>
+      </nav>
+
+      <!-- Burger Menu Icon -->
+      <div class="relative">
+        <button id="burger-menu" class="md:hidden p-2 rounded-full" aria-label="Toggle mobile menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu (Positioned absolutely) -->
+        <div id="mobile-menu" class="hidden md:hidden absolute mt-2 w-24 bg-white dark:bg-dark border rounded shadow-lg z-50">
+          <nav>
+            <ul class="py-2 font-normal">
+              
+              <li><a href="/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a></li>
+              
+
+              
+              <li><a href="/about" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">About</a></li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <button id="theme-toggle" class="p-2 rounded-full" aria-label="Toggle theme to dark or light mode">
+        <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+        </svg>
+        <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+            fill-rule="evenodd" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const burgerMenu = document.getElementById('burger-menu');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      burgerMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!burgerMenu.contains(event.target) && !mobileMenu.contains(event.target)) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+</header>
+
+<main class="container mx-auto px-4 flex-grow">
+
+    <div class="relative max-w-prose mb-6 mx-auto">
+        <!-- Featured Image -->
+        
+
+
+        <!-- Title Overlay -->
+        <div
+            class="py-6 text-gray-800 dark:text-gray-200">
+            <div class="flex items-center space-x-1 md:space-x-2 text-sm mb-2">
+                <span>23 Feb 2020</span>
+                <span>•</span>
+                <span>2 min read</span>
+                <span>•</span>
+                <span
+                    class="text-gray-800 dark:text-gray-200">
+                    Project
+                </span>
+            </div>
+            <h1 class="text-2xl md:text-4xl font-bold">Guide to Signal Messenger</h1>
+        </div>
+    </div>
+
+    <article class="prose dark:prose-invert prose-img:mx-auto max-w-prose mx-auto space-y-6 sm:text-lg leading-relaxed">
+        <p><img src="/assets/others/signal-logo.png" alt="Signal-Logo" /></p>
+
+<p>Earlier this year I was tasked to help in rewriting an Indonesian-made chat app, that project make me curious about chatting app, is there an open-source chat app that has a guaranted security?  <a href="https://signal.org/">Signal</a> is one that I found that not only easy to setup our own private server, but also has a great community support. During the process of learning how to deploy our own Signal Server, I saw a lack of comperhensive guide, that’s why I decided to wrote a guide by compiling the guide from the community and adding my own solution to the problems i stumbled upon.</p>
+
+<hr />
+
+<p>For those who want to build their own secure chat app that support Android, iOS, and Desktop clients, Signal is what you are looking for. Edward Snowden himself recommended Signal on <a href="https://twitter.com/Snowden/status/986277159252750336">his Twitter</a>.  Follow this guide to start your journey on making your own signal chat messenger, but please do remember that this guide is meant for a starting point, to make your server even more secure, you need to do some hardening that meet your needs and that will not be covered by the guide.</p>
+
+<hr />
+
+<p>What the guide contains?</p>
+
+<ul>
+  <li>Signal Server setup guide</li>
+  <li>Signal Android setup guide</li>
+  <li>Signal iOS setup guide</li>
+  <li>Signal Desktop setup guide</li>
+  <li>Signal dependency setup guide</li>
+  <li>AWS for Signal setup guide</li>
+  <li>Subtituting AWS S3 with Minio</li>
+  <li>Signal with self-signed certificate</li>
+</ul>
+
+<hr />
+
+<p><a href="https://github.com/madeindra/Setup-Guide">Check it out</a> on Github. Feel free to <a href="https://github.com/madeindra/Setup-Guide/issues">open an issue</a> if you find any difficulties.</p>
+
+    </article>
+
+    
+    <div class="max-w-prose mx-auto border-t border-gray-200 my-12"></div>
+    <section class="max-w-prose mx-auto">
+        <script src="https://giscus.app/client.js"
+        data-repo="madeindra/madeindra.github.io"
+        data-repo-id="R_kgDOMxraRQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOMxraRc4CjK1D"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        id="gitcus"
+        async>
+</script>
+    </section>
+    
+</main>
+
+<footer class="py-6">
+    <div class="container mx-auto px-4">
+        <!-- Divider -->
+        <div class="border-t border-gray-200 mb-4"></div>
+
+        <!-- Footer -->
+        <div class="flex justify-between items-center">
+            <div class="text-sm text-gray-600 dark:text-gray-400">
+                madeindra.dev © 2024
+            </div>
+            
+            <div class="text-sm text-gray-600 dark:text-gray-400">
+                
+                <a href="/sitemap.xml" class="hover:text-gray-900 dark:hover:text-gray-100">Sitemap</a>
+                
+        
+                
+                <span class="px-2">|</span>
+                
+        
+                
+                <a href="/feed.xml" class="hover:text-gray-900 dark:hover:text-gray-100">RSS</a>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+  <script type="text/javascript">
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+    const themeColorMetaTag = document.querySelector('meta[name="theme-color"]');
+
+    const themeComment = document.getElementById('gitcus');
+
+    // add click listener to theme toggle button
+    themeToggleBtn?.addEventListener('click', function () {
+        setTheme(!document?.documentElement?.classList?.contains('dark'));
+    });
+
+    // set initial theme
+    if (sessionStorage.theme === 'dark' || (!('theme' in sessionStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        setTheme(true);
+    } else {
+        setTheme(false);
+    }
+
+    function setTheme(isDark) {
+        if (isDark) {
+            sessionStorage.theme = 'dark';
+
+            document.documentElement?.classList?.add('dark');
+
+            themeToggleDarkIcon?.classList?.add('hidden');
+            themeToggleLightIcon?.classList?.remove('hidden');
+
+            themeColorMetaTag.setAttribute('content', '#1A1A1A');
+
+            if (themeComment) {
+                themeComment.setAttribute('data-theme', 'noborder_dark');
+            }
+        } else {
+            sessionStorage.theme = 'light';
+
+            document.documentElement?.classList?.remove('dark');
+
+            themeToggleDarkIcon?.classList?.remove('hidden');
+            themeToggleLightIcon?.classList?.add('hidden');
+
+            themeColorMetaTag.setAttribute('content', '#FFFFFF');
+
+            if (themeComment) {
+                themeComment.setAttribute('data-theme', 'noborder_light');
+            }
+        }
+    }
+</script>
+
+  
+  <script type="text/javascript">
+  let searchData = [];
+
+  // Fetch search data
+  fetch('/search.json')
+    .then(response => response.json())
+    .then(data => {
+      searchData = data;
+    });
+
+  const searchBar = document.getElementById('search-bar');
+  const searchInput = document.getElementById('search-input');
+  const searchResults = document.getElementById('search-results');
+
+  searchInput?.addEventListener('input', debounce(handleSearch, 300));
+
+  function setResultInnerHTML(content) {
+    searchResults.innerHTML = content;
+  }
+
+  function addResultClass(className) {
+    searchResults.classList.add(className);
+  }
+
+  function removeResultClass(className) {
+    searchResults.classList.remove(className);
+  }
+
+  function handleSearch() {
+    const query = searchInput.value.toLowerCase();
+
+    // don't process 1 character
+    if (query.length < 2) {
+      setResultInnerHTML('');
+      addResultClass('hidden');
+
+      return;
+    }
+
+    const matches = searchData
+      .map(item => ({
+        item,
+        score: fuzzyMatch(query, item.title.toLowerCase())
+      }))
+      .filter(({ score }) => score > 0.3)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 5);
+
+    renderResults(matches);
+  }
+
+  function fuzzyMatch(query, text) {
+    let score = 0;
+    let textIndex = 0;
+
+    for (let i = 0; i < query.length; i++) {
+      const index = text.indexOf(query[i], textIndex);
+      if (index === -1) return 0;
+      score += 1 / (index - textIndex + 1);
+      textIndex = index + 1;
+    }
+
+    return score / query.length;
+  }
+
+  function renderResults(matches) {
+    let resultInnerHTML;
+    if (matches.length === 0) {
+      resultInnerHTML = '<p class="p-2 text-gray-500 dark:text-gray-500">No results found</p>';
+    } else {
+      resultInnerHTML = matches
+        .map(({ item }) => `
+            <a href="${item.url}" class="block p-2 hover:bg-gray-200 dark:hover:bg-gray-800">
+              <h3 class="font-semibold">${item.title}</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">${item.description}</p>
+            </a>
+          `)
+        .join('');
+    }
+
+    setResultInnerHTML(resultInnerHTML);
+    removeResultClass('hidden');
+  }
+
+  function debounce(func, delay) {
+    let timeoutId;
+    return function (...args) {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => func.apply(this, args), delay);
+    };
+  }
+
+  // hide search results on click
+  document?.addEventListener('click', (event) => {
+    if (!searchInput.contains(event.target) && !searchResults.contains(event.target)) {
+      searchResults.classList.add('hidden');
+    }
+  });
+</script>
+  
+</body>
+
+</html>

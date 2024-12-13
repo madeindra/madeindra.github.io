@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name=author content="Made Indra">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon/site.webmanifest">
+<link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon/android-chrome-512x512.png">
+
+
+  <title>Perlukah Ikut Bootcamp? | madeindra.dev</title>
+  <meta name="description"
+    content="Apakah wajib ikut bootcamp? Atau bisa belajar otodidak hanya bermodal Youtube?">
+  <meta name="keywords"
+    content="Blog, Bootcamp">
+
+  <link rel="canonical" href="https://madeindra.dev/perlukah-ikut-bootcamp/">
+  <link rel="alternate" type="application/rss+xml" title="madeindra.dev" href="https://madeindra.dev/feed.xml" />
+
+  <!-- for browsers supporting theme-color -->
+  <meta name="theme-color" content="">
+
+  <meta property="og:title" content="Perlukah Ikut Bootcamp?">
+<meta property="og:description"
+    content="Apakah wajib ikut bootcamp? Atau bisa belajar otodidak hanya bermodal Youtube?">
+<meta property="og:url" content="https://madeindra.dev/perlukah-ikut-bootcamp/">
+<meta property="og:site_name" content="madeindra.dev">
+<meta property="og:type" content="website">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Perlukah Ikut Bootcamp?">
+<meta name="twitter:description"
+    content="Apakah wajib ikut bootcamp? Atau bisa belajar otodidak hanya bermodal Youtube?">
+
+
+<meta name="twitter:site" content="@madecanggih">
+
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body
+  class="min-h-screen flex flex-col transition-colors duration-300 bg-white dark:bg-dark text-gray-900 dark:text-dark-base">
+  <header class="py-6">
+  <div class="container mx-auto px-4 flex justify-between items-center">
+    <!-- Logo and Title -->
+    <div class="flex items-center">
+      
+      <a href="/">
+        <img src="https://madeindra.dev/assets/images/logo.webp" alt="Logo" class="h-8 mr-2 block md:hidden" />
+      </a>
+      
+      <h1 class="text-xl font-semibold hidden md:block">
+        <a href="/" class="hover:text-gray-600 dark:hover:text-white">
+          madeindra.dev
+        </a>
+      </h1>
+    </div>
+
+    <!-- Search Bar-->
+    
+    <div id="search-bar" class="relative w-1/3">
+      <input type="text" id="search-input" placeholder="Search..."
+        class="w-full px-4 py-1 border rounded-full focus:outline-none focus:ring-0 bg-white dark:bg-dark transition-colors duration-300">
+      <div id="search-results" class="z-[100] absolute left-0 right-0 mt-2 bg-white dark:bg-dark border rounded shadow-lg hidden"
+        style="min-width: 150%; left: 50%; transform: translateX(-50%);"></div>
+    </div>
+    
+
+    <!-- Navigation -->
+    <div class="flex items-center space-x-4">
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-6 font-normal">
+          
+          <li><a href="/" class="hover:text-gray-600 dark:hover:text-white">Home</a></li>
+          
+
+          
+          <li><a href="/about" class="hover:text-gray-600 dark:hover:text-white">About</a></li>
+          
+        </ul>
+      </nav>
+
+      <!-- Burger Menu Icon -->
+      <div class="relative">
+        <button id="burger-menu" class="md:hidden p-2 rounded-full" aria-label="Toggle mobile menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu (Positioned absolutely) -->
+        <div id="mobile-menu" class="hidden md:hidden absolute mt-2 w-24 bg-white dark:bg-dark border rounded shadow-lg z-50">
+          <nav>
+            <ul class="py-2 font-normal">
+              
+              <li><a href="/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a></li>
+              
+
+              
+              <li><a href="/about" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">About</a></li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <button id="theme-toggle" class="p-2 rounded-full" aria-label="Toggle theme to dark or light mode">
+        <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+        </svg>
+        <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+            fill-rule="evenodd" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const burgerMenu = document.getElementById('burger-menu');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      burgerMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!burgerMenu.contains(event.target) && !mobileMenu.contains(event.target)) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+</header>
+
+<main class="container mx-auto px-4 flex-grow">
+
+    <div class="relative max-w-prose mb-6 mx-auto">
+        <!-- Featured Image -->
+        
+
+
+        <!-- Title Overlay -->
+        <div
+            class="py-6 text-gray-800 dark:text-gray-200">
+            <div class="flex items-center space-x-1 md:space-x-2 text-sm mb-2">
+                <span>06 Jan 2022</span>
+                <span>•</span>
+                <span>5 min read</span>
+                <span>•</span>
+                <span
+                    class="text-gray-800 dark:text-gray-200">
+                    Blog
+                </span>
+            </div>
+            <h1 class="text-2xl md:text-4xl font-bold">Perlukah Ikut Bootcamp?</h1>
+        </div>
+    </div>
+
+    <article class="prose dark:prose-invert prose-img:mx-auto max-w-prose mx-auto space-y-6 sm:text-lg leading-relaxed">
+        <p>Hai! Halo!</p>
+
+<p>Kalau kamu buka halaman ini, kemungkinan besar kamu lagi penasaran tentang seberapa penting ikut bootcamp.</p>
+
+<p>Bootcamp-bootcamp yang sedang tren saat ini biasanya menawarkan pelatihan <em>skill</em> khusus yang sedang banyak <em>demand</em>nya, misalnya <em>programming</em>, <em>data science</em>, atau <em>design</em>.</p>
+
+<p>Karena <em>skill-skill</em> ini sedang banyak <em>demand</em>nya, otomatis sebagian besar orang yang tertarik buat ikut bootcamp adalah orang-orang yang punya rencana pindah karir, sisanya adalah orang-orang yang mau menambah skill atau sekedar menambah koneksi.</p>
+
+<p>Sekarang pun penyedia bootcamp sudah makin beragam ya, tidak cuma satu atau dua bootcamp yang punya program pelatihan skill yang sama, pastinya ini bakal bikin kamu bingung mau memilih bootcamp yang mana.</p>
+
+<p>Belum lagi <em>skill</em> yang ada di bootcamp sebenarnya bisa diakses secara gratis di platform seperti YouTube. Tambah bingung deh buat apa keluar duit buat ikut bootcamp.</p>
+
+<p>Yuk, kita bahas tentang apa yang bisa kamu dapatkan kalau ikut bootcamp dan apakah bootcamp bisa memenuhi kebutuhanmu.</p>
+
+<p><img src="/assets/memes/youtube-bootcamp.jpeg" alt="Meme 1" /></p>
+
+<h2 id="belajar-dengan-bimbingan">Belajar dengan Bimbingan</h2>
+
+<p>Ada orang yang bisa belajar otodidak, tapi ada juga orang yang butuh dibimbing selama belajar. Tidak ada yang salah.</p>
+
+<p>Nah selama bootcamp, biasanya kamu sebagai student akan diberikan seorang pembimbing belajar atau istilah kerennya Mentor.</p>
+
+<p>Buat kamu yang butuh bimbingan selama belajar, adanya mentor ini bakal jadi salah satu poin yang mendukung proses belajarmu.</p>
+
+<p>Biarpun kamu bisa belajar otodidak, adanya mentor menjadi salah satu poin penting yang susah didapatkan di platform seperti YouTube.</p>
+
+<p>Kalau kita analogikan proses belajar itu adalah proses membangun rumah, sebelum dinding dibuat, pasti ada proses pembuatan pondasi bangunan.</p>
+
+<p>Jangan sampai kita belajar membuat dinding yang kuat, tapi lupa belajar membuat pondasi yang kuat.</p>
+
+<p>Seorang mentor bisa menunjukkan kamu skill dasar apa yang penting untuk dipelajari sebagai pondasi dan apa yang bisa dipelajari lebih jauh setelah pondasimu kuat.</p>
+
+<p>Hal ini sangat penting terutama buat kamu yang baru belajar skill tersebut, karena tanpa arahan itu, kamu bisa terjebak di <em>tutorial hell</em> (belajar terus tapi tidak berani untuk membuat sesuatu).</p>
+
+<p>Bootcamp juga punya kurikulum khusus yang bisa jadi peta belajarmu <em>from zero to hero</em>.</p>
+
+<p>Nantinya ketika kamu belajar membuat dinding yang kuat, mungkin kamu bakal bertanya “Kenapa susunan batu bata untuk membuat dinding itu tidak lurus?”.</p>
+
+<p>Nah momen seperti ini sering kamu temui ketika belajar, pasti ada titik dimana kamu tidak langsung paham tentang materi yang dipelajari. Mentormu bisa membantu kamu karena adanya mentor memungkinkan kita buat berinteraksi dua arah secara langsung.</p>
+
+<p>Mentormu bukan cuma akan menjawab pertanyaanmu, tapi juga bisa memberikan <em>best-practice</em> dalam penerapan skill itu.</p>
+
+<p>Satu pertanyaan bisa menjadi diskusi dan pastinya bakal bikin kamu tau lebih banyak.</p>
+
+<p><img src="/assets/memes/skip-react.jpg" alt="Meme 2" /></p>
+
+<h2 id="partner-bootcamp">Partner Bootcamp</h2>
+
+<p>Kalau kamu memilih bootcamp untuk cari kerja atau pindah karir, kamu mungkin bertanya “Emangnya ada perusahaan yang mau terima lulusan bootcamp?”.</p>
+
+<p>Tentu aja ada, tapi kalau kamu ikut bootcamp kamu bisa dapat benefit penyaluran kerja.</p>
+
+<p>Sekarang sudah banyak bootcamp yang sudah bekerja sama dengan perusahaan-perusahaan sebagai partner, dan setelah lulus bootcamp nanti, kamu bisa disalurkan ke partner-partner tersebut.</p>
+
+<p>Ini adalah satu poin penting yang gak bisa digantikan dengan platform kursus atau platform belajar gratis.</p>
+
+<p>Supaya kamu bisa menikmati benefit ini, pastikan bootcamp yang kamu incar menawarkan program penyaluran kerja, lebih bagus lagi kalau bootcampnya bekerjasama dengan perusahaan impian kamu.</p>
+
+<p><img src="/assets/memes/success-bootcamp.jpeg" alt="Meme 3" /></p>
+
+<h2 id="bootcamp-itu-wajib">Bootcamp itu Wajib?</h2>
+
+<p>Oke sekarang waktunya kita jawab pertanyaan ini.</p>
+
+<p>Ikut bootcamp tentu bakal memberikan kamu banyak keuntungan, mulai dari dapat teman baru, bisa dibimbing belajar, tau tentang best-practice yang dipakai di industri, bahkan bisa disalurkan kerja.</p>
+
+<p>Tapi di balik itu pasti ada harga yang harus dibayar. Ini bukan cuma tentang biaya, tapi juga komitmen, dengan ikut bootcamp kamu dituntut untuk bisa mengikuti bootcamp dari awal sampai akhir.</p>
+
+<p>Bisa jadi kelas bootcampnya berlangsung 6 kali seminggu selama 3 bulan, artinya selama 3 bulan penuh kamu harus belajar intens. Belajar se-intens ini belum tentu cocok untuk semua orang.</p>
+
+<p>Syukurnya tidak semua bootcamp se-intens itu, ada yang cuma 3 kali seminggu dan kelasnya berlangsung di luar jam kerja, jadi bakal sangat membantu buat yang bootcamp sambil bekerja <em>full-time</em>.</p>
+
+<p>Tapi kalau misalnya kamu masih tidak tertarik untuk ikut bootcamp kamu mungkin bertanya-tanya “Apa ada alternatif lain selain bootcamp?”/</p>
+
+<p>Jawabannya ada.</p>
+
+<p>Kamu masih bisa lewat platform gratisan, tapi untuk memastikan kamu bisa belajar lebih banyak dan tau <em>best-practice</em> di industri, kamu bisa gabung komunitas skill <em>terkait</em>.</p>
+
+<p>Salah satunya kamu bisa gabung ke komunitas di platform Meetup secara gratis, bakal ada webinar rutin yang membahas tentang penerapan skill di dunia kerja. Kamu juga bisa gabung ke komunitas yang ada di Telegram, Facebook, ataupun Reddit untuk berdiskusi dengan sesama anggota komunitas.</p>
+
+<p>Kalau kamu tertarik untuk dapat mentor, kamu bisa mencari mentor lewat ADPList atau mengontak calon mentor via LinkedIn.</p>
+
+<p>Kalau fokusmu adalah pindah karir, tanpa bootcamp kamu tetap bisa kok. Banyak perusahaan sekarang sudah punya program <em>employee get employee</em>.</p>
+
+<p>Kalau kamu kenal dengan seseorang yang kerja di perusahaan yang kamu incar atau bahkan orang itu mentormu sendiri, dia bisa membantu mengajukan kamu ke perusahaannya.</p>
+
+<p>Apapun fokusmu dalam belajar, jangan takut untuk mencoba menerapkan skill yang sudah kamu pelajari, buat proyek sekecil apapun dan pamerkan hasil kerjamu dia platfom yang sesuai bidangmu.</p>
+
+<p>Misalnya hasil karya Programming bisa diupload ke Github atau hasil karya Design bisa diupload ke Behance. Hasil karyamu ini juga nantinya bisa kamu jadikan portofolio yang membantu kamu mencari kerja lho!</p>
+
+<p>Yang terpenting ketika belajar adalah fokus dan komitmen pada tujuanmu, kalau kamu ingin belajar dari nol, pastikan kamu sudah tau poin-poin apa yang perlu dipelajari untuk mencapai tujuanmu.</p>
+
+<p><img src="/assets/memes/distracted-bootcamp.jpeg" alt="Meme 3" /></p>
+
+    </article>
+
+    
+    <div class="max-w-prose mx-auto border-t border-gray-200 my-12"></div>
+    <section class="max-w-prose mx-auto">
+        <script src="https://giscus.app/client.js"
+        data-repo="madeindra/madeindra.github.io"
+        data-repo-id="R_kgDOMxraRQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOMxraRc4CjK1D"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        id="gitcus"
+        async>
+</script>
+    </section>
+    
+</main>
+
+<footer class="py-6">
+    <div class="container mx-auto px-4">
+        <!-- Divider -->
+        <div class="border-t border-gray-200 mb-4"></div>
+
+        <!-- Footer -->
+        <div class="flex justify-between items-center">
+            <div class="text-sm text-gray-600 dark:text-gray-400">
+                madeindra.dev © 2024
+            </div>
+            
+            <div class="text-sm text-gray-600 dark:text-gray-400">
+                
+                <a href="/sitemap.xml" class="hover:text-gray-900 dark:hover:text-gray-100">Sitemap</a>
+                
+        
+                
+                <span class="px-2">|</span>
+                
+        
+                
+                <a href="/feed.xml" class="hover:text-gray-900 dark:hover:text-gray-100">RSS</a>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+  <script type="text/javascript">
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+    const themeColorMetaTag = document.querySelector('meta[name="theme-color"]');
+
+    const themeComment = document.getElementById('gitcus');
+
+    // add click listener to theme toggle button
+    themeToggleBtn?.addEventListener('click', function () {
+        setTheme(!document?.documentElement?.classList?.contains('dark'));
+    });
+
+    // set initial theme
+    if (sessionStorage.theme === 'dark' || (!('theme' in sessionStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        setTheme(true);
+    } else {
+        setTheme(false);
+    }
+
+    function setTheme(isDark) {
+        if (isDark) {
+            sessionStorage.theme = 'dark';
+
+            document.documentElement?.classList?.add('dark');
+
+            themeToggleDarkIcon?.classList?.add('hidden');
+            themeToggleLightIcon?.classList?.remove('hidden');
+
+            themeColorMetaTag.setAttribute('content', '#1A1A1A');
+
+            if (themeComment) {
+                themeComment.setAttribute('data-theme', 'noborder_dark');
+            }
+        } else {
+            sessionStorage.theme = 'light';
+
+            document.documentElement?.classList?.remove('dark');
+
+            themeToggleDarkIcon?.classList?.remove('hidden');
+            themeToggleLightIcon?.classList?.add('hidden');
+
+            themeColorMetaTag.setAttribute('content', '#FFFFFF');
+
+            if (themeComment) {
+                themeComment.setAttribute('data-theme', 'noborder_light');
+            }
+        }
+    }
+</script>
+
+  
+  <script type="text/javascript">
+  let searchData = [];
+
+  // Fetch search data
+  fetch('/search.json')
+    .then(response => response.json())
+    .then(data => {
+      searchData = data;
+    });
+
+  const searchBar = document.getElementById('search-bar');
+  const searchInput = document.getElementById('search-input');
+  const searchResults = document.getElementById('search-results');
+
+  searchInput?.addEventListener('input', debounce(handleSearch, 300));
+
+  function setResultInnerHTML(content) {
+    searchResults.innerHTML = content;
+  }
+
+  function addResultClass(className) {
+    searchResults.classList.add(className);
+  }
+
+  function removeResultClass(className) {
+    searchResults.classList.remove(className);
+  }
+
+  function handleSearch() {
+    const query = searchInput.value.toLowerCase();
+
+    // don't process 1 character
+    if (query.length < 2) {
+      setResultInnerHTML('');
+      addResultClass('hidden');
+
+      return;
+    }
+
+    const matches = searchData
+      .map(item => ({
+        item,
+        score: fuzzyMatch(query, item.title.toLowerCase())
+      }))
+      .filter(({ score }) => score > 0.3)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 5);
+
+    renderResults(matches);
+  }
+
+  function fuzzyMatch(query, text) {
+    let score = 0;
+    let textIndex = 0;
+
+    for (let i = 0; i < query.length; i++) {
+      const index = text.indexOf(query[i], textIndex);
+      if (index === -1) return 0;
+      score += 1 / (index - textIndex + 1);
+      textIndex = index + 1;
+    }
+
+    return score / query.length;
+  }
+
+  function renderResults(matches) {
+    let resultInnerHTML;
+    if (matches.length === 0) {
+      resultInnerHTML = '<p class="p-2 text-gray-500 dark:text-gray-500">No results found</p>';
+    } else {
+      resultInnerHTML = matches
+        .map(({ item }) => `
+            <a href="${item.url}" class="block p-2 hover:bg-gray-200 dark:hover:bg-gray-800">
+              <h3 class="font-semibold">${item.title}</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">${item.description}</p>
+            </a>
+          `)
+        .join('');
+    }
+
+    setResultInnerHTML(resultInnerHTML);
+    removeResultClass('hidden');
+  }
+
+  function debounce(func, delay) {
+    let timeoutId;
+    return function (...args) {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => func.apply(this, args), delay);
+    };
+  }
+
+  // hide search results on click
+  document?.addEventListener('click', (event) => {
+    if (!searchInput.contains(event.target) && !searchResults.contains(event.target)) {
+      searchResults.classList.add('hidden');
+    }
+  });
+</script>
+  
+</body>
+
+</html>
