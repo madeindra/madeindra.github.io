@@ -14,15 +14,15 @@ archived: false
 
 ![Signal-Logo](/assets/others/signal-logo.png)
 
-Earlier this year I was tasked to help in rewriting an Indonesian-made chat app, that project make me curious about chatting app, is there an open-source chat app that has a guaranted security?  <a href="https://signal.org/">Signal</a> is one that I found that not only easy to setup our own private server, but also has a great community support. During the process of learning how to deploy our own Signal Server, I saw a lack of comperhensive guide, that's why I decided to wrote a guide by compiling the guide from the community and adding my own solution to the problems i stumbled upon.
+Earlier this year I was tasked to help in rewriting an Indonesian-made chat app. That project made me curious about chat apps. Is there an open-source chat app that has guaranteed security? <a href="https://signal.org/">Signal</a> is one that I found that is not only easy to set up our own private server but also has great community support. During the process of learning how to deploy our own Signal Server, I saw a lack of comprehensive guides. That's why I decided to write a guide by compiling the guides from the community and adding my own solutions to the problems I stumbled upon.
 
 ---
 
-For those who want to build their own secure chat app that support Android, iOS, and Desktop clients, Signal is what you are looking for. Edward Snowden himself recommended Signal on <a href="https://twitter.com/Snowden/status/986277159252750336">his Twitter</a>.  Follow this guide to start your journey on making your own signal chat messenger, but please do remember that this guide is meant for a starting point, to make your server even more secure, you need to do some hardening that meet your needs and that will not be covered by the guide.
+For those who want to build their own secure chat app that supports Android, iOS, and Desktop clients, Signal is what you are looking for. Edward Snowden himself recommended Signal on <a href="https://twitter.com/Snowden/status/986277159252750336">his Twitter</a>. Follow this guide to start your journey on making your own Signal chat messenger, but please do remember that this guide is meant as a starting point. To make your server even more secure, you need to do some hardening that meets your needs, and that will not be covered by this guide.
 
 ---
 
-What the guide contains?
+What does the guide contain?
 
 - Signal Server setup guide
 - Signal Android setup guide
@@ -30,7 +30,7 @@ What the guide contains?
 - Signal Desktop setup guide
 - Signal dependency setup guide
 - AWS for Signal setup guide
-- Subtituting AWS S3 with Minio
+- Substituting AWS S3 with Minio
 - Signal with self-signed certificate
 
 ---
