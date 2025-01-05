@@ -28,7 +28,7 @@ Seperti biasa, disclaimer dulu.
 
 Tips ini aku dapat ketika aku bertugas jadi tim pengembang kurikulum perguruan tinggi.
 
-Semua info yang ada disini tolong disaring dahulu sesuai kondisi kamu ya.
+Semua info yang ada di sini tolong disaring dahulu sesuai kondisi kamu ya.
 
 Pemilihan prodi tetap harus dipertimbangkan secara matang bersama keluargamu.
 
@@ -46,22 +46,22 @@ Tulisan ini aku buat di tahun 2020, beberapa data dan ketentuan kemungkinan akan
 
 Dari sekian banyak prodi, ada beberapa prodi yang penamaannya yang mirip, terutama di bidang IT.
 
-Kalau kamu bingung,  tenang aja kamu ga sendiri!
+Kalau kamu bingung, tenang aja kamu gak sendiri!
 
 Ketika kamu merasa bingung, apa yang harus dilakukan?
 
-Daripada mikirin nama prodi, kamu bisa memilih untuk mencari info tentang skill-skill yang ditawarkan oleh prodi tsb!
+Daripada mikirin nama prodi, kamu bisa memilih untuk mencari info tentang skill-skill yang ditawarkan oleh prodi tersebut!
 
 ### Skill yang Ditawarkan
 Perbedaan tiap-tiap prodi ada dalam skill-skill yang dibekali untuk lulusannya.
 
-Untuk tau skill apa saja yang ditawarkan, kamu bisa mulai menggali dari mata kuliah yang ada dalam prodi tsb.
+Untuk tahu skill apa saja yang ditawarkan, kamu bisa mulai menggali dari mata kuliah yang ada dalam prodi tersebut.
 
 **Yuk lihat contoh!**
 
-Misalnya Prodi X di Kampus A menawarkan Skill di bidang Artificial Intelligence.
+Misalnya Prodi X di Kampus A menawarkan skill di bidang Artificial Intelligence.
 
-Maka, kemungkinan besar di prodi tsb akan ada Mata Kuliah berikut:
+Maka, kemungkinan besar di prodi tersebut akan ada Mata Kuliah berikut:
 
 - Matematika Lanjutan
 - Dasar Pemrograman
@@ -77,12 +77,11 @@ Misalnya kamu pengen punya skill Artificial Intelligence.
 
 Prodi X di Kampus A mungkin punya MK yang mendukung skill tersebut. Tapi, belum tentu Prodi yang sama di Kampus yang berbeda juga akan punya MK tersebut.
 
-
 **Jadi memilih prodi tinggal lihat mata kuliahnya?**
 
 Eits! Tunggu dulu, lihat MK saja belum tentu cukup lho.
 
-Misal Prodi X di Kampus A  punya MK Machine Learning, tapi ga ada lagi MK lain yang berhubungan dengan Artificial Inteligence. Berarti skill yang kamu mau itu gak akan banyak kamu pelajari di prodi ini dong.
+Misal Prodi X di Kampus A punya MK Machine Learning, tapi gak ada lagi MK lain yang berhubungan dengan Artificial Intelligence. Berarti skill yang kamu mau itu gak akan banyak kamu pelajari di prodi ini dong.
 
 **Jadi harus gimana?**
 
@@ -96,31 +95,31 @@ Ini contoh Profil Lulusan dari salah satu Prodi Sistem Komputer dari Universitas
 
 1.  Insinyur Perangkat Keras
 2.  Insinyur Jaringan Komputer
-3.  Spesialis Keamanan Kompuetr
+3.  Spesialis Keamanan Komputer
 4.  Pemrogram Sistem
 5.  Peneliti
 6.  Wirausaha Teknologi
 
-Kampus dalam menentukan Profil Lulusan ini ga main-main.
+Kampus dalam menentukan Profil Lulusan ini gak main-main.
 
 Kampus harus ngikutin beberapa tahapan dan analisis misalnya dari visi, misi, dan saran para stakeholder.
 
-Menurut Buku Panduan Penyusunan Kurikulum, prodi yang sama di perguruan tinggi yang berbeda harus memiliki kesepakatan profil lulusan, supaya prodi tsb punya ciri khas.
+Menurut Buku Panduan Penyusunan Kurikulum, prodi yang sama di perguruan tinggi yang berbeda harus memiliki kesepakatan profil lulusan, supaya prodi tersebut punya ciri khas.
 
-Dari Profil Lulusan ini, kampus akan merinci skill-skill apa yang harus dimiliki oleh profesi tsb. Skil-skill ini juga gak main-main, harus berdasarkan KKNI, SN-Dikti, dan referensi lain dari dalam/luar negeri.
+Dari Profil Lulusan ini, kampus akan merinci skill-skill apa yang harus dimiliki oleh profesi tersebut. Skill-skill ini juga gak main-main, harus berdasarkan KKNI, SN-Dikti, dan referensi lain dari dalam/luar negeri.
 
-Skill ini juga dirinci jadi 4 bagian: Sikap, Pengetahuan, Keterampilan Umum, dan Keterampilan Khusus. Setelah dirinci, barulah bisa ditentukan Mata Kuliah apa yang mendukung rincian skill tsb. Fokus prodi terhadap skill juga bisa dilihat dari jumlah SKS yang ada dalam MK tsb.
+Skill ini juga dirinci jadi 4 bagian: Sikap, Pengetahuan, Keterampilan Umum, dan Keterampilan Khusus. Setelah dirinci, barulah bisa ditentukan Mata Kuliah apa yang mendukung rincian skill tersebut. Fokus prodi terhadap skill juga bisa dilihat dari jumlah SKS yang ada dalam MK tersebut.
 
-Jadi, dari sini kamu bisa tau bahwa kampus ga bisa sembarangan menentukan lulusannya harus jadi apa dan punya skill apa saja.
+Jadi, dari sini kamu bisa tahu bahwa kampus gak bisa sembarangan menentukan lulusannya harus jadi apa dan punya skill apa saja.
 
 **Sekarang kamu siap untuk memilih prodi yang akan mendukung mimpi kamu?**
 
 ### Contoh Kasus
 Kamu pengen jadi Data Scientist.
 
-Kamu cari dulu Prodi yang punya Profil Lulusan tsb. Kalau kampus tidak mempublish Profil Lulusan, lihat dari Kurikulum prodi tsb.
+Kamu cari dulu Prodi yang punya Profil Lulusan tersebut. Kalau kampus tidak mempublish Profil Lulusan, lihat dari Kurikulum prodi tersebut.
 
-Cek disana, berapa banyak MK yang bisa mengasah skill kamu untuk mencapai mimpi kamu. Cek juga, apakah Prodi punya MK Pilihan / Penjurusan di bidang yang kamu mau.
+Cek di sana, berapa banyak MK yang bisa mengasah skill kamu untuk mencapai mimpi kamu. Cek juga, apakah Prodi punya MK Pilihan / Penjurusan di bidang yang kamu mau.
 
 Kalau sudah ketemu prodi yang kamu mau, bandingkan lagi dengan Prodi yang ada di Kampus lain. Setelah itu kamu akan punya daftar prodi & kampus yang kamu mau.
 
@@ -132,11 +131,11 @@ Jadi apa saja yang harus dipertimbangkan?
 
 1. Mulai dari daftar mimpi kamu
 2. Cek Prodi apa yang bisa memenuhi mimpi kamu
-3. Cek Profil Lulusan Prodi tsb
+3. Cek Profil Lulusan Prodi tersebut
 4. Cek Skill yang ditawarkan dalam kurikulum
 5. Bandingkan dengan Prodi yang ada di Kampus lain
 
-Tentu kamu ga perlu menutup kemungkinan pengembangan skill di luar jam kuliah. Misalnya dari UKM atau Komunitas di dalam/luar kampus.
+Tentu kamu gak perlu menutup kemungkinan pengembangan skill di luar jam kuliah. Misalnya dari UKM atau Komunitas di dalam/luar kampus.
 
 ---
 

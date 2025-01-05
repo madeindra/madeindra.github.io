@@ -16,9 +16,9 @@ Hai! Halo!
 
 Kalau kamu buka halaman ini, kemungkinan besar kamu lagi penasaran tentang seberapa penting ikut bootcamp.
 
-Bootcamp-bootcamp yang sedang tren saat ini biasanya menawarkan pelatihan *skill* khusus yang sedang banyak *demand*nya, misalnya *programming*, *data science*, atau *design*.
+Bootcamp-bootcamp yang sedang tren saat ini biasanya menawarkan pelatihan *skill* khusus yang sedang banyak *demand*-nya, misalnya *programming*, *data science*, atau *design*.
 
-Karena *skill-skill* ini sedang banyak *demand*nya, otomatis sebagian besar orang yang tertarik buat ikut bootcamp adalah orang-orang yang punya rencana pindah karir, sisanya adalah orang-orang yang mau menambah skill atau sekedar menambah koneksi.
+Karena *skill-skill* ini sedang banyak *demand*-nya, otomatis sebagian besar orang yang tertarik buat ikut bootcamp adalah orang-orang yang punya rencana pindah karir, sisanya adalah orang-orang yang mau menambah skill atau sekadar menambah koneksi.
 
 Sekarang pun penyedia bootcamp sudah makin beragam ya, tidak cuma satu atau dua bootcamp yang punya program pelatihan skill yang sama, pastinya ini bakal bikin kamu bingung mau memilih bootcamp yang mana.
 
@@ -50,11 +50,11 @@ Bootcamp juga punya kurikulum khusus yang bisa jadi peta belajarmu *from zero to
 
 Nantinya ketika kamu belajar membuat dinding yang kuat, mungkin kamu bakal bertanya "Kenapa susunan batu bata untuk membuat dinding itu tidak lurus?".
 
-Nah momen seperti ini sering kamu temui ketika belajar, pasti ada titik dimana kamu tidak langsung paham tentang materi yang dipelajari. Mentormu bisa membantu kamu karena adanya mentor memungkinkan kita buat berinteraksi dua arah secara langsung.
+Nah momen seperti ini sering kamu temui ketika belajar, pasti ada titik di mana kamu tidak langsung paham tentang materi yang dipelajari. Mentormu bisa membantu kamu karena adanya mentor memungkinkan kita buat berinteraksi dua arah secara langsung.
 
 Mentormu bukan cuma akan menjawab pertanyaanmu, tapi juga bisa memberikan *best-practice* dalam penerapan skill itu.
 
-Satu pertanyaan bisa menjadi diskusi dan pastinya bakal bikin kamu tau lebih banyak.
+Satu pertanyaan bisa menjadi diskusi dan pastinya bakal bikin kamu tahu lebih banyak.
 
 ![Meme 2](/assets/memes/skip-react.jpg)
 
@@ -68,7 +68,7 @@ Sekarang sudah banyak bootcamp yang sudah bekerja sama dengan perusahaan-perusah
 
 Ini adalah satu poin penting yang gak bisa digantikan dengan platform kursus atau platform belajar gratis. 
 
-Supaya kamu bisa menikmati benefit ini, pastikan bootcamp yang kamu incar menawarkan program penyaluran kerja, lebih bagus lagi kalau bootcampnya bekerjasama dengan perusahaan impian kamu.
+Supaya kamu bisa menikmati benefit ini, pastikan bootcamp yang kamu incar menawarkan program penyaluran kerja, lebih bagus lagi kalau bootcamp-nya bekerja sama dengan perusahaan impian kamu.
 
 ![Meme 3](/assets/memes/success-bootcamp.jpeg)
 
@@ -76,19 +76,19 @@ Supaya kamu bisa menikmati benefit ini, pastikan bootcamp yang kamu incar menawa
 
 Oke sekarang waktunya kita jawab pertanyaan ini.
 
-Ikut bootcamp tentu bakal memberikan kamu banyak keuntungan, mulai dari dapat teman baru, bisa dibimbing belajar, tau tentang best-practice yang dipakai di industri, bahkan bisa disalurkan kerja.
+Ikut bootcamp tentu bakal memberikan kamu banyak keuntungan, mulai dari dapat teman baru, bisa dibimbing belajar, tahu tentang best-practice yang dipakai di industri, bahkan bisa disalurkan kerja.
 
 Tapi di balik itu pasti ada harga yang harus dibayar. Ini bukan cuma tentang biaya, tapi juga komitmen, dengan ikut bootcamp kamu dituntut untuk bisa mengikuti bootcamp dari awal sampai akhir.
 
-Bisa jadi kelas bootcampnya berlangsung 6 kali seminggu selama 3 bulan, artinya selama 3 bulan penuh kamu harus belajar intens. Belajar se-intens ini belum tentu cocok untuk semua orang. 
+Bisa jadi kelas bootcamp-nya berlangsung 6 kali seminggu selama 3 bulan, artinya selama 3 bulan penuh kamu harus belajar intens. Belajar se-intens ini belum tentu cocok untuk semua orang. 
 
 Syukurnya tidak semua bootcamp se-intens itu, ada yang cuma 3 kali seminggu dan kelasnya berlangsung di luar jam kerja, jadi bakal sangat membantu buat yang bootcamp sambil bekerja *full-time*.
 
-Tapi kalau misalnya kamu masih tidak tertarik untuk ikut bootcamp kamu mungkin bertanya-tanya "Apa ada alternatif lain selain bootcamp?"/
+Tapi kalau misalnya kamu masih tidak tertarik untuk ikut bootcamp kamu mungkin bertanya-tanya "Apa ada alternatif lain selain bootcamp?"
 
 Jawabannya ada.
 
-Kamu masih bisa lewat platform gratisan, tapi untuk memastikan kamu bisa belajar lebih banyak dan tau *best-practice* di industri, kamu bisa gabung komunitas skill *terkait*.
+Kamu masih bisa lewat platform gratisan, tapi untuk memastikan kamu bisa belajar lebih banyak dan tahu *best-practice* di industri, kamu bisa gabung komunitas skill *terkait*.
 
 Salah satunya kamu bisa gabung ke komunitas di platform Meetup secara gratis, bakal ada webinar rutin yang membahas tentang penerapan skill di dunia kerja. Kamu juga bisa gabung ke komunitas yang ada di Telegram, Facebook, ataupun Reddit untuk berdiskusi dengan sesama anggota komunitas.
 
@@ -98,10 +98,10 @@ Kalau fokusmu adalah pindah karir, tanpa bootcamp kamu tetap bisa kok. Banyak pe
 
 Kalau kamu kenal dengan seseorang yang kerja di perusahaan yang kamu incar atau bahkan orang itu mentormu sendiri, dia bisa membantu mengajukan kamu ke perusahaannya.
 
-Apapun fokusmu dalam belajar, jangan takut untuk mencoba menerapkan skill yang sudah kamu pelajari, buat proyek sekecil apapun dan pamerkan hasil kerjamu dia platfom yang sesuai bidangmu.
+Apapun fokusmu dalam belajar, jangan takut untuk mencoba menerapkan skill yang sudah kamu pelajari, buat proyek sekecil apapun dan pamerkan hasil kerjamu di platform yang sesuai bidangmu.
 
 Misalnya hasil karya Programming bisa diupload ke Github atau hasil karya Design bisa diupload ke Behance. Hasil karyamu ini juga nantinya bisa kamu jadikan portofolio yang membantu kamu mencari kerja lho!
 
-Yang terpenting ketika belajar adalah fokus dan komitmen pada tujuanmu, kalau kamu ingin belajar dari nol, pastikan kamu sudah tau poin-poin apa yang perlu dipelajari untuk mencapai tujuanmu.
+Yang terpenting ketika belajar adalah fokus dan komitmen pada tujuanmu, kalau kamu ingin belajar dari nol, pastikan kamu sudah tahu poin-poin apa yang perlu dipelajari untuk mencapai tujuanmu.
 
 ![Meme 3](/assets/memes/distracted-bootcamp.jpeg)
