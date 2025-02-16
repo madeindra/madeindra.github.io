@@ -19,7 +19,9 @@ comments: true
 archived: false
 ---
 
-Setelah hampir 2 tahun bekerja secara remote untuk perusahaan di Australia, saya mulai merasa yakin bahwa saya mampu bersaing dengan software engineer dari seluruh dunia. Sebelumnya, pekerjaan pertama saya adalah menjadi seorang dosen di sebuah kampus swasta kecil. Setahun kemudian, saya bergabung dengan perusahaan BUMN melalui jalur Management Trainee.
+Setelah hampir 2 tahun bekerja secara remote untuk perusahaan di Australia, saya mulai merasa yakin bahwa saya mampu berdiri di panggung yang sama dengan software engineer dari seluruh dunia.
+
+Sebelumnya, pekerjaan pertama saya adalah menjadi seorang dosen di sebuah kampus swasta kecil. Setahun kemudian, saya bergabung dengan perusahaan BUMN melalui jalur Management Trainee.
 
 Meski telah meniti karir selama 5 tahun, saya merasa belum memberikan *impact* yang signifikan untuk bisa saya banggakan. Namun, 2 tahun terakhir benar-benar mengubah perjalanan hidup saya dengan pengalaman yang sangat berharga.
 
