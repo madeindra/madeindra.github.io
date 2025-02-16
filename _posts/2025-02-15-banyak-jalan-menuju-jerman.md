@@ -39,7 +39,7 @@ Swedia dan Jerman menarik perhatian saya karena kedua negara ini menyediakan pel
 
 Selain itu, ada negara dengan program serupa, seperti [Portugal](https://vistos.mne.gov.pt/en/national-visas/necessary-documentation/job-seeker-visa) dan [Austria](https://www.migration.gv.at/en/types-of-immigration/permanent-immigration/very-highly-qualified-workers/). Namun, peluang di negara-negara tersebut masih lebih sedikit dibandingkan negara prioritas saya.
 
-Estonia menjadi target karena saya kagum dengan kemajuan teknologi digital di negara ini. Meskipun saya pernah gagal mendapatkan pekerjaan remote di perusahaan Estonia, mereka tetap memberikan saya penawaran *freelance expert*. Selain infrastruktur digitalnya yang maju, orang-orang Estonia sangat menghargai hasil kerja ketimbang waktu kerja. Satu-satunya kekurangan adalah kurangnya sinar matahari selama musim dingin.
+Estonia menjadi target karena saya kagum dengan kemajuan teknologi digital di negara ini. Meskipun saya pernah gagal mendapatkan pekerjaan remote di perusahaan Estonia, mereka tetap memberikan saya penawaran *freelance* sebagai *expert*. Selain infrastruktur digitalnya yang maju, orang-orang Estonia sangat menghargai hasil kerja ketimbang waktu kerja. Satu-satunya kekurangan adalah kurangnya sinar matahari selama musim dingin.
 
 Singkat cerita, setelah mengirim puluhan lamaran, saya mendapat 4 panggilan wawancara, 2 dari Jerman dan 2 dari Estonia. Setelah proses yang cukup panjang karena terbentur oleh libur Natal, saya mendapatkan 2 tawaran kerja: 1 dari perusahaan fintech di Jerman dan 1 lagi dari perusahaan SaaS CRM di Estonia.
 
@@ -104,6 +104,8 @@ Peluang relokasi biasanya lebih besar jika kita melamar ke perusahaan besar (kor
 
 Ketika menggunakan LinkedIn atau Xing, saya menggunakan filter *Job Title* yang saya inginkan (contohnya "Software Engineer" atau "Backend") dan *Location* (contohnya "Berlin").
 
+Jangan lupa, minimal gaji untuk bisa mengajukan visa Blue Card adalah EUR 43.759,80 (bidang IT, Dokter, Perawat, dan Insinyur).
+
 Kurang lebih, semua *job board* memiliki model yang serupa, yaitu iklan lowongan kerja. Jadi persiapannya pun sama, yaitu: Resume / Curriculum Vitae (CV) dan Cover Letter.
 
 Saya sudah pernah membagikan template Resume, [silakan klik link GitHub ini](https://github.com/madecanggih/resource).
@@ -142,11 +144,11 @@ Jika dokumen ditandatangani secara digital, proses akan lebih mudah.
 
 Jika dokumen ditandatangan basah, maka kita mungkin perlu meminta spesimen tanda tangan pejabat tersebut atau pejabat yang baru.
 
-Beruntung kalau data tanda tangan pejabat tersebut sudah ada di database Ditjen AHU. Jika belum, kita akan diberikan surat pengantar yang perlu dibawa langsung ke instansi untuk meminta spesimen tanda tangan. Jika pejabat sudah tidak menjabat karena dimutasi atau pensiun, kita cukup minta pernyataan dari pejabat saat ini. Kedua formulir itu terlampir di surat pengantar yang diberikan.
+Beruntung kalau data tanda tangan pejabat tersebut sudah ada di database Ditjen AHU. Jika belum, kita akan diberikan surat pengantar yang perlu dibawa langsung ke instansi untuk meminta spesimen tanda tangan. Jika pejabat sudah tidak menjabat karena dimutasi atau pensiun, kita cukup meminta pernyataan dari pejabat saat ini. Kedua formulir itu terlampir di surat pengantar yang diberikan.
 
 Pengalaman saya, kadang meskipun data pejabat sudah terdaftar, bisa saja pengajuan apostille ditolak saat verifikasi. Cukup ajukan ulang, kecuali ada catatan lain dari verifikator (misal: salah input nomor dokumen atau nama).
 
-Sebelum mengambil sertifikat apostille, pastikan semua dokumen sudah di-scan dengan baik. Jangan scan menggunakan kamera atau handphone untuk memastikan kualitas hasil scan. Hasil scan dokumen tersebut nantinya akan digunakan saat proses pengajuan visa. Selain itu, saat mengambil sertifikat apostille, dokumen asli dan sertifikat apostille akan digabung. Cara penggabungannya adalah dengan menggunakan staples, namun jika dokumen asli dilaminasi, maka akan dilubangi terlebih dahulu dan digabungkan dengan menggunakan *eyelet* (mata ayam).
+Sebelum mengambil sertifikat apostille, pastikan semua dokumen sudah di-scan dengan baik. Jangan scan menggunakan kamera atau handphone untuk memastikan kualitas hasil scan yang baik. Hasil scan dokumen tersebut nantinya akan digunakan saat proses pengajuan visa. Selain itu, saat mengambil sertifikat apostille, dokumen asli dan sertifikat apostille akan digabung oleh petugas. Anehnya, cara penggabungannya adalah dengan menggunakan staples, namun jika dokumen asli dilaminasi, maka akan dilubangi terlebih dahulu dan digabungkan dengan menggunakan *eyelet* (mata ayam).
 
 > Sangat disayangkan bahwa proses apostille ini akan merusak dokumen asli.
 > 
@@ -158,7 +160,7 @@ Saya tekankan lagi, scan semua dokumen dengan baik sebelum mengambil hasil apost
 
 Ada beberapa penerjemah yang menawarkan jasa terjemah lengkap dengan apostille, saya tidak merekomendasikan jasa tersebut karena harganya mahal. Selain itu, jasa tersebut biasanya tidak mencakup pengurusan spesimen tanda tangan, sehingga kita tetap harus melakukannya sendiri. Jasa apostille tersebut benar-benar hanya untuk mengurus pengajuan online dan pengambilan sertifikat.
 
-Menurut saya, meskipun *user experience* website tersebut buruk, pengajuan apostille cukup mudah karena bisa dilakukan sepenuhnya secara online. Saat pengambilan, saya hanya mengajukan izin 1 hari, antrian di kantor pusat pun tidak begitu ramai. Lebih baik proses apostille dilakukan sendiri karena lebih hemat.
+Menurut saya, meskipun *user experience* website Apotille itu buruk, pengajuan apostille cukup mudah karena bisa dilakukan sepenuhnya secara online. Saat pengambilan, saya hanya mengajukan izin 1 hari, antrian di kantor pusat pun tidak begitu ramai. Lebih baik proses apostille dilakukan sendiri karena lebih hemat.
 
 Saya sendiri mengalami kesulitan mendapatkan spesimen tanda tangan karena beberapa dokumen saya ditandatangani oleh pejabat yang berada di luar Jabodetabek. Bagi yang tidak memiliki saudara atau rekan untuk dimintakan tolong, pertimbangkan menggunakan bantuan jasa seperti [Santo Suruh](https://santosuruh.co.id/).
 
@@ -178,7 +180,7 @@ Proses pengajuan visa membutuhkan kontrak kerja yang sudah ditandatangani kedua 
 
 Selain melengkapi dokumen, kita juga diminta mengisi data diri atau istilahnya VIDEX, [contoh formulir VIDEX dapat dilihat disini](https://videx.diplo.de/videx/visum-erfassung/videx-langfristiger-aufenthalt).
 
-Catatan: kemungkinan terdapat sedikit perbedaan pada VIDEX yang perlu kita isi ketika pengajuan visa. Tidak perlu khawatir karena proses pengisian VIDEX dan upload dokumen nantinya akan sama-sama dilakukan di [Auslandsportal](https://digital.diplo.de/).
+Catatan: kemungkinan terdapat sedikit perbedaan dari contoh di atas dengan VIDEX yang perlu kita isi ketika pengajuan visa. Tidak perlu khawatir karena proses pengisian VIDEX dan upload dokumen nantinya akan sama-sama dilakukan di [Auslandsportal](https://digital.diplo.de/).
 
 ### Penyetaraan Ijazah
 
@@ -192,7 +194,7 @@ Dokumen yang diperlukan untuk pengajuan penyetaraan ijazah:
 - Ijazah S1/D4
 - Transkrip nilai S1/D4
 - Ijazah SMA
-- Sertifikat akreditas Ban-PT selama masa studi
+- Sertifikat akreditasi program studi dari Ban-PT selama masa studi
 - Kontrak kerja (opsional)
   
 Jika ada versi ijazah dan transkrip nilai dalam bahasa Inggris, siapkan juga dokumen tersebut. Website ZAB menyediakan tempat upload terpisah untuk ijazah & transkrip bahasa asli dan bahasa Inggris. Ini hanya berlaku untuk ijazah dan transkrip S1/D4. Jika tidak ada versi bahasa Inggris, dokumen asli tidak perlu diterjemahkan.
