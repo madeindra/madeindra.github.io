@@ -87,6 +87,8 @@ Estimasi biaya:
 - EUR 1000 per orang untuk biaya hidup bulan pertama (menurut Numbeo)
 - EUR 900 (1 orang) hingga EUR 2000 (3 orang) dikali 3 untuk biaya sewa apartemen (1 biaya bulan pertama dan deposit sebesar biaya sewa 2 bulan)
 
+Pastikan masa berlaku paspor masih lebih dari 6 bulan saat pengajuan visa dan minimal ada 2 halaman kosong.
+
 Pengeluaran terbesar ada di sewa tempat tinggal karena apartemen di Jerman sangat terbatas. Kemungkinan beberapa bulan awal kita hanya bisa menyewa apartemen *furnished* karena untuk bisa menyewa apartemen *unfurnished*, kita akan diminta menyediakan laporan skor kredit (Schufa) kita. Jika membawa keluarga, jangan lupa ada syarat luas minimal tempat tinggal (12m² per orang atau 10m² untuk anak di bawah 6 tahun).
 
 ## Mencari Kerja
