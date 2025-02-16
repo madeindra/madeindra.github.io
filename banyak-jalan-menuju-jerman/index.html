@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name=author content="Made Indra">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon/site.webmanifest">
+<link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon/android-chrome-512x512.png">
+
+
+  <title>Banyak Jalan Menuju Jerman | madeindra.dev</title>
+  <meta name="description"
+    content="Pengalaman saya mencari kerja ke luar negeri dan proses mendapatkan pekerjaan sebagai software engineer di Jerman, dari persiapan hingga mendapatkan visa kerja.">
+  <meta name="keywords"
+    content="Visa, Pekerjaan, Luar Negeri, Software, Engineer, Developer, Jerman, Germany">
+
+  <link rel="canonical" href="https://madeindra.dev/banyak-jalan-menuju-jerman/">
+  <link rel="alternate" type="application/rss+xml" title="madeindra.dev" href="https://madeindra.dev/feed.xml" />
+
+  <!-- for browsers supporting theme-color -->
+  <meta name="theme-color" content="">
+
+  <meta property="og:title" content="Banyak Jalan Menuju Jerman">
+<meta property="og:description"
+    content="Pengalaman saya mencari kerja ke luar negeri dan proses mendapatkan pekerjaan sebagai software engineer di Jerman, dari persiapan hingga mendapatkan visa kerja.">
+<meta property="og:url" content="https://madeindra.dev/banyak-jalan-menuju-jerman/">
+<meta property="og:site_name" content="madeindra.dev">
+<meta property="og:type" content="website">
+
+<meta property="og:image" content="https://madeindra.dev/assets/images/2025-02-15-banyak-jalan-menuju-jerman.webp">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Banyak Jalan Menuju Jerman">
+<meta name="twitter:description"
+    content="Pengalaman saya mencari kerja ke luar negeri dan proses mendapatkan pekerjaan sebagai software engineer di Jerman, dari persiapan hingga mendapatkan visa kerja.">
+
+<meta property="twitter:domain" content="https://madeindra.dev">
+<meta property="twitter:url"
+    content="https://madeindra.dev/banyak-jalan-menuju-jerman/">
+<meta name="twitter:image" content="https://madeindra.dev/assets/images/2025-02-15-banyak-jalan-menuju-jerman.webp">
+
+
+<meta name="twitter:site" content="@madecanggih">
+
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body
+  class="min-h-screen flex flex-col transition-colors duration-300 bg-white dark:bg-dark text-gray-900 dark:text-dark-base">
+  <header class="py-6">
+  <div class="container mx-auto px-4 flex justify-between items-center">
+    <!-- Logo and Title -->
+    <div class="flex items-center">
+      
+      <a href="/">
+        <img src="https://madeindra.dev/assets/images/logo.webp" alt="Logo" class="h-8 mr-2 block md:hidden" />
+      </a>
+      
+      <h1 class="text-xl font-semibold hidden md:block">
+        <a href="/" class="hover:text-gray-600 dark:hover:text-white">
+          madeindra.dev
+        </a>
+      </h1>
+    </div>
+
+    <!-- Search Bar-->
+    
+    <div id="search-bar" class="relative w-1/3">
+      <input type="text" id="search-input" placeholder="Search..."
+        class="w-full px-4 py-1 border rounded-full focus:outline-none focus:ring-0 bg-white dark:bg-dark transition-colors duration-300">
+      <div id="search-results" class="z-[100] absolute left-0 right-0 mt-2 bg-white dark:bg-dark border rounded shadow-lg hidden"
+        style="min-width: 150%; left: 50%; transform: translateX(-50%);"></div>
+    </div>
+    
+
+    <!-- Navigation -->
+    <div class="flex items-center space-x-4">
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-6 font-normal">
+          
+          <li><a href="/" class="hover:text-gray-600 dark:hover:text-white">Home</a></li>
+          
+
+          
+          <li><a href="/about" class="hover:text-gray-600 dark:hover:text-white">About</a></li>
+          
+        </ul>
+      </nav>
+
+      <!-- Burger Menu Icon -->
+      <div class="relative">
+        <button id="burger-menu" class="md:hidden p-2 rounded-full" aria-label="Toggle mobile menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu (Positioned absolutely) -->
+        <div id="mobile-menu" class="hidden md:hidden absolute mt-2 w-24 bg-white dark:bg-dark border rounded shadow-lg z-50">
+          <nav>
+            <ul class="py-2 font-normal">
+              
+              <li><a href="/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a></li>
+              
+
+              
+              <li><a href="/about" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">About</a></li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <button id="theme-toggle" class="p-2 rounded-full" aria-label="Toggle theme to dark or light mode">
+        <svg id="theme-toggle-dark-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="0" stroke="currentColor" class="w-5 h-5 hidden" >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+        </svg>
+        
+        <svg id="theme-toggle-light-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"  stroke-width="1.5" stroke="currentColor" class="w-5 h-5 hidden" >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+        </svg>
+      </button>
+
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const burgerMenu = document.getElementById('burger-menu');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      burgerMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!burgerMenu.contains(event.target) && !mobileMenu.contains(event.target)) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+</header>
+
+<main class="container mx-auto px-4 flex-grow">
+
+    <div class="relative max-w-prose mb-6 mx-auto">
+        <!-- Featured Image -->
+        
+        <div class="relative overflow-hidden rounded">
+            
+            <img src="https://madeindra.dev/assets/images/2025-02-15-banyak-jalan-menuju-jerman.webp" alt="Featured image" class="w-full h-[40vh] md:h-[50vh] object-cover">
+            
+
+            <!-- Black Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        </div>
+        
+
+
+        <!-- Title Overlay -->
+        <div
+            class="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <div class="flex items-center space-x-1 md:space-x-2 text-sm mb-2">
+                <span>15 Feb 2025</span>
+                <span>•</span>
+                <span>12 min read</span>
+                <span>•</span>
+                <span
+                    class="">
+                    Work
+                </span>
+            </div>
+            <h1 class="text-2xl md:text-4xl font-bold">Banyak Jalan Menuju Jerman</h1>
+        </div>
+    </div>
+
+    <article class="prose dark:prose-invert prose-img:mx-auto max-w-prose mx-auto space-y-6 sm:text-lg leading-relaxed">
+        <p>Setelah hampir 2 tahun bekerja secara remote untuk perusahaan di Australia, saya mulai merasa yakin bahwa saya mampu bersaing dengan software engineer dari seluruh dunia. Sebelumnya, pekerjaan pertama saya adalah menjadi seorang dosen di sebuah kampus swasta kecil. Setahun kemudian, saya bergabung dengan perusahaan BUMN melalui jalur Management Trainee.</p>
+
+<p>Meski telah meniti karir selama 5 tahun, saya merasa belum memberikan <em>impact</em> yang signifikan untuk bisa saya banggakan. Namun, 2 tahun terakhir benar-benar mengubah perjalanan hidup saya dengan pengalaman yang sangat berharga.</p>
+
+<p>Di penghujung tahun 2024, saya mulai mencari informasi tentang cara berkarir di luar negeri.</p>
+
+<hr />
+
+<p>Tujuan saya bekerja di luar negeri adalah untuk mendapatkan kualitas hidup yang lebih baik, melihat dunia secara langsung, berinteraksi dengan orang-orang dari berbagai latar belakang, serta memberikan kontribusi yang lebih besar di bidang software development.</p>
+
+<p>Negara-negara yang menjadi target utama saya adalah: Australia, Selandia Baru, Swedia, Estonia, dan Jerman.</p>
+
+<p>Australia dan Selandia Baru menjadi pilihan karena setiap hari saya bekerja dengan rekan-rekan dari negara tersebut. Saya merasa cocok dengan budaya kerja mereka dan mampu membangun hubungan yang tidak hanya profesional tetapi juga bersifat personal.</p>
+
+<p>Swedia dan Jerman menarik perhatian saya karena kedua negara ini menyediakan peluang besar bagi pencari kerja melalui program <a href="https://www.migrationsverket.se/English/Private-individuals/Working-in-Sweden/Look-for-work-or-start-a-business.html">Job Seeker Visa</a> dan <a href="https://www.make-it-in-germany.com/en/visa-residence/types/job-search-opportunity-card">Opportunity Card</a>. Program-program ini memungkinkan saya untuk melamar pekerjaan secara langsung, mengajukan visa pencari kerja, hingga mencari beasiswa doktoral. Hal unik dari Swedia adalah mahasiswa doktoral di sana dianggap sebagai pekerja penuh waktu, sehingga mereka mendapatkan gaji dan posisi ini dapat ditemukan di <em>job board</em> seperti LinkedIn atau Indeed.</p>
+
+<p>Selain itu, ada negara dengan program serupa, seperti <a href="https://vistos.mne.gov.pt/en/national-visas/necessary-documentation/job-seeker-visa">Portugal</a> dan <a href="https://www.migration.gv.at/en/types-of-immigration/permanent-immigration/very-highly-qualified-workers/">Austria</a>. Namun, peluang di negara-negara tersebut masih lebih sedikit dibandingkan negara prioritas saya.</p>
+
+<p>Estonia menjadi target karena saya kagum dengan kemajuan teknologi digital di negara ini. Meskipun saya pernah gagal mendapatkan pekerjaan remote di perusahaan Estonia, mereka tetap memberikan saya penawaran <em>freelance expert</em>. Selain infrastruktur digitalnya yang maju, orang-orang Estonia sangat menghargai hasil kerja ketimbang waktu kerja. Satu-satunya kekurangan adalah kurangnya sinar matahari selama musim dingin.</p>
+
+<p>Singkat cerita, setelah mengirim puluhan lamaran, saya mendapat 4 panggilan wawancara, 2 dari Jerman dan 2 dari Estonia. Setelah proses yang cukup panjang karena terbentur oleh libur Natal, saya mendapatkan 2 tawaran kerja: 1 dari perusahaan fintech di Jerman dan 1 lagi dari perusahaan SaaS CRM di Estonia.</p>
+
+<p>Setelah mempertimbangkan berbagai aspek seperti budaya yang dimiliki perusahaan, peluang karir ke depannya, dan kualitas hidup untuk keluarga, saya memutuskan untuk menerima tawaran dari Jerman.</p>
+
+<p>Lewat tulisan ini, saya ingin berbagi pengalaman mencari kerja di bidang IT ke luar negeri, khususnya Jerman, dan persiapan yang diperlukan.</p>
+
+<h2 id="persiapan">Persiapan</h2>
+
+<p>Karena nantinya kita akan mengajukan visa, langkah pertama yang saya sarankan adalah memahami persyaratan visa negara tujuan.</p>
+
+<p>Untungnya, proses pengajuan visa Jerman saat ini sudah bisa dilakukan secara online lewat <a href="https://digital.diplo.de/">Auslandsportal</a>, kita cukup membuat akun di website tersebut, maka kita bisa melihat dokumen-dokumen yang dibutuhkan untuk mengajukan berbagai jenis visa, seperti visa kerja, visa pencari kerja, bahkan visa kumpul keluarga bagi pasangan, anak-anak, atau orang tua.</p>
+
+<p>Dokumen yang diperlukan adalah:</p>
+<ul>
+  <li>Paspor</li>
+  <li>Ijazah S1/D4 (hanya pekerja)</li>
+  <li>Akta kelahiran</li>
+  <li>Buku nikah atau akta perkawinan (untuk visa kumpul keluarga pasangan)</li>
+  <li>Kartu keluarga (untuk visa kumpul keluarga anak sebagai bukti hak asuh anak)</li>
+  <li>Sertifikat kemampuan bahasa Jerman C1 (untuk anak 16 tahun ke atas)</li>
+</ul>
+
+<p>Pastikan dokumen-dokumen tersebut tidak hilang atau rusak dan tidak terdapat kesalahan. Jika ada kesalahan seperti kesalahan penulisan nama di ijazah atau nama orang tua di akta kelahiran, segera urus perbaikannya.</p>
+
+<p>Syukurnya, bagi pemegang visa Blue Card, tidak ada syarat bahasa Jerman untuk pekerja maupun pasangan.</p>
+
+<hr />
+
+<p>Untuk pekerjaan bidang IT, syarat yang perlu diperhatikan adalah: pendidikan atau pengalaman kerja.</p>
+
+<p>Lulusan S1/D4 bidang IT harus memastikan institusi pendidikan memiliki status “H+” atau “H+/H-“ di database Anabin, silakan cek <a href="https://www.make-it-in-germany.com/en/working-in-germany/recognition/academic-qualifications">panduan dari Make it in Germany</a>. Pastikan juga institusi pendidikan terakreditasi Ban-PT, selama masa studi hingga tahun kelulusan, ini dibutuhkan untuk proses penyetaraan sebelum pengajuan visa, silakan cek <a href="https://service.banpt.or.id/bianglala/bianglala.php">data histori akreditasi Ban-PT</a>.</p>
+
+<p>Jika latar pendidikan bukan dari bidang IT, maka syarat pendidikan bisa diganti dengan pengalaman kerja di bidang IT selama minimal 3 tahun dalam 7 tahun terakhir.</p>
+
+<hr />
+
+<p>Hal yang tidak kalah penting adalah mempersiapkan biaya pindah. Meskipun perusahaan nantinya akan memberikan <em>relocation assistance</em>, biasanya biaya bantuan akan diberikan setelah kita sampai di negara tujuan. Jadi, persiapkan dana pribadi terlebih dahulu.</p>
+
+<p>Estimasi biaya:</p>
+<ul>
+  <li>IDR 650.000 per orang untuk paspor (jika perlu membuat / memperbarui)</li>
+  <li>IDR 150.000 per dokumen untuk apostille (pengganti legalisir, buku nikah tetap perlu dilegalisir sebelum apostille)</li>
+  <li>IDR 200.000 hingga Rp350.000 per halaman hasil terjemah untuk semua dokumen yang tidak berbahasa Inggris / Jerman</li>
+  <li>IDR 15.000.000-20.000.000 per orang untuk tiket pesawat kelas ekonomi</li>
+  <li>EUR 208 untuk penyetaraan ijazah bagi yang menggunakan ijazah S1/D4</li>
+  <li>EUR 75 per orang untuk pengajuan visa</li>
+  <li>EUR 1000 per orang untuk biaya hidup bulan pertama (menurut Numbeo)</li>
+  <li>EUR 900 (1 orang) hingga EUR 2000 (3 orang) dikali 3 untuk biaya sewa apartemen (1 biaya bulan pertama dan deposit sebesar biaya sewa 2 bulan)</li>
+</ul>
+
+<p>Pengeluaran terbesar ada di sewa tempat tinggal karena apartemen di Jerman sangat terbatas. Kemungkinan beberapa bulan awal kita hanya bisa menyewa apartemen <em>furnished</em> karena untuk bisa menyewa apartemen <em>unfurnished</em>, kita akan diminta menyediakan laporan skor kredit (Schufa) kita. Jika membawa keluarga, jangan lupa ada syarat luas minimal tempat tinggal (12m² per orang atau 10m² untuk anak di bawah 6 tahun).</p>
+
+<h2 id="mencari-kerja">Mencari Kerja</h2>
+
+<p>Beberapa platform yang saya gunakan untuk mencari kerja:</p>
+<ul>
+  <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+  <li><a href="https://www.xing.com/">Xing</a></li>
+  <li><a href="https://www.make-it-in-germany.com/en/working-in-germany/job-listings">Make it in Germany</a></li>
+  <li><a href="https://germantechjobs.de/">German Tech Jobs</a></li>
+  <li><a href="https://www.joinimagine.com/">Imagine Foundation</a></li>
+</ul>
+
+<p>Saya spesifik menargetkan lowongan pekerjaan yang mencantumkan kata <strong>“relocation”</strong>. Jika lowongan pekerjaan tidak menyebutkan tentang bantuan relokasi secara eksplisit, saya akan mencari informasi jumlah karyawan dan <em>funding</em> perusahaan tersebut, jika cukup besar, saya akan tetap mengirim lamaran. Beberapa perusahaan yang tidak mencantumkan tentang bantuan relokasi juga menjawab lamaran saya dengan mengirimkan pertanyaan apakah saya siap untuk pindah jika diterima.</p>
+
+<p>Peluang relokasi biasanya lebih besar jika kita melamar ke perusahaan besar (korporasi). Tapi, tidak menutup kemungkinan untuk diterima di perusahaan startup.</p>
+
+<p>Ketika menggunakan LinkedIn atau Xing, saya menggunakan filter <em>Job Title</em> yang saya inginkan (contohnya “Software Engineer” atau “Backend”) dan <em>Location</em> (contohnya “Berlin”).</p>
+
+<p>Kurang lebih, semua <em>job board</em> memiliki model yang serupa, yaitu iklan lowongan kerja. Jadi persiapannya pun sama, yaitu: Resume / Curriculum Vitae (CV) dan Cover Letter.</p>
+
+<p>Saya sudah pernah membagikan template Resume, <a href="https://github.com/madecanggih/resource">silakan klik link GitHub ini</a>.</p>
+
+<p>Apakah cover letter wajib? Tidak! Namun, saya tetap merekomendasikan untuk menulis cover letter. Tidak perlu panjang, cukup yang singkat, padat, dan jelas.</p>
+
+<p>Saya menggunakan template yang sama dengan resume, hanya saja isinya mencakup motivasi melamar, bukan riwayat kerja.</p>
+
+<p>Hal yang perlu dituliskan di cover letter adalah:</p>
+<ul>
+  <li>Informasi pribadi (nama, posisi yang diinginkan, pengalaman kerja, pencapaian selama bekerja)</li>
+  <li>Motivasi melamar (alasan mengapa kita cocok di posisi ini, termasuk budaya kerja / nilai dari perusahaan yang membuat kita tertarik)</li>
+</ul>
+
+<p>Saya sendiri mengikuti <a href="https://www.joinimagine.com/how-to-write-a-winning-cover-letter">panduan dari Imagine Foundation untuk menulis cover letter</a>.</p>
+
+<hr />
+
+<p>Bicara tentang Imagine Foundation, platform ini sedikit berbeda dari <em>job board</em> lain. Imagine Foundation ini adalah organisasi non-profit yang membantu orang-orang dari negara berkembang untuk mendapatkan kerja di Jerman.</p>
+
+<p>Cara kerjanya adalah kita mendaftar ke Imagine Foundation, kemudian kita akan mengikuti beberapa tahap seperti tes online, mengirimkan resume, memoles profil LinkedIn, dan mentoring. Kemudian jika kita lolos semua tahap tersebut, kita akan bergabung ke Talent Pool mereka.</p>
+
+<p>Ada biaya awal sebelum bergabung sebesar EUR 20, ini dibayarkan setelah kita lolos semua tahap di atas, setelah itu kita akan dibantu mencari kerja.</p>
+
+<p>Jika kita berhasil mendapatkan pekerjaan, kita harus membayar sebesar 7% dari gaji kotor tahun pertama, tapi pembayaran ini baru dilakukan setelah 6 bulan bekerja. Bisa dicicil selama 12 bulan atau dibayar sekaligus dengan potongan 10%.</p>
+
+<p>Misalnya kita mendapatkan tawaran kerja dengan besaran gaji kotor sebesar EUR 60.000 per tahun, maka biaya yang kita bayar adalah EUR 4.200.</p>
+
+<p>Saya sendiri berhasil melewati semua proses seleksi awal. Namun memilih untuk tidak bergabung ke talent pool karena saya sudah lebih dulu sudah mendapatkan tawaran kerja dari lowongan pekerjaan yang saya cari sendiri.</p>
+
+<h2 id="apostille--terjemah">Apostille &amp; Terjemah</h2>
+
+<p>Semua dokumen yang diterbitkan di Indonesia harus diterjemahkan ke dalam bahasa Jerman dan di-Apostille.</p>
+
+<p>Pengajuan Apostille bisa dilakukan secara online lewat platform <a href="https://apostille.ahu.go.id/">Ditjen AHU Online</a>, butuh waktu 3 hari kerja untuk menunggu verifikasi dokumen.</p>
+
+<p>Jika dokumen ditandatangani secara digital, proses akan lebih mudah.</p>
+
+<p>Jika dokumen ditandatangan basah, maka kita mungkin perlu meminta spesimen tanda tangan pejabat tersebut atau pejabat yang baru.</p>
+
+<p>Beruntung kalau data tanda tangan pejabat tersebut sudah ada di database Ditjen AHU. Jika belum, kita akan diberikan surat pengantar yang perlu dibawa langsung ke instansi untuk meminta spesimen tanda tangan. Jika pejabat sudah tidak menjabat karena dimutasi atau pensiun, kita cukup minta pernyataan dari pejabat saat ini. Kedua formulir itu terlampir di surat pengantar yang diberikan.</p>
+
+<p>Pengalaman saya, kadang meskipun data pejabat sudah terdaftar, bisa saja pengajuan apostille ditolak saat verifikasi. Cukup ajukan ulang, kecuali ada catatan lain dari verifikator (misal: salah input nomor dokumen atau nama).</p>
+
+<p>Sebelum mengambil sertifikat apostille, pastikan semua dokumen sudah di-scan dengan baik. Jangan scan menggunakan kamera atau handphone untuk memastikan kualitas hasil scan. Hasil scan dokumen tersebut nantinya akan digunakan saat proses pengajuan visa. Selain itu, saat mengambil sertifikat apostille, dokumen asli dan sertifikat apostille akan digabung. Cara penggabungannya adalah dengan menggunakan staples, namun jika dokumen asli dilaminasi, maka akan dilubangi terlebih dahulu dan digabungkan dengan menggunakan <em>eyelet</em> (mata ayam).</p>
+
+<blockquote>
+  <p>Sangat disayangkan bahwa proses apostille ini akan merusak dokumen asli.</p>
+
+  <p>Saya tidak paham mengapa sertifikat apostille tidak dibuat dalam bentuk sertifikat digital yang juga menampung informasi dokumen aslinya.</p>
+</blockquote>
+
+<p>Saya tekankan lagi, scan semua dokumen dengan baik sebelum mengambil hasil apostille.</p>
+
+<hr />
+
+<p>Ada beberapa penerjemah yang menawarkan jasa terjemah lengkap dengan apostille, saya tidak merekomendasikan jasa tersebut karena harganya mahal. Selain itu, jasa tersebut biasanya tidak mencakup pengurusan spesimen tanda tangan, sehingga kita tetap harus melakukannya sendiri. Jasa apostille tersebut benar-benar hanya untuk mengurus pengajuan online dan pengambilan sertifikat.</p>
+
+<p>Menurut saya, meskipun <em>user experience</em> website tersebut buruk, pengajuan apostille cukup mudah karena bisa dilakukan sepenuhnya secara online. Saat pengambilan, saya hanya mengajukan izin 1 hari, antrian di kantor pusat pun tidak begitu ramai. Lebih baik proses apostille dilakukan sendiri karena lebih hemat.</p>
+
+<p>Saya sendiri mengalami kesulitan mendapatkan spesimen tanda tangan karena beberapa dokumen saya ditandatangani oleh pejabat yang berada di luar Jabodetabek. Bagi yang tidak memiliki saudara atau rekan untuk dimintakan tolong, pertimbangkan menggunakan bantuan jasa seperti <a href="https://santosuruh.co.id/">Santo Suruh</a>.</p>
+
+<hr />
+
+<p>Penerjemahan dokumen bisa dilakukan secara bersamaan dengan pengajuan apostille.</p>
+
+<p>Penerjemah tersumpah mungkin akan memakan waktu lebih lama dan kita diharuskan mengirim dokumen asli.</p>
+
+<p>Sejauh yang saya ketahui, tidak masalah menggunakan jasa penerjemah tidak tersumpah, asalkan penerjemah tersebut ada di dalam daftar penerjemah Kedutaan Besar. Silakan cek <a href="https://jakarta.diplo.de/id-de/service/2551760-2551760">daftar penerjemah di website resmi Kedutaan Besar Jerman</a></p>
+
+<p>Saya sendiri menggunakan jasa penerjemah tidak tersumpah karena prosesnya lebih cepat dan cukup mengirimkan salinan dokumen asli.</p>
+
+<h2 id="pengajuan-visa">Pengajuan Visa</h2>
+
+<p>Proses pengajuan visa membutuhkan kontrak kerja yang sudah ditandatangani kedua belah pihak.</p>
+
+<p>Selain melengkapi dokumen, kita juga diminta mengisi data diri atau istilahnya VIDEX, <a href="https://videx.diplo.de/videx/visum-erfassung/videx-langfristiger-aufenthalt">contoh formulir VIDEX dapat dilihat disini</a>.</p>
+
+<p>Catatan: kemungkinan terdapat sedikit perbedaan pada VIDEX yang perlu kita isi ketika pengajuan visa. Tidak perlu khawatir karena proses pengisian VIDEX dan upload dokumen nantinya akan sama-sama dilakukan di <a href="https://digital.diplo.de/">Auslandsportal</a>.</p>
+
+<h3 id="penyetaraan-ijazah">Penyetaraan Ijazah</h3>
+
+<p>Jika perlu melakukan penyetaraan ijazah (<em>Statement of Comparability</em>), prosesnya bisa dilakukan melalui <a href="https://zab.kmk.org/en/statement-comparability">website Zentralstelle für ausländisches Bildungswesen (ZAB)</a>. Silakan ikuti <a href="https://www.youtube.com/watch?v=WyG-wM7gDNo">panduan dari Hello Germany</a>.</p>
+
+<blockquote>
+  <p>Saya mengalami kesulitan ketika melakukan login menggunakan Single Sign On (SSO) BundID.</p>
+
+  <p>Ketika login berhasil dan tidak otomatis dialihkan ke website ZAB, logout terlebih dahulu di website BundID, kemudian ulangi proses login dari awal dengan mengklik Login di website ZAB.</p>
+</blockquote>
+
+<p>Dokumen yang diperlukan untuk pengajuan penyetaraan ijazah:</p>
+<ul>
+  <li>Ijazah S1/D4</li>
+  <li>Transkrip nilai S1/D4</li>
+  <li>Ijazah SMA</li>
+  <li>Sertifikat akreditas Ban-PT selama masa studi</li>
+  <li>Kontrak kerja (opsional)</li>
+</ul>
+
+<p>Jika ada versi ijazah dan transkrip nilai dalam bahasa Inggris, siapkan juga dokumen tersebut. Website ZAB menyediakan tempat upload terpisah untuk ijazah &amp; transkrip bahasa asli dan bahasa Inggris. Ini hanya berlaku untuk ijazah dan transkrip S1/D4. Jika tidak ada versi bahasa Inggris, dokumen asli tidak perlu diterjemahkan.</p>
+
+<p>Kontrak kerja dibutuhkan untuk opsi Fast-Track. Normalnya proses penyetaraan menghabiskan waktu selama 3 bulan, namun dengan opsi Fast-Track pengajuan hanya menghabiskan waktu 2 minggu.</p>
+
+<p>Setelah hasil penyetaraan selesai, periksa kembali dan pastikan tidak terdapat kesalahan. Jika terdapat kesalahan, cukup kirimkan pesan lewat website ZAB untuk perbaikan.</p>
+
+<p>Hasil penyetaraan saya selesai kurang dari 2 minggu. Saat itu terdapat kesalahan di nama saya dan revisi kesalahan tersebut hanya membutuhkan waktu 1-2 hari kerja.</p>
+
+<h3 id="asuransi-kesehatan">Asuransi Kesehatan</h3>
+
+<p>Jika sudah ada kontrak kerja, saya sarankan untuk mendaftarkan asuransi kesehatan, karena dokumen asuransi perlu dilampirkan saat pengajuan visa.</p>
+
+<p>Saya memilih mendaftar asuransi kesehatan TK (Techniker Krankenkasse) secara online. Karena asuransi kesehatan itu baru memulai mengcover saya setelah saya mulai bekerja, saya juga mengambil asuransi perjalanan dengan coverage 30 hari sebelum hari pertama bekerja. Yang saya tau, tidak ada ketentuan masa coverage, asalkan bisa mengcover dari hari pertama mendarat di Jerman sampai hari pertama bekerja.</p>
+
+<p>Proses pendaftaran bisa dilakukan lewat <a href="https://www.expatrio.com/health-insurance-plus">Expatrio</a> atau <a href="https://feather-insurance.com/health-insurance/public">Feather</a> dan menghabiskan waktu 2 hari kerja.</p>
+
+<h3 id="fast-track-untuk-visa-blue-card">Fast-Track untuk Visa Blue Card</h3>
+
+<p>Jika perusahaan bersedia membantu, mereka bisa mengajukan proses Fast-Track untuk pengajuan visa Blue Card. Proses ini melibatkan pengajuan dokumen dari perusahaan ke ke <a href="https://www.arbeitsagentur.de/en/german-labour-market">Bundesagentur für Arbeit</a> sebelum kita mengajukan visa. Untuk informasi lebih lanjut silakan <a href="https://www.make-it-in-germany.com/en/looking-for-foreign-professionals/entering/federal-employment-agency">klik link berikut</a>.</p>
+
+<p>Proses ini diperkirakan menghabiskan waktu 4 minggu. Proses ini dilakukan setelah memiliki kontrak kerja dan hasil penyetaraan ijazah.</p>
+
+<p>Jika disetujui, proses visa blue card akan diproses lebih cepat dari biasanya.</p>
+
+<p>Sayangnya, dari informasi yang saya dapat, proses percepatan hanya berlaku untuk pekerja. Jika akan berangkat dengan pasangan atau anak atau orang tua, maka visa keluarga kemungkinan akan terbit belakangan.</p>
+
+<hr />
+
+<p>Saat ini saya masih dalam proses pengajuan Fast-Track. Saya belum bisa menulis lebih lanjut, jadi tulisan ini akan saya perbarui setelah saya menyelesaikan semua proses pengajuan visa (￣▽￣)ノ</p>
+
+<hr />
+
+<p>Photo by <a href="https://unsplash.com/@florianwehde?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Florian Wehde on Unsplash</a></p>
+
+    </article>
+
+    
+    <div class="max-w-prose mx-auto border-t border-gray-200 my-12"></div>
+    <section class="max-w-prose mx-auto">
+        <script src="https://giscus.app/client.js"
+        data-repo="madeindra/madeindra.github.io"
+        data-repo-id="R_kgDOMxraRQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOMxraRc4CjK1D"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        id="gitcus"
+        async>
+</script>
+    </section>
+    
+</main>
+
+<footer class="py-6">
+    <div class="container mx-auto px-4">
+        <!-- Divider -->
+        <div class="border-t border-gray-200 mb-4"></div>
+
+        <!-- Footer -->
+        <div class="flex justify-between items-center">
+            <div class="text-sm text-gray-600 dark:text-gray-400">
+                madeindra.dev © 2025
+            </div>
+            
+            <div class="text-sm text-gray-600 dark:text-gray-400">
+                
+                <a href="/sitemap.xml" class="hover:text-gray-900 dark:hover:text-gray-100">Sitemap</a>
+                
+        
+                
+                <span class="px-2">|</span>
+                
+        
+                
+                <a href="/feed.xml" class="hover:text-gray-900 dark:hover:text-gray-100">RSS</a>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+  <script type="text/javascript">
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+    const themeColorMetaTag = document.querySelector('meta[name="theme-color"]');
+
+    const themeComment = document.getElementById('gitcus');
+
+    // add click listener to theme toggle button
+    themeToggleBtn?.addEventListener('click', function () {
+        setTheme(!document?.documentElement?.classList?.contains('dark'));
+    });
+
+    // set initial theme
+    if (sessionStorage.theme === 'dark' || (!('theme' in sessionStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        setTheme(true);
+    } else {
+        setTheme(false);
+    }
+
+    function setTheme(isDark) {
+        if (isDark) {
+            sessionStorage.theme = 'dark';
+
+            document.documentElement?.classList?.add('dark');
+
+            themeToggleDarkIcon?.classList?.add('hidden');
+            themeToggleLightIcon?.classList?.remove('hidden');
+
+            themeColorMetaTag.setAttribute('content', '#1A1A1A');
+
+            if (themeComment) {
+                themeComment.setAttribute('data-theme', 'noborder_dark');
+            }
+        } else {
+            sessionStorage.theme = 'light';
+
+            document.documentElement?.classList?.remove('dark');
+
+            themeToggleDarkIcon?.classList?.remove('hidden');
+            themeToggleLightIcon?.classList?.add('hidden');
+
+            themeColorMetaTag.setAttribute('content', '#FFFFFF');
+
+            if (themeComment) {
+                themeComment.setAttribute('data-theme', 'noborder_light');
+            }
+        }
+    }
+</script>
+
+  
+  <script type="text/javascript">
+  let searchData = [];
+
+  // Fetch search data
+  fetch('/search.json')
+    .then(response => response.json())
+    .then(data => {
+      searchData = data;
+    });
+
+  const searchBar = document.getElementById('search-bar');
+  const searchInput = document.getElementById('search-input');
+  const searchResults = document.getElementById('search-results');
+
+  searchInput?.addEventListener('input', debounce(handleSearch, 300));
+
+  function setResultInnerHTML(content) {
+    searchResults.innerHTML = content;
+  }
+
+  function addResultClass(className) {
+    searchResults.classList.add(className);
+  }
+
+  function removeResultClass(className) {
+    searchResults.classList.remove(className);
+  }
+
+  function handleSearch() {
+    const query = searchInput.value.toLowerCase();
+
+    // don't process 1 character
+    if (query.length < 2) {
+      setResultInnerHTML('');
+      addResultClass('hidden');
+
+      return;
+    }
+
+    const matches = searchData
+      .map(item => ({
+        item,
+        score: fuzzyMatch(query, item.title.toLowerCase())
+      }))
+      .filter(({ score }) => score > 0.3)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 5);
+
+    renderResults(matches);
+  }
+
+  function fuzzyMatch(query, text) {
+    let score = 0;
+    let textIndex = 0;
+
+    for (let i = 0; i < query.length; i++) {
+      const index = text.indexOf(query[i], textIndex);
+      if (index === -1) return 0;
+      score += 1 / (index - textIndex + 1);
+      textIndex = index + 1;
+    }
+
+    return score / query.length;
+  }
+
+  function renderResults(matches) {
+    let resultInnerHTML;
+    if (matches.length === 0) {
+      resultInnerHTML = '<p class="p-2 text-gray-500 dark:text-gray-500">No results found</p>';
+    } else {
+      resultInnerHTML = matches
+        .map(({ item }) => `
+            <a href="${item.url}" class="block p-2 hover:bg-gray-200 dark:hover:bg-gray-800">
+              <h3 class="font-semibold">${item.title}</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">${item.description}</p>
+            </a>
+          `)
+        .join('');
+    }
+
+    setResultInnerHTML(resultInnerHTML);
+    removeResultClass('hidden');
+  }
+
+  function debounce(func, delay) {
+    let timeoutId;
+    return function (...args) {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => func.apply(this, args), delay);
+    };
+  }
+
+  // hide search results on click
+  document?.addEventListener('click', (event) => {
+    if (!searchInput.contains(event.target) && !searchResults.contains(event.target)) {
+      searchResults.classList.add('hidden');
+    }
+  });
+</script>
+  
+</body>
+
+</html>
