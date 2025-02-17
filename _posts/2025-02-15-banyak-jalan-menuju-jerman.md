@@ -81,7 +81,7 @@ Estimasi biaya:
 - IDR 650.000 per orang untuk paspor (jika perlu membuat / memperbarui)
 - IDR 150.000 per dokumen untuk apostille (pengganti legalisir, buku nikah tetap perlu dilegalisir sebelum apostille)
 - IDR 200.000 hingga Rp350.000 per halaman hasil terjemah untuk semua dokumen yang tidak berbahasa Inggris / Jerman
-- IDR 15.000.000-20.000.000 per orang untuk tiket pesawat kelas ekonomi
+- IDR 6.000.000-20.000.000 per orang untuk tiket pesawat kelas ekonomi
 - EUR 208 untuk penyetaraan ijazah bagi yang menggunakan ijazah S1/D4
 - EUR 75 per orang untuk pengajuan visa
 - EUR 1000 per orang untuk biaya hidup bulan pertama (menurut Numbeo)
