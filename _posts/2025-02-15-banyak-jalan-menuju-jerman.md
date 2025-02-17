@@ -110,8 +110,6 @@ Jangan lupa, minimal gaji untuk bisa mengajukan visa Blue Card adalah EUR 43.759
 
 Kurang lebih, semua *job board* memiliki model yang serupa, yaitu iklan lowongan kerja. Jadi persiapannya pun sama, yaitu: Resume / Curriculum Vitae (CV) dan Cover Letter.
 
-Saya sudah pernah membagikan template Resume, [silakan klik link GitHub ini](https://github.com/madecanggih/resource).
-
 Apakah cover letter wajib? Tidak! Namun, saya tetap merekomendasikan untuk menulis cover letter. Tidak perlu panjang, cukup yang singkat, padat, dan jelas. 
 
 Saya menggunakan template yang sama dengan resume, hanya saja isinya mencakup motivasi melamar, bukan riwayat kerja.
@@ -120,7 +118,7 @@ Hal yang perlu dituliskan di cover letter adalah:
 - Informasi pribadi (nama, posisi yang diinginkan, pengalaman kerja, pencapaian selama bekerja)
 - Motivasi melamar (alasan mengapa kita cocok di posisi ini, termasuk budaya kerja / nilai dari perusahaan yang membuat kita tertarik) 
 
-Saya sendiri mengikuti [panduan dari Imagine Foundation untuk menulis cover letter](https://www.joinimagine.com/how-to-write-a-winning-cover-letter).
+Saya sudah pernah membagikan template Resume dan Cover Letter, [silakan klik link GitHub ini](https://github.com/madecanggih/resource).
 
 ---
 
