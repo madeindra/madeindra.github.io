@@ -215,13 +215,13 @@ Proses pendaftaran bisa dilakukan lewat [Expatrio](https://www.expatrio.com/heal
 
 ### Fast-Track untuk Visa Blue Card
 
-Jika perusahaan bersedia membantu, mereka bisa mengajukan proses Fast-Track untuk pengajuan visa Blue Card. Proses ini melibatkan pengajuan dokumen dari perusahaan ke ke [Bundesagentur für Arbeit](https://www.arbeitsagentur.de/en/german-labour-market) sebelum kita mengajukan visa. Untuk informasi lebih lanjut silakan [klik link berikut](https://www.make-it-in-germany.com/en/looking-for-foreign-professionals/entering/federal-employment-agency).
+Jika perusahaan bersedia, mereka bisa mengajukan proses Fast-Track untuk pengajuan visa Blue Card. Proses ini dilakukan oleh perusahaan lewat Ausländerbehörde (*Foreigners authority*) sebelum kita mengajukan visa. Untuk informasi lebih lanjut silakan [klik link berikut](https://www.make-it-in-germany.com/en/looking-for-foreign-professionals/entering/the-fast-track-procedure-for-skilled-workers).
 
-Proses ini diperkirakan menghabiskan waktu 4 minggu. Proses ini dilakukan setelah memiliki kontrak kerja dan hasil penyetaraan ijazah.
+Proses ini diperkirakan menghabiskan waktu sekitar 4 minggu. Proses ini dilakukan setelah memiliki kontrak kerja dan hasil penyetaraan ijazah.
 
-Jika disetujui, proses visa blue card akan diproses lebih cepat dari biasanya.
+Jika proses Fast-Track visa kita disetujui, kita harus mengajukan visa paling lambat 3 minggu setelah persetujuan dikeluarkan. Pengajuan visa visa Blue Card akan diproses lebih cepat dari biasanya, hanya dalam 3 minggu.
 
-Sayangnya, dari informasi yang saya dapat, proses percepatan hanya berlaku untuk pekerja. Jika akan berangkat dengan pasangan atau anak atau orang tua, maka visa keluarga kemungkinan akan terbit belakangan.
+Sayangnya, dari informasi yang saya dapat, proses percepatan hanya berlaku untuk pekerja. Jika akan berangkat dengan pasangan atau anak atau orang tua, maka visa kumpul keluarga untuk mereka mungkin akan terbit belakangan.
 
 ---
 
