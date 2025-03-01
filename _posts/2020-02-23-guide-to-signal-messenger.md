@@ -9,7 +9,7 @@ keywords:
   - Guide
   - Signal
 comments: true
-archived: false
+archived: true
 ---
 
 ![Signal-Logo](/assets/others/signal-logo.png)

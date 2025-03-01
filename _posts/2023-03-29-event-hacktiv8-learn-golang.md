@@ -10,7 +10,7 @@ keywords:
   - Event
   - Bootcamp
 comments: true
-archived: false
+archived: true
 ---
 
 Hai! Halo!

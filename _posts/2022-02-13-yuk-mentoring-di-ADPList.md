@@ -9,7 +9,7 @@ keywords:
   - Blog
   - Mentoring
 comments: true
-archived: false
+archived: true
 ---
 
 Hai! Halo!

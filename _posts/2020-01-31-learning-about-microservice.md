@@ -10,7 +10,7 @@ keywords:
   - CodeIgniter
   - PHP
 comments: true
-archived: false
+archived: true
 ---
 
 Earlier in 2020, I got a project assignment to create an example app for an e-commerce application. I was tasked to code in PHP CodeIgniter3 & MariaDB as the database.
