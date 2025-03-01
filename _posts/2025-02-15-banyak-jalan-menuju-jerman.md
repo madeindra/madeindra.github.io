@@ -51,7 +51,7 @@ Lewat tulisan ini, saya ingin berbagi pengalaman mencari kerja di bidang IT ke l
 
 Karena nantinya kita akan mengajukan visa, langkah pertama yang saya sarankan adalah memahami persyaratan visa negara tujuan.
 
-Untungnya, proses pengajuan visa Jerman saat ini sudah bisa dilakukan secara online lewat [Auslandsportal](https://digital.diplo.de/), kita cukup membuat akun di website tersebut, maka kita bisa melihat dokumen-dokumen yang dibutuhkan untuk mengajukan berbagai jenis visa, seperti visa kerja, visa pencari kerja, bahkan visa kumpul keluarga bagi pasangan, anak-anak, atau orang tua.
+Untungnya, proses pengajuan visa Jerman saat ini sudah bisa dilakukan secara online lewat [Auslandsportal](https://digital.diplo.de/), kita cukup membuat akun di website tersebut, maka kita bisa melihat dokumen-dokumen yang dibutuhkan untuk mengajukan berbagai jenis visa, seperti visa kerja, visa pencari kerja, bahkan visa kumpul keluarga (*Family Reunification*) bagi pasangan, anak-anak, atau orang tua.
 
 Dokumen yang diperlukan adalah:
 - Paspor
@@ -60,6 +60,7 @@ Dokumen yang diperlukan adalah:
 - Buku nikah atau akta perkawinan (untuk visa kumpul keluarga pasangan)
 - Kartu keluarga (untuk visa kumpul keluarga anak sebagai bukti hak asuh anak)
 - Sertifikat kemampuan bahasa Jerman C1 (untuk anak 16 tahun ke atas)
+- SKCK (tergantung perusahaan)
 
 Pastikan dokumen-dokumen tersebut tidak hilang atau rusak dan tidak terdapat kesalahan. Jika ada kesalahan seperti kesalahan penulisan nama di ijazah atau nama orang tua di akta kelahiran, segera urus perbaikannya.
 
@@ -79,6 +80,7 @@ Hal yang tidak kalah penting adalah mempersiapkan biaya pindah. Meskipun perusah
 
 Estimasi biaya:
 - IDR 650.000 per orang untuk paspor (jika perlu membuat / memperbarui)
+- IDR 30.000 per orang untuk SKCK (jika perlu membuat / memperbarui)
 - IDR 150.000 per dokumen untuk apostille (pengganti legalisir, buku nikah tetap perlu dilegalisir sebelum apostille)
 - IDR 200.000 hingga IDR 350.000 per halaman hasil terjemah untuk semua dokumen yang tidak berbahasa Inggris / Jerman
 - IDR 7.000.000-17.000.000 per orang untuk tiket pesawat kelas ekonomi dengan 1x transit
@@ -87,9 +89,29 @@ Estimasi biaya:
 - EUR 1000 per orang untuk biaya hidup bulan pertama (menurut Numbeo)
 - EUR 900 (1 orang) hingga EUR 2000 (3 orang) dikali 3 untuk biaya sewa apartemen (1 biaya bulan pertama dan deposit sebesar biaya sewa 2 bulan)
 
+Pengeluaran terbesar ada di sewa tempat tinggal karena apartemen di Jerman sangat terbatas. Kemungkinan beberapa bulan awal kita hanya bisa menyewa apartemen *furnished* karena untuk bisa menyewa apartemen *unfurnished*, kita akan diminta menyediakan laporan skor kredit (Schufa) kita. Jika membawa keluarga, jangan lupa ada syarat luas minimal tempat tinggal (12m² per orang atau 10m² untuk anak di bawah 6 tahun).
+
+---
+
 Pastikan masa berlaku paspor masih lebih dari 6 bulan saat pengajuan visa dan minimal ada 2 halaman kosong.
 
-Pengeluaran terbesar ada di sewa tempat tinggal karena apartemen di Jerman sangat terbatas. Kemungkinan beberapa bulan awal kita hanya bisa menyewa apartemen *furnished* karena untuk bisa menyewa apartemen *unfurnished*, kita akan diminta menyediakan laporan skor kredit (Schufa) kita. Jika membawa keluarga, jangan lupa ada syarat luas minimal tempat tinggal (12m² per orang atau 10m² untuk anak di bawah 6 tahun).
+Saat ini, pembuatan paspor sudah lebih sederhana karena pengisian data awal dilakukan lewat aplikasi M-Paspor. Jujur saja, *user experience* aplikasi ini tidak memuaskan karena banyak yang harus difoto, diupload, dan ditulis. Apalagi kalau keluar dari aplikasi di tengah-tengah proses, semua tahap harus diulang dari awal. Tetapi secara keseluruhan, menurut saya prosesnya lebih baik dibanding dulu dimana kita diharuskan datang ke kantor imigrasi untuk mengantri sebelum mengisi form kemudian harus menunggu beberapa jam untuk mendapat giliran interview dan foto. Sekarang, cukup isi data dan upload semua dokumen, kemudian pilih tanggal kedatangan sambil menyiapkan salinan dokumen-dokumen itu untuk dibawa ke kantor imigrasi. 
+
+Khusus untuk anak-anak (di bawah 5 tahun) atau lansia (di atas 60 tahun), tidak perlu mengisi data lewat M-Paspor, bisa langsung datang dan membawa berkas-berkas yang dipersyaratkan.
+
+Pengalaman saya dari awal mendapat antrian konfirmasi aplikasi sampai interview dan foto menghabiskan waktu selama 1 jam. Setelah foto, saya diberikan bukti pengambilan yang juga berisi informasi cara pembayaran secara online. Paspor bisa diambil dalam waktu 4 hari kerja setelah pembayaran dilakukan, saat pengambilan pun antrian hanya menghabiskan waktu sekitar 30 menit, meskipun kondisi saat itu sedang ramai.
+
+---
+
+Tidak semua perusahaan meminta bukti catatan kriminal, namun jika diminta, kita harus mengajukan SKCK ke Mabes Polri.
+
+Mengapa harus di Mabes Polri? Karena tujuan penggunaan SKCK adalah untuk ke luar negeri, jadi tidak bisa di Sektor atau Resor, harus di pusat.
+
+Sama seperti pembuatan paspor, pembuatan SKCK sekarang sudah lebih sederhana karena dilakukan lewat aplikasi POLRI Super App. Sama juga, *user experience* aplikasi ini tidak memuaskan terutama ketika proses pembayaran. Saya sendiri harus mengajukan sebanyak 3 kali di aplikasi tersebut karena di proses-proses sebelumnya nomor rekening virtual pembayaran tidak muncul.
+
+Saya sangat menyarankan menggunakan metode pembayaran virtual account, jangan menggunakan metode pembayaran di loket karena dengan metode itu, kita harus mengantri di loket pembayaran sebelum SKCK dicetak.
+
+Pengalaman saya dari awal mendapat antrian pengambilan SKCK sampai pencetakan selesai membutuhkan waktu tunggu selama 3 jam.
 
 ## Mencari Kerja
 
@@ -217,11 +239,13 @@ Proses pendaftaran bisa dilakukan lewat [Expatrio](https://www.expatrio.com/heal
 
 Jika perusahaan bersedia, mereka bisa mengajukan proses Fast-Track untuk pengajuan visa Blue Card. Proses ini dilakukan oleh perusahaan lewat Ausländerbehörde (*Foreigners authority*) sebelum kita mengajukan visa. Untuk informasi lebih lanjut silakan [klik link berikut](https://www.make-it-in-germany.com/en/looking-for-foreign-professionals/entering/the-fast-track-procedure-for-skilled-workers).
 
-Proses ini diperkirakan menghabiskan waktu sekitar 4 minggu. Proses ini dilakukan setelah memiliki kontrak kerja dan hasil penyetaraan ijazah.
+Proses ini dilakukan setelah ada kontrak kerja (minimal dalam bentuk *draft*) dan secara keseluruhan proses diperkirakan menghabiskan waktu 15 minggu, ini sudah termasuk 8 minggu untuk penyetaraan ijazah.
+
+Jika proses ini dilakukan setelah memiliki penyetaraan ijazah, keputusan proses Fast-Track (persetujaun atau penolakan) diperkirakan akan diberikan dalam waktu 1 minggu.
 
 Jika proses Fast-Track visa kita disetujui, kita harus mengajukan visa paling lambat 3 minggu setelah persetujuan dikeluarkan. Pengajuan visa visa Blue Card akan diproses lebih cepat dari biasanya, hanya dalam 3 minggu.
 
-Sayangnya, dari informasi yang saya dapat, proses percepatan hanya berlaku untuk pekerja. Jika akan berangkat dengan pasangan atau anak atau orang tua, maka visa kumpul keluarga untuk mereka mungkin akan terbit belakangan.
+Dari informasi yang saya dapat, proses percepatan bisa juga berlaku untuk pasangan atau anak atau orang tua, jika mereka sebagai pemegang visa *Family Reunification* akan datang ke Jerman tidak lebih dari 6 bulan setelah kita sebagai pemegang visa Blue Card ada di Jerman.
 
 ---
 
