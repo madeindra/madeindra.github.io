@@ -70,3 +70,10 @@ exclude:
   - postcss.config.js
   - tailwind.config.js
 
+# highlighted link
+highlights:
+  - "/banyak-jalan-menuju-jerman"
+  - "/perlukah-ikut-bootcamp"
+  - "/bingung-memilih-jurusan"
+  - "/lanjut-kuliah-atau-kerja"
+

@@ -1,0 +1,34 @@
+---
+layout: default
+title: "Highlights"
+---
+
+<main class="container mx-auto px-4 flex-grow py-8">
+    <div class="max-w-lg mx-auto space-y-4">
+        <div class="text-center mb-8">
+            <h1 class="text-2xl font-bold text-gray-900 dark:text-white">
+                <a href="/" class="hover:text-gray-600 dark:hover:text-white">
+                    {{ site.title }}
+                </a>
+            </h1>
+            <p class="text-gray-600 dark:text-gray-400">Must-read posts from my blog</p>
+        </div>
+
+        {% for highlight in site.highlights %}
+        {% assign normalized_highlight = highlight | remove: '/' %}
+        {% for post in site.posts %}
+            {% assign normalized_url = post.url | remove: '/' %}
+            {% if normalized_url == normalized_highlight %}
+            <a href="{{ post.url }}"
+                class="block w-full p-4 text-left bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-700 transition-colors duration-200">
+                <h2 class="text-lg font-semibold text-gray-900 dark:text-white">{{ post.title }}</h2>
+                {% if post.description %}
+                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">{{ post.description }}</p>
+                {% endif %}
+            </a>
+            {% break %}
+            {% endif %}
+        {% endfor %}
+        {% endfor %}
+    </div>
+</main>
