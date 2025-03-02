@@ -60,7 +60,7 @@ Dokumen yang diperlukan adalah:
 - Buku nikah atau akta perkawinan (untuk visa kumpul keluarga pasangan)
 - Kartu keluarga (untuk visa kumpul keluarga anak sebagai bukti hak asuh anak)
 - Sertifikat kemampuan bahasa Jerman C1 (untuk anak 16 tahun ke atas)
-- SKCK (tergantung perusahaan)
+- SKCK (Surat Keterangan Catatan Kepolisian, hanya pekerja & tergantung perusahaan)
 
 Pastikan dokumen-dokumen tersebut tidak hilang atau rusak dan tidak terdapat kesalahan. Jika ada kesalahan seperti kesalahan penulisan nama di ijazah atau nama orang tua di akta kelahiran, segera urus perbaikannya.
 
@@ -80,7 +80,7 @@ Hal yang tidak kalah penting adalah mempersiapkan biaya pindah. Meskipun perusah
 
 Estimasi biaya:
 - IDR 650.000 per orang untuk paspor (jika perlu membuat / memperbarui)
-- IDR 30.000 per orang untuk SKCK (jika perlu membuat / memperbarui)
+- IDR 30.000 untuk SKCK (jika perlu membuat / memperbarui)
 - IDR 150.000 per dokumen untuk apostille (pengganti legalisir, buku nikah tetap perlu dilegalisir sebelum apostille)
 - IDR 200.000 hingga IDR 350.000 per halaman hasil terjemah untuk semua dokumen yang tidak berbahasa Inggris / Jerman
 - IDR 7.000.000-17.000.000 per orang untuk tiket pesawat kelas ekonomi dengan 1x transit
