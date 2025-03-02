@@ -2,13 +2,13 @@
 layout: post
 title: "Bingung Memilih Jurusan?"
 date: "2020-10-31 07:00:00"
-category: "Blog"
+category: "Life"
 image: "/assets/images/2020-10-31-classroom-desk.jpg"
 feature_image: true
 description: "Sepuluh tahun lalu, sebagai calon alumni SMA, aku bertanya 'Kuliah bidang apa ya?'. Aku yakin hal ini bukan cuma terjadi denganku, tapi juga banyak orang di luar sana yang masih bimbang tentang masa depan mereka."
 keywords:
-  - Blog
   - Life
+  - Education
 comments: true
 archived: false
 ---

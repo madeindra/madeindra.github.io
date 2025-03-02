@@ -2,13 +2,13 @@
 layout: post
 title: "Lanjut Kuliah atau Kerja?"
 date: "2020-05-27 07:00:00"
-category: "Blog"
+category: "Life"
 image: "/assets/images/2020-05-27-graduation.jpg"
 feature_image: true
 description: "Dulu aku sempat bingung mau pilih jurusan apa. Setelah lulus bingung lagi, mau lanjut kuliah atau langsung kerja. Setelah kerja bingung lagi mau pindah kerja atau tidak."
 keywords:
-  - Blog
   - Life
+  - Education
 comments: true
 archived: false
 ---

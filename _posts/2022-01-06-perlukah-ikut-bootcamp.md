@@ -2,11 +2,11 @@
 layout: post
 title: "Perlukah Ikut Bootcamp?"
 date: "2022-01-06 09:00:00"
-category: "Blog"
+category: "Life"
 feature_image: false
 description: "Apakah wajib ikut bootcamp? Atau bisa belajar otodidak hanya bermodal Youtube?"
 keywords:
-  - Blog
+  - Life
   - Bootcamp
 comments: true
 archived: false

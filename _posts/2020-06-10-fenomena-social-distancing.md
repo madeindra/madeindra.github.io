@@ -2,13 +2,13 @@
 layout: post
 title: "Fenomena Social Distancing"
 date: "2020-06-10 07:00:00"
-category: "Blog"
+category: "Life"
 image: "/assets/images/2020-06-10-desk-laptop.jpg"
 feature_image: true
 description: "Selama pemberlakuan pembatasan sosial berskala besar, aku lihat banyak mulai bermunculan fenomena yang menarik. Banyak orang memulai kebiasaan baru. Hal ini termasuk hal baik, tapi di balik kebaikan itu justru ada sesuatu yang tidak bisa kita lihat."
 keywords:
-  - Blog
   - Life
+  - Issue
 comments: true
 archived: false
 ---
