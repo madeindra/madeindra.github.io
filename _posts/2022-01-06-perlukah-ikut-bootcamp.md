@@ -25,7 +25,7 @@ Bagi yang tidak familiar, *bootcamp* adalah sejenis kursus intensif dengan topik
 
 ## Mengapa Bootcamp Laris Manis?
 
-Sebenarnya keberadaan *bootcamp* di Indonesia bukanlah hal yang baru, tetapi perusahaan penyedia *bootcamp* baru mulai banyak muncul di sekitar tahun 2015 ke atas.
+Sebenarnya keberadaan *bootcamp* di Indonesia bukanlah hal yang baru, tetapi perusahaan-perusahaan baru penyedia *bootcamp* mulai banyak bermunculan di sekitar tahun 2015 ke atas.
 
 > Entah apakah hal itu berhubungan dengan Laporan World Bank tahun 2016 atau tidak.
 >
@@ -49,28 +49,28 @@ Bootcamp menyediakan "dorongan" belajar dalam bentuk pengajar (*mentor*, *instru
 
 Poin plus dari adanya pengajar adalah kita bisa belajar tanpa menebak hal apa yang harus dipelajari.
 
-Contohnya dalam programming, kita harus memiliki pondasi ilmu dan cara berpikir agar kita bisa menulis dan memahami fungsi setiap baris kode. Pengajar bisa mengarahkan kita untuk membangun pondasi ini karena dalam *bootcamp* sudah disiapkan kurikulum khusus yang bisa menjadi panduan.
+Contohnya dalam *coding*, kita harus memiliki pondasi ilmu dan cara berpikir agar kita bisa menulis dan memahami fungsi setiap baris kode. Pengajar bisa mengarahkan kita untuk membangun atau memperkuat pondasi ini karena dalam *bootcamp* sudah disiapkan kurikulum khusus yang bisa menjadi panduan belajar.
 
 Selain itu, ketika kita menghadapi kesulitan, pengajar bisa membantu kita mencari jalan keluarnya. Hal ini tidak kita dapatkan saat belajar mandiri. 
 
-Yang paling menguntungkan adalah ketika pengajar sudah memiliki banyak pengalaman di industri, karena pengajar bisa membagikan tips-tips dan *best practice* yang akan membuat kita mendapat ilmu yang teruji, bukan hanya sekadar teori.
+Yang paling menguntungkan adalah ketika pengajar sudah memiliki banyak pengalaman di industri, karena kita bisa mendapatkan tips-tips dan *best practice* yang akan membuat kita mendapat ilmu yang teruji, bukan hanya sekadar teori.
 
 ### Cari Kerja
 
-Beberapa bootcamp punya partner yang bersedia untuk mengambil lulusannya untuk bekerja di perusahaan mereka. 
+Beberapa bootcamp memiliki relasi dengan perusahaan lain yang bersedia untuk mengambil lulusannya untuk bekerja di perusahaan mereka, istilahnya *partner*. 
 
 Ada beberapa model yang saya ketahui:
-- Bimbingan Kerja: Lulusan dibimbing untuk membuat CV/Resume, menyiapkan portofolio, dan memberikan tips-tips interview. Selain itu, pihak *bootcamp* akan memberikan informasi lowongan pekerjaan di perusahaan yang berafiliasi dengan mereka.
-- Penyaluran kerja: Lulusan disalurkan langsung ke perusahaan yang berafiliasi, selama memenuhi kriteria yang ditetapkan. Misalnya diberikan syarat minimal nilai kelulusan. Bootcamp yang memberi jaminan disalurkan kerja biasanya memiliki biaya yang lebih mahal.
-- Bagi Hasil: Lulusan disalurkan langsung ke perusahaan yang berafiliasi dan akan ada potongan gaji selama waktu tertentu, misalnya gaji dipotong 50% selama 2 tahun. Jenis *bootcamp* ini biasanya memiliki biaya lebih murah atau bahkan gratis, namun bisa jadi terdapat seleksi untuk bisa mengikuti *bootcamp* atau ada ujian khusus di akhir *bootcamp* atau bahkan kedua-duanya.
+- Bimbingan kerja: Lulusan dibimbing untuk membuat CV/Resume, menyiapkan portofolio, dan diberikan tips-tips interview. Selain itu, pihak *bootcamp* akan membagikan informasi lowongan pekerjaan yang sesuai dengan profil lulusan.
+- Penyaluran kerja: Lulusan disalurkan langsung ke perusahaan yang berafiliasi, selama memenuhi kriteria yang ditetapkan. Misalnya diberikan syarat minimal nilai kelulusan. Bootcamp yang memberi jaminan penyaluran kerja biasanya memiliki biaya yang lebih mahal.
+- Bagi hasil: Lulusan disalurkan langsung ke perusahaan yang berafiliasi dan akan ada potongan gaji selama waktu tertentu, misalnya gaji dipotong 50% selama 2 tahun. Jenis *bootcamp* ini biasanya memiliki biaya lebih murah atau bahkan gratis, namun bisa jadi terdapat seleksi untuk bisa mengikuti *bootcamp* atau ada ujian khusus di akhir *bootcamp* atau bahkan kedua-duanya.
 
 ### Memilih Bootcamp
 
 Sadari bahwa mengikuti *bootcamp* adalah pilihan yang berat. Bukan hanya mengeluarkan biaya besar, kita juga diwajibkan untuk berkomitmen waktu. 
 
-Terdapat bootcamp *full-time* atau *part-time* dan *on-site* ataupun *online*. Pastikan memilih bootcamp sesuai dengan waktu yang dimiliki. Jarang ada *bootcamp* yang jadwal belajarnya bisa diatur sesuai kebutuhan, biasanya sudah ada jadwal tertentu (misal Senin-Jumat atau Senin, Rabu, Jumat). 
+Terdapat bootcamp *full-time* atau *part-time* yang bisa diikuti secara *on-site* ataupun *online*. Pastikan memilih bootcamp sesuai dengan waktu luang yang kita miliki. Jarang ada *bootcamp* yang jadwal belajarnya bisa diatur sesuai kebutuhan, biasanya sudah ada jadwal tertentu (misal, Senin-Jumat atau Senin, Rabu, Jumat). 
 
-Model *bootcamp* kebanyakan adalah belajar dan proyek. Misalnya 2-3 minggu belajar kemudian minggu selanjutnya mengerjakan tugas proyek sesuai ketentuan, kemudian kita akan mendapatkan nilai dari hasil pengerjaan tersebut. Tantangan terbesar dalam *bootcamp* adalah menyelesaikan tugas jika di saat yang bersamaan kita juga memiliki pekerjaan. Pengalaman saya, banyak yang kesulitan mengatur waktu dan menjadi stres sehingga harus berhenti dari *bootcamp*.
+Model *bootcamp* kebanyakan adalah belajar dan proyek. Misalnya 2-3 minggu belajar kemudian minggu selanjutnya mengerjakan tugas proyek sesuai ketentuan, kemudian kita akan mendapatkan nilai dari hasil pengerjaan tersebut. Tantangan terbesar dalam *bootcamp* adalah menyelesaikan tugas jika di saat yang bersamaan kita juga memiliki pekerjaan. Pengalaman saya, banyak peserta yang kesulitan mengatur waktu dan menjadi stres sehingga harus berhenti dari *bootcamp*.
 
 Selain harus mengetahui model belajar *bootcamp*, kita harus mencari informasi terkait kurikulum agar kita tahu hal-hal apa saja yang akan dipelajari. Apakah materi yang diajar sesuai dengan standar industri? Jika tidak yakin, coba cek [roadmap.sh](https://roadmap.sh/) untuk melihat daftar hal yang perlu dipelajari secara umum pada beberapa bidang.
 
@@ -96,13 +96,13 @@ Bagaimana dengan mengikuti *bootcamp* untuk memulai karir di bidang IT?
 
 Tergantung kondisi.
 
-Jika kita memiliki perusahaan besar, apakah kita siap mempekerjakan talenta baru dengan pengalaman minim dan memberikan gaji hingga belasan juta? Belum tentu!
+Coba bayangkan diri kita sebagai pemilik sebuah perusahaan, apakah kita siap mempekerjakan talenta baru yang minim pengalaman kerja dan memberikan gaji hingga belasan juta? Belum tentu!
 
 Realitanya lulusan *bootcamp* belum tentu mendapat kerja, apalagi mendapat gaji belasan juta.
 
 Pastikan ekspektasi kita tidak jauh dari realita. Jika kita siap untuk digaji lebih rendah (bukan di bawah UMR, ya!), kita boleh mempertimbangkan mencari kerja lewat *bootcamp*. Hal ini mungkin tidak menjadi masalah bagi yang belum memiliki tanggungan apapun.
 
-Beberapa peserta yang belajar dengan saya sudah sadar akan hal ini, karena mereka sudah memiliki pekerjaan tetap, mereka memutuskan mengikuti *bootcamp* untuk mencari peluang promosi di posisi yang berkaitan dengan IT. Ada juga yang belajar untuk membuat perusahaan atau konsultan teknologi.
+Beberapa peserta yang belajar dengan saya sudah sadar akan hal ini. Karena mereka sudah memiliki pekerjaan tetap, alasan utama mereka mengikuti *bootcamp* adalah untuk mencari peluang promosi atau pindah ke posisi yang berkaitan dengan IT di perusahaan yang sama. Ada juga yang belajar untuk membuat perusahaan atau konsultan teknologi.
 
 Apapun itu, semuanya sah-sah saja untuk menjadi alasan untuk mengikuti bootcamp.
 
@@ -111,7 +111,7 @@ Apapun itu, semuanya sah-sah saja untuk menjadi alasan untuk mengikuti bootcamp.
 
 *Bootcamp* bukan satu-satunya jalan untuk belajar *coding* atau untuk menjadi *programmer*.
 
-Kita bisa belajar lewat platform gratisan, saat ini sudah banyak tersedia *channel* belajar di Youtube dan materi juga sudah berupa materi yang baru. Selain itu, terdapat beberapa platform berbayar seperti Udemy yang menyediakan banyak materi dengan harga terjangkau dan sering kali mengadakan diskon. 
+Kita bisa belajar lewat platform gratisan, saat ini sudah banyak tersedia *channel* belajar di Youtube dan materi pembelajarannya juga sudah *up-to-date*. Selain itu, terdapat beberapa platform berbayar seperti Udemy yang menyediakan banyak materi dengan harga terjangkau dan sering kali mengadakan diskon. 
 
 Keduanya bisa menjadi alternatif asalkan kita bisa mengatur waktu untuk belajar dan berlatih.
 
@@ -119,7 +119,7 @@ Selain itu, jangan hanya belajar dan belajar terus, ini akan menyebabkan kita te
 
 Jika ingin melakukan diskusi yang lebih intens, coba untuk mencari mentor lewat ADPList atau mengontak mereka melalui LinkedIn.
 
-Terakhir, hal yang sering kali saya tekankan. Kemampuan *coding* dan mencari kerja adalah 2 skill yang berbeda. Meskipun kita sudah mahir, jangan lupa mengasah kemampuan untuk mencari kerja. Poles profil LinkedIn dan publikasi hasil karya di GitHub, dengan cara ini kita bisa membangun relasi untuk mendapatkan kerja atau sekadar proyek kecil-kecilan.
+Terakhir, hal yang selalu saya tekankan. Kemampuan *coding* dan kemampuan mencari kerja adalah 2 hal yang berbeda. Meskipun kita sudah mahir, jangan lupa mengasah kemampuan untuk mencari kerja. Poles profil LinkedIn dan publikasi hasil karya di GitHub, dengan cara ini kita bisa membangun relasi untuk mendapatkan kerja atau sekadar proyek kecil-kecilan.
 
 ---
 
