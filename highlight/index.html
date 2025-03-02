@@ -67,6 +67,17 @@
     -webkit-overflow-scrolling: touch;
   }
 }
+
+/* Android Instagram browser detection */
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+  @supports (not (-webkit-touch-callout: none)) {
+    /* Android-specific styles */
+    .highlights-container {
+      min-height: 85vh;
+      margin: 0 auto !important;
+    }
+  }
+}
 </style>
 
 <main class="container mx-auto px-4 py-8 highlights-container">

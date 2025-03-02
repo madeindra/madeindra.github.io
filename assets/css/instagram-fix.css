@@ -1,16 +1,16 @@
 /* 
  * instagram-fix.css
- * Special fixes for Instagram in-app browser and other WebKit issues
+ * Special fixes for Instagram in-app browser and other WebKit/Chromium issues
  */
 
-/* Force proper height calculation in WebKit browsers */
+/* Force proper height calculation in WebKit/Chromium browsers */
 html, body {
   height: 100%;
   width: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
-/* Fix for Instagram in-app browser viewport issues */
+/* Fix for iOS Instagram in-app browser viewport issues */
 @supports (-webkit-touch-callout: none) {
   .highlights-container {
     min-height: 80vh !important;
@@ -37,5 +37,53 @@ html, body {
   /* Add some bottom padding to ensure content isn't cut off */
   main {
     padding-bottom: 40px !important;
+  }
+}
+
+/* Android Instagram browser specific fixes */
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+  @supports (not (-webkit-touch-callout: none)) {
+    /* Android Chrome/Chromium-based browsers */
+    .highlights-container {
+      min-height: 85vh !important;
+      height: auto !important;
+      overflow-y: auto !important;
+      display: block !important;
+    }
+    
+    /* Fix Android-specific flexbox issues */
+    body > .flex {
+      display: block !important;
+    }
+    
+    /* Fix card container width issues */
+    .max-w-lg {
+      width: 100% !important;
+      max-width: 32rem !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  }
+}
+
+/* General Instagram in-app browser fixes (both iOS and Android) */
+@media screen and (max-width: 768px) {
+  /* Force proper rendering on all mobile devices */
+  .highlights-container {
+    display: block !important;
+    padding: 1rem !important;
+    min-height: 80vh !important;
+  }
+  
+  /* Fix touch interactions */
+  a, button {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    touch-action: manipulation;
+  }
+  
+  /* Fix content scrolling */
+  body {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
   }
 }
