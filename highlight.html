@@ -3,7 +3,22 @@ layout: default
 title: "Highlights"
 ---
 
-<main class="container mx-auto px-4 flex-grow py-8">
+<link rel="stylesheet" href="{{ '/assets/css/instagram-fix.css' | relative_url }}">
+
+<style>
+/* Instagram browser compatibility fixes */
+@supports (-webkit-touch-callout: none) {
+  /* iOS-specific browser fix */
+  .highlights-container {
+    min-height: 80vh;
+    height: auto !important;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+</style>
+
+<main class="container mx-auto px-4 py-8 highlights-container">
     <div class="max-w-lg mx-auto space-y-4">
         <div class="text-center mb-8">
             <h1 class="text-2xl font-bold text-gray-900 dark:text-white">
