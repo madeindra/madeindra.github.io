@@ -1,0 +1,41 @@
+/* 
+ * instagram-fix.css
+ * Special fixes for Instagram in-app browser and other WebKit issues
+ */
+
+/* Force proper height calculation in WebKit browsers */
+html, body {
+  height: 100%;
+  width: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Fix for Instagram in-app browser viewport issues */
+@supports (-webkit-touch-callout: none) {
+  .highlights-container {
+    min-height: 80vh !important;
+    height: auto !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    display: block !important;
+    padding-bottom: env(safe-area-inset-bottom) !important;
+  }
+  
+  /* Fix for content not filling the screen */
+  .max-w-lg {
+    width: 100% !important;
+    max-width: 32rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  /* Fix for flexbox issues in Instagram browser */
+  .flex {
+    display: block !important;
+  }
+  
+  /* Add some bottom padding to ensure content isn't cut off */
+  main {
+    padding-bottom: 40px !important;
+  }
+}
