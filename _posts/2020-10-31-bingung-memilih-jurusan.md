@@ -129,3 +129,7 @@ Jika kita sudah memiliki *"dream company"* yang ingin menjadi target, kita bisa 
 Dari informasi proporsi alumni di LinkedIn, saya menyimpulkan bahwa beberapa alumni memiliki semacam *"advantage"*. Entah karena perusahaan merasa perguruan tinggi tertentu memiliki keahlian yang sesuai kebutuhan perusahaan atau karena memang perguruan tinggi tersebut menghasilkan banyak lulusan berkualitas.
 
 Sebelum mempertimbangkan hal ini, kita perlu membuat daftar perusahaan-perusahaan yang menjadi impian kita terlebih dahulu.
+
+---
+
+<span>Photo by <a href="https://unsplash.com/@munjay?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Mwesigwa Joel on Unsplash</a></span>
