@@ -5,7 +5,7 @@ date: "2020-10-31 07:00:00"
 category: "Life"
 image: "/assets/images/2020-10-31-classroom-desk.jpg"
 feature_image: true
-description: "Sepuluh tahun lalu, sebagai calon alumni SMA, aku bertanya 'Kuliah bidang apa ya?'. Aku yakin hal ini bukan cuma terjadi denganku, tapi juga banyak orang di luar sana yang masih bimbang tentang masa depan mereka."
+description: "Hal apa saja yang perlu menjadi pertimbangan ketika memilih program studi?"
 keywords:
   - Life
   - Education
@@ -13,130 +13,119 @@ comments: true
 archived: false
 ---
 
-Hai! Halo!
+> Tulisan ini telah diperbarui pada Maret 2025
 
-Teman-temanku yang kece!
+Salah satu dilema yang dihadapi para lulusan SMA/SMK adalah memilih program studi (atau jurusan).
 
-Kalau kamu atau saudara kamu atau teman kamu kebingungan memilih jurusan, ini bacaan yang cocok buat kalian.
+Sebagai mantan pengajar, saya ingin berbagi tentang hal-hal yang perlu dipertimbangkan ketika memutuskan untuk melanjutkan studi ke jenjang yang lebih tinggi.
 
-Di long-weekend ini, kita akan bahas tentang tips memilih program studi ya!
+## Strategi Awal
 
-Awalnya aku kepingin bahas tips memilih prodi bidang IT karena penamaan yang mirip-mirip. Tapi, ternyata tips ini juga ampuh buat memilih prodi bidang lain lho!
+Beberapa langkah dalam memilih program studi biasanya terdiri dari 3 langkah ini:
+- Menentukan perguruan tinggi (atau universitas) yang memiliki reputasi baik
+- Memilih program studi yang tersedia di sana berdasarkan minat dan bakat
+- Merencanakan karir setelah lulus
 
-## Disclaimer
-Seperti biasa, disclaimer dulu.
+Ada yang memulai dari menentukan perguruan tinggi, kemudian program studinya, lalu tujuan karirnya. Ada juga yang memulai dari cita-citanya, kemudian program studi untuk mencapai cita-cita itu, lalu memilih perguruan tingginya.
 
-Tips ini aku dapat ketika aku bertugas jadi tim pengembang kurikulum perguruan tinggi.
+Tidak ada yang salah dari pendekatan manapun.
 
-Semua info yang ada di sini tolong disaring dahulu sesuai kondisi kamu ya.
-
-Pemilihan prodi tetap harus dipertimbangkan secara matang bersama keluargamu.
-
-Tulisan ini aku buat di tahun 2020, beberapa data dan ketentuan kemungkinan akan berbeda dengan tulisan ini.
-
-## Tips Memilih Program Studi
-> Sistem Informasi?
-> 
-> Teknik Informatika?
-> 
-> Ilmu Komputer?
-> 
-> Teknik Komputer?
->
-
-Dari sekian banyak prodi, ada beberapa prodi yang penamaannya yang mirip, terutama di bidang IT.
-
-Kalau kamu bingung, tenang aja kamu gak sendiri!
-
-Ketika kamu merasa bingung, apa yang harus dilakukan?
-
-Daripada mikirin nama prodi, kamu bisa memilih untuk mencari info tentang skill-skill yang ditawarkan oleh prodi tersebut!
-
-### Skill yang Ditawarkan
-Perbedaan tiap-tiap prodi ada dalam skill-skill yang dibekali untuk lulusannya.
-
-Untuk tahu skill apa saja yang ditawarkan, kamu bisa mulai menggali dari mata kuliah yang ada dalam prodi tersebut.
-
-**Yuk lihat contoh!**
-
-Misalnya Prodi X di Kampus A menawarkan skill di bidang Artificial Intelligence.
-
-Maka, kemungkinan besar di prodi tersebut akan ada Mata Kuliah berikut:
-
-- Matematika Lanjutan
-- Dasar Pemrograman
-- Machine Learning
-
-**Kalau ada yang bilang "Kuliah dimanapun sama saja", menurutku ini kurang tepat sih.**
-
-Menurut UU No 12 Tahun 2012, penyusunan kurikulum diserahkan ke perguruan tinggi masing-masing tetapi tetap mengacu ke standar nasional.
-
-Artinya, meskipun sebagian besar ilmu yang diajarkan sama, tapi tiap perguruan tinggi *kemungkinan* akan punya fokus ilmunya masing-masing.
-
-Misalnya kamu pengen punya skill Artificial Intelligence.
-
-Prodi X di Kampus A mungkin punya MK yang mendukung skill tersebut. Tapi, belum tentu Prodi yang sama di Kampus yang berbeda juga akan punya MK tersebut.
-
-**Jadi memilih prodi tinggal lihat mata kuliahnya?**
-
-Eits! Tunggu dulu, lihat MK saja belum tentu cukup lho.
-
-Misal Prodi X di Kampus A punya MK Machine Learning, tapi gak ada lagi MK lain yang berhubungan dengan Artificial Intelligence. Berarti skill yang kamu mau itu gak akan banyak kamu pelajari di prodi ini dong.
-
-**Jadi harus gimana?**
-
-Tenang! Tiap prodi biasanya punya Profil Lulusan.
+Namun ada hal yang sering terlupakan, yaitu memastikan pilihan karir tersebut selaras dengan yang direncanakan oleh perguruan tinggi dan program studi. Hal ini bisa dilihat dari Profil Lulusan dari program studi tersebut.
 
 ### Profil Lulusan
 
-Sederhananya, Profil Lulusan ini adalah daftar profesi yang bisa dilakoni oleh lulusan prodi.
+Istilah "Profil Lulusan" sederhananya adalah daftar profesi yang dapat dikerjakan oleh para lulusan program studi dari perguruan tinggi tersebut. Setiap program studi memiliki profil lulusan yang berbeda, bahkan program studi dengan nama yang sama bisa saja memiliki profil lulusan yang berbeda.
 
-Ini contoh Profil Lulusan dari salah satu Prodi Sistem Komputer dari Universitas di Bandung:
+Misalnya program studi "Teknik Informatika" di Perguruan Tinggi A memiliki profil lulusan:
+1. Software Developer
+2. System Analyst
+3. Researcher
+4. Entrepreneur
 
-1.  Insinyur Perangkat Keras
-2.  Insinyur Jaringan Komputer
-3.  Spesialis Keamanan Komputer
-4.  Pemrogram Sistem
-5.  Peneliti
-6.  Wirausaha Teknologi
+Lalu di Perguruan Tinggi B, dengan nama program studi yang sama, memiliki profil lulusan:
+1. Network Engineer
+2. Cyber Security
+3. Software Developer
+4. System Analyst
 
-Kampus dalam menentukan Profil Lulusan ini gak main-main.
+Bisa dilihat di contoh di atas, program studi yang sama di perguruan tinggi yang berbeda memiliki profil lulusan yang berbeda.
 
-Kampus harus ngikutin beberapa tahapan dan analisis misalnya dari visi, misi, dan saran para stakeholder.
+Apa efek dari Profil Lulusan ini?
 
-Menurut Buku Panduan Penyusunan Kurikulum, prodi yang sama di perguruan tinggi yang berbeda harus memiliki kesepakatan profil lulusan, supaya prodi tersebut punya ciri khas.
+Efeknya adalah kedua program studi menawarkan skill yang berbeda, jadi kurikulumnya tidak akan sama persis.
 
-Dari Profil Lulusan ini, kampus akan merinci skill-skill apa yang harus dimiliki oleh profesi tersebut. Skill-skill ini juga gak main-main, harus berdasarkan KKNI, SN-Dikti, dan referensi lain dari dalam/luar negeri.
+Pada Perguruan Tinggi A, kemungkinan akan ada pembelajaran dengan topik wirausaha lebih banyak dibanding di Perguruan Tinggi B.
 
-Skill ini juga dirinci jadi 4 bagian: Sikap, Pengetahuan, Keterampilan Umum, dan Keterampilan Khusus. Setelah dirinci, barulah bisa ditentukan Mata Kuliah apa yang mendukung rincian skill tersebut. Fokus prodi terhadap skill juga bisa dilihat dari jumlah SKS yang ada dalam MK tersebut.
+Pada Perguruan Tinggi B, kemungkinan teori dan praktek jaringan akan lebih banyak porsinya dibanding topik perangkat lunak.
 
-Jadi, dari sini kamu bisa tahu bahwa kampus gak bisa sembarangan menentukan lulusannya harus jadi apa dan punya skill apa saja.
+Apa berarti lulusan tidak akan bisa menjadi Entrepreneur jika mengambil program studi tersebut di Perguruan Tinggi B? Tentu saja tidak! Hanya saja ilmu yang diberikan akan lebih banyak di Perguruan Tinggi A.
 
-**Sekarang kamu siap untuk memilih prodi yang akan mendukung mimpi kamu?**
+### Kurikulum
 
-### Contoh Kasus
-Kamu pengen jadi Data Scientist.
+Menurut UU No 12 Tahun 2012, penyusunan kurikulum memang diserahkan ke perguruan tinggi, tetapi harus mengacu ke standar nasional.
 
-Kamu cari dulu Prodi yang punya Profil Lulusan tersebut. Kalau kampus tidak mempublish Profil Lulusan, lihat dari Kurikulum prodi tersebut.
-
-Cek di sana, berapa banyak MK yang bisa mengasah skill kamu untuk mencapai mimpi kamu. Cek juga, apakah Prodi punya MK Pilihan / Penjurusan di bidang yang kamu mau.
-
-Kalau sudah ketemu prodi yang kamu mau, bandingkan lagi dengan Prodi yang ada di Kampus lain. Setelah itu kamu akan punya daftar prodi & kampus yang kamu mau.
-
-**Dan jangan lupa, kamu harus pertimbangkan bersama keluarga kamu ya!**
+Jadi meskipun nama program studinya sama, perguruan tinggi boleh menentukan fokus ilmunya di bidang apa.
 
 ---
 
-Jadi apa saja yang harus dipertimbangkan?
+Penyusunan kurikulum, jika dimulai dari pemetaan profil lulusan, akan menentukan mata kuliah yang ada di program studi tersebut.
 
-1. Mulai dari daftar mimpi kamu
-2. Cek Prodi apa yang bisa memenuhi mimpi kamu
-3. Cek Profil Lulusan Prodi tersebut
-4. Cek Skill yang ditawarkan dalam kurikulum
-5. Bandingkan dengan Prodi yang ada di Kampus lain
+Mata kuliah bisa berupa wajib atau pilihan. Mata kuliah pilihan biasanya memberikan ilmu yang lebih terfokus pada suatu bidang.
 
-Tentu kamu gak perlu menutup kemungkinan pengembangan skill di luar jam kuliah. Misalnya dari UKM atau Komunitas di dalam/luar kampus.
+Sebagai contoh, jika terdapat mata kuliah wajib berupa Probabilitas dan Statistik, ilmu dari mata kuliah tersebut bisa diaplikasikan ke bidang Artificial Intelligence, sehingga program studi bisa menawarkan mata kuliah pilihan Artificial Intelligence Dasar dan Artificial Intelligence Lanjutan.
+
+Meskipun memiliki nama program studi dan profil lulusan yang sama, perguruan tinggi yang berbeda bisa memiliki penawaran mata kuliah yang juga berbeda.
+
+Selain melihat profil lulusan, saya sangat merekomendasikan untuk mendalami kurikulum yang dimiliki oleh program studi. Hal ini juga berlaku untuk membandingkan program studi yang mirip-mirip seperti "Sistem Informasi", "Teknik Informatika", "Ilmu Komputer", "Teknik Komputer".
+
+## Pengaruh ke Masa Depan
+
+Masih ada beberapa hal yang biasanya luput dari pertimbangan pemilihan program studi.
+
+Jika sudah mendapat bayangan tentang program studi yang ingin didalami, kita juga bisa merencanakan tentang hal-hal yang harus dilakukan untuk melancarkan studi kita nantinya.
+
+### Pengajar di Program Studi
+
+Melihat keahlian para pengajar juga bisa jadi salah satu hal yang dilakukan sebelum memilih program studi.
+
+Carilah daftar nama pengajar dari program studi, kemudian masukkan nama mereka di [scholar.google.com](https://scholar.google.com/), maka akan muncul beberapa publikasi ilmiah yang mereka buat dan mahasiswa didikannya. Dengan daftar publikasi ilmiah tersebut, kita bisa melihat bidang apa yang menjadi fokus mereka dari tahun ke tahun.
+
+Untuk bisa belajar dari mereka, kita tidak perlu menunggu mata kuliah mereka atau menunggu tugas akhir (misalnya proyek atau skripsi). Kita bisa mendapatkan bimbingan dari mereka ketika kita bergabung dalam unit yang dibina oleh mereka, unit-unit ini biasanya berbentuk kegiatan ekstrakurikuler atau laboratorium.
+
+Dengan pengetahuan dan pengalaman mereka, pengajar dapat membimbing kita memilih jalur karir yang tepat, selain itu, relasi yang baik dengan pengajar juga bisa memberi pengaruh positif selama masa studi kita.
+
+Ada kenalan saya yang menjalin kerja sama dengan pengajarnya setelah berhasil membuat sebuah produk baru dari hasil penelitian.
+
+Ada juga pengajar yang memiliki pekerjaan tambahan sebagai konsultan dan mempekerjakan mahasiswanya setelah lulus.
+
+### Penilaian terhadap Perguruan Tinggi
+
+Pemilihan perguruan tinggi bisa jadi memiliki pengaruh ke masa depan.
+
+Contohnya untuk bisa melanjutkan studi ke jenjang magister di negara tertentu, perguruan tinggi yang memberikan gelar sarjana harus setara dengan perguruan tinggi di negara tujuan.
+
+Jika memiliki rencana kerja atau melanjutkan studi, ingat untuk mengecek syarat dan ketentuannya.
+
+Tanpa rencana ke luar negeri pun, saya tetap merekomendasikan memilih perguruan tinggi dan program studi yang sudah terakreditasi Ban-PT. Caranya mudah, cukup buka [banpt.or.id](https://www.banpt.or.id/) dan masuk ke menu pencarian data akreditasi.
 
 ---
 
-<span>Photo by <a href="https://unsplash.com/@munjay?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Mwesigwa Joel on Unsplash</a></span>
+Sebuah perguruan tinggi bisa jadi memiliki relasi ke perguruan tinggi lain di dalam ataupun luar negeri.
+
+Sebagai contoh, ada perguruan tinggi yang mengizinkan mahasiswanya untuk belajar selama 1 tahun di luar negeri lewat skema pertukaran pelajar.
+
+Ada juga perguruan tinggi yang menawarkan program double degree dengan perguruan tinggi di luar negeri.
+
+Beberapa jenis kerjasama antar perguruan tinggi bisa membantu kita merencanakan masa depan kita. Saya biasanya menemukan informasi tentang kerjasama ini lewat website perguruan tinggi dalam bentuk berita atau tulisan.
+
+### Alumni
+
+Pendidikan bukan cuma sebagai investasi, tapi juga untuk membangun koneksi.
+
+Saya rasa hal ini bukan sebuah rahasia.
+
+Jika kita sudah memiliki *"dream company"* yang ingin menjadi target, kita bisa melihat latar pendidikan karyawan di perusahaan tersebut. Informasi ini bisa dilihat di [linkedin.com](https://www.linkedin.com/) ketika kita membuka halaman profil perusahaan.
+
+Dari informasi proporsi alumni di LinkedIn, saya menyimpulkan bahwa beberapa alumni memiliki semacam *"advantage"*. Entah karena perusahaan merasa perguruan tinggi tertentu memiliki keahlian yang sesuai kebutuhan perusahaan atau karena memang perguruan tinggi tersebut menghasilkan banyak lulusan berkualitas.
+
+Sebelum mempertimbangkan hal ini, kita perlu membuat daftar perusahaan-perusahaan yang menjadi impian kita terlebih dahulu.
