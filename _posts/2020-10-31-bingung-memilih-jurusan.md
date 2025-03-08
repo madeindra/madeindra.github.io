@@ -130,6 +130,12 @@ Dari informasi proporsi alumni di LinkedIn, saya menyimpulkan bahwa beberapa alu
 
 Sebelum mempertimbangkan hal ini, kita perlu membuat daftar perusahaan-perusahaan yang menjadi impian kita terlebih dahulu.
 
+## Penutup
+
+Memilih program studi adalah hal yang perlu didiskusikan dengan keluarga dan dipertimbangkan dengan matang. Persiapkan dari jauh-jauh hari, jangan terburu-buru dan jangan hanya mengikuti tren, karena pada akhirnya yang akan menjalaninya adalah kita sendiri.
+
+Tentukan pilihan dengan bijak ⸜(*ˊᗜˋ*)⸝
+
 ---
 
 <span>Photo by <a href="https://unsplash.com/@munjay?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Mwesigwa Joel on Unsplash</a></span>
