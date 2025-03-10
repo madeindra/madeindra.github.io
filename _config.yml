@@ -35,8 +35,13 @@ about:
 
 # social media
 social_media:
+  email: ""
   linkedin: "indramade"
   github: "madeindra"
+  youtube: ""
+  bsky: ""
+  twitter: ""
+  instagram: ""
 
 # plugins
 plugins:
