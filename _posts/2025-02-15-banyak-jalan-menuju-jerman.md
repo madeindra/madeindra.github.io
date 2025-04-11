@@ -269,6 +269,8 @@ Oh iya, saat itu saya melihat ada 2 pilihan link temu janji: National Visa & Nat
 
 Di Auslandsportal, terdapat daftar dokumen yang dibawa dengan pesan "data biometrik dan foto akan diambil saat janji temu". Namun, pengalaman saya membuktikan kita tetap diminta membawa foto biometrik, jadi jangan lupa untuk menyiapkan 1 lembar foto biometrik sesuai [panduan kedubes](https://digital.diplo.de/api/uploads/biometric_photos_instruction_0eb9a4741a.pdf).
 
+Catatan: lokasi foto biometrik terdekat dari kedubes ada di Jalan Sabang. Cukup datang ke salah satu studio foto dan bilang "Foto visa Eropa".
+
 Selain foto dan daftar dokumen dalam checklist, siapkan biaya EUR 75 untuk pembayaran visa. Meskipun ingin membayar dengan kartu kredit, tetap sediakan uang tunai dalam rupiah yang jumlahnya sama dengan nilai tersebut, karena sepengalaman saya, kartu saya tidak berhasil digunakan. Terdapat ATM BCA di dalam kedubes, namun lebih baik sediakan sebelum datang ke janji temu.
 
 Saya sempat panik karena dalam checklist terdapat pesan larangan membawa perangkat elektronik saat janji temu, namun saat memasuki kedubes ternyata perangkat elektronik beserta benda yang tidak dibutuhkan akan disimpan di loker yang disediakan di sana.
