@@ -70,9 +70,13 @@ Syukurnya, bagi pemegang visa Blue Card, tidak ada syarat bahasa Jerman untuk pe
 
 Untuk pekerjaan bidang IT, syarat yang perlu diperhatikan adalah: pendidikan atau pengalaman kerja.
 
-Lulusan S1/D4 bidang IT harus memastikan institusi pendidikan memiliki status "H+" atau "H+/H-" di database Anabin, silakan cek [panduan dari Make it in Germany](https://www.make-it-in-germany.com/en/working-in-germany/recognition/academic-qualifications). Pastikan juga institusi pendidikan terakreditasi Ban-PT, selama masa studi hingga tahun kelulusan, ini dibutuhkan untuk proses penyetaraan sebelum pengajuan visa, silakan cek [data histori akreditasi Ban-PT](https://service.banpt.or.id/bianglala/bianglala.php).
+Lulusan S1/D4 bidang IT harus memastikan institusi pendidikan memiliki status "H+" atau "H+/H-" di database Anabin, silakan cek [panduan dari Make it in Germany](https://www.make-it-in-germany.com/en/working-in-germany/recognition/academic-qualifications). 
 
-Jika latar pendidikan bukan dari bidang IT, maka syarat pendidikan bisa diganti dengan pengalaman kerja di bidang IT selama minimal 3 tahun dalam 7 tahun terakhir.
+Jika institusi pendidikan dan program studi sama-sama memiliki status "H+", pendidikan dianggap "*comparable*" dengan program yang diadakan di Jerman. 
+
+Jika program studi memiliki status "H+/H-", nama institusi pendidikan harus muncul di daftar penyelenggara program studi. Jika tidak, kita diminta untuk meminta "*Statement of Comparability*" sebelum mengajukan visa. Pastikan institusi pendidikan terakreditasi Ban-PT, selama masa studi hingga tahun kelulusan, ini dibutuhkan nantinya saat pengajuan, silakan cek [data histori akreditasi Ban-PT](https://service.banpt.or.id/bianglala/bianglala.php).
+
+Sayangnya jika salah satunya memiliki status "H-", maka pendidikan tidak bisa digunakan. Proses pengajuan visa masih bisa dilakukan menggunakan pengalaman kerja, sama seperti jika memiliki latar pendidikan bukan dari bidang IT. Syaratnya adalah pengalaman kerja di bidang IT selama minimal 3 tahun dalam 7 tahun terakhir.
 
 ---
 
@@ -84,7 +88,7 @@ Estimasi biaya:
 - IDR 150.000 per dokumen untuk apostille (pengganti legalisir, buku nikah tetap perlu dilegalisir sebelum apostille)
 - IDR 200.000 hingga IDR 350.000 per halaman hasil terjemah untuk semua dokumen yang tidak berbahasa Inggris / Jerman
 - IDR 7.000.000-17.000.000 per orang untuk tiket pesawat kelas ekonomi dengan 1x transit
-- EUR 208 untuk penyetaraan ijazah bagi yang menggunakan ijazah S1/D4
+- EUR 208 untuk *Statement of Comparability* bagi yang menggunakan ijazah S1/D4
 - EUR 75 per orang untuk pengajuan visa
 - EUR 1000 per orang untuk biaya hidup bulan pertama (menurut Numbeo)
 - EUR 900 (1 orang) hingga EUR 2000 (3 orang) dikali 3 untuk biaya sewa apartemen (1 biaya bulan pertama dan deposit sebesar biaya sewa 2 bulan)
@@ -202,17 +206,19 @@ Proses pengajuan visa membutuhkan kontrak kerja yang sudah ditandatangani kedua 
 
 Selain melengkapi dokumen, kita juga diminta mengisi data diri atau istilahnya VIDEX, [contoh formulir VIDEX dapat dilihat disini](https://videx.diplo.de/videx/visum-erfassung/videx-langfristiger-aufenthalt).
 
-Catatan: kemungkinan terdapat sedikit perbedaan dari contoh di atas dengan VIDEX yang perlu kita isi ketika pengajuan visa. Tidak perlu khawatir karena proses pengisian VIDEX dan upload dokumen nantinya akan sama-sama dilakukan di [Auslandsportal](https://digital.diplo.de/).
+Catatan: kemungkinan terdapat sedikit perbedaan dari contoh di atas dengan VIDEX yang perlu kita isi ketika pengajuan visa. Tidak perlu khawatir karena proses pengisian VIDEX dan upload dokumen nantinya akan sama-sama dilakukan di [Auslandsportal](https://digital.diplo.de/). 
 
-### Penyetaraan Ijazah
+Panduan yang saya ikuti untuk mengisi VIDEX adalah panduan dari [VFS](https://www.vfsglobal.com/Germany/Indonesia/pdf/User-guide-videx.pdf).
 
-Jika perlu melakukan penyetaraan ijazah (*Statement of Comparability*), prosesnya bisa dilakukan melalui [website Zentralstelle für ausländisches Bildungswesen (ZAB)](https://zab.kmk.org/en/statement-comparability). Silakan ikuti [panduan dari Hello Germany](https://www.youtube.com/watch?v=WyG-wM7gDNo).
+### *Statement of Comparability*
+
+Jika perlu mengajukan *Statement of Comparability*, prosesnya bisa dilakukan melalui [website Zentralstelle für ausländisches Bildungswesen (ZAB)](https://zab.kmk.org/en/statement-comparability). Silakan ikuti [panduan dari Hello Germany](https://www.youtube.com/watch?v=WyG-wM7gDNo).
 
 > Saya mengalami kesulitan ketika melakukan login menggunakan Single Sign On (SSO) BundID.
 >
 > Ketika login berhasil dan tidak otomatis dialihkan ke website ZAB, logout terlebih dahulu di website BundID, kemudian ulangi proses login dari awal dengan mengklik Login di website ZAB.
 
-Dokumen yang diperlukan untuk pengajuan penyetaraan ijazah:
+Dokumen yang diperlukan untuk pengajuan *Statement of Comparability*:
 - Ijazah S1/D4
 - Transkrip nilai S1/D4
 - Ijazah SMA
@@ -239,17 +245,73 @@ Proses pendaftaran bisa dilakukan lewat [Expatrio](https://www.expatrio.com/heal
 
 Jika perusahaan bersedia, mereka bisa mengajukan proses Fast-Track untuk pengajuan visa Blue Card. Proses ini dilakukan oleh perusahaan lewat Ausländerbehörde (*Foreigners authority*) sebelum kita mengajukan visa. Untuk informasi lebih lanjut silakan [klik link berikut](https://www.make-it-in-germany.com/en/looking-for-foreign-professionals/entering/the-fast-track-procedure-for-skilled-workers).
 
-Proses ini dilakukan setelah ada kontrak kerja (minimal dalam bentuk *draft*) dan secara keseluruhan proses diperkirakan menghabiskan waktu 15 minggu, ini sudah termasuk 8 minggu untuk penyetaraan ijazah.
+Proses ini dilakukan setelah ada kontrak kerja (minimal dalam bentuk *draft*) dan secara keseluruhan proses diperkirakan menghabiskan waktu 15 minggu, ini sudah termasuk 8 minggu untuk proses *Statement of Comparability*.
 
-Jika proses ini dilakukan setelah memiliki penyetaraan ijazah, keputusan proses Fast-Track (persetujaun atau penolakan) diperkirakan akan diberikan dalam waktu 1 minggu.
+Jika proses ini dilakukan setelah memiliki *Statement of Comparability*, keputusan proses Fast-Track (persetujaun atau penolakan) diperkirakan akan diberikan dalam waktu 1 minggu.
+
+Proses ini tetap bisa berjalan cukup lama, tergantung antrian pada kantor imigrasi di negara bagian tujuan. Saya sendiri menunggu selama 4 minggu sebelum mendapat persetujuan.
 
 Jika proses Fast-Track visa kita disetujui, kita harus mengajukan visa paling lambat 3 minggu setelah persetujuan dikeluarkan. Pengajuan visa visa Blue Card akan diproses lebih cepat dari biasanya, hanya dalam 3 minggu.
 
 Dari informasi yang saya dapat, proses percepatan bisa juga berlaku untuk pasangan atau anak atau orang tua, jika mereka sebagai pemegang visa *Family Reunification* akan datang ke Jerman tidak lebih dari 6 bulan setelah kita sebagai pemegang visa Blue Card ada di Jerman.
 
+Persetujuan dari kantor imigrasi negara bagian ini disebut Pre-Approval (*Vorabzustimmung*), nantinya akan ada bagian khusus di form dokumen yang bisa diupload di Auslandsportal.
+
+### Janji Temu Visa
+
+Baik dengan proses fast-track ataupun tidak, tahap selanjutnya adalah pembuatan janji temu (*appointment*) visa.
+
+Karena menggunakan proses fast-track, saya mendapat jawaban hanya dalam 1 minggu setelah mengupload semua dokumen. Jawaban bisa berupa permintaan revisi VIDEX atau dokumen atau langsung diterima.
+
+Tampilan di Auslandsportal akan berubah dan menampilkan tombol "Make an appoinment" yang akan mengarahkan kita ke website termin milik Kedutaan Besar Jerman Jakarta.
+
+Oh iya, saat itu saya melihat ada 2 pilihan link temu janji: National Visa & National Visa for Family Reunification. Silakan pilih yang sesuai, lalu pilih tanggal dan isi nama lengkap & nomor paspor.
+
+Di Auslandsportal, terdapat daftar dokumen yang dibawa dengan pesan "data biometrik dan foto akan diambil saat janji temu". Namun, pengalaman saya membuktikan kita tetap diminta membawa foto biometrik, jadi jangan lupa untuk menyiapkan 1 lembar foto biometrik sesuai [panduan kedubes](https://digital.diplo.de/api/uploads/biometric_photos_instruction_0eb9a4741a.pdf).
+
+Selain foto dan daftar dokumen dalam checklist, siapkan biaya EUR 75 untuk pembayaran visa. Meskipun ingin membayar dengan kartu kredit, tetap sediakan uang tunai dalam rupiah yang jumlahnya sama dengan nilai tersebut, karena sepengalaman saya, kartu saya tidak berhasil digunakan. Terdapat ATM BCA di dalam kedubes, namun lebih baik sediakan sebelum datang ke janji temu.
+
+Saya sempat panik karena dalam checklist terdapat pesan larangan membawa perangkat elektronik saat janji temu, namun saat memasuki kedubes ternyata perangkat elektronik beserta benda yang tidak dibutuhkan akan disimpan di loker yang disediakan di sana.
+
 ---
 
-Saat ini saya masih dalam proses pengajuan Fast-Track. Saya belum bisa menulis lebih lanjut, jadi tulisan ini akan saya perbarui setelah saya menyelesaikan semua proses pengajuan visa (￣▽￣)ノ
+Janji temu cukup sederhana. Datang 15 menit sebelum jam yang ditentukan, di depan kedubes tidak terdapat tempat duduk ataupun tempat berteduh.
+
+Setelah melewati pengecekan, barang-barang disimpan di loker, jadi kita cukup membawa dokumen yang dibutuhkan. 
+
+Naik ke lantai 2, ambil nomor antrian (tekan layar nomor antrian agak lama ya!) dan tunggu dipanggil. Prosesnya singkat, cukup menyerahkan dokumen dan foto, menyerahkan biaya visa, pengambilan sidik jari, selesai! Sebagai bukti, kita diberi kuitansi pembayaran biasa visa & paspor akan diberi cap "National Visa Applied on xx xxx".
+
+Selama janji temu, saya hanya mendapat 1 pertanyaan, "Apakah keluarga akan ikut berangkat ke Jerman?".
+
+Setelah janji temu selesai, kita diminta menunggu sampai kedubes memberi keputusan visa. Status pengajuan di Auslandsportal mungkin tidak berubah selama kita menunggu hasil keputusan visa.
+
+### Cetak Visa
+
+Setelah 2 minggu, akhirnya saya mendapatkan email untuk mengambil visa ke kedubes.
+
+Saya diminta untuk datang membawa paspor dan kuitansi pembayaran visa, proses ini bisa dilakukan setiap Senin-Jumat. Proses pengambilan paspor dilakukan di hari yang sama, kecuali hari Jumat.
+
+Proses ini sangat singkat, kita hanya diminta melipat kuitansi dan diselipkan dalam paspor, kemudian keduanya diletakkan di dalam kotak di ruangan visa lantai 1.
+
+Setelah itu kita kembali lagi setelah jam istirahat untuk mengambil visa. Nah, saat pengambilan ini kita diminta menunjukkan KTP karena paspor kita tidak ada.
+
+Halaman paspor akan ditempel visa dan zusatzblatt yang menjelaskan ketentuan penggunaan visa.
+
+---
+
+And that's the final hurdle! 
+
+Selamat sudah mendapatkan visa dan sampai jumpa di Jerman! (￣▽￣)ノ
+
+---
+
+Selama proses pengajuan visa, jika terdapat pertanyaan atau kesulitan dalam penggunaan Auslandsportal, ajukan lewat form *Contact* yang disediakan.
+
+Setelah mengisi form *contact*, akan ada email balasan otomatis. Untuk mendapat jawaban dari tim support, balas email tersebut.
+
+Saya selalu menggunakan ChatGPT untuk membuat pesan dalam Bahasa Jerman. Saya selalu mendapat jawaban dari tim support di hari yang sama saat saya membalas email.
+
+**Kudos for the Auslandsportal support team!**
 
 ---
 
