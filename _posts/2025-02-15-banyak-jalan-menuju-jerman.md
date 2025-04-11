@@ -249,13 +249,13 @@ Proses ini dilakukan setelah ada kontrak kerja (minimal dalam bentuk *draft*) da
 
 Jika proses ini dilakukan setelah memiliki *Statement of Comparability*, keputusan proses Fast-Track (persetujaun atau penolakan) diperkirakan akan diberikan dalam waktu 1 minggu.
 
-Proses ini tetap bisa berjalan cukup lama, tergantung antrian pada kantor imigrasi di negara bagian tujuan. Saya sendiri menunggu selama 4 minggu sebelum mendapat persetujuan.
+Proses ini tetap bisa berjalan cukup lama, tergantung antrian pada Ausländerbehörde di negara bagian tujuan. Saya sendiri menunggu selama 4 minggu sebelum mendapat persetujuan.
 
 Jika proses Fast-Track visa kita disetujui, kita harus mengajukan visa paling lambat 3 minggu setelah persetujuan dikeluarkan. Pengajuan visa visa Blue Card akan diproses lebih cepat dari biasanya, hanya dalam 3 minggu.
 
 Dari informasi yang saya dapat, proses percepatan bisa juga berlaku untuk pasangan atau anak atau orang tua, jika mereka sebagai pemegang visa *Family Reunification* akan datang ke Jerman tidak lebih dari 6 bulan setelah kita sebagai pemegang visa Blue Card ada di Jerman.
 
-Persetujuan dari kantor imigrasi negara bagian ini disebut Pre-Approval (*Vorabzustimmung*), nantinya akan ada bagian khusus di form dokumen yang bisa diupload di Auslandsportal.
+Persetujuan dari Ausländerbehörde negara bagian ini disebut Pre-Approval (*Vorabzustimmung*), nantinya akan ada bagian khusus di form dokumen yang bisa diupload di Auslandsportal.
 
 ### Janji Temu Visa
 
@@ -311,7 +311,7 @@ Selama proses pengajuan visa, jika terdapat pertanyaan atau kesulitan dalam peng
 
 Setelah mengisi form *contact*, akan ada email balasan otomatis. Untuk mendapat jawaban dari tim support, balas email tersebut.
 
-Saya selalu menggunakan ChatGPT untuk membuat pesan dalam Bahasa Jerman. Saya selalu mendapat jawaban dari tim support di hari yang sama saat saya membalas email.
+Saya menggunakan ChatGPT untuk membuat pesan dalam Bahasa Jerman. Bisa saja menggunakan Bahasa Inggris, namun saya merasa akan lebih mudah dipahami jika menggunakan bahasa asal mereka. Mungkin karena hal tersebut, saya jadi selalu mendapat jawaban dari tim support di hari yang sama saat saya membalas email.
 
 **Kudos for the Auslandsportal support team!**
 
