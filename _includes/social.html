@@ -1,6 +1,6 @@
 <ul class="flex justify-center space-x-5">
 
-    {% if site.social_media.email %}
+    {% if site.social_media.email != "" %}
     <li><a href="mailto:{{ site.social_media.email }}" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600"
             aria-label="Send an email to the author">
             <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -10,7 +10,7 @@
         </a></li>
     {% endif %}
 
-    {% if site.social_media.linkedin %}
+    {% if site.social_media.linkedin != "" %}
     <li><a href="https://linkedin.com/in/{{ site.social_media.linkedin }}"
             class="text-gray-600 dark:text-gray-400 hover:text-blue-700" target="_blank" rel="noopener"
             aria-label="Visit author on linkedin">
@@ -21,7 +21,7 @@
         </a></li>
     {% endif %}
 
-    {% if site.social_media.github %}
+    {% if site.social_media.github != "" %}
     <li><a href="https://github.com/{{ site.social_media.github }}"
             class="text-gray-600 dark:text-gray-400 hover:text-gray-900" target="_blank" rel="noopener"
             aria-label="Visit author on github">
@@ -32,7 +32,7 @@
         </a></li>
     {% endif %}
 
-    {% if site.social_media.youtube %}
+    {% if site.social_media.youtube != "" %}
     <li><a href="https://youtube.com/@{{ site.social_media.youtube }}"
             class="text-gray-600 dark:text-gray-400 hover:text-red-600" target="_blank" rel="noopener"
             aria-label="Visit author on youtube">
@@ -43,7 +43,7 @@
         </a></li>
     {% endif %}
 
-    {% if site.social_media.bsky %}
+    {% if site.social_media.bsky != "" %}
     <li><a href="https://bsky.app/profile/{{ site.social_media.bsky }}"
             class="text-gray-600 dark:text-gray-400 hover:text-blue-500" target="_blank" rel="noopener"
             aria-label="Visit author on bluesky">
@@ -54,7 +54,7 @@
         </a></li>
     {% endif %}
 
-    {% if site.social_media.twitter %}
+    {% if site.social_media.twitter != "" %}
     <li><a href="https://twitter.com/{{ site.social_media.twitter }}"
             class="text-gray-600 dark:text-gray-400 hover:text-blue-500" target="_blank" rel="noopener"
             aria-label="Visit author on twitter">
@@ -65,7 +65,7 @@
         </a></li>
     {% endif %}
 
-    {% if site.social_media.instagram %}
+    {% if site.social_media.instagram != "" %}
     <li><a href="https://instagram.com/{{ site.social_media.instagram }}"
             class="text-gray-600 dark:text-gray-400 hover:text-pink-600" target="_blank" rel="noopener"
             aria-label="Visit author on instagram">
