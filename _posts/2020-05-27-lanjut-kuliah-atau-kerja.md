@@ -5,309 +5,124 @@ date: "2020-05-27 07:00:00"
 category: "Life"
 image: "/assets/images/2020-05-27-graduation.jpg"
 feature_image: true
-description: "Dulu aku sempat bingung mau pilih jurusan apa. Setelah lulus bingung lagi, mau lanjut kuliah atau langsung kerja. Setelah kerja bingung lagi mau pindah kerja atau tidak."
+description: "Pilihan mana yang lebih baik untuk lulusan pendidikan tinggi, melanjutkan studi atau langsung bekerja?"
 keywords:
   - Life
   - Education
+  - Work
 comments: true
 archived: false
 ---
+> Tulisan ini telah diperbarui pada Maret 2025
 
-Hai! Halo!
+Ternyata mencari kerja itu sulit.
 
-Masih dalam seri tips seputar dunia edukasi.
+Setelah perayaan wisuda selesai, realitas sering kali datang menampar. Di titik ini banyak yang mulai berpikir untuk melanjutkan studi dengan harapan tambahan ilmu dan gelar bisa membantu mendapatkan pekerjaan.
 
-Apakah kamu atau saudara kamu atau teman kamu baru selesai menempuh pendidikan D3 / S1?
+Tapi, apakah itu pilihan yang tepat?
 
-Bingung mau lanjut kuliah atau langsung kerja?
+## Pilihan Sesuai Tingkat Pendidikan
+### Lulusan Diploma (D1/D2/D3)
 
-Galau memilih antara mau jadi akademisi atau praktisi?
+Kebanyakan program studi yang memiliki ikatan dinas adalah program diploma. Bagi lulusan program tersebut, tentu pilihan yang paling menjamin adalah langsung bekerja. Peluang untuk melanjutkan studi tetap ada, biasanya ketika ingin mendapatkan promosi.
 
-Ini bacaan yang bisa jadi membantu kamu dalam mengambil keputusan.
+Secara umum, lulusan diploma memiliki kelebihan karena dibekali lebih banyak keterampilan praktis, sehingga lebih siap kerja. Menurut [data BPS dari tahun 2021-2024](https://www.bps.go.id/id/statistics-table/2/MTE3OSMy/tingkat-pengangguran-terbuka-berdasarkan-tingkat-pendidikan.html), tingkat pengangguran terbuka dengan pendidikan diploma lebih sedikit dibandingkan yang berpendidikan sarjana. Hal ini juga bisa disebabkan oleh jumlah lulusan sarjana yang hampir 4x lebih banyak dibanding jumlah lulusan diploma berdasarkan [data Kementerian Pendidikan tahun 2022/2023](https://data.dikdasmen.go.id/publikasi/p/diktiristek-buku-statistik/ikhtisar-data-pendidikan-tinggi-tahun-2022-2023).
 
-## Disclaimer
-
-Supaya lebih kredibel, aku infoin dulu.
-
-Aku udah nempuh S1 dan S2 di dua jurusan yang berbeda tapi masih satu rumpun ilmu, yaitu Sistem Komputer dan Teknik Elektro.
-
-Setelah lulus, aku sempat jadi dosen tetap D3 Manajemen Informatika selama 1 tahun. Kalau sekarang, sudah alih profesi jadi Programmer hehehe.
-
-Aku harap backgroundku cukup untuk sharing ke teman-teman.
-
-Yang bakal aku sampaikan di sini gak perlu dijadikan pedoman, cukup jadi pertimbangan saja ya. Semua keputusan tetap harus kamu pertimbangkan secara matang bersama keluargamu.
-
-Oh iya, pembahasan akademisi akan aku batasi seputar dosen supaya aku bahasnya gak di luar pengalaman.
-
-Tulisan ini aku buat di tahun 2020, beberapa data dan ketentuan kemungkinan akan berbeda dengan tulisan ini.
-
-## Tips Menentukan Kuliah
-### Lulusan D3: Apakah lulusan D3 perlu melanjutkan D4 / S1?
-
-Kalau kamu sudah dapat kerja / terikat ikatan dinas, go for it, langsung kerja aja. Suatu saat kamu perlu promosi dan harus berpendidikan setara D4/S1, baru kuliah.
-
-Kalau demand kerja untuk jurusanmu banyak, bisa job hunting langsung.
-
-Contoh: tenaga kesehatan, pariwisata, keuangan, manajemen, dan sebagainya.
-
-Kalau kamu kesulitan dapat kerja dan masih punya waktu dan dana untuk lanjut kuliah D4/S1, coba lanjut aja, karena kuliah termasuk investasi.
-
-**Alasannya?**
-
-> 16 dari 17 sektor industri membuka paling sedikit 1,5x - 15x lebih banyak lowongan kerja untuk lulusan Sarjana (atau setara) dibanding lulusan Diploma. 
-
-Sumber: Lokadata 2019
-
-Berdasar data "Lowongan Pekerjaan Berdasarkan Sektor Industri dan Latar Belakang Pendidikan" yang dirangkum oleh Lokadata pada tahun 2018, sektor terbanyak yang membutuhkan lulusan sarjana adalah Informasi dan komunikasi; Pertanian, kehutanan, dan perikanan; Jasa pendidikan; Administrasi pemerintahan, pertahanan, dan jaminan sosial wajib. [Klik untuk mengunjungi data di beritagar.id](https://beritagar.id/artikel/berita/saling-silang-lulusan-sekolah-dengan-dunia-kerja).
-
-Hanya 1 sektor dari 17 sektor di data tersebut yang membuka lebih banyak lowongan untuk lulusan diploma dibanding lulusan sarjana, yaitu sektor "Pengadaan air, pengelolaan sampah, dan daur ulang, pembuangan dan pembersihan limbah dan sampah".
-
-> Perlu diingat, lulusan S1 setiap tahun hampir mencapai 4x lebih banyak dibanding lulusan D1-D4. So, persaingan tentu lebih ketat bagi lulusan sarjana.
-
-Sumber: Statistik Pendidikan Tinggi 2018
-
-Di tahun 2018, lulusan D1-D4 berjumlah sebanyak 227.779 orang. Sedangkan lulusan S1 berjumlah sebanyak 874.536 orang. Maaf aku belum nemu data tahun 2019, tapi seharusnya gak terlalu jauh berbeda sih.
-
-### Lulusan S1: Apakah sudah siap kerja?
-Hal yang wajar buat lulusan S1 merasa gak siap kerja. Praktik yang ada selama kuliah memang tidak cukup banyak. Belum lagi ilmu yang diajarkan tidak terlalu spesifik pada bidang yang kamu minati.
-
-Contohnya, dulu aku di S1 Sistem Komputer banyak belajar tentang komponen hardware komputer, cara kerja softwarenya sampai jaringan komputer.
-
-Nyatanya, sangat jarang kamu akan menyentuh 3 bagian tersebut secara bersamaan dalam 1 pekerjaan yang sama.
-
-Belum lagi kurikulum tiap kampus berbeda-beda, bisa aja di Kampus A fokus di Keamanan Jaringan, sedangkan di Kampus B fokus di Microcontroller.
-
-Keamanan jaringan juga masih ada fokusnya lho, hahaha.
-
-Tenang, kamu gak sendiri kok.
-
-Kalau kamu merasa salah jurusan, coba lihat cabang ilmu dari jurusanmu bisa diterapkan di bagian kerja apa kira-kira. Jadi kalau kamu mau cari kerja, kamu bisa ambil spesialisasi di sana.
-
-Kalau gak ketemu dan kamu benar-benar mau keluar dari jurusanmu, bisa kok, tenang aja!
-
-Kamu bisa job hunting ke tempat yang menerima S1 semua jurusan, contohnya lowongan Management Trainee. Jadi nanti sebelum kerja, kamu akan dapat pelatihan khusus supaya siap kerja, gak bakal merasa gak siap kerja lagi.
-
-### Lulusan S1: Mau kerja atau lanjut S2?
-Setelah lulus mau kuliah lagi atau kerja, ini sering banget kejadian, bingung mau milih yang mana.
-
-Kamu harus lihat kebutuhan dulu, kerja yang kamu mau itu mengharuskan S2 gak?
-
-Contoh, kalau dosen wajib tuh S2, atau kerjaan yang kamu incar memang membuka lowongan untuk S2 Fresh Grad.
-
-Akhir-akhir ini mulai ada lowongan untuk S2 Fresh Grad, kemungkinan beberapa tahun ke depan trennya bakal naik.
-
-Kalau bukan untuk kerja, tapi kamu merasa masih pengen belajar mumpung masih muda, ada waktu dan dana, kuliah aja gak perlu ragu. Gak harus keinginan jadi akademisi yang mendorong buat S2 kok. 
-
-### Kuliah Sampai S3
-Kalau kamu terpikirkan untuk lanjut sampai S3, kamu harus pertimbangkan urgensi atau tuntutan apa yang jadi motivasinya.
-
-Kalau kamu mau kerja jadi praktisi, kamu harus tahu kalau kebanyakan praktisi yang S3 itu melanjutkan kuliah setelah lama ada di bidang kerjanya. 
-
-**Alasannya?**
-
-S3 itu fokusnya lebih ke riset, untuk masuk kuliah S3 pun harus sudah siap topik riset dan cari pembimbing di kampus yang bersangkutan.
-
-So, buat yang mau jadi praktisi, kamu bisa milih untuk kerja dulu kok.
-
-Kalau kamu mau jadi akademisi dan mau S3 dulu, siapkan topik dengan matang, kemudian gaspol!
-
-Kalau kamu mau jadi dosen, S3 bukan syarat wajib kok. Kebanyakan dosen mulai dari S2 dulu, kemudian lanjut kuliah setelah beberapa tahun. Biasanya karena syarat pengangkatan, misal diwajibkan melanjutkan S3 setelah 5 tahun diangkat. Bisa juga untuk naik jabatan, ini nanti aku bahas lebih dalam.
-
-Kalau kamu mau jadi peneliti, S3 juga bukan satu-satunya jalan, ada kok lowongan peneliti untuk lulusan S1 di LIPI. Kalau kamu mau jadi peneliti tapi belum sempat S2-S3, ya gak apa-apa kok.
-
-**Ingat selalu pertimbangan waktu dan dana sebelum memutuskan untuk kuliah yaaa.**
-
-Okay! That's all buat pembahasan tentang kuliah, guys!
-
-Aku bakal lanjut ke pembahasan kerja.
-
-Kita bakal bahas tentang memilih kerja dan pertimbangan menjadi praktisi atau akademisi.
-
-## Tips Menentukan Kerja
-Waktu aku bingung cari kerja, pertimbangan yang aku pakai ada 4:
-
-Passion, Skill, Gaji, dan Impact.
-
-Ternyata mirip banget sama konsep Ikigai. Meski idealnya susah banget buat dapat semua di satu pekerjaan. Aku rasa kalau dapat 3 dari 4 pun sudah cukup.
-
-Nah menurutku saat memilih jadi praktisi, ada 4 kelompok pekerjaan praktisi yang paling diminati di Indonesia.
-
-**PNS**, **BUMN**, **Swasta**, dan **Wirausaha**.
-
-Yuk kita lihat pertimbangannya!
-
-### PNS
-
-Ketika kamu mau jadi PNS kemungkinan besar orang tuamu juga PNS, hahaha.
-
-Atau karena mau dapat **kepastian karir**, karena sebagai PNS kamu bisa kerja dari awal sampai pensiun tanpa harus pindah kerja, ya toh?
-
-Kerja sebagai PNS pada dasarnya adalah **bidang pelayanan**, artinya kamu gak bakal menghadapi persaingan bisnis dengan kompetitor.
-
-Sayangnya untuk jadi PNS cukup sulit, bukan cuma karena **ketatnya persaingan, tapi juga karena lowongannya tidak selalu ada**.
-
-### BUMN
-Mirip dengan PNS, Karyawan BUMN bisa mendapat **kepastian karir**, kamu bisa kerja sampai pensiun di BUMN. 
-
-Sebagai gantinya, kamu harus **bersedia untuk ditempatkan di seluruh wilayah Indonesia**, tidak terkecuali di pelosok.
-
-Nah, karena dasarnya BUMN adalah **bisnis**, kemungkinan besar kamu akan berhadapan dengan yang namanya **kompetisi bisnis**. 
-
-Di Indonesia ini ada banyak BUMN, ditambah pengelolaan tenaga kerjanya diatur BUMN itu sendiri, jadi **lowongan kerjanya lebih banyak dibanding lowongan kerja PNS**.
-
-### Swasta
-Kepastian karir di swasta itu **variatif**. Tergantung pengelolaan perusahaan tersebut, **gak jarang kamu harus pindah ke perusahaan lain untuk mendapat posisi yang lebih tinggi**, ya berbekal pengalaman di tempat sebelumnya.
-
-Kamu juga kemungkinan akan berurusan dengan kompetitor, tapi kerja di Swasta itu **dinamis banget**, minim "birokrasi" lah, jadi bakal lebih leluasa.
-
-Belum lagi **lowongannya banyak banget**, insentifnya juga gak kalah kok.
-
-### Wirausaha
-Kalau kamu **menemukan potensi** di sekitarmu, bisa banget buat berwirausaha, atau buat startup.
-
-Tentu gak gampang untuk sukses berwirausaha, tapi kamu bisa atur kerjamu sendiri dan membantu membuka lapangan kerja.
-
-Hal terbaik sebagai wirausaha menurutku **seberapa pun banyak waktu yang kamu pakai untuk berwirausaha, hasilnya ya kamu juga yang bakal menikmati**.
-
-### Akademisi
-Kalau kamu memilih untuk menjadi akademisi. Kamu bisa memilih untuk menjadi Guru, Peneliti, atau Dosen. 
-
-**Kira-kira apa aja pertimbangannya ya?**
-
-### Guru
-Kalau kamu lulusan **Sarjana Pendidikan**, menjadi guru adalah salah satu pilihannya.
-
-Aku belum cukup berpengalaman untuk banyak membahas tentang ini. Tapi, berdasarkan data Lokadata, pada tahun 2014-2019 **jumlah guru di Indonesia menurun setiap tahunnya**. 
-
-Jumlah guru di Indonesia pada tahun 2014/2015 hampir menyentuh angka 3.800.000, namun pada tahun 2018/2019 angka ini turun hingga kurang dari 3.000.000. [Klik untuk melihat data lokadata](https://lokadata.id/data/jumlah-guru-di-indonesia-2014-2019-1585298885).
-
-### Peneliti
-Kalau kamu berniat menjadi peneliti, **kamu bisa melamar bahkan mulai dari kamu lulus S1**.
-
-Gak banyak yang tahu kalau ternyata jumlah peneliti di Indonesia itu **sedikit**. Menurut Data LIPI baru ada 9669 orang peneliti yang tersebar di 42 lembaga.
-
-Bisa banget nih buat kamu yang suka mendalami ilmu pengetahuan yang kamu punya.
-
-Karena **Peneliti termasuk PNS**, proses melamar kerjanya sama dengan proses di PNS.
-
-### Dosen
-Kalau kamu berniat menjadi dosen, **minimal kamu harus lulus S2**.
-
-Untuk jadi dosen, ada istilah yang harus kamu tahu: "**linieritas**". Linier maksudnya ilmu yang kamu pelajari di S1 dan S2 harus serumpun.
-
-Ketentuan linieritas ini rencananya dihapus, sekarang ini juga sudah ada kampus yang merekrut hanya berdasar pendidikan terakhir kok.
-
-Salah satu kasus rumit dalam melamar sebagai dosen adalah sebagai berikut:
-
-Misal ada lowongan dosen Teknik Komputer, syaratnya adalah lulusan S2 Teknik Komputer. 
-
-Kalau kamu lulusan S2 Teknik Elektro penjurusan Teknik Komputer, kamu bisa saja tidak lolos di seleksi administrasi.
-
-Tapi kejadian tidak lulus hanya karena penamaan jurusan ini **cukup jarang terjadi** kok. Jangan sampai kamu takut jadi dosen hanya karena alasan itu ya.
-
-In my opinion, aturan penamaan jurusan (nomenklatur) dan ilmu yang dipelajari ini belum cukup mengikat. Ilmu yang dipelajari itu diatur dalam Kurikulum, sedangkan Kurikulum boleh disusun oleh masing-masing institusi. Jadi, jurusan yang sama di Kampus yang berbeda mungkin saja mempelajari fokus ilmu yang berbeda.
-
-Yaudah gak usah terlalu membahas ini ya, yuk kita mulai bahas tentang serba-serbi menjadi dosen.
-
-Kalau kamu melamar sebagai dosen, kamu harus tahu lowongan dosen itu dibagi menjadi **Dosen Tetap** dan **Tidak Tetap**.
-
-Dosen Tidak Tetap juga biasa disebut *Part-Time*. Kalau kamu mau **bekerja sebagai praktisi sambil menjadi dosen**, kamu bisa coba ini.
-
-Kalau kamu mau jadi Dosen Tetap, kamu harus tahu lowongan Dosen Tetap ada di mana aja.
-
-Kamu bisa melamar ke **Kementerian atau Kampus Negeri** untuk jadi **Dosen Tetap PNS**. Kementerian juga punya kampus lho, seperti Kampus Agama, Kesehatan, Pariwisata, dsb.
-
-Proses melamarnya pun sama dengan PNS. **Seleksinya nanti ada 2x**, 1x seleksi kompetensi secara nasional, dan 1x seleksi bidang bertempat di Institusi yang dilamar.
-
-Kalau kamu mau jadi **Dosen Tetap Non-PNS**, kamu bisa melamar ke **Kampus Swasta dan Kampus Negeri**.
-
-Ya! Kamu bisa jadi dosen tetap di Negeri tanpa harus melalui proses seleksi PNS kok. Proses ini dihandle oleh Kampus tersebut, cuma ya **tidak semua kampus boleh mengangkat Dosen Tetap Non-PNS**.
-
-Semua Dosen Tetap nantinya mendapatkan **Nomor Induk Dosen Nasional** dari Pusat, dengan NIDN ini kamu sudah bisa ikut pengajuan dana hibah untuk penelitian/pengabdian dan bisa ikut sertifikasi dosen.
-
-Kalau kamu saat ini jadi Dosen Tetap di Kampus Swasta, kemudian kamu mau jadi Dosen PNS, ada caranya kok!
-
-Ya **harus ikut seleksi PNS** dan diizinkan oleh Institusi kamu saat ini. Lihat perjanjian sewaktu pengangkatan apakah ada ketentuan yang melarang perpindahan.
-
-Kalau boleh dan kamu lolos, nanti kamu akan melalui proses **Pindah Homebase**.
-
-Sebagai dosen kamu bakal punya yang namanya **Jabatan Fungsional**, setara dengan pangkat di PNS lah. 
-
-Kalau kamu pernah dengar **Profesor**, ini adalah Jabatan Fungsional tertinggi di Indonesia. **Bukan gelar akademik**. Sebutan lainnya adalah **Guru Besar**.
-
-Ada 4 tingkatan Jabatan Fungsional:
-**Asisten Ahli**, **Lektor**, **Lektor Kepala**, dan **Guru Besar**.
-
-Untuk bisa naik jabatan fungsional, ada syarat dan poin tertentu yang harus kamu kumpulkan.
-
-**Setelah 1 tahun menjabat** sebagai Dosen Tetap, kamu bisa mengajukan Jabatan Asisten Ahli dengan syarat sudah pernah melakukan **1x Pengabdian Masyarakat** dan memiliki **1 Publikasi Penelitian Ilmiah**. 
-
-Publikasi kamu sewaktu kuliah S2 bisa dipakai kok! 
-
-Selain syarat itu, ada mekanisme yang unik, yaitu **Loncat Jabatan**, misalnya ketika kamu sudah memenuhi syarat dan poin untuk Lektor Kepala, kamu bisa loncat dari Asisten Ahli langsung ke Lektor Kepala. 
-
-Wow! Ya ini karena poin yang kamu punya tidak diakumulasi, setiap kamu naik jabatan fungsional bakal di-reset poinnya. 
-
-Jadi banyak yang memanfaatkan ini untuk loncat dari Lektor ke Guru Besar.
-
-Oh iya, poin itu bisa didapatkan dari macam-macam kegiatan lho. Mengajar, meneliti, pengabdian masyarakat, membimbing skripsi, menjadi pembicara forum, menulis buku, banyak banget!
-
-Belum lagi **sertifikasi dosen**, proses penilaian kamu sebagai dosen. Untuk sertifikasi, kamu harus punya jabatan **Asisten Ahli** dan sudah menjabat sebagai Dosen Tetap selama **2 tahun**.
-
-Eits, jangan lupa kamu perlu melampirkan hasil **Tes Kemampuan Dasar Akademik** dan **TOEP/TOEFL**.
-
-Setelah data-data kamu diverifikasi, kamu dirasa cukup memenuhi syarat, dan kamu dinyatakan lulus, kamu bakal dapat **insentif tambahan sertifikasi** lho!
-
-Eh kelupaan!
-
-Tugas dosen tetap itu adalah mengemban Tri Dharma Perguruan Tinggi, yaitu mengajar, meneliti, dan mengabdi ke masyarakat sejumlah setara **12 SKS**.
-
-Selain itu, kamu punya jam kerja sebanyak **40 jam/minggu**.
-
-**Haruskah super pintar untuk jadi dosen?**
-
-In my opinion, enggak.
-
-Dosen paling sering dan paling banyak berhadapan dengan mahasiswa.
-
-Kamu bakal membutuhkan kecerdasan emosi di sini, bagaimana caranya mereka tidak bosan, bagaimana membuat mereka mengerti pelajaran, bagaimana menanggapi kekonyolan yang mereka lakukan, dan lainnya.
-
-## Mempertimbangkan Praktisi atau Akademisi
-Ketika kamu memilih jadi akademisi, kamu akan dituntut **selalu belajar**, bahkan kamu akan belajar hingga teori dasar dari ilmu yang kamu punya.
-
-Tapi selain itu, kamu juga bakal sering berurusan dengan urusan administrasi seperti ngurusin silabus, bahan ajar, evaluasi/ujian, bimbingan, bahkan sampai mengurus akreditasi jurusan.
-
-Dan ketika kamu memilih jadi praktisi, kamu bakal banyak ngulik **best practice** terkait ilmu kamu di industri, praktik di industri juga **tidak selalu sesuai** dengan teori yang pernah kamu pelajari, mungkin karena kondisi tertentu atau dana yang terbatas, jadi kamu harus bisa adaptif.
-
-**Jadi, mau jadi praktisi atau akademisi?**
-
-### Alih Profesi
-**Kalau kamu ingin beralih dari akademisi menjadi praktisi**, akan lebih mudah saat sebelum umur 30-an karena untuk bekerja praktis kamu dituntut punya pengalaman dan lowongan kerja tanpa pengalaman untuk umur 30an cukup sulit dicari.
-
-Ada juga sektor industri yang syarat pengalamannya bukan berapa tahun di posisi tertentu, tapi dihitung dari jumlah proyek yang pernah dikerjakan. Tentu sebagai akademisi kamu bisa mendapat pengalaman menghandle project tertentu.
-
-Kebanyakan akademisi senior yang aku kenal juga punya profesi praktis sebagai konsultan di perusahaan sendiri atau sebagai asesor/auditor.
-
-Gak selamanya kamu harus berhenti menjadi akademisi ketika mau menjadi praktisi.
-
-**Kalau kamu ingin beralih dari praktisi menjadi akademisi**, kamu bisa menjadi dosen tetap maksimal di umur 50 tahun.
-
-Kamu juga bisa diangkat menjadi PNS maksimal di umur 35 tahun.
-
-Tentu dosen dengan banyak pengalaman industri ini sangat bagus karena matching antara kemampuan mahasiswa dan kebutuhan industri akan terpenuhi.
-
-Meski kamu mau menjadi akademisi, kamu masih bisa menjadi praktisi dengan memilih menjadi dosen paruh waktu.
+Jika ada peluang kerja yang cocok, lebih baik pilih untuk bekerja terlebih dahulu. Pekerjaan ini bisa menjadi ajang untuk menabung dan mencari pengalaman. Hal ini akan membantu jika suatu hari ingin melanjutkan studi.
 
 ---
 
-It's a wrap, guys!
-Semoga sharingku bermanfaat buat kamu.
+Jika ingin mendapatkan peluang karier yang lebih luas, melanjutkan studi ke jenjang sarjana bisa menjadi pilihan. Program ekstensi dari D3 ke S1 umumnya memiliki durasi selama kurang lebih 2 tahun. Melanjutkan studi akan memberikan opsi karier yang lebih banyak, namun tidak menutup kemungkinan jumlah saingan juga menjadi lebih banyak.
 
-Jangan ragu untuk membagikan ini ke saudara dan temanmu yang sedang memerlukan pertimbangan ya.
+Misalnya, terdapat peluang di rekrutmen *management trainee* karena lowongan ini biasanya memiliki syarat minimal S1 dan tidak terbatas ke lulusan program studi tertentu.
 
-Kamu gak perlu memberikan credit ke aku sewaktu membagikan ini, aku sudah cukup senang mendapat kesempatan berbagi.
+Bagi yang merasa "salah jurusan", lowongan pekerjaan yang menerima lulusan semua program studi bisa dijadikan sebagai opsi alternatif.
 
-I know that you have a bright future ahead of you, I wish you a good luck!
+### Lulusan Sarjana (S1/D4)
+
+Sebagai salah satu orang yang memilih untuk melanjutkan studi, banyak kenalan saya yang mempertanyakan pertimbangan saya.
+
+> Apakah kuliah S2 memberikan nilai tambah yang mempermudah kita mendapatkan pekerjaan?
+
+Setelah sekian banyak lowongan yang saya kirimkan, memang ada sedikit *benefit* yang didapatkan untuk lulusan S2. Salah satunya adalah beberapa lowongan memberikan batas umur yang lebih tinggi jika kandidat sudah menyelesaikan pendidikan S2.
+
+Namun, jika melihat peluang kerja, saya merasa tidak ada kelebihan lain antara pencari kerja lulusan S2 dengan lulusan S1/D4.
+
+Pendidikan S2 paling banyak manfaatnya ketika:
+- Digunakan untuk melamar pekerjaan sebagai akademisi / peneliti.
+- Mencari peluang promosi.
+- Mendalami ilmu yang dimiliki berdasarkan pengalaman kerja.
+
+Poin pertama sudah cukup jelas: jika lowongan yang diinginkan mensyaratkan S2, maka mau tidak mau harus memiliki ijazah S2. Tidak bisa dinegosiasi lagi.
+
+Sedangkan poin-poin lain, jika ingin mendapatkan "keuntungan maksimal", saya menekankan bahwa lebih baik bekerja terlebih dahulu, lalu mencari peluang melanjutkan studi setelah itu.
+
+Beda cerita kalau ada tawaran beasiswa atau ingin mencari pengalaman belajar di luar negeri.
+
+---
+
+Selain peluang karier, ada lagi pertanyaan yang sering saya dapatkan, kali ini lebih ke pilihan program studi.
+
+> Lebih baik mengambil S2 di bidang yang sama dengan S1/D4 atau mengambil bidang lain?
+
+Jawabannya: tergantung!
+
+Bagi yang bekerja di bidang akademis atau riset, tentu harus mendalami ilmu yang sama dengan S1/D4. Di kebanyakan kasus, pekerja di bidang teknis juga bisa memilih jalan yang sama, alasannya adalah memperdalam ilmu akan membantu kita menjadi lebih baik dalam pekerjaan.
+
+Jika perusahaan ingin berfokus ke bidang baru, biasanya akan ada kandidat yang dibantu untuk mendalami ilmu di bidang tersebut. Ini adalah kesempatan belajar dan mendapatkan promosi di saat yang bersamaan.
+
+Di luar alasan-alasan di atas, lebih banyak keuntungan S2 di bidang umum seperti bidang manajemen karena ilmunya bisa diaplikasikan di banyak bidang pekerjaan. Atau jika ingin pindah jalur karier, S2 di bidang yang berbeda bisa menjadi pilihan.
+
+## Pertimbangan Karier
+### ASN
+
+Memiliki anak yang bekerja sebagai ASN (Aparatur Sipil Negara) adalah idaman semua orang tua di Indonesia.
+
+Alasannya klasik: kepastian karier hingga akhir hayat.
+
+Bekerja sebagai ASN memberikan beberapa keuntungan yaitu:
+- Sangat kecil kemungkinan diberhentikan.
+- Bekerja di bidang pelayanan, tidak bersaing dengan perusahaan lain.
+- Mendapatkan tunjangan pensiun.
+
+Lowongan sebagai PNS (Pegawai Negeri Sipil) sudah mulai berkurang, lebih banyak peluang untuk P3K (Pegawai Pemerintah dengan Perjanjian Kerja). P3K masuk kategori ASN, berbeda dengan pegawai honorer. Secara hak dan kewajiban, keduanya bisa dikatakan setara, namun perbedaan terbesar dari PNS dan P3K adalah tidak adanya tunjangan pensiun bagi P3K. Tidak perlu khawatir karena P3K masih memiliki peluang untuk mengikuti seleksi CPNS.
+
+### BUMN
+
+Mirip seperti ASN, pegawai BUMN memiliki keuntungan kepastian karier, namun tidak semua BUMN menawarkan tunjangan pensiun.
+
+Keuntungan menjadi pegawai BUMN lebih banyak dibandingkan ASN karena bekerja di bidang yang memiliki kompetitor. Maka, perusahaan bisa memberikan bonus jika target tahunan tercapai. Tentu dengan keuntungan yang lebih banyak, akan ada tekanan kerja yang lebih besar. Sebagai tambahan, beberapa BUMN menawarkan pelayanan kesehatan karyawan yang lebih baik dibanding BPJS.
+
+Lowongan sebagai karyawan BUMN lebih banyak dibandingkan PNS dan biasanya setiap tahun dilakukan secara serentak.
+
+BUMN saat ini sudah di-branding sebagai tempat kerja yang modern dan cocok dengan anak muda. Apakah hal itu sesuai dengan realitanya? Silakan ditanyakan ke "orang dalam".
+
+### Swasta
+
+Kepastian karier di Swasta sangat berpengaruh pada stabilitas perusahaan.
+
+Sayangnya, banyak sekali perusahaan swasta yang tidak mengikuti aturan ketenagakerjaan yang berlaku di negara ini. Lebih disayangkan instansi yang berwenang tidak serius dalam menangani masalah.
+
+Namun di luar sana, masih banyak pilihan perusahaan swasta yang baik.
+
+Definisi "baik" yang dimaksud adalah perusahaan yang memiliki visi yang jelas dan memperlakukan karyawan sesuai dengan aturan yang berlaku.
+
+Bergabunglah ke forum-forum anonim seperti FOMO untuk membantu kita menyeleksi perusahaan yang layak dijadikan sebagai tempat kerja. 
+
+Ketika memilih untuk bekerja di perusahaan swasta, pertimbangkan hal-hal berikut:
+- Kesesuaian visi-misi perusahaan dengan ambisi diri sendiri.
+- Budaya kerja yang sehat.
+- Perusahaan tidak melanggar aturan yang berlaku.
+
+Biasanya interview kerja juga melibatkan orang-orang yang akan bekerja dengan kita nantinya. Interaksi tersebut bisa dimanfaatkan untuk menggali tentang kecocokan diri dengan perusahaan & tim kerja, jadi selalu siapkan pertanyaan untuk menggali lebih dalam.
+
+## Pilihan Ada Di Tanganmu
+
+Pada akhirnya, pilihan pendidikan dan karier ada di tangan kita sendiri.
+
+Selalu diskusikan pilihan tersebut dengan orang-orang yang akan terdampak oleh pilihan tersebut, misalnya keluarga atau pasangan.
+
+Semoga sukses ya! ＼(＾▽＾)／ 
 
 ---
 
