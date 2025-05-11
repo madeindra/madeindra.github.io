@@ -3,14 +3,14 @@ layout: post
 title: "Self-Doubt: Is It an Unwinnable Battle"
 date: "2025-04-29 00:00:00"
 category: ""
-image: "/assets/images/"
-feature_image: true
-description: ""
+feature_image: false
+description: "A personal journey of battling self-doubt, overcoming challenges, and finding moments of belief that change everything."
 keywords:
-  - 
-  - 
+  - Personal
+  - Growth
+  - Motivation
 comments: true
-archived: false
+archived: true
 ---
 
 Let me confess something.
