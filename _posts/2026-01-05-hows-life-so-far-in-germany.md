@@ -40,11 +40,11 @@ It was unusual, but again, you just have to be in the proper clothing.
 
 One thing that I love the most from Berlin is definitely the public transportation.
 
-Yes, it's not the most punctual one. But I can survive without having my own vehicle. I can get anywhere with just my monthly ticket.
+Yes, it's not the most punctual one. But, I can survive here without having my own vehicle. I can get anywhere with just my monthly ticket.
 
-There was a time when I had to sleep in a train station because the regional trains were cancelled and delayed so badly. But it's a story for another day.
+There was a time when I had to sleep in a train station because the regional trains that I need to take were either cancelled or delayed so badly. But it's a story for another day.
 
-When I came back to Indonesia for a month, this is the thing that I missed the most. I hate driving by my own because the traffic is always unpredictable. Using a rid-ehailing service is also a gamble, sometimes I end up with a driver who drives as if they are above the law.
+When I came back to Indonesia for a month, this is the thing that I missed the most. I hate driving because the traffic is always unpredictable. Using a ride-hailing service is also a gamble, sometimes I end up with a driver who drives as if they are above the law.
 
 Here, I can hop on to a bus, change to a train or to a tram, and get to my destination not feeling tired nor anxious about getting bumped by other drivers. Peace of mind is number one.
 
@@ -52,7 +52,7 @@ Here, I can hop on to a bus, change to a train or to a tram, and get to my desti
 
 Have I told you that it's very nice to be in the central of Europe?
 
-It was not long until I get myself in Tallinn and Helsinki, which was respectively one hour flight away from Berlin and then two hours by ferry from the Tallinn. Those cities were incridibly beautiful.
+It was not long until I get myself in Tallinn and Helsinki, which was respectively one hour flight away from Berlin and then two hours by ferry from the Tallinn. Those cities were incredibly beautiful.
 
 ![Old town was very beautiful](/assets/images/2026-01-05-hows-life-so-far-in-germany-old-town.webp)
 
@@ -61,3 +61,29 @@ The cities in Germany also have their own charm. Everytime I visited a new place
 That's not all, in Berlin alone there's hundreds of open spaces. You can find park everywhere you go. I often see people walking their cute dogs, parents playing with their children or socialising with the other parents, and musicians singing the song that they themselves composed.
 
 Summer was the best season where park will never be empty. People often gather there for barbecuing, I could hear them chatting and sometimes singing with a bottle of beer in hand.
+
+---
+
+Speaking of people being happy, I was told that the people here would not be friendly, like, grumpy all the time. It was not the case. In my opinion, the elders are the most open, they would not hesitate to throw back smiles, especially to children. 
+
+Indonesia is known for being friendly, but we don't have the custom of cashiers saying greeting and farewell. I love hearing "Hallo!" when I'm going to the cashier and the usual "Tschüss/Ciao/Schönen tag noch" to end the interactions.
+
+For a country which said to be not tolerating bullshit, I say, a lot of Germans can be quite friendly. 
+
+---
+
+You have read this far, you must've already known that I love living the live here.
+
+Hey, there are also times when I get annoyed, such as having to do everything by letter. Or when I have to wait months for an appointment with a general practitioner. Or when I have to queue for hours with more than 25 people to compete to rent a 1-bedroom apartment. Or when I walk to a food stall just to be greeted with "Kartenzahlung erst ab 10 Euro" which translate to "We don't accept card payments unless it's 10 euros or more", it's just a bother carrying banknotes and getting too much coins in change. 
+
+I accept those complexities as my new normal.
+
+Even when someone being mean because I don't understand what they said and they don't understand my broken German words, I didn't regret coming here. At the end of the day, I would just cry a little bit while eating Döner mit Pommes frites.
+
+I'm not joking, German is super hard to master. Despite learning it for the last 6 months straight, two hours every weekday, I still struggle to converse spontaneously. Reading the news is also a challenge I have yet to tackle.
+
+As for work, I can't say much because the company I work for has international environment. The culture is amazing and I don't have any issue. People are eager to give their best and I can talk to anyone without bothered by hierarchy. I apologise if I sound like I'm showing off, but that's just the reality.
+
+There's a lot to learn at work due to the differing business needs, but I'm grateful for the opportunity. I'm looking forward to making a greater impact at work and enjoying my life here.
+
+![Wearing the traditional clothings to blend in](/assets/images/2026-01-05-hows-life-so-far-in-germany-trad.webp)
