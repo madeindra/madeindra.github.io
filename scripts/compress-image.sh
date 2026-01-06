@@ -12,9 +12,13 @@ fi
 
 # Check if image path is provided
 if [ -z "$1" ]; then
-    echo "Usage: ./compress-image.sh <image_path>"
+    echo "Usage: ./compress-image.sh <image_path> [max_width]"
+    echo "  max_width: Maximum width in pixels (default: 1080, 0 to disable resize)"
     exit 1
 fi
+
+# Get max width parameter (default to 1080)
+max_width=${2:-1080}
 
 # Check if file exists
 if [ ! -f "$1" ]; then
@@ -33,8 +37,17 @@ quality=100
 min_qulity=25
 max_size=$((100 * 1024))  # 100KB in bytes
 
+# Build cwebp command with optional resize
+if [ $max_width -gt 0 ]; then
+    resize_option="-resize $max_width 0"
+    echo "Resizing to max width: ${max_width}px (maintaining aspect ratio)"
+else
+    resize_option=""
+    echo "No resizing applied"
+fi
+
 while true; do
-    cwebp -quiet -q $quality -resize 1080 0 "$1" -o "${source_dir}/${filename_noext}.webp"
+    cwebp -quiet -q $quality $resize_option "$1" -o "${source_dir}/${filename_noext}.webp"
     
     current_size=$(stat -f%z "${source_dir}/${filename_noext}.webp")
     
