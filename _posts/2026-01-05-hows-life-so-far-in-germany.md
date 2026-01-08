@@ -5,7 +5,7 @@ date: "2026-01-05 00:00:00"
 category: "Life"
 image: "/assets/images/2026-01-05-hows-life-so-far-in-germany.webp"
 feature_image: true
-description: "A personal reflection on moving from Indonesia to Germany—the good, the hard, and why I stayed."
+description: "A personal reflection on moving from Indonesia to Germany: the good, the hard, and why I stayed."
 keywords:
   - Life
   - Personal
