@@ -104,11 +104,13 @@ The worst case is nothing happens.
 
 ## Bonus: Price Tracking Tools
 
-If have a long list of wishlist and you're not in a hurry, use a price tracker to monitor when an item hits its lowest point.
+If have a long list of wishlist and you're not in a hurry, use a price tracker to monitor when an item hits its lowest point. 
 
-[CamelCamelCamel](https://camelcamelcamel.com/) tracks Amazon prices over time and can send alerts when a product drops below a price you set. [Google Shopping](https://shopping.google.com/) and browser extensions like Keepa do similar things. Instead of guessing whether today's price is a good deal, you'll have the historical data to know for sure.
+Some tool can track prices over time. So, instead of guessing whether today's price is a good deal, you'll have the historical data to know for sure. They could also send alerts when the price drop below the value you set
 
 This tricks apply to anything: [SteamDB](https://steamdb.info/) for Steam games, [PS Deals](https://psdeals.net/) for Playstation games, [Google Flight](https://www.google.com/travel/flights) for flight tickets, and [idealo](https://www.idealo.de/) for a lot of products in Germany.
+
+Other that I haven't try but worth to mentions are [CamelCamelCamel](https://camelcamelcamel.com/) for products in Amazon, [Google Shopping](https://shopping.google.com/), and browser extensions like Keepa. 
 
 ---
 
