@@ -86,7 +86,9 @@ Beyond the welcome discount, newsletter subscribers often get early access to sa
 
 Many digital services price their products differently depending on the country the buyer is in. A subscription that costs $15/month in the US might cost $4/month in Turkey or India. Using a VPN to appear in a lower-cost region can unlock that pricing.
 
-One thing to remember, this trick is technically something you shouldn't do. Sometimes the service could be smart enough to detect the difference between the indicated country and the the payment method (e.g. credit card issuer country, currency of the card). Let's just say I put it here for education purpose.
+One thing to remember, this trick is technically something you shouldn't do. Sometimes the service could be smart enough to detect the difference between the indicated country and the the payment method (e.g. credit card issuer country, currency of the card). 
+
+Let's just say I put it here for education purpose.
 
 ---
 
