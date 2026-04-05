@@ -17,6 +17,7 @@ archived: false
 Let me tell you something, paying full is optional.
 
 Well not always, but most of the times there are some tricks you should try.
+
 ---
 
 ## 1. Student or Corporate Discounts
@@ -105,7 +106,7 @@ If have a long list of wishlist and you're not in a hurry, use a price tracker t
 
 [CamelCamelCamel](https://camelcamelcamel.com/) tracks Amazon prices over time and can send alerts when a product drops below a price you set. [Google Shopping](https://shopping.google.com/) and browser extensions like Keepa do similar things. Instead of guessing whether today's price is a good deal, you'll have the historical data to know for sure.
 
-This tricks apply to anything, [SteamDB](https://steamdb.info/) for Steam games, [PS Deals](https://psdeals.net/) for Playstation games, [Google Flight](https://www.google.com/travel/flights) for flight tickets, and [idealo](https://www.idealo.de/) for a lot of products in Germany.
+This tricks apply to anything: [SteamDB](https://steamdb.info/) for Steam games, [PS Deals](https://psdeals.net/) for Playstation games, [Google Flight](https://www.google.com/travel/flights) for flight tickets, and [idealo](https://www.idealo.de/) for a lot of products in Germany.
 
 ---
 
