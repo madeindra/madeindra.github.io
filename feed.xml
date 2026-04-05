@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://madeindra.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://madeindra.dev/" rel="alternate" type="text/html" /><updated>2026-04-05T08:58:45+00:00</updated><id>https://madeindra.dev/feed.xml</id><title type="html">madeindra.dev</title><subtitle>A blog by Made Indra sharing insights, tutorials, and stories about software development, technology trends, personal passions, plus a bit of everything else!</subtitle><author><name>Made Indra</name></author><entry><title type="html">Hidden Ways to Pay Less</title><link href="https://madeindra.dev/hidden-ways-to-pay-less/" rel="alternate" type="text/html" title="Hidden Ways to Pay Less" /><published>2026-04-05T00:00:00+00:00</published><updated>2026-04-05T00:00:00+00:00</updated><id>https://madeindra.dev/hidden-ways-to-pay-less</id><content type="html" xml:base="https://madeindra.dev/hidden-ways-to-pay-less/"><![CDATA[<p>Let me tell you something, paying full is optional.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://madeindra.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://madeindra.dev/" rel="alternate" type="text/html" /><updated>2026-04-05T08:59:53+00:00</updated><id>https://madeindra.dev/feed.xml</id><title type="html">madeindra.dev</title><subtitle>A blog by Made Indra sharing insights, tutorials, and stories about software development, technology trends, personal passions, plus a bit of everything else!</subtitle><author><name>Made Indra</name></author><entry><title type="html">Hidden Ways to Pay Less</title><link href="https://madeindra.dev/hidden-ways-to-pay-less/" rel="alternate" type="text/html" title="Hidden Ways to Pay Less" /><published>2026-04-05T00:00:00+00:00</published><updated>2026-04-05T00:00:00+00:00</updated><id>https://madeindra.dev/hidden-ways-to-pay-less</id><content type="html" xml:base="https://madeindra.dev/hidden-ways-to-pay-less/"><![CDATA[<p>Let me tell you something, paying full is optional.</p>
 
 <p>Well not always, but most of the times there are some tricks you should try.</p>
 
@@ -70,7 +70,9 @@
 
 <p>Many digital services price their products differently depending on the country the buyer is in. A subscription that costs $15/month in the US might cost $4/month in Turkey or India. Using a VPN to appear in a lower-cost region can unlock that pricing.</p>
 
-<p>One thing to remember, this trick is technically something you shouldn’t do. Sometimes the service could be smart enough to detect the difference between the indicated country and the the payment method (e.g. credit card issuer country, currency of the card). Let’s just say I put it here for education purpose.</p>
+<p>One thing to remember, this trick is technically something you shouldn’t do. Sometimes the service could be smart enough to detect the difference between the indicated country and the the payment method (e.g. credit card issuer country, currency of the card).</p>
+
+<p>Let’s just say I put it here for education purpose.</p>
 
 <hr />
 
